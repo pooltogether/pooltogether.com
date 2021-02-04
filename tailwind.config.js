@@ -163,10 +163,6 @@ module.exports = {
         relaxed: 1.75
       },
       fontSize: {
-        // sm: ['14px', '20px'],
-        // base: ['16px', '24px'],
-        // lg: ['20px', '28px'], // line height!
-        // xl: ['24px', '32px'],
         'xxxxs': '0.625rem',
         'xxxs': '0.75rem',
         'xxs': '0.875rem',
@@ -175,24 +171,18 @@ module.exports = {
         'base': '1.25rem',
         'lg': '1.25rem',
         'xl': '1.5rem',
-        '2xl': '1.875rem',
-        '3xl': '2.25rem',
-        '4xl': '2.5rem',
-        '5xl': '3rem',
-        '6xl': '4rem',
-        '7xl': '5rem',
-        '8xl': '6rem',
-        '9xl': '7rem',
-        '10xl': '8rem'
+        '2xl': '1.75rem',
+        '3xl': '2rem',
+        '4xl': '2.25rem',
+        '5xl': '2.5rem',
+        '6xl': '2.75rem',
+        '7xl': '3rem',
+        '8xl': '3.5rem',
+        '9xl': '4rem',
+        '10xl': '5rem'
       },
       fontFamily: {
-        // 'sans-regular': ['FF Tisa Sans', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
-        // 'sans-regular': ['Comfortaa', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
-        // 'sans-regular': ['Cairo', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
         'sans-regular': ['Titillium Web', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
-        'number': ['DM Mono', 'Courier', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
-        'headline': ['omnes-pro', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
-        'sans': ['Roboto', 'Helvetica', 'Arial', 'sans-serif'],
       },
       opacity: {
         '0': '0',

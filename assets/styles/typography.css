@@ -68,6 +68,12 @@ h2 {
   @apply text-xl leading-tight;
 }
 
+@screen xs {
+  h2 {
+    @apply text-2xl;
+  }
+}
+
 @screen sm {
   h2 {
     @apply text-3xl;

@@ -48,7 +48,7 @@ export const getButtonClasses = (props) => {
 
   if (secondary) {
     defaultBorder = 'border-highlight-2 border-2'
-    defaultBg = 'bg-default'
+    defaultBg = 'bg-transparent'
     defaultText = 'text-highlight-2'
 
     defaultHoverBorder = 'hover:border-highlight-1'

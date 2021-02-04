@@ -28,7 +28,13 @@ body {
 }
 
 .pool-container {
-  max-width: 90vw;
+  max-width: 80vw;
+}
+
+@screen sm {
+  .pool-container {
+    max-width: 90vw;
+  }
 }
 
 @screen sm {

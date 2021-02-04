@@ -9,8 +9,9 @@ import { WistiaPlayer } from 'lib/components/WistiaPlayer'
 import { numberWithCommas } from 'lib/utils/numberWithCommas'
 
 import Squiggle from 'assets/images/squiggle.svg'
+import SquiggleMobile from 'assets/images/squiggle-mobile.svg'
 
-const BySavingMoneyText = () => (<strong>just by saving your money.</strong>)
+const BySavingMoneyText = () => (<strong>just by saving your money</strong>)
 
 const EveryWeekText = () => 'every week'
 
@@ -46,11 +47,7 @@ export const IndexHero = (
         className='pool-container flex flex-col sm:flex-row justify-between pt-12 mx-auto'
       >
         <div
-          className='relative hero-text-left'
-          style={{
-            height: 'calc(40vh - 84px)',
-            minHeight: 290,
-          }}
+          className='relative hero-text-left mb-12 sm:mb-0'
         >
           <motion.div
             animate={'enter'}
@@ -74,19 +71,7 @@ export const IndexHero = (
               }
             }}
           >
-            <div className='text-center sm:hidden'>
-              <h1 className='text-flashy font-bold leading-none text-center'>
-                <WinAmountText />
-              </h1>
-              <h1 className='text-flashy font-bold leading-none text-center'>
-                <EveryWeekText />
-              </h1>
-              <div className='mt-4 mb-2'>
-                <BySavingMoneyText />
-              </div>
-            </div>
-
-            <div className='hidden sm:block'>
+            <div className='w-3/4 xs:w-7/12 sm:w-full mx-auto'>
               <ReactFitty
                 className='text-flashy font-bold leading-none text-center'
               ><WinAmountText /></ReactFitty>
@@ -99,26 +84,19 @@ export const IndexHero = (
                 className='mt-4 mb-2'
               ><BySavingMoneyText /></ReactFitty>
 
-            </div>
-            {/* <h1
-              className='banner-text mx-auto font-bold'
-            >
-              <span className='text-flashy sm:leading-none'>
-              </span>
-              
-            </h1> */}
 
-            <div
-              className='text-center mt-4'
-            >
-              <ButtonLink
-                width='w-full'
-                textSize='xl'
-                href='https://app.pooltogether.com'
-                as='https://app.pooltogether.com'
+              <div
+                className='text-center mt-4'
               >
-                Deposit now
-              </ButtonLink>
+                <ButtonLink
+                  width='w-full'
+                  textSize='xl'
+                  href='https://app.pooltogether.com'
+                  as='https://app.pooltogether.com'
+                >
+                  Deposit now
+                </ButtonLink>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -148,27 +126,23 @@ export const IndexHero = (
         </div>
       </div>
 
-      
+    
       <div
-        className='text-center relative pb-12 sm:pb-0'
+        className='pool-container text-center relative flex flex-col sm:flex-row my-20 sm:my-32 mx-auto'
       >
         <div
-          className='pool-container flex flex-col sm:flex-row my-20 mx-auto'
+          className='bg-card rounded-xl mx-auto w-full sm:w-full py-8 sm:py-8 lg:px-12 lg:py-12 text-center sm:text-left'
         >
-          <div
-            className='bg-card rounded-xl mx-auto w-full xs:w-9/12 sm:w-full py-8 sm:py-8 lg:px-12 lg:py-12 text-center sm:text-left'
-          >
-            <h1 className='text-center'>
-              PoolTogether
-            </h1>
+          <h1 className='text-center'>
+            PoolTogether
+          </h1>
 
-            <img src={Squiggle} className='mx-auto my-4' />
+          <img src={Squiggle} className='hidden xs:block mx-auto my-4' />
+          <img src={SquiggleMobile} className='xs:hidden mx-auto my-4' />
 
-            <div className='text-xs sm:text-2xl text-center mt-7'>
-              is an open source and decentralized<br/> protocol for no-loss prize games
-            </div>
+          <div className='text-xs sm:text-2xl text-center mt-7'>
+            is an open source and decentralized<br/> protocol for no-loss prize games
           </div>
-
         </div>
       </div>
 
