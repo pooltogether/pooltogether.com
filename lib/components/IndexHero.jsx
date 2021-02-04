@@ -8,6 +8,8 @@ import { TotalPrizes } from 'lib/components/TotalPrizes'
 import { WistiaPlayer } from 'lib/components/WistiaPlayer'
 import { numberWithCommas } from 'lib/utils/numberWithCommas'
 
+import Squiggle from 'assets/images/squiggle.svg'
+
 export const IndexHero = (
   props,
 ) => {
@@ -39,7 +41,7 @@ export const IndexHero = (
             {(totalPrizeAmountUSD => {
               return <>
                 <motion.div
-                  animate={totalPrizeAmountUSD.gt(0) ? 'enter' : null}
+                  animate={'enter'}
                   initial='initial'
                   transition={{ delay: 1 }}
                   variants={{
@@ -62,22 +64,18 @@ export const IndexHero = (
                 >
                   <ReactFitty
                     className='text-flashy font-bold leading-none text-center'
-                  >
-                    Win ${numberWithCommas(parseFloat(ethers.utils.formatUnits(
+                  >Win ${numberWithCommas(parseFloat(ethers.utils.formatUnits(
                     totalPrizeAmountUSD,
                     '18'
                   )), { precision: 0 })}</ReactFitty>
                   
                   <ReactFitty
                     className='text-flashy font-bold leading-none text-center'
-                  >
-                    every week</ReactFitty>
+                  >every week</ReactFitty>
 
                   <ReactFitty
                     className='mt-4 mb-2'
-                  >
-                    <strong>just by saving your money.</strong>
-                  </ReactFitty>
+                  ><strong>just by saving your money.</strong></ReactFitty>
 
                   {/* <h1
                     className='banner-text mx-auto font-bold'
@@ -119,7 +117,7 @@ export const IndexHero = (
               />
 
               <div
-                className='bg-vid-circle flex items-center justify-center hover:bg-highlight-2 trans'
+                className='bg-vid-circle rounded-full flex items-center justify-center hover:bg-highlight-2 trans'
               >
                 <div
                   className='bg-vid-tri'
@@ -132,47 +130,25 @@ export const IndexHero = (
 
       
       <div
-        clipPath='url(#wave)'
-        className='bg-vid text-center relative pb-12 sm:pb-0'
+        className='text-center relative pb-12 sm:pb-0'
       >
-        <div className='custom-shape-divider-top-1600195439 pointer-events-none'>
-          <svg data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'>
-            <path
-              d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z'
-              fill='#290B5A'
-            ></path>
-          </svg>
-        </div>
-        
         <div
-          className='pool-container flex flex-col sm:flex-row pt-10 sm:mt-32 sm:pt-20 text-left mx-auto'
+          className='pool-container flex flex-col sm:flex-row my-20 mx-auto'
         >
           <div
-            className='mx-auto xs:w-9/12 sm:w-1/2 pt-8 sm:pt-8 lg:px-12 lg:py-12 text-center sm:text-left'
+            className='bg-card rounded-xl mx-auto w-full xs:w-9/12 sm:w-full py-8 sm:py-8 lg:px-12 lg:py-12 text-center sm:text-left'
           >
-            <h2
-              className='text-flashy'
-            >
+            <h1 className='text-center'>
               PoolTogether
-            </h2>
+            </h1>
 
-            <div className='font-number font-bold text-xs sm:text-lg sm:pr-20 lg:pr-10 pb-2 sm:pb-0'>
-              is a protocol for no-loss money games powered by Ethereum.
+            <img src={Squiggle} className='mx-auto my-4' />
+
+            <div className='text-xs sm:text-2xl text-center mt-7'>
+              is an open source and decentralized<br/> protocol for no-loss prize games
             </div>
           </div>
 
-          <div
-            className='flex flex-col items-center z-10'
-          >
-            
-            
-            <button
-              onClick={startVideo}
-              className='text-center font-bold mb-1 mb-4 text-white hover:text-highlight-2 trans hover:border-highlight-2 border-b border-transparent'
-            >
-              Watch how it works!
-            </button>
-          </div>
         </div>
       </div>
 
