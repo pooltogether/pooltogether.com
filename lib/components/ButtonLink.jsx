@@ -35,7 +35,7 @@ export const getButtonClasses = (props) => {
   textSize = getTextSize(textSize)
 
   let defaultPadding = 'px-4 xs:px-6 sm:px-4 lg:px-12 py-2 sm:py-2'
-  let defaultRounded = 'rounded-lg'
+  let defaultRounded = 'rounded-full'
   let defaultTrans = 'trans trans-fast'
 
   let defaultBorder = 'border-highlight-1'
