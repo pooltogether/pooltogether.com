@@ -1,17 +1,19 @@
 import React from 'react'
 
-import HowArt123Coins from 'assets/images/how-art-123-coins.png'
-import CoinsSvg from 'assets/images/how-art-coins@2x.jpg'
+import SquigglePurple from 'assets/images/squiggle-purple.svg'
 
 const HowItWorksBox = (props) => {
   return <>
     <div
-      className={`trans how-it-works-box text-highlight-2 bg-secondary px-6 py-4 sm:px-8 sm:py-6 how-it-works-box-${props.id} mb-10 sm:mb-10`}
+      className={`bg-default rounded-lg shadow-xl trans how-it-works-box bg-secondary px-6 py-8 sm:px-8 sm:py-12 lg:pb-20 sm:-mx-8 mb-10 sm:mb-10 sm:max-w-1/3 lg:max-w-sm`}
     >
-      <h4 className='how-it-works-box-title uppercase pb-2'>
-        <span className='sm:hidden'>{props.id}.</span> {props.title}
+      <h4 className='how-it-works-box-title text-highlight-2 uppercase sm:pb-2'>
+        {props.title}
       </h4>
-      <div className='font-number text-xxs sm:text-base'>
+
+      <img src={SquigglePurple} className='mt-2 sm:mt-4 mb-5 sm:mb-8' />
+
+      <div className='text-xs xs:text-sm sm:text-base lg:text-xl'>
         {props.description}
       </div>
     </div>
@@ -20,57 +22,38 @@ const HowItWorksBox = (props) => {
 
 export const IndexHowItWorks = () => {
   return <>
-    <div
-      className='bg-darkened'
-    >
-      <div className='pool-container mx-auto py-8 sm:pt-24'>
-        <div className='flex items-center justify-between'>
-          <h1
-            className='w-1/2 sm:w-1/3 leading-10 sm:leading-tight'
-          >
-            <span
-              className='text-flashy'
-              style={{ display: 'block' }}
-            >How</span> <div className=' -mt-3 block'>it works</div>
-          </h1>
-
-          <div className='w-16 sm:w-32'>
-            <img
-              src={CoinsSvg}
-              className='max-w-full'
-            />
+    <div className='bg-secondary'>
+      <div
+        className='bg-how-art-waves pt-24 px-4 sm:px-0'
+      >
+        <div className='pool-container mx-auto pb-8'>
+          <div className='flex items-center justify-between'>
+            <h1
+              className='leading-10 sm:leading-tight'
+            >
+              <div
+                className='text-flashy'
+              >How</div> <div className='block -mt-2'>it works</div>
+            </h1>
           </div>
         </div>
-      </div>
 
-      <div
-        className='bg-how-art-waves pb-40 px-4 sm:px-0'
-        style={{
-          minHeight: 200
-        }}
-      >
-        <HowItWorksBox
-          id='1'
-          title='Get tickets'
-          description='Deposit into any prize pool and instantly get tickets. Receive 1 ticket for every $1 deposited.'
-        />
+        <div className='pool-container mx-auto flex flex-col sm:flex-row justify-between'>
+          <HowItWorksBox
+            title='Get tickets'
+            description='Deposit into any prize pool and instantly get tickets.'
+          />
 
-        <HowItWorksBox
-          id='2'
-          title='Win prizes'
-          description={`As long as your money is deposited you're eligible to win prizes. Prizes are made up of the interest earned on all deposited money in the pool`}
-        />
+          <HowItWorksBox
+            title='Win prizes'
+            description={`As long as you have deposits you're eligible to win prizes. Prizes are made up of the all the interest earned on deposited money in the pools.`}
+          />
 
-        <HowItWorksBox
-          id='3'
-          title='Never lose'
-          description='Remove your deposit at anytime. As long as you stay in the pools you continue to be eligible to win.'
-        />
-
-        <img
-          src={HowArt123Coins}
-          className='mx-auto how-art-123-coins trans hidden sm:block'
-        />
+          <HowItWorksBox
+            title='Never lose'
+            description='Remove your deposit at anytime. As long as you stay in the pools you continue to be eligible to win.'
+          />
+        </div>
       </div>
     </div>
   </>

@@ -49,7 +49,7 @@ export const GridItem = (props) => {
         </div>
 
         <div
-          className='mt-2 sm:mt-4 no-underline text-gray-600 text-xxs font-number'
+          className='mt-2 sm:mt-4 no-underline text-gray-600 text-xxs'
         >
           {description}
         </div>

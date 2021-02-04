@@ -26,7 +26,7 @@ export const IndexGetInvolved = () => {
             Join our growing community
           </h3>
           <div
-            className='font-normal font-number w-3/4 xs:w-2/3 sm:w-1/2 lg:w-1/3 text-center text-xs sm:text-sm'
+            className='font-normal w-3/4 xs:w-2/3 sm:w-1/2 lg:w-1/3 text-center text-xs sm:text-sm'
           >
             Make your contribution and get community support 24/7.
           </div>
@@ -87,7 +87,7 @@ export const IndexGetInvolved = () => {
             Sign up for our newsletter
           </h3>
           <div
-            className='font-normal font-number w-3/4 xs:w-2/3 sm:w-1/2 lg:w-1/3 text-center text-xs sm:text-sm'
+            className='font-normal w-3/4 xs:w-2/3 sm:w-1/2 lg:w-1/3 text-center text-xs sm:text-sm'
           >
             Get the latest updates about pools and new releases.
           </div>
@@ -98,7 +98,7 @@ export const IndexGetInvolved = () => {
                 flexWrapperClasses=''
                 listId={process.env.NEXT_JS_MAILCHIMP_LIST_GENERAL_ID}
                 successMessage={<>
-                  <div className='text-green font-bold font-number'>
+                  <div className='text-green font-bold'>
                     Nice.
                     <br />You'll be getting all the good PoolTogether news!
                   </div>

@@ -117,7 +117,7 @@ export const IndexIntegrations = () => {
 
 
         <div
-          className='bg-card rounded-xl mx-auto text-center p-4 xs:p-12 sm:pt-12 sm:pb-20'
+          className='bg-card rounded-xl mx-auto text-center p-4 xs:p-12 sm:pt-12 sm:pb-12'
         >
           <div className='flex flex-col items-center'>
             <h2

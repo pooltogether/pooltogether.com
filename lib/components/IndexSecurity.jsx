@@ -43,7 +43,7 @@ export const IndexSecurity = () => {
             </div>
 
             <p
-              className='font-number text-xs sm:text-lg pr-12 py-6 sm:pb-12'
+              className='text-xs sm:text-lg pr-12 py-6 sm:pb-12'
             >
               PoolTogether is an open-source and decentralized protocol that is provided on an "as is" and "as available" basis. The protocol has unique risks associated with its use. It is important to understand these risks before using the protocol.
             </p>

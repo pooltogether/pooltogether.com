@@ -167,7 +167,7 @@ h6 {
 }
 
 .text-caption-2 {
-  @apply text-accent-2 text-xxxxs font-number;
+  @apply text-accent-2 text-xxxxs;
 }
 
 @screen sm {
