@@ -394,18 +394,24 @@ li.nav-mobile-listitem {
   cursor: pointer;
 }
 
-.custom-shape-divider-top-1600195439 {
-  position: absolute;
-  top: -2px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
+.hero-text-left {
+  top: -8px;
+}
+
+@screen sm {
+  .hero-text-left {
+    width: 300px;
+  }
+}
+
+@screen lg {
+  .hero-text-left {
+    width: 420px;
+  }
 }
 
 .bg-vid-holo {
   background-image: url('/vid@2x.png');
-  /* background-image: url('/bg-vid-holo.png'); */
   background-size: contain;
   background-position: top center;
   background-repeat: no-repeat;
@@ -418,15 +424,10 @@ li.nav-mobile-listitem {
   width: 100%;
 }
 
-@screen xs {
-  .bg-vid-holo {
-    max-width: 680px;
-  }
-}
-
 @screen sm {
   .bg-vid-holo {
-    width: 420px;
+    background-position: top right;
+    width: 450px;
   }
 }
 
