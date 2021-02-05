@@ -42,6 +42,24 @@ export const IndexHero = (
   }
 
   return <>
+    <div
+      className='pool-container text-center font-bold text-xs xs:text-lg border-flashy purple-pink-gradient-animation mx-auto pt-4 pb-5 px-6 xs:mt-4 xs:leading-tight'
+    >
+      <span
+        role='img'
+        aria-label='megaphone emoji'
+        className='mx-2 text-xl block xs:inline-block'
+      >📣</span> POOL Token and decentralized governance is live!
+                  <br /><a
+        href='#token'
+        className='text-inverse hover:text-green border-b trans'
+      >Find out more</a> <span
+        role='img'
+        aria-label='megaphone emoji'
+        className='mx-2 text-xl hidden xs:inline-block'
+      >📣</span>
+    </div>
+    
     <div className='relative'>
       <div
         className='pool-container flex flex-col sm:flex-row justify-between pt-12 mx-auto'
