@@ -55,6 +55,7 @@ export const IndexSecurity = () => {
                 href='https://docs.pooltogether.com/security/risks'
                 as='https://docs.pooltogether.com/security/risks'
                 className='mb-12'
+                width='w-full sm:w-auto'
               >
                 Learn about Risk
               </ButtonLink>

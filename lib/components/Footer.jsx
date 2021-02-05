@@ -107,7 +107,7 @@ export const Footer = () => {
                       <FooterLink
                         href='/brand-assets'
                       >
-                        Brand assets
+                        Brand
                       </FooterLink>
                       <FooterLink
                         href='https://gov.pooltogether.com/'
@@ -124,33 +124,22 @@ export const Footer = () => {
                     <span
                       className='font-bold block'
                     >
-                      Company
+                      Releases
                     </span>
 
                     <ul>
                       <FooterLink
-                        href='https://medium.com/pooltogether'
-                      >
-                        Blog
-                      </FooterLink>
-                      <FooterLink
-                        href='/careers'
-                      >
-                        Careers
-                      </FooterLink>
-                      <FooterLink
                         href='https://v2.pooltogether.com'
                       >
-                        v2.0.0
+                        Version 2
                       </FooterLink>
                       <FooterLink
                         href='https://v1.pooltogether.com'
                       >
-                        v1.0.0
+                        Version 1
                       </FooterLink>
                     </ul>
                   </div>
-
 
                   <div
                     className='w-1/2 md:w-auto flex flex-col mb-8 md:my-0'
@@ -245,14 +234,6 @@ export const Footer = () => {
         <div
           className='flex justify-between flex-col sm:flex-row sm:pt-2 pb-10 sm:pb-20 lg:pb-20 text-xs border-t'
         >
-          <div className='sm:w-1/2'>
-            <span
-              className='block mt-4'
-            >
-              &copy; {new Date().getFullYear()} PoolTogether Inc.
-            </span>
-          </div>
-
           <div className='w-32 lg:w-32'>
             <nav
               className='flex justify-between w-full'

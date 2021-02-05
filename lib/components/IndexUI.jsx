@@ -7,7 +7,7 @@ import { IndexHero } from 'lib/components/IndexHero'
 import { IndexPoolToken } from 'lib/components/IndexPoolToken'
 import { IndexHowItWorks } from 'lib/components/IndexHowItWorks'
 import { IndexIntegrations } from 'lib/components/IndexIntegrations'
-import { IndexBackedBy } from 'lib/components/IndexBackedBy'
+import { IndexSupportedBy } from 'lib/components/IndexSupportedBy'
 import { IndexSecurity } from 'lib/components/IndexSecurity'
 
 export const IndexUI = (
@@ -21,7 +21,7 @@ export const IndexUI = (
     <IndexIntegrations />
     <IndexHowItWorks />
     <IndexSecurity />
-    <IndexBackedBy />
+    <IndexSupportedBy />
     <IndexGetInvolved />
     {/* <IndexFeaturedIn /> */}
   </>

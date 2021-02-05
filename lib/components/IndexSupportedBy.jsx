@@ -3,7 +3,7 @@ import classnames from 'classnames'
 import { useInView } from 'react-intersection-observer'
 import { motion, useAnimation } from 'framer-motion'
 
-import { GridItemBackedBy } from 'lib/components/GridItemBackedBy'
+import { GridItemSupportedBy } from 'lib/components/GridItemSupportedBy'
 
 import ConsensysSvg from 'assets/images/consensys.svg'
 import DTCCapitalSvg from 'assets/images/dtc-capital.svg'
@@ -13,7 +13,7 @@ import MetaCartelSvg from 'assets/images/metacartel-logo.svg'
 import TheLaoSvg from 'assets/images/the-lao-logo.svg'
 import RobotVenturesSvg from 'assets/images/robot-ventures-logo.svg'
 
-export const IndexBackedBy = () => {
+export const IndexSupportedBy = () => {
   const controls = useAnimation()
   const [ref, inView] = useInView()
 
@@ -43,7 +43,7 @@ export const IndexBackedBy = () => {
       <h3
         className='my-0 sm:mb-12 leading-tight'
       >
-        Backed by
+        Protocol supported by
       </h3>
 
       <motion.div
@@ -56,44 +56,44 @@ export const IndexBackedBy = () => {
         initial='hidden'
         variants={containerVariants}
       >
-        <GridItemBackedBy
+        <GridItemSupportedBy
           title={'ConsenSys'}
           img={ConsensysSvg}
           url='https://www.consensys.com'
         />
 
-        <GridItemBackedBy
+        <GridItemSupportedBy
           title={'IDEO'}
           img={IdeoSvg}
           url='https://www.ideo.com'
           maxHeight={30}
         />
 
-        <GridItemBackedBy
+        <GridItemSupportedBy
           title={'DTC Capital'}
           img={DTCCapitalSvg}
           url='https://www.dtc.capital'
         />
 
-        <GridItemBackedBy
+        <GridItemSupportedBy
           title={'ParaFi'}
           img={ParaFiSvg}
           url='https://www.parafi.capital/'
         />
 
-        <GridItemBackedBy
+        <GridItemSupportedBy
           title={'MetaCartel Ventures'}
           img={MetaCartelSvg}
           url='https://metacartel.org'
         />
 
-        <GridItemBackedBy
+        <GridItemSupportedBy
           title={'The LAO'}
           img={TheLaoSvg}
           url='https://thelao.io'
         />
         
-        <GridItemBackedBy
+        <GridItemSupportedBy
           title={'Robot Ventures'}
           img={RobotVenturesSvg}
           url='https://twitter.com/robotventures'

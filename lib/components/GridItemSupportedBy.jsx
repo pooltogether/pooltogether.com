@@ -12,7 +12,7 @@ const itemVariants = {
   }
 }
 
-export const GridItemBackedBy = (props) => {
+export const GridItemSupportedBy = (props) => {
   const {
     attribution,
     img,

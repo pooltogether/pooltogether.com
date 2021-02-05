@@ -441,97 +441,16 @@ li.nav-mobile-listitem {
   }
 }
 
-/* 
-.how-it-works-box {
-  @apply border-4 border-highlight-2 rounded-tr-3xl rounded-bl-3xl mx-auto;
-
-  z-index: 20;
-}
-
-@screen sm {
-  .how-it-works-box {
-    @apply absolute;
-
-    left: -20%;
-    right: 0;
-    transform: scale(0.8);
-    transform-origin: center center;
-    width: 400px;
-  }
-}
-
-@screen lg {
-  .how-it-works-box {
-    transform: scale(1);
-  }
-}
-
-
-.how-it-works-box-1 {
-  margin-top: 0; 
-}
-
-@screen sm {
-  .how-it-works-box-1 {
-    left: -25%;
-    margin-top: 10px; 
-  }
-}
-
-@screen lg {
-  .how-it-works-box-1 {
-    left: -500px;
-    margin-top: 0; 
-  }
-}
-
-@screen sm {
-  .how-it-works-box-2 {
-    left: 55%;
-    margin-top: 140px; 
-  }
-}
-
-@screen lg {
-  .how-it-works-box-2 {
-    left: 720px;
-    margin-top: 230px; 
-  }
-}
-
-
-@screen sm {
-  .how-it-works-box-3 {
-    left: -220px;
-    margin-top: 390px; 
-  }
-}
-
-@screen lg {
-  .how-it-works-box-3 {
-    left: -500px;
-    margin-top: 500px; 
-  }
-} */
-
-.bg-get-involved {
-  background-image: url('/bg-get-involved.jpg');
-  background-size: cover;
-  background-position: center bottom;
-  background-attachment: fixed;
-  height: auto;
-}
-
 .bg-overlay {
-  /* backdrop-filter: saturate(180%) blur(10px);
-  background-color: rgba(22, 5, 40, 0.72); */
-
-  backdrop-filter: saturate(180%) blur(8px);
-  background-image: linear-gradient(265deg, rgba(108, 49, 245, 0.4) 0%, rgba(48, 220, 250, 0.45) 100%);
+  background-image: linear-gradient(
+    40deg,
+    #4C249F 30%,
+    #9C48BA 100%
+  ) !important;
 }
 
 .interactable-chip {
-  @apply bg-secondary hover:bg-highlight-5 rounded-lg flex items-center justify-center;
+  @apply bg-secondary hover:bg-highlight-3 rounded-lg flex items-center justify-center;
   min-height: 50px;
   min-width: 80px;
 }
