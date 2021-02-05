@@ -5,16 +5,6 @@ import { ButtonLink } from 'lib/components/ButtonLink'
 export const CommunityPage = (props) => {
   return <>
     <div
-      className='bg-get-involved absolute l-0 r-0 b-0 w-full h-full'
-      style={{ 
-        backgroundPosition: '0 -20px',
-        backgroundAttachment: 'initial',
-        top: -100,
-        zIndex: 1
-      }}
-    />
-    
-    <div
       className='pool-container mx-auto flex flex-col text-base h-full xs:pr-32 sm:pr-32 lg:pr-64 z-10 relative'
     >
       <h2
