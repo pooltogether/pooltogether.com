@@ -44,9 +44,9 @@ export const DevelopersPage = (props) => {
             viewBox='0 0 24 24'
             fill='none'
             stroke='currentColor'
-            stroke-width='2'
-            stroke-linecap='round'
-            stroke-linejoin='round'
+            strokeWidth='2'
+            strokeLinecap='round'
+            strokeLinejoin='round'
             className='feather feather-file-text mr-2'
           >
             <path d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'></path>
@@ -79,7 +79,11 @@ export const DevelopersPage = (props) => {
         </div> */}
       </div>
 
-      <img src={PrizeIllustration} style={{ maxWidth: 400 }} className='mx-auto my-9' />
+      <img
+        src={PrizeIllustration}
+        style={{ maxWidth: 400 }}
+        className='mx-auto my-9 w-full'
+      />
     </div>
 
     <div
