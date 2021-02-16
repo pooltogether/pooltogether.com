@@ -529,3 +529,11 @@ li.nav-mobile-listitem {
     #9C48BA 81%
   ) !important
 }
+
+.bg-developers {
+  background-image: linear-gradient(
+    180deg,
+    #32025E 0%,
+    #230B40 100%
+  ) !important
+}

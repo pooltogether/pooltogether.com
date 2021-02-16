@@ -49,18 +49,18 @@ h6 {
 }
 
 h1 {
-  @apply text-2xl;
+  @apply text-4xl;
 }
 
 @screen sm {
   h1 {
-    @apply text-4xl;
+    @apply text-7xl;
   }
 }
 
 @screen lg {
   h1 {
-    @apply text-6xl;
+    @apply text-10xl;
   }
 }
 

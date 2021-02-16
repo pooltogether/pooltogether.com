@@ -33,10 +33,10 @@ export const IndexPoolToken = (
             <ButtonLink
               textSize='xl'
               width='w-full'
-              as={`https://app.pooltogether.com/pools/PT-cDAI`}
-              href={`https://app.pooltogether.com/pools/PT-cDAI`}
+              as={`https://app.pooltogether.com`}
+              href={`https://app.pooltogether.com`}
             >
-              Deposit to receive POOL token
+              Deposit to receive POOL tokens
             </ButtonLink>
           </div>
           <div className='sm:ml-4 my-2'>
@@ -47,7 +47,7 @@ export const IndexPoolToken = (
               as={`https://medium.com/p/fca9ab8b8ba2`}
               href={`https://medium.com/p/fca9ab8b8ba2`}
             >
-              Learn about our governance
+              Learn about governance
             </ButtonLink>
           </div>
         </div>

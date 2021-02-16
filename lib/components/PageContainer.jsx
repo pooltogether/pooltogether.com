@@ -16,7 +16,7 @@ export const PageContainer = (props) => {
     },
   }
 
-  const motionDivClassnames = 'sm:pt-20 xl:pt-24 trans'
+  const motionDivClassnames = `sm:pt-20 xl:pt-24 trans ${window.location.pathname === '/developers' ? 'bg-developers' : ''}`
   const wrapperClassnames = 'min-height-container mx-auto pb-10 sm:pb-8 lg:pb-20 leading-relaxed'
 
   return <>

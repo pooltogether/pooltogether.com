@@ -14,15 +14,20 @@ const variants = {
 
 const links = [
   {
+    label: 'Home',
+    href: '/',
+    as: '/'
+  },
+  {
     label: 'Developers',
     href: '/developers',
     as: '/developers'
   },
-  {
-    label: 'Community',
-    href: '/community',
-    as: '/community'
-  },
+  // {
+  //   label: 'Community',
+  //   href: '/community',
+  //   as: '/community'
+  // },
   {
     label: 'App',
     href: 'https://app.pooltogether.com',

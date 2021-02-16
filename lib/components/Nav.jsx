@@ -11,9 +11,9 @@ export const Nav = (props) => {
   const router = useRouter()
 
   const developersPage = router.pathname.match('developers')
-  const communityPage = router.pathname.match('community')
+  // const communityPage = router.pathname.match('community')
 
-  const navLinkClasses = 'capitalize text-center leading-none rounded-full hover:bg-accent-grey-1 flex justify-start items-center text-lg py-3 px-4 lg:px-8 trans tracking-wider outline-none focus:outline-none active:outline-none font-bold'
+  const navLinkClasses = 'capitalize text-center leading-none rounded-full flex justify-start items-center text-lg py-3 px-4 lg:px-8 trans tracking-wider outline-none focus:outline-none active:outline-none text-white'
 
   return <>
     <nav
@@ -29,15 +29,15 @@ export const Nav = (props) => {
             'mr-3',
             navLinkClasses,
             {
-              'text-accent-2 hover:text-highlight-2': !developersPage,
-              'text-highlight-2 hover:text-highlight-2 bg-accent-grey-1': developersPage
+              'text-white hover:text-highlight-2': !developersPage,
+              'text-highlight-2 hover:text-highlight-2': developersPage
             }
           )}
         >
           {t('developers')}
         </a>
       </Link>
-
+{/* 
       <Link
         href='/community'
         as='/community'
@@ -49,14 +49,14 @@ export const Nav = (props) => {
             'mr-8',
             {
               'text-accent-2 hover:text-highlight-2': !communityPage,
-              'text-highlight-2 hover:text-highlight-2 bg-accent-grey-1': communityPage
+              'text-highlight-2 hover:text-highlight-2': communityPage
             }
           )}
         >
           {t('community')}
         </a>
       </Link>
-
+ */}
 
       <Link
         href='https://app.pooltogether.com'

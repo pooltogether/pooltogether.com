@@ -10,8 +10,8 @@ import { GridItem } from 'lib/components/GridItem'
 // import MakerSvg from 'assets/images/maker.svg'
 import ArgentSvg from 'assets/images/argent.svg'
 import BotSvg from 'assets/images/logo-ttbot@2x.png'
-import EBOSvg from 'assets/images/ebo.svg'
-import PillarSvg from 'assets/images/pillar.svg'
+// import EBOSvg from 'assets/images/ebo.svg'
+// import PillarSvg from 'assets/images/pillar.svg'
 import ZerionSvg from 'assets/images/zerion.svg'
 import ZapperFiSvg from 'assets/images/zapperfi.svg'
 
@@ -75,12 +75,12 @@ export const IndexIntegrations = () => {
                 url='https://www.argent.xyz/'
               />
 
-              <GridItem
+              {/* <GridItem
                 title={'Pillar'}
                 description={`Pillar Wallet makes it simple to use PoolTogether.`}
                 img={PillarSvg}
                 url='https://pillarproject.io'
-              />
+              /> */}
 
               <GridItem
                 title={'ZapperFi'}
@@ -104,13 +104,13 @@ export const IndexIntegrations = () => {
                 attribution={`bot by Sophia Bai from the Noun Project`}
                 imgStyle={{ width: 39, height: 34 }}
               />
-
+{/* 
               <GridItem
                 title={'EBO'}
                 description={`EBO Finance is a wallet app for joining the pool.`}
                 img={EBOSvg}
                 url='https://ebo.io/'
-              />
+              /> */}
             </motion.div>
           </div>
         </div>
