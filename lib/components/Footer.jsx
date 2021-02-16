@@ -107,7 +107,7 @@ export const Footer = () => {
                       <FooterLink
                         href='/brand-assets'
                       >
-                        Brand
+                        Assets
                       </FooterLink>
                       <FooterLink
                         href='https://gov.pooltogether.com/'

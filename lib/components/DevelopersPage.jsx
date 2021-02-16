@@ -2,13 +2,16 @@ import React from 'react'
 
 import { ButtonLink } from 'lib/components/ButtonLink'
 
+import PoolBlob from 'assets/images/pool-blob@2x.png'
+import PrizeIllustration from 'assets/images/prize_transparent.png'
+
 export const DevelopersPage = (props) => {
   return <>
     <div
-      className='pool-container mx-auto flex flex-col text-base h-full z-10 relative'
+      className='pool-container mx-auto flex flex-col text-base h-full z-10 relative pt-10 sm:pt-0'
     >
       <h1
-        className='text-center text-flashy'
+        className='text-center text-flashy text-4xl sm:text-7xl lg:text-10xl'
       >
         Build Together
       </h1>
@@ -50,7 +53,7 @@ export const DevelopersPage = (props) => {
             <line x1='16' y1='13' x2='8' y2='13'></line>
             <line x1='16' y1='17' x2='8' y2='17'></line>
             <polyline points='10 9 9 9 8 9'></polyline>
-          </svg> Read the Docs
+          </svg> Developer Documentation
         </a>
 {/*         
         <div className='mb-4'>
@@ -73,6 +76,44 @@ export const DevelopersPage = (props) => {
             </svg> Ask on Discord
           </ButtonLink>
         </div> */}
+      </div>
+
+      <img src={PrizeIllustration} style={{ maxWidth: 400 }} className='mx-auto my-9' />
+    </div>
+
+    <div
+      className='bg-developers-art-waves pt-24 lg:pt-64 px-4 sm:px-0'
+    >
+
+    </div>
+
+    <div
+      className='pool-container mx-auto flex flex-col text-base h-full z-10 relative pt-20 pb-12 lg:pb-0'
+    >
+      <div className='flex flex-col-reverse sm:flex-row sm:items-center sm:justify-center text-center sm:text-left'>
+        <div className='max-w-lg mx-auto mt-10 sm:mt-0'>
+          <h2>
+            Participate in
+            <br/><span className='text-flashy'>Decentralized Governance</span>
+          </h2>
+
+          <p className='my-4'>
+            Share your ideas, make proposals, and vote. The protocol is solely controlled by the POOL token holders. 
+          </p>
+
+          <ButtonLink
+            href='https://medium.com/p/23b09f36db48'
+            as='https://medium.com/p/23b09f36db48'
+            className='items-center underline font-bold my-4'
+          >
+            Learn more about governance
+          </ButtonLink>
+        </div>
+
+        <div className='mx-auto'>
+          <img src={PoolBlob} className='w-full xs:w-auto max-w-sm mx-auto' />
+        </div>
+
       </div>
     </div>
   </>

@@ -534,6 +534,27 @@ li.nav-mobile-listitem {
   background-image: linear-gradient(
     180deg,
     #32025E 0%,
-    #230B40 100%
+    #150429 50%
   ) !important
+}
+
+.bg-developers-art-waves {
+  background-image: url('/bg-developers-art-waves@2x.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  min-height: 300px;
+  width: 100%;
+}
+
+@screen xs {
+  .bg-developers-art-waves {
+    min-height: 400px;
+  }
+}
+
+@screen sm {
+  .bg-developers-art-waves {
+    min-height: 800px;
+  }
 }
