@@ -67,12 +67,17 @@ body.wistia_popover_mode #video-player_popover_container {
   pointer-events: auto;
 }
 
+body.wistia_popover_mode #video-player_popover_container {
+  overflow: hidden
+}
+
 .wistia_popover_mode {
   overflow: hidden;
 }
 
 .wistia_popover_overlay {
   outline: 0 !important;
+  width: 100% !important;
 }
 
 .wistia_popover_embed {
