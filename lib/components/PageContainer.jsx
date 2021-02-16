@@ -20,7 +20,7 @@ export const PageContainer = (props) => {
   }
 
   const motionDivClassnames = `sm:pt-20 xl:pt-24 trans ${router.pathname === '/developers' ? 'bg-developers' : ''}`
-  const wrapperClassnames = 'min-height-container mx-auto pb-10 sm:pb-8 lg:pb-20 leading-relaxed'
+  const wrapperClassnames = 'min-height-container mx-auto leading-relaxed'
 
   return <>
     <motion.div

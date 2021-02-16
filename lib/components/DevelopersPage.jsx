@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { ButtonLink } from 'lib/components/ButtonLink'
+import { SocialCTAs } from 'lib/components/SocialCTAs'
 
 import PoolBlob from 'assets/images/pool-blob@2x.png'
 import PrizeIllustration from 'assets/images/prize_transparent.png'
@@ -116,5 +117,28 @@ export const DevelopersPage = (props) => {
 
       </div>
     </div>
+
+    <div className='bg-secondary bg-get-involved'>
+      <div className='pool-container mx-auto py-16'>
+
+        <div className='flex flex-col items-center rounded-lg p-4 py-12 sm:p-10 bg-overlay'>
+          <h3
+            className='my-0 leading-tight mb-4 w-3/4 text-center'
+          >
+            Stuck, or not sure where to start?
+          </h3>
+
+          <div
+            className='font-normal w-3/4 xs:w-2/3 sm:w-1/2 lg:w-1/3 text-center text-xs sm:text-sm'
+          >
+            Join one of our community channels and get support 24/7. 
+          </div>
+
+          <SocialCTAs />
+        </div>
+
+      </div>
+    </div>
+
   </>
 }
