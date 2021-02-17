@@ -72,7 +72,7 @@ export const DevelopersPage = (props) => {
     </div>
 
     <div
-      className='pool-container mx-auto flex flex-col text-base h-full z-10 relative pt-20 pb-12 lg:pb-0'
+      className='pool-container mx-auto flex flex-col text-base h-full z-10 relative pt-20 pb-12'
     >
       <div className='flex flex-col-reverse sm:flex-row sm:items-center sm:justify-center text-center sm:text-left'>
         <div className='max-w-lg mx-auto mt-10 sm:mt-0'>
