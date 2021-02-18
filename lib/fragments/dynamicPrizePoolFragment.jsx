@@ -37,7 +37,5 @@ export const dynamicPrizePoolFragment = gql`
 
     currentPrizeId
     currentState
-
-    prizesCount
   }
 `

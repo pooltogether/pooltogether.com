@@ -6,6 +6,7 @@ import { ethers } from 'ethers'
 import { ButtonLink } from 'lib/components/ButtonLink'
 import { TotalPrizes } from 'lib/components/TotalPrizes'
 import { WistiaPlayer } from 'lib/components/WistiaPlayer'
+import { useTotalPoolPrizeInterestUSD } from 'lib/hooks/useTotalPoolPrizeInterestUSD'
 import { numberWithCommas } from 'lib/utils/numberWithCommas'
 
 import Squiggle from 'assets/images/squiggle.svg'
@@ -16,15 +17,16 @@ const BySavingMoneyText = () => (<strong>just by saving your money</strong>)
 const EveryWeekText = () => 'every week'
 
 const WinAmountText = () => {
-  return (
-    <TotalPrizes>
-      {(totalPrizeAmountUSD => {
-        return <>
-          Win ${numberWithCommas(parseFloat(ethers.utils.formatEther(totalPrizeAmountUSD)), { precision: 0 })}
-        </>
-      })}
-    </TotalPrizes>
-  )
+  const { data, isFetched } = useTotalPoolPrizeInterestUSD()
+  console.log({ data, isFetched })
+
+  const totalLootBoxValueUSD = 0
+  const totalPrizeAmountUSD = data?.totalPrizeInterestUSD?.add(totalLootBoxValueUSD)
+
+  return <>
+    Win 
+    {/* Win ${numberWithCommas(parseFloat(ethers.utils.formatEther(totalPrizeAmountUSD)), { precision: 0 })} */}
+  </>
 }
 
 export const IndexHero = (

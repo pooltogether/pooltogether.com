@@ -48,10 +48,11 @@ export const CONTRACT_ADDRESSES = {
 }
 
 export const QUERY_KEYS = {
-  'ethereumErc20sQuery': 'ethereumErc20sQuery',
-  'ethereumGenericQuery': 'ethereumGenericQuery',
-  'poolsQuery': 'poolsQuery',
-  'uniswapTokensQuery': 'uniswapTokensQuery',
+  ethereumErc20sQuery: 'ethereumErc20sQuery',
+  ethereumGenericQuery: 'ethereumGenericQuery',
+  poolsQuery: 'poolsQuery',
+  totalPrizePoolPrizes: 'totalPrizePoolPrizes',
+  uniswapTokensQuery: 'uniswapTokensQuery',
 }
 
 export const POOLTOGETHER_CURRENT_GRAPH_URIS = {

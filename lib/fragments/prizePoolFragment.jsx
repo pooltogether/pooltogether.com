@@ -32,8 +32,6 @@ export const prizePoolFragment = gql`
     currentPrizeId
     currentState
 
-    prizesCount
-
     # prizePoolAccounts {
     #   ...prizePoolAccountFragment
     # }
