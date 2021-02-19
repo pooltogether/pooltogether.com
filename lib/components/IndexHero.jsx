@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { ReactFitty } from 'react-fitty'
-import { ethers } from 'ethers'
+// import CountUp from 'react-countup'
 
 import { ButtonLink } from 'lib/components/ButtonLink'
-import { TotalPrizes } from 'lib/components/TotalPrizes'
+// import { PoolCountUp } from 'lib/components/PoolCountUp'
 import { WistiaPlayer } from 'lib/components/WistiaPlayer'
 import { useTotalPoolPrizeInterestUSD } from 'lib/hooks/useTotalPoolPrizeInterestUSD'
 import { numberWithCommas } from 'lib/utils/numberWithCommas'
@@ -16,22 +16,24 @@ const BySavingMoneyText = () => (<strong>just by saving your money</strong>)
 
 const EveryWeekText = () => 'every week'
 
-const WinAmountText = () => {
-  const { data: totalPrizeInterestUSD, isFetched } = useTotalPoolPrizeInterestUSD()
-
-  if (!totalPrizeInterestUSD || !isFetched) {
-    return null
-  }
-
-  return <>
-    {/* Win  */}
-    Win ${numberWithCommas(totalPrizeInterestUSD, { precision: 0 })}
-  </>
-}
+// const PoolCountUp = (props) => {
+//   return <CountUp
+//     start={props.value || 0}
+//     end={props.value}
+//     duration={1.4}
+//     separator={','}
+//     decimals={0}
+//   />
+// }
 
 export const IndexHero = (
   props,
 ) => {
+  let { data: totalPrizeInterestUSD, isFetched } = useTotalPoolPrizeInterestUSD()
+  if (!isFetched) {
+    totalPrizeInterestUSD = 34532
+  }
+  
   const [playVideo, setPlayVideo] = useState(false)
 
   const startVideo = (e) => {
@@ -70,7 +72,7 @@ export const IndexHero = (
           className='relative hero-text-left mb-12 sm:mb-0'
         >
           <motion.div
-            animate={'enter'}
+            animate={isFetched && 'enter'}
             initial='initial'
             transition={{ delay: 1 }}
             variants={{
@@ -94,7 +96,9 @@ export const IndexHero = (
             <div className='w-3/4 xs:w-7/12 sm:w-full mx-auto'>
               <ReactFitty
                 className='text-flashy font-bold leading-none text-center'
-              ><WinAmountText /></ReactFitty>
+              >
+                Win ${numberWithCommas(totalPrizeInterestUSD, { precision: 0 })}
+              </ReactFitty>
               
               <ReactFitty
                 className='text-flashy font-bold leading-none text-center'
