@@ -53,9 +53,10 @@ export const QUERY_KEYS = {
   poolsQuery: 'poolsQuery',
   totalPrizePoolPrizes: 'totalPrizePoolPrizes',
   uniswapTokensQuery: 'uniswapTokensQuery',
+  usePrizePools: 'usePrizePools',
 }
 
-export const POOLTOGETHER_CURRENT_GRAPH_URIS = {
+export const POOLTOGETHER_SUBGRAPH_URIS = {
   1: process.env.NEXT_JS_SUBGRAPH_URI_MAINNET,
   3: process.env.NEXT_JS_SUBGRAPH_URI_ROPSTEN,
   4: process.env.NEXT_JS_SUBGRAPH_URI_RINKEBY

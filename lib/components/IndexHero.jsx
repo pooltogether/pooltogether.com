@@ -17,15 +17,15 @@ const BySavingMoneyText = () => (<strong>just by saving your money</strong>)
 const EveryWeekText = () => 'every week'
 
 const WinAmountText = () => {
-  const { data, isFetched } = useTotalPoolPrizeInterestUSD()
-  console.log({ data, isFetched })
+  const { data: totalPrizeInterestUSD, isFetched } = useTotalPoolPrizeInterestUSD()
 
-  const totalLootBoxValueUSD = 0
-  const totalPrizeAmountUSD = data?.totalPrizeInterestUSD?.add(totalLootBoxValueUSD)
+  if (!totalPrizeInterestUSD || !isFetched) {
+    return null
+  }
 
   return <>
-    Win 
-    {/* Win ${numberWithCommas(parseFloat(ethers.utils.formatEther(totalPrizeAmountUSD)), { precision: 0 })} */}
+    {/* Win  */}
+    Win ${numberWithCommas(totalPrizeInterestUSD, { precision: 0 })}
   </>
 }
 
