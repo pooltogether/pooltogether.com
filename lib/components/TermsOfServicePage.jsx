@@ -5,7 +5,7 @@ export const TermsOfServicePage = class _TermsOfServicePage extends PureComponen
   render () {
     return <>
       <div
-        className='pool-container mx-auto flex flex-col text-base h-full z-10 relative'
+        className='pool-container mx-auto flex flex-col text-base h-full z-10 relative mb-20'
       >
 
         <h2

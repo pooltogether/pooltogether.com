@@ -11,7 +11,6 @@ export const Nav = (props) => {
   const router = useRouter()
 
   const developersPage = router.pathname.match('developers')
-  // const communityPage = router.pathname.match('community')
 
   const navLinkClasses = 'capitalize text-center leading-none rounded-full flex justify-start items-center text-lg py-3 px-4 lg:px-8 trans tracking-wider outline-none focus:outline-none active:outline-none text-white'
 
@@ -37,26 +36,6 @@ export const Nav = (props) => {
           {t('developers')}
         </a>
       </Link>
-{/* 
-      <Link
-        href='/community'
-        as='/community'
-        shallow
-      >
-        <a
-          className={classnames(
-            navLinkClasses,
-            'mr-8',
-            {
-              'text-accent-2 hover:text-highlight-2': !communityPage,
-              'text-highlight-2 hover:text-highlight-2': communityPage
-            }
-          )}
-        >
-          {t('community')}
-        </a>
-      </Link>
- */}
 
       <Link
         href='https://app.pooltogether.com'

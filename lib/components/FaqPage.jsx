@@ -14,7 +14,7 @@ export const FaqPage = class _FaqPage extends Component {
   render() {
     return <>
       <div
-        className='pool-container mx-auto flex flex-col text-base h-full z-10 relative'
+        className='pool-container mx-auto flex flex-col text-base h-full z-10 relative mb-20'
       >
         <h4
           className='mb-6'

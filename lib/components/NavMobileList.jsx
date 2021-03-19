@@ -23,11 +23,6 @@ const links = [
     href: '/developers',
     as: '/developers'
   },
-  // {
-  //   label: 'Community',
-  //   href: '/community',
-  //   as: '/community'
-  // },
   {
     label: 'App',
     href: 'https://app.pooltogether.com',

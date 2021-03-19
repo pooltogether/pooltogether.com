@@ -22,7 +22,7 @@ export const BrandAssetsPage = (props) =>  {
 
   return <>
     <div
-      className='pool-container mx-auto flex flex-col text-base h-full z-10 relative'
+      className='pool-container mx-auto flex flex-col text-base h-full z-10 relative mb-20'
     >
       <h4
         className='my-0'
