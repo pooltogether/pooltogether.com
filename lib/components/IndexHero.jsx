@@ -101,13 +101,8 @@ export const IndexHero = (
               </ReactFitty>
               
               <ReactFitty
-                className='text-flashy font-bold leading-none text-center'
+                className='font-bold leading-none text-center'
               >your money</ReactFitty>
-
-              <ReactFitty
-                className='mt-4 mb-2'
-              ></ReactFitty>
-
 
               <div
                 className='text-center mt-4'
