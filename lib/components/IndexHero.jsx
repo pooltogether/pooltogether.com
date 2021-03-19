@@ -95,18 +95,18 @@ export const IndexHero = (
           >
             <div className='w-3/4 xs:w-7/12 sm:w-full mx-auto'>
               <ReactFitty
-                className='text-flashy font-bold leading-none text-center'
+                className='font-bold leading-none text-center'
               >
-                Win ${numberWithCommas(totalPrizeInterestUSD, { precision: 0 })}
+                <span className='text-flashy'>Win</span> by saving
               </ReactFitty>
               
               <ReactFitty
                 className='text-flashy font-bold leading-none text-center'
-              ><EveryWeekText /></ReactFitty>
+              >your money</ReactFitty>
 
               <ReactFitty
                 className='mt-4 mb-2'
-              ><BySavingMoneyText /></ReactFitty>
+              ></ReactFitty>
 
 
               <div
