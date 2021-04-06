@@ -563,3 +563,9 @@ li.nav-mobile-listitem {
     min-height: 800px;
   }
 }
+
+.bg-holographic {
+  background-image: url('/bg-holographic@2x.png');
+  background-size: cover;
+  width: 100%; 
+}

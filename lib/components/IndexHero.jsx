@@ -1,14 +1,11 @@
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
 import { ReactFitty } from 'react-fitty'
-// import CountUp from 'react-countup'
 
 import { ButtonLink } from 'lib/components/ButtonLink'
-// import { PoolCountUp } from 'lib/components/PoolCountUp'
 import { WistiaPlayer } from 'lib/components/WistiaPlayer'
 import { useTotalPoolPrizeInterestUSD } from 'lib/hooks/useTotalPoolPrizeInterestUSD'
-import { numberWithCommas } from 'lib/utils/numberWithCommas'
 
+import Rocket from 'assets/images/rocketship@2x.png'
 import Squiggle from 'assets/images/squiggle.svg'
 import SquiggleMobile from 'assets/images/squiggle-mobile.svg'
 
@@ -30,7 +27,7 @@ export const IndexHero = (
   props,
 ) => {
   let { data: totalPrizeInterestUSD, isFetched } = useTotalPoolPrizeInterestUSD()
-  if (!isFetched) {
+  if (!isFetched || typeof totalPrizeInterestUSD === 'object') {
     totalPrizeInterestUSD = 34532
   }
   
@@ -49,19 +46,20 @@ export const IndexHero = (
     <div
       className='pool-container text-center font-bold text-xs xs:text-lg border-flashy purple-pink-gradient-animation mx-auto pt-4 pb-5 px-6 xs:mt-4 xs:leading-tight'
     >
-      <span
+      {/* <span
         role='img'
         aria-label='megaphone emoji'
         className='mx-2 text-xl block xs:inline-block'
-      >📣</span> POOL Token and decentralized governance is live!
-                  <br /><a
+      >📣</span> */}
+       POOL Token and decentralized governance is live! <a
         href='#token'
-        className='text-inverse hover:text-green border-b trans'
-      >Find out more</a> <span
+        className='text-green trans'
+      >Find out more</a> 
+      {/* <span
         role='img'
         aria-label='megaphone emoji'
         className='mx-2 text-xl hidden xs:inline-block'
-      >📣</span>
+      >📣</span> */}
     </div>
     
     <div className='relative'>
@@ -71,28 +69,6 @@ export const IndexHero = (
         <div
           className='relative hero-text-left mb-12 sm:mb-0'
         >
-          <motion.div
-            animate={isFetched && 'enter'}
-            initial='initial'
-            transition={{ delay: 1 }}
-            variants={{
-              enter: {
-                scale: 1,
-                height: 'auto',
-                transition: {
-                  duration: 0.25
-                }
-              },
-              initial: {
-                scale: 0,
-                height: 0,
-              },
-              exit: {
-                scale: 1,
-                height: 'auto',
-              }
-            }}
-          >
             <div className='w-3/4 xs:w-7/12 sm:w-full mx-auto'>
               <ReactFitty
                 className='font-bold leading-none text-center'
@@ -105,7 +81,7 @@ export const IndexHero = (
               >your money</ReactFitty>
 
               <div
-                className='text-center mt-4'
+                className='text-center mt-6 sm:mt-12'
               >
                 <ButtonLink
                   width='w-full'
@@ -117,7 +93,6 @@ export const IndexHero = (
                 </ButtonLink>
               </div>
             </div>
-          </motion.div>
         </div>
 
 
@@ -126,7 +101,6 @@ export const IndexHero = (
             onClick={startVideo}
             className='bg-vid-holo flex items-start justify-center trans'
             role='img'
-            aria-label='Holographic gradient'
           >
             <div className='bg-vid-holo--inner flex items-center justify-center'>
               <WistiaPlayer
@@ -145,9 +119,21 @@ export const IndexHero = (
         </div>
       </div>
 
+      <div className='pool-container bg-holographic flex flex-col items-center font-bold text-primary rounded-lg text-center mt-12 px-4 py-4 mx-auto'>
+        <div className='flex items-center'>
+          <img
+            src={Rocket}
+            className='w-12 h-12 xs:w-16 xs:h-16 sm:mr-4'
+          />
+
+          <span
+            className='sm:leading-tight text-xs xs:text-lg sm:text-xl  sm:mr-auto'
+          >Currently $X.XX million deposited and $YY,000 prizes weekly! {totalPrizeInterestUSD.toString()}</span>
+        </div>
+      </div>
     
       <div
-        className='pool-container text-center relative flex flex-col sm:flex-row my-20 sm:my-32 mx-auto'
+        className='pool-container text-center relative flex flex-col sm:flex-row my-20 mx-auto'
       >
         <div
           className='bg-card rounded-xl mx-auto w-full sm:w-full py-8 sm:py-8 lg:px-12 lg:py-12 text-center sm:text-left'
