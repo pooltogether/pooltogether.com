@@ -6,12 +6,8 @@ import { motion, useAnimation } from 'framer-motion'
 import { ButtonLink } from 'lib/components/ButtonLink'
 import { GridItem } from 'lib/components/GridItem'
 
-// import CircleSvg from 'assets/images/circle.svg'
-// import MakerSvg from 'assets/images/maker.svg'
-import ArgentSvg from 'assets/images/argent.svg'
 import BotSvg from 'assets/images/logo-ttbot@2x.png'
-// import EBOSvg from 'assets/images/ebo.svg'
-// import PillarSvg from 'assets/images/pillar.svg'
+import DharmaSvg from 'assets/images/dharma-logo.png'
 import ZerionSvg from 'assets/images/zerion.svg'
 import ZapperFiSvg from 'assets/images/zapperfi.svg'
 
@@ -69,33 +65,33 @@ export const IndexIntegrations = () => {
                 url='https://www.argent.xyz/'
               /> */}
 
-                {/* <GridItem
-                title={'Pillar'}
-                description={`Pillar Wallet makes it simple to use PoolTogether.`}
-                img={PillarSvg}
-                url='https://pillarproject.io'
-              /> */}
+                <GridItem
+                  title={'Dharma'}
+                  description={`Dharma Wallet enables deposits from your US bank into PoolTogether.`}
+                  img={DharmaSvg}
+                  url='https://www.dharma.io/'
+                />
 
                 <GridItem
                   title={'ZapperFi'}
-                  description={`A great dashboard to track your tickets & odds of winning.`}
+                  description={`A great dashboard to deposit and track your assets and POOL you're earning.`}
                   img={ZapperFiSvg}
                   url='https://www.zapper.fi/#/dashboard'
                 />
 
                 <GridItem
                   title={'Zerion'}
-                  description={`A simple interface to access DeFi to invest in PoolTogether.`}
+                  description={`Another great way to access DeFi and view your PoolTogether deposits and earnings.`}
                   img={ZerionSvg}
                   url='https://zerion.io/'
                 />
 
                 <GridItem
                   title={'PT Twitter Bot'}
-                  description={`A bot that updates on every join or win of the Dai pool.`}
+                  description={`A bot that updates each time someone joins or wins a pool.`}
                   img={BotSvg}
                   url='https://twitter.com/PoolTogetherBot'
-                  attribution={`bot by Sophia Bai from the Noun Project`}
+                  attribution={`bot icon by Sophia Bai from the Noun Project`}
                   imgStyle={{ width: 39, height: 34 }}
                 />
                 {/* 
