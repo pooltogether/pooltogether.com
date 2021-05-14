@@ -56,21 +56,3 @@ export const QUERY_KEYS = {
   usePrizePools: 'usePrizePools',
   usePools: 'usePools'
 }
-
-export const POOLTOGETHER_SUBGRAPH_URIS = {
-  1: process.env.NEXT_JS_SUBGRAPH_URI_MAINNET,
-  3: process.env.NEXT_JS_SUBGRAPH_URI_ROPSTEN,
-  4: process.env.NEXT_JS_SUBGRAPH_URI_RINKEBY
-}
-
-export const UNISWAP_GRAPH_URIS = {
-  1: process.env.NEXT_JS_UNISWAP_SUBGRAPH_URI_MAINNET, // https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v2
-  3: process.env.NEXT_JS_UNISWAP_SUBGRAPH_URI_ROPSTEN,
-  4: process.env.NEXT_JS_UNISWAP_SUBGRAPH_URI_RINKEBY // https://api.thegraph.com/subgraphs/name/blockrockettech/uniswap-v2-subgraph-rinkeby
-}
-
-export const LOOTBOX_GRAPH_URIS = {
-  1: process.env.NEXT_JS_SUBGRAPH_LOOTBOX_URI_MAINNET,
-  3: process.env.NEXT_JS_SUBGRAPH_LOOTBOX_URI_ROPSTEN,
-  4: process.env.NEXT_JS_SUBGRAPH_LOOTBOX_URI_RINKEBY
-}
