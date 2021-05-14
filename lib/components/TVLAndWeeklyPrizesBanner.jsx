@@ -1,17 +1,16 @@
 import React from 'react'
-
-import { useTotalPoolPrizeInterestUSD } from 'lib/hooks/useTotalPoolPrizeInterestUSD'
-import { useTotalPoolPrizeValueLockedUSD } from 'lib/hooks/useTotalPoolPrizeValueLockedUSD'
+import { useTranslation } from 'lib/../i18n'
 import { numberWithCommas } from 'lib/utils/numberWithCommas'
+import { usePooltogetherTvl, usePooltogetherTotalPrizes } from 'lib/hooks/usePooltogetherTvl'
+import { BannerUILoader } from 'lib/components/BannerUILoader'
 
 import Rocket from 'assets/images/rocketship@2x.png'
 
 export const TVLAndWeeklyPrizesBanner = (props) => {
-  const [totalValueLocked, totalPrizePoolValueLockedIsFetched] = useTotalPoolPrizeValueLockedUSD()
-  const {
-    data: totalPrizeInterestUSD,
-    isFetched: totalPrizeIsFetched
-  } = useTotalPoolPrizeInterestUSD()
+  const { t } = useTranslation()
+
+  const totalValueLocked = usePooltogetherTvl()
+  const totalPrizes = usePooltogetherTotalPrizes()
 
   const formatNumbers = (num) => {
     if (num > 1000000) {
@@ -24,23 +23,16 @@ export const TVLAndWeeklyPrizesBanner = (props) => {
   }
 
   // Check if data has loaded
-  if (!totalPrizeIsFetched || !totalPrizePoolValueLockedIsFetched) {
-    return null
-    // return <BannerUILoader />
+  if (totalValueLocked === null || totalPrizes === null) {
+    return (
+      <div className='pool-container mx-auto mt-12'>
+        <BannerUILoader />
+      </div>
+    )
   }
 
-  const totalPrizeFormatted = formatNumbers(totalPrizeInterestUSD)
+  const totalPrizeFormatted = formatNumbers(totalPrizes)
   const totalValueLockedFormatted = formatNumbers(totalValueLocked)
-
-  // const PoolCountUp = (props) => {
-  //   return <CountUp
-  //     start={props.value || 0}
-  //     end={props.value}
-  //     duration={1.4}
-  //     separator={','}
-  //     decimals={0}
-  //   />
-  // }
 
   return (
     <div className='pool-container bg-holographic flex flex-col items-center font-bold text-primary rounded-lg text-center mt-12 px-4 py-4 mx-auto'>
@@ -48,7 +40,7 @@ export const TVLAndWeeklyPrizesBanner = (props) => {
         <img src={Rocket} className='w-12 h-12 xs:w-16 xs:h-16 sm:mr-4' />
 
         <span className='sm:leading-tight text-xs xs:text-sm sm:text-lg lg:text-xl sm:mr-auto'>
-          Currently {totalValueLockedFormatted} deposited and {totalPrizeFormatted} prizes weekly!{' '}
+          Currently {totalValueLockedFormatted} deposited and {totalPrizeFormatted} prizes weekly!
         </span>
       </div>
     </div>

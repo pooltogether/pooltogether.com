@@ -53,7 +53,8 @@ export const QUERY_KEYS = {
   poolsQuery: 'poolsQuery',
   totalPrizePoolPrizes: 'totalPrizePoolPrizes',
   uniswapTokensQuery: 'uniswapTokensQuery',
-  usePrizePools: 'usePrizePools'
+  usePrizePools: 'usePrizePools',
+  usePools: 'usePools'
 }
 
 export const POOLTOGETHER_SUBGRAPH_URIS = {
