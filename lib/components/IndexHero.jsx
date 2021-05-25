@@ -4,6 +4,7 @@ import { ReactFitty } from 'react-fitty'
 import { ButtonLink } from 'lib/components/ButtonLink'
 import { TVLAndWeeklyPrizesBanner } from 'lib/components/TVLAndWeeklyPrizesBanner'
 import { WistiaPlayer } from 'lib/components/WistiaPlayer'
+import { IndexHeroFeaturedIn } from 'lib/components/IndexHeroFeaturedIn'
 
 import Squiggle from 'assets/images/squiggle.svg'
 import SquiggleMobile from 'assets/images/squiggle-mobile.svg'
@@ -22,32 +23,17 @@ export const IndexHero = (props) => {
 
   return (
     <>
-      <div className='pool-container text-center font-bold text-xs xs:text-lg border-flashy purple-pink-gradient-animation mx-auto pt-4 pb-5 px-6 xs:mt-4 xs:leading-tight'>
-        {/* <span
-        role='img'
-        aria-label='megaphone emoji'
-        className='mx-2 text-xl block xs:inline-block'
-      >📣</span> */}
-        POOL Token and decentralized governance is live!{' '}
-        <a href='#token' className='text-green trans'>
-          Find out more
-        </a>
-        {/* <span
-        role='img'
-        aria-label='megaphone emoji'
-        className='mx-2 text-xl hidden xs:inline-block'
-      >📣</span> */}
-      </div>
-
       <div className='relative'>
         <div className='pool-container flex flex-col sm:flex-row justify-between pt-12 mx-auto'>
           <div className='relative hero-text-left mb-12 sm:mb-0'>
             <div className='w-3/4 xs:w-7/12 sm:w-full mx-auto'>
               <ReactFitty className='font-bold leading-none text-center'>
-                <span className='text-flashy'>Win</span> by saving
+                <span className='text-flashy'>Win</span> simply by
               </ReactFitty>
 
-              <ReactFitty className='font-bold leading-none text-center'>your money</ReactFitty>
+              <ReactFitty className='mt-2 font-bold leading-none text-center'>
+                <span className='text-flashy'>saving your money</span>
+              </ReactFitty>
 
               <div className='text-center mt-6 sm:mt-12'>
                 <ButtonLink
@@ -80,6 +66,8 @@ export const IndexHero = (props) => {
         </div>
 
         <TVLAndWeeklyPrizesBanner />
+
+        <IndexHeroFeaturedIn />
 
         <div className='pool-container text-center relative flex flex-col sm:flex-row my-20 mx-auto'>
           <div className='bg-card rounded-xl mx-auto w-full sm:w-full py-8 sm:py-8 lg:px-12 lg:py-12 text-center sm:text-left'>

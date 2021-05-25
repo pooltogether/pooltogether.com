@@ -10,19 +10,19 @@ import { IndexIntegrations } from 'lib/components/IndexIntegrations'
 import { IndexSupportedBy } from 'lib/components/IndexSupportedBy'
 import { IndexSecurity } from 'lib/components/IndexSecurity'
 
-export const IndexUI = (
-  props,
-) => {
+export const IndexUI = (props) => {
   const { t } = useTranslation()
 
-  return <>
-    <IndexHero />
-    <IndexPoolToken />
-    <IndexIntegrations />
-    <IndexHowItWorks />
-    <IndexSecurity />
-    <IndexSupportedBy />
-    <IndexGetInvolved />
-    {/* <IndexFeaturedIn /> */}
-  </>
+  return (
+    <>
+      <IndexHero />
+      <IndexPoolToken />
+      <IndexIntegrations />
+      <IndexHowItWorks />
+      <IndexSecurity />
+      <IndexSupportedBy />
+      <IndexGetInvolved />
+      {/* <IndexFeaturedIn /> */}
+    </>
+  )
 }

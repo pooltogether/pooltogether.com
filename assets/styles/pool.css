@@ -18,13 +18,7 @@
 }
 
 * {
-  --flashyGradient: linear-gradient(
-    40deg,
-    #FF62CC 10%,
-    #F7FE0C 40%,
-    #2AF787 60%,
-    #00F0D0 80%
-  );
+  --flashyGradient: linear-gradient(40deg, #ff62cc 10%, #f7fe0c 40%, #2af787 60%, #00f0d0 80%);
 }
 
 html {
@@ -35,7 +29,9 @@ body {
   height: 100%;
 }
 
-html, body, table {
+html,
+body,
+table {
   scroll-behavior: smooth;
 }
 
@@ -68,7 +64,7 @@ body.wistia_popover_mode #video-player_popover_container {
 }
 
 body.wistia_popover_mode #video-player_popover_container {
-  overflow: hidden
+  overflow: hidden;
 }
 
 .wistia_popover_mode {
@@ -109,7 +105,7 @@ select:-internal-autofill-selected {
 }
 
 ::selection {
-  background-color: #79FFE1;
+  background-color: #79ffe1;
   color: var(--color-text-inverse);
 }
 
@@ -139,7 +135,7 @@ label {
 }
 
 form:after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -159,7 +155,7 @@ button[disabled] {
 input:not([type='submit'])[disabled],
 textarea[disabled] {
   @apply border-transparent opacity-50 cursor-not-allowed !important;
-} 
+}
 
 input[type='submit'][disabled] {
   @apply border-transparent cursor-not-allowed;
@@ -167,7 +163,7 @@ input[type='submit'][disabled] {
 
 input:not([type='submit'])[readOnly] {
   @apply cursor-not-allowed !important;
-} 
+}
 
 input[type='submit'][disabled] {
   @apply border-transparent cursor-not-allowed;
@@ -181,22 +177,21 @@ input[type='submit'][disabled] {
 }
 
 @keyframes gradientBG {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .text-flashy {
   background: var(--flashyGradient);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
 
   background-size: 200% auto;
   animation: cycleBackgroundPos 6000ms infinite steps(100);
@@ -204,18 +199,18 @@ input[type='submit'][disabled] {
 
 @keyframes cycleBackgroundPos {
   0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .footer--container {
-  background-color: #0C021B;
+  background-color: #0c021b;
 }
 
 .footer {
@@ -258,7 +253,7 @@ input[type='submit'][disabled] {
 .pool-logo:hover {
   background-color: transparent;
 }
- 
+
 .banner-text {
   font-size: 2rem;
   line-height: 1;
@@ -298,11 +293,6 @@ input[type='submit'][disabled] {
 .button-scale:active {
   transform: scale(1.02) translateY(-3px);
 }
-
-
-
-
-
 
 .mobile-nav-background {
   position: absolute;
@@ -447,17 +437,21 @@ li.nav-mobile-listitem {
 }
 
 .bg-overlay {
-  background-image: linear-gradient(
-    40deg,
-    #4C249F 30%,
-    #9C48BA 100%
-  ) !important;
+  background-image: linear-gradient(40deg, #4c249f 30%, #9c48ba 100%) !important;
 }
 
 .interactable-chip {
-  @apply bg-secondary hover:bg-highlight-3 rounded-lg flex items-center justify-center;
+  @apply rounded-lg flex items-center justify-center;
   min-height: 50px;
   min-width: 80px;
+}
+
+.interactable-chip-main-bg {
+  @apply bg-secondary hover:bg-highlight-3;
+}
+
+.interactable-chip-alt-bg {
+  @apply bg-default hover:bg-highlight-3;
 }
 
 @screen xs {
@@ -482,7 +476,7 @@ li.nav-mobile-listitem {
 }
 
 .collapsible-target:hover * {
-  color: var(--color-text-white)
+  color: var(--color-text-white);
 }
 
 .collapsible-content {
@@ -528,19 +522,11 @@ li.nav-mobile-listitem {
 .purple-pink-gradient-animation:after {
   --borderFlashyWidth: 2px !important;
   animation-duration: 4000ms !important;
-  background-image: linear-gradient(
-    40deg,
-    #4C249F 30%,
-    #9C48BA 81%
-  ) !important
+  background-image: linear-gradient(40deg, #4c249f 30%, #9c48ba 81%) !important;
 }
 
 .bg-developers {
-  background-image: linear-gradient(
-    180deg,
-    #32025E 0%,
-    #150429 50%
-  ) !important
+  background-image: linear-gradient(180deg, #32025e 0%, #150429 50%) !important;
 }
 
 .bg-developers-art-waves {
@@ -567,5 +553,5 @@ li.nav-mobile-listitem {
 .bg-holographic {
   background-image: url('/bg-holographic@2x.png');
   background-size: cover;
-  width: 100%; 
+  width: 100%;
 }

@@ -40,7 +40,7 @@ export const TVLAndWeeklyPrizesBanner = (props) => {
         <img src={Rocket} className='w-12 h-12 xs:w-16 xs:h-16 sm:mr-4' />
 
         <span className='sm:leading-tight text-xs xs:text-sm sm:text-lg lg:text-xl sm:mr-auto'>
-          Currently {totalValueLockedFormatted} deposited and {totalPrizeFormatted} prizes weekly!
+          Currently awarding {totalPrizeFormatted} in prizes weekly!
         </span>
       </div>
     </div>
