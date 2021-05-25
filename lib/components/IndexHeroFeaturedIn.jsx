@@ -32,7 +32,7 @@ export const IndexHeroFeaturedIn = () => {
   return (
     <div id='featured-in' className='text-center pt-10'>
       <div className='pool-container mx-auto'>
-        <h5 className='my-0 leading-tight'>Featured in:</h5>
+        <h5 className='my-0 sm:mt-4 leading-tight'>Featured in:</h5>
 
         <motion.div
           className={classnames(

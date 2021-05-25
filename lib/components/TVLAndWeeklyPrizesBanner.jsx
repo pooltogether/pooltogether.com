@@ -35,7 +35,7 @@ export const TVLAndWeeklyPrizesBanner = (props) => {
   const totalValueLockedFormatted = formatNumbers(totalValueLocked)
 
   return (
-    <div className='pool-container bg-holographic flex flex-col items-center font-bold text-primary rounded-lg text-center mt-12 px-4 py-4 mx-auto'>
+    <div className='pool-container bg-card flex flex-col items-center font-bold text-accent-3 rounded-lg text-center mt-6 px-4 py-4 mx-auto'>
       <div className='flex flex-col xs:flex-row items-center'>
         <img src={Rocket} className='w-12 h-12 xs:w-16 xs:h-16 sm:mr-4' />
 
