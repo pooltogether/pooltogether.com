@@ -51,7 +51,7 @@ export const IndexIntegrations = () => {
               <motion.div
                 className={classnames(
                   'flex flex-col sm:flex-row sm:flex-wrap',
-                  'mt-8 mb-4 -mx-4 rounded-xl text-base lg:text-lg'
+                  'mt-8 mb-4 rounded-xl text-base lg:text-lg -mx-4 sm:-mx-4 lg:-mx-8'
                 )}
                 ref={ref}
                 animate={controls}
@@ -66,33 +66,36 @@ export const IndexIntegrations = () => {
               /> */}
 
                 <GridItem
+                  altBg
                   title={'Dharma'}
-                  description={`Dharma Wallet enables deposits from your US bank into PoolTogether.`}
+                  description={`Deposit into PoolTogether from your US bank.`}
                   img={DharmaSvg}
                   url='https://www.dharma.io/'
                 />
 
                 <GridItem
+                  altBg
                   title={'ZapperFi'}
-                  description={`A great dashboard to deposit and track your assets and POOL you're earning.`}
+                  description={`Join PoolTogether using this portal to DeFi.`}
                   img={ZapperFiSvg}
                   url='https://www.zapper.fi/#/dashboard'
                 />
 
                 <GridItem
+                  altBg
                   title={'Zerion'}
-                  description={`Another great way to access DeFi and view your PoolTogether deposits and earnings.`}
+                  description={`Access DeFi & view your PoolTogether deposits.`}
                   img={ZerionSvg}
                   url='https://zerion.io/'
                 />
 
                 <GridItem
-                  title={'PT Twitter Bot'}
-                  description={`A bot that updates each time someone joins or wins a pool.`}
+                  altBg
+                  title={'Twitter Bot'}
+                  description={`Updates each time someone joins or wins!`}
                   img={BotSvg}
                   url='https://twitter.com/PoolTogetherBot'
                   attribution={`bot icon by Sophia Bai from the Noun Project`}
-                  imgStyle={{ width: 39, height: 34 }}
                 />
                 {/* 
               <GridItem

@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { useTranslation } from 'lib/../i18n'
-// import { IndexFeaturedIn } from 'lib/components/IndexFeaturedIn'
 import { IndexGetInvolved } from 'lib/components/IndexGetInvolved'
 import { IndexHero } from 'lib/components/IndexHero'
 import { IndexPoolToken } from 'lib/components/IndexPoolToken'
@@ -11,8 +9,6 @@ import { IndexSupportedBy } from 'lib/components/IndexSupportedBy'
 import { IndexSecurity } from 'lib/components/IndexSecurity'
 
 export const IndexUI = (props) => {
-  const { t } = useTranslation()
-
   return (
     <>
       <IndexHero />
@@ -22,7 +18,6 @@ export const IndexUI = (props) => {
       <IndexSecurity />
       <IndexSupportedBy />
       <IndexGetInvolved />
-      {/* <IndexFeaturedIn /> */}
     </>
   )
 }

@@ -441,7 +441,7 @@ li.nav-mobile-listitem {
 }
 
 .interactable-chip {
-  @apply rounded-lg flex items-center justify-center;
+  @apply rounded-lg flex;
   min-height: 50px;
   min-width: 80px;
 }

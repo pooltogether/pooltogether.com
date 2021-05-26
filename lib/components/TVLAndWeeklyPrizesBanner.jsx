@@ -1,5 +1,6 @@
 import React from 'react'
-import { useTranslation } from 'lib/../i18n'
+
+// import { useTranslation } from 'lib/../i18n'
 import { numberWithCommas } from 'lib/utils/numberWithCommas'
 import { usePooltogetherTvl, usePooltogetherTotalPrizes } from 'lib/hooks/usePooltogetherTvl'
 import { BannerUILoader } from 'lib/components/BannerUILoader'
@@ -7,7 +8,7 @@ import { BannerUILoader } from 'lib/components/BannerUILoader'
 import Rocket from 'assets/images/rocketship@2x.png'
 
 export const TVLAndWeeklyPrizesBanner = (props) => {
-  const { t } = useTranslation()
+  // const { t } = useTranslation()
 
   const totalValueLocked = usePooltogetherTvl()
   const totalPrizes = usePooltogetherTotalPrizes()
@@ -32,7 +33,7 @@ export const TVLAndWeeklyPrizesBanner = (props) => {
   }
 
   const totalPrizeFormatted = formatNumbers(totalPrizes)
-  const totalValueLockedFormatted = formatNumbers(totalValueLocked)
+  // const totalValueLockedFormatted = formatNumbers(totalValueLocked)
 
   return (
     <div className='pool-container bg-card flex flex-col items-center font-bold text-accent-3 rounded-lg text-center mt-6 px-4 py-4 mx-auto'>

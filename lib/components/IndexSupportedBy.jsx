@@ -29,79 +29,61 @@ export const IndexSupportedBy = () => {
         staggerChildren: 0.12
       }
     },
-    hidden: {
-    },
+    hidden: {}
   }
 
-  return <div
-    id='backed-by'
-    className='bg-darkened text-center py-24'
-  >
-    <div
-      className='pool-container mx-auto'
-    >
-      <h3
-        className='my-0 sm:mb-12 leading-tight'
-      >
-        Protocol supported by
-      </h3>
+  return (
+    <div id='backed-by' className='bg-darkened text-center py-24'>
+      <div className='pool-container mx-auto'>
+        <h3 className='my-0 sm:mb-12 leading-tight'>Protocol supported by</h3>
 
-      <motion.div
-        className={classnames(
-          'flex flex-col xs:flex-row xs:flex-wrap justify-start items-start',
-          'mt-2 mb-4 px-4 xs:px-8 rounded-xl -mx-4 lg:-mx-8',
-        )}
-        ref={ref}
-        animate={controls}
-        initial='hidden'
-        variants={containerVariants}
-      >
-        <GridItemSupportedBy
-          title={'ConsenSys'}
-          img={ConsensysSvg}
-          url='https://www.consensys.com'
-        />
+        <motion.div
+          className={classnames(
+            'flex flex-col xs:flex-row xs:flex-wrap justify-start items-start',
+            'mt-2 mb-4 px-4 xs:px-8 rounded-xl -mx-4 sm:-mx-12 lg:-mx-16'
+          )}
+          ref={ref}
+          animate={controls}
+          initial='hidden'
+          variants={containerVariants}
+        >
+          <GridItemSupportedBy
+            title={'ConsenSys'}
+            img={ConsensysSvg}
+            url='https://www.consensys.com'
+          />
 
-        <GridItemSupportedBy
-          title={'IDEO'}
-          img={IdeoSvg}
-          url='https://www.ideo.com'
-          maxHeight={30}
-        />
+          <GridItemSupportedBy
+            title={'IDEO'}
+            img={IdeoSvg}
+            url='https://www.ideo.com'
+            maxHeight={30}
+          />
 
-        <GridItemSupportedBy
-          title={'DTC Capital'}
-          img={DTCCapitalSvg}
-          url='https://www.dtc.capital'
-        />
+          <GridItemSupportedBy
+            title={'DTC Capital'}
+            img={DTCCapitalSvg}
+            url='https://www.dtc.capital'
+          />
 
-        <GridItemSupportedBy
-          title={'ParaFi'}
-          img={ParaFiSvg}
-          url='https://www.parafi.capital/'
-        />
+          <GridItemSupportedBy title={'ParaFi'} img={ParaFiSvg} url='https://www.parafi.capital/' />
 
-        <GridItemSupportedBy
-          title={'MetaCartel Ventures'}
-          img={MetaCartelSvg}
-          url='https://metacartel.org'
-        />
+          <GridItemSupportedBy
+            title={'MetaCartel Ventures'}
+            img={MetaCartelSvg}
+            url='https://metacartel.org'
+          />
 
-        <GridItemSupportedBy
-          title={'The LAO'}
-          img={TheLaoSvg}
-          url='https://thelao.io'
-        />
-        
-        <GridItemSupportedBy
-          title={'Robot Ventures'}
-          img={RobotVenturesSvg}
-          url='https://twitter.com/robotventures'
-        />
-      </motion.div>
+          <GridItemSupportedBy title={'The LAO'} img={TheLaoSvg} url='https://thelao.io' />
 
+          <GridItemSupportedBy
+            title={'Robot Ventures'}
+            img={RobotVenturesSvg}
+            url='https://twitter.com/robotventures'
+          />
+        </motion.div>
 
-      {/* <div className='flex justify-center items-center sm:-mx-2'>
+        {/* <div className='flex justify-center items-center sm:-mx-2'>
         <a
           href='https://makerdao.com'
           title='View the Maker site'
@@ -114,7 +96,7 @@ export const IndexSupportedBy = () => {
           />
         </a>
       </div> */}
-
+      </div>
     </div>
-  </div>
+  )
 }

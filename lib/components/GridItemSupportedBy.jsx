@@ -13,7 +13,7 @@ const itemVariants = {
 }
 
 export const GridItemSupportedBy = (props) => {
-  const { attribution, img, title, url, small } = props
+  const { attribution, img, title, url, small, noPadding, altBg } = props
 
   let maxHeight = props.maxHeight || 44
 
@@ -32,8 +32,8 @@ export const GridItemSupportedBy = (props) => {
       >
         <div
           className={`${
-            props.altBg ? 'interactable-chip-alt-bg' : 'interactable-chip-main-bg'
-          } interactable-chip hover:shadow-xl flex flex-col justify-center trans p-2 xs:px-10 h-20`}
+            altBg ? 'interactable-chip-alt-bg' : 'interactable-chip-main-bg'
+          } interactable-chip items-center justify-center hover:shadow-xl flex flex-col justify-center trans p-2 xs:px-10 h-20`}
         >
           <img
             src={img}

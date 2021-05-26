@@ -15,22 +15,24 @@ export const getButtonClasses = (props) => {
     padding,
     rounded,
     secondary,
+    tertiary,
     selected,
     text,
     transition,
     className,
     textSize,
-    width,
+    width
   } = props
 
-  let defaultClasses = 'font-bold relative inline-block text-center leading-snug cursor-pointer outline-none focus:outline-none active:outline-none no-underline'
+  let defaultClasses =
+    'font-bold relative inline-block text-center leading-snug cursor-pointer outline-none focus:outline-none active:outline-none no-underline'
   let animClass = noAnim ? '' : 'button-scale'
-  
+
   if (selected) {
     defaultClasses += ` opacity-50`
     animClass = ``
   }
-  
+
   // eg. textSize='sm', textSize='xl'
   textSize = getTextSize(textSize)
 
@@ -62,6 +64,16 @@ export const getButtonClasses = (props) => {
       defaultHoverBorder = 'hover:border-blue-2'
       defaultHoverText = 'hover:text-blue-2'
     }
+  }
+
+  if (tertiary) {
+    defaultBorder = 'border-transparent border-2'
+    defaultBg = 'bg-transparent'
+    defaultText = 'text-highlight-2'
+
+    defaultHoverBorder = 'hover:border-transparent'
+    defaultHoverBg = 'hover:bg-body'
+    defaultHoverText = 'hover:text-highlight-1'
   }
 
   padding = padding ? `${padding}` : defaultPadding
@@ -115,26 +127,19 @@ const getTextSize = (size) => {
 }
 
 export const ButtonLink = (props) => {
-  let {
-    children,
-    as,
-    href,
-  } = props
+  let { children, as, href } = props
 
   const classes = getButtonClasses(props)
-  
-  return <Link
-    href={href}
-    as={as}
-    scroll={false}
-  >
-    <a
-      // {...linkProps}
-      className={classes}
-      onClick={(e) => e.stopPropagation()}
-    >
-      {children}
-    </a>
-  </Link>
 
+  return (
+    <Link href={href} as={as} scroll={false}>
+      <a
+        // {...linkProps}
+        className={classes}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {children}
+      </a>
+    </Link>
+  )
 }

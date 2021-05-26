@@ -37,7 +37,7 @@ export const IndexHeroFeaturedIn = () => {
         <motion.div
           className={classnames(
             'flex flex-col xs:flex-row xs:flex-wrap justify-start items-start',
-            'mt-2 mb-4 px-4 xs:px-8 rounded-xl -mx-4 lg:-mx-8'
+            'mt-2 mb-4 px-4 xs:px-8 rounded-xl -mx-4 sm:-mx-12 lg:-mx-16'
           )}
           ref={ref}
           animate={controls}
