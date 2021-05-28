@@ -6,9 +6,9 @@
 
 <br />
 
-## PoolTogether Marketing Site - v3
+## PoolTogether Landing Site - v3
 
-Codes for the new PoolTogether marketing site.
+Code for the latest PoolTogether landing site.
 
 #### Setup
 
