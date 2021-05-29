@@ -12,9 +12,9 @@ export const IndexUI = (props) => {
   return (
     <>
       <IndexHero />
-      <IndexPoolToken />
       <IndexIntegrations />
       <IndexHowItWorks />
+      <IndexPoolToken />
       <IndexSecurity />
       <IndexSupportedBy />
       <IndexGetInvolved />

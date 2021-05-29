@@ -33,7 +33,7 @@ export const IndexIntegrations = () => {
   return (
     <>
       <div className='bg-secondary'>
-        <div className='pool-container mx-auto py-8 sm:py-24'>
+        <div className='pool-container mx-auto pt-12 pb-6 sm:pt-20 sm:pb-16'>
           <div className='lg:px-20'>
             <div className='flex items-center justify-between'>
               <h1 className='leading-10 sm:leading-tight'>
@@ -108,7 +108,7 @@ export const IndexIntegrations = () => {
             </div>
           </div>
 
-          <div className='bg-card rounded-xl mx-auto text-center p-4 xs:p-12 sm:pt-12 sm:pb-12'>
+          <div className='bg-card rounded-xl mx-auto text-center p-4 xs:p-12 sm:pt-12 sm:pb-12 sm:mt-10'>
             <div className='flex flex-col items-center'>
               <h2 className='mt-4 mb-8 text-center'>Check out our developer documentation</h2>
               <p className='text-sm xs:text-lg sm:text-xl max-w-lg text-center'>

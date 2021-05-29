@@ -69,7 +69,7 @@ export const IndexHero = (props) => {
 
         <IndexHeroFeaturedIn />
 
-        <div className='pool-container text-center relative flex flex-col sm:flex-row my-20 mx-auto'>
+        <div className='pool-container text-center relative flex flex-col sm:flex-row mt-10 mb-16 sm:my-20 mx-auto'>
           <div className='bg-card rounded-xl mx-auto w-full sm:w-full py-8 sm:py-8 lg:px-12 lg:py-12 text-center sm:text-left'>
             <h1 className='text-center'>PoolTogether</h1>
 

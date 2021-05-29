@@ -33,9 +33,11 @@ export const IndexSupportedBy = () => {
   }
 
   return (
-    <div id='backed-by' className='bg-darkened text-center py-24'>
+    <div id='backed-by' className='bg-darkened text-center pt-12 pb-6 sm:pt-20 sm:pb-16'>
       <div className='pool-container mx-auto'>
-        <h3 className='my-0 sm:mb-12 leading-tight'>Protocol supported by</h3>
+        <h3 className='text-sm xs:text-lg sm:text-xl my-0 sm:mb-12 leading-tight'>
+          Protocol supported by
+        </h3>
 
         <motion.div
           className={classnames(
