@@ -28,11 +28,11 @@ export const IndexHero = (props) => {
           <div className='relative hero-text-left mb-12 sm:mb-0'>
             <div className='w-3/4 xs:w-7/12 sm:w-full mx-auto'>
               <ReactFitty className='font-bold leading-none text-center'>
-                <span className='text-flashy'>Win</span> simply by
+                <span className='text-flashy'>Save, pool funds,</span>
               </ReactFitty>
 
               <ReactFitty className='mt-2 font-bold leading-none text-center'>
-                <span className='text-flashy'>saving your money</span>
+                <span className='text-flashy'>& win prizes together</span>
               </ReactFitty>
 
               <div className='text-center mt-6 sm:mt-12'>
@@ -42,7 +42,7 @@ export const IndexHero = (props) => {
                   href='https://app.pooltogether.com'
                   as='https://app.pooltogether.com'
                 >
-                  Deposit now
+                  Join the Pool
                 </ButtonLink>
               </div>
             </div>
