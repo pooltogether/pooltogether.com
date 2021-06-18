@@ -9,6 +9,7 @@ import BinanceAcademySvg from 'assets/images/binance-academy.svg'
 import EthereumPng from 'assets/images/ethereum-org.png'
 import BanklessPng from 'assets/images/bankless.png'
 import CoinDeskPng from 'assets/images/coindesk.png'
+import ZapperFiSvg from 'assets/images/zapper-white.svg'
 
 export const IndexHeroFeaturedIn = () => {
   const controls = useAnimation()
@@ -49,6 +50,13 @@ export const IndexHeroFeaturedIn = () => {
             title={'Binance Academy'}
             img={BinanceAcademySvg}
             url='https://academy.binance.com/en/articles/how-pool-together-turns-saving-money-into-a-game'
+          />
+
+          <GridItemSupportedBy
+            altBg
+            title={'Zapper'}
+            img={ZapperFiSvg}
+            url='https://learn.zapper.fi/articles/how-to-tranfer-eth-from-coinbase-to-defi'
           />
 
           <GridItemSupportedBy
