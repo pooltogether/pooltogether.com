@@ -20,169 +20,88 @@ export const Footer = () => {
   const linkClassNames = 'trans trans-fast text-accent-1 no-underline'
   // mt-1 sm:mt-3
 
-  const FooterLink = (props) => <>
-    <li
-      className={linkListItemClassNames}
-    >
-      <Link
-        href={props.href}
-        as={props.href}
-      >
-        <a
-          className={classnames(
-            linkClassNames,
-            { 
+  const FooterLink = (props) => (
+    <>
+      <li className={linkListItemClassNames}>
+        <Link href={props.href} as={props.href}>
+          <a
+            className={classnames(linkClassNames, {
               flex: props.iconSrc
-            }
-          )}
-        >
-          {props.iconSrc && <img
-            alt={`${props.children} icon/logo`}
-            src={props.iconSrc}
-            className='mr-4 w-4'
-          />} {props.children}
-        </a>
-      </Link>
-    </li>
-  </>
-  
-  return <>
-    <footer
-      className='footer pool-container w-full text-accent-1 text-sm mx-auto'
-    >
-      <div
-        className='flex flex-col pt-10 lg:pt-20'
-      >
-        <div
-          className='pt-6 sm:pt-0 pb-8 flex flex-col sm:flex-row justify-between'
-        >
+            })}
+          >
+            {props.iconSrc && (
+              <img alt={`${props.children} icon/logo`} src={props.iconSrc} className='mr-4 w-4' />
+            )}{' '}
+            {props.children}
+          </a>
+        </Link>
+      </li>
+    </>
+  )
 
-                <div
-                  className='footer--pool-logo-container '
-                >
-                  <Link
-                    href='/'
-                    as='/'
-                    shallow
-                  >
-                    <a
-                      title={'Back to home'}
-                      className='pool-logo border-0 trans block w-full'
-                    >
-                      <img
-                        src={PoolTogetherLogo}
-                      />
-                    </a>
-                  </Link>
-                </div>
+  return (
+    <>
+      <footer className='footer pool-container w-full text-accent-1 text-sm mx-auto'>
+        <div className='flex flex-col pt-10 lg:pt-20'>
+          <div className='pt-6 sm:pt-0 pb-8 flex flex-col sm:flex-row justify-between'>
+            <div className='footer--pool-logo-container '>
+              <Link href='/' as='/' shallow>
+                <a title={'Back to home'} className='pool-logo border-0 trans block w-full'>
+                  <img src={PoolTogetherLogo} />
+                </a>
+              </Link>
+            </div>
 
-                <nav
-                  className='flex flex-wrap w-full sm:flex-no-wrap sm:justify-between sm:w-1/2'
-                >
+            <nav className='flex flex-wrap w-full sm:flex-no-wrap sm:justify-between sm:w-1/2'>
+              <div className='w-full sm:w-1/3 sm:w-auto flex flex-col mb-8 mt-12 sm:my-0'>
+                <span className='font-bold block'>Ecosystem</span>
+                <ul>
+                  <FooterLink href='/developers'>Developers</FooterLink>
+                  <FooterLink href='/audits'>Security</FooterLink>
+                  <FooterLink href='/faq'>FAQ</FooterLink>
+                  <FooterLink href='/brand-assets'>Assets</FooterLink>
+                  <FooterLink href='https://gov.pooltogether.com/'>Governance</FooterLink>
+                  <FooterLink href='https://www.notion.so/PoolTogether-Knowledge-Base-fa721ccefa3242eaabd125a8415acd27'>
+                    Knowledge Base
+                  </FooterLink>
+                </ul>
+              </div>
 
-                  <div
-                    className='w-full sm:w-1/3 sm:w-auto flex flex-col mb-8 mt-12 sm:my-0'
-                  >
-                    <span
-                      className='font-bold block'
-                    >
-                      Protocol
-                    </span>
-                    <ul>
-                      <FooterLink
-                        href='/developers'
-                      >
-                        Developers
-                      </FooterLink>
-                      <FooterLink
-                        href='/audits'
-                      >
-                        Security
-                      </FooterLink>
-                      <FooterLink
-                        href='/faq'
-                      >
-                        FAQ
-                      </FooterLink>
-                      <FooterLink
-                        href='/brand-assets'
-                      >
-                        Assets
-                      </FooterLink>
-                      <FooterLink
-                        href='https://gov.pooltogether.com/'
-                      >
-                        Governance
-                      </FooterLink>
-                    </ul>
-                  </div>
+              <div className='w-full sm:w-1/3 flex flex-col mb-8 sm:my-0'>
+                <span className='font-bold block'>Releases</span>
 
+                <ul>
+                  <FooterLink href='https://v2.pooltogether.com'>Version 2</FooterLink>
+                  <FooterLink href='https://v1.pooltogether.com'>Version 1</FooterLink>
+                </ul>
+              </div>
 
-                  <div
-                    className='w-full sm:w-1/3 flex flex-col mb-8 sm:my-0'
-                  >
-                    <span
-                      className='font-bold block'
-                    >
-                      Releases
-                    </span>
+              <div
+                className='w-1/2 md:w-auto flex flex-col mb-8 md:my-0'
+                style={{
+                  width: 108
+                }}
+              >
+                <span className='font-bold block'>Community</span>
 
-                    <ul>
-                      <FooterLink
-                        href='https://v2.pooltogether.com'
-                      >
-                        Version 2
-                      </FooterLink>
-                      <FooterLink
-                        href='https://v1.pooltogether.com'
-                      >
-                        Version 1
-                      </FooterLink>
-                    </ul>
-                  </div>
+                <ul>
+                  <FooterLink href='https://twitter.com/PoolTogether_' iconSrc={TwitterLogo}>
+                    Twitter
+                  </FooterLink>
 
-                  <div
-                    className='w-1/2 md:w-auto flex flex-col mb-8 md:my-0'
-                    style={{ 
-                      width: 108
-                    }}
-                  >
-                    <span
-                      className='font-bold block'
-                    >
-                      Community
-                    </span>
+                  <FooterLink href='https://discord.gg/hxPhPDW' iconSrc={DiscordLogo}>
+                    Discord
+                  </FooterLink>
 
-                    <ul>
-                      <FooterLink
-                        href='https://twitter.com/PoolTogether_'
-                        iconSrc={TwitterLogo}
-                      >
-                        Twitter
-                      </FooterLink>
-                      
-                      <FooterLink
-                        href='https://discord.gg/hxPhPDW'
-                        iconSrc={DiscordLogo}
-                      >
-                        Discord
-                      </FooterLink>
+                  <FooterLink href='https://github.com/pooltogether' iconSrc={GithubLogo}>
+                    Github
+                  </FooterLink>
 
-                      <FooterLink
-                        href='https://github.com/pooltogether'
-                        iconSrc={GithubLogo}
-                      >
-                        Github
-                      </FooterLink>
+                  <FooterLink href='https://medium.com/pooltogether' iconSrc={MediumLogo}>
+                    Medium
+                  </FooterLink>
 
-                      <FooterLink
-                        href='https://medium.com/pooltogether'
-                        iconSrc={MediumLogo}
-                      >
-                        Medium
-                      </FooterLink>
-                          
-{/* 
+                  {/* 
                       <FooterLink
                         href=''
                       >
@@ -194,11 +113,10 @@ export const Footer = () => {
                       >
                         Invite friends
                       </FooterLink> */}
-                    </ul>
+                </ul>
+              </div>
 
-                  </div>
-
-      {/* 
+              {/* 
                   <div
                     className='w-full sm:w-1/3 md:w-auto flex flex-col mb-8 md:my-0'
                   >
@@ -227,18 +145,13 @@ export const Footer = () => {
                       v1
                     </a>
                   </div> */}
+            </nav>
+          </div>
 
-                </nav>
-        </div>
-
-        <div
-          className='flex justify-between flex-col sm:flex-row sm:pt-2 pb-10 sm:pb-20 lg:pb-20 text-xs border-t'
-        >
-          <div className='w-32 lg:w-32'>
-            <nav
-              className='flex justify-between w-full'
-            >
-              {/* <a
+          <div className='flex justify-between flex-col sm:flex-row sm:pt-2 pb-10 sm:pb-20 lg:pb-20 text-xs border-t'>
+            <div className='w-32 lg:w-32'>
+              <nav className='flex justify-between w-full'>
+                {/* <a
                 className={classnames(
                   'mt-2 sm:mt-4',
                   linkClassNames,
@@ -247,31 +160,17 @@ export const Footer = () => {
               >
                 Privacy
               </a> */}
-              <a
-                className={classnames(
-                  'mt-2 sm:mt-4',
-                  linkClassNames,
-                )}
-                href='/terms'
-              >
-                Terms
-              </a>
-              <a
-                className={classnames(
-                  'mt-2 sm:mt-4',
-                  linkClassNames,
-                )}
-                href='/sitemap.xml'
-              >
-                Sitemap
-              </a>
-            </nav>
+                <a className={classnames('mt-2 sm:mt-4', linkClassNames)} href='/terms'>
+                  Terms
+                </a>
+                <a className={classnames('mt-2 sm:mt-4', linkClassNames)} href='/sitemap.xml'>
+                  Sitemap
+                </a>
+              </nav>
+            </div>
           </div>
-
-          
         </div>
-      </div>
-
-    </footer>
-  </>
+      </footer>
+    </>
+  )
 }
