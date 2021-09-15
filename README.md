@@ -6,11 +6,11 @@
 
 <br />
 
-## PoolTogether Landing Site - v3
+# PoolTogether.com
 
 Code for the latest PoolTogether landing site.
 
-#### Setup
+### Setup
 
 Install dependencies:
 
