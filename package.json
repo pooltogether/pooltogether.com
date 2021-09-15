@@ -51,6 +51,7 @@
     "next": "11.1.2",
     "next-i18next": "^4.5.0",
     "next-images": "^1.8.1",
+    "postcss": "^8.3.6",
     "postcss-easy-import": "^3.0.0",
     "query-string": "^6.13.8",
     "react": "17.0.2",
@@ -64,7 +65,7 @@
     "react-query": "^2.26.2",
     "react-query-devtools": "^2.6.3",
     "react-toastify": "^6.0.8",
-    "tailwindcss": "^1.8.6",
+    "tailwindcss": "^2.2.15",
     "use-window-focus": "^1.2.0",
     "wistia-player-api-loader": "^1.0.0"
   }
