@@ -842,7 +842,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.1", "@babel/runtime@^7.3.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.1", "@babel/runtime@^7.3.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.4":
   version "7.11.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.11.2.tgz#f549c13c754cc40b87644b9fa9f09a6a95fe0736"
   integrity sha512-TeWkU52so0mPtDcaCTxNBI/IHiz0pZgr8VEFqXFtZWpYD08ZB6FaSwVAS8MKRQAP3bYKiVjwysOJgMFY28o6Tw==
@@ -4273,11 +4273,6 @@ cosmiconfig@^7.0.1:
     path-type "^4.0.0"
     yaml "^1.10.0"
 
-countup.js@^1.9.3:
-  version "1.9.3"
-  resolved "https://registry.yarnpkg.com/countup.js/-/countup.js-1.9.3.tgz#ce3e50cd7160441e478f07da31895edcc0f1c9dd"
-  integrity sha1-zj5QzXFgRB5HjwfaMYle3MDxyd0=
-
 create-ecdh@^4.0.0:
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/create-ecdh/-/create-ecdh-4.0.4.tgz#d6e7f4bffa66736085a0762fd3a632684dabcc4e"
@@ -4385,11 +4380,6 @@ cssnano-simple@3.0.0:
   integrity sha512-oU3ueli5Dtwgh0DyeohcIEE00QVfbPR3HzyXdAl89SfnQG3y0/qcpfLVW+jPIh3/rgMZGwuW96rejZGaYE9eUg==
   dependencies:
     cssnano-preset-simple "^3.0.0"
-
-csstype@^3.0.2:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.3.tgz#2b410bbeba38ba9633353aff34b05d9755d065f8"
-  integrity sha512-jPl+wbWPOWJ7SXsWyqGRk3lGecbar0Cb0OvZF/r/ZU011R4YqiRehgkQ9p4eQfo9DSDLqLL3wHwfxeJiuIsNag==
 
 cyclist@^1.0.1:
   version "1.0.1"
@@ -4669,14 +4659,6 @@ dlv@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/dlv/-/dlv-1.1.3.tgz#5c198a8a11453596e751494d49874bc7732f2e79"
   integrity sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==
-
-dom-helpers@^5.0.1:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-5.2.0.tgz#57fd054c5f8f34c52a3eeffdb7e7e93cd357d95b"
-  integrity sha512-Ru5o9+V8CpunKnz5LGgWXkmrH/20cGKwcHwS4m73zIvs54CN9epEmT/HLqFJW3kXpakAFkEdzgy1hzlJe3E4OQ==
-  dependencies:
-    "@babel/runtime" "^7.8.7"
-    csstype "^3.0.2"
 
 dom-walk@^0.1.0:
   version "0.1.2"
@@ -5879,11 +5861,6 @@ find-yarn-workspace-root@^1.2.1:
   dependencies:
     fs-extra "^4.0.3"
     micromatch "^3.1.4"
-
-fitty@2:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/fitty/-/fitty-2.3.3.tgz#176eb3a5d756ae7cdb7f7841a9357046b15817a0"
-  integrity sha512-JBrXkAT29fGTMFA/O40zzxZTISK5qm4kx8gRU6x43a1OalC5kyVXG77RLbyFMFdFabd16nYX3HrRAe/hGKg+EQ==
 
 flat@^4.1.0:
   version "4.1.1"
@@ -9606,15 +9583,6 @@ react-content-loader@^5.1.1:
   resolved "https://registry.yarnpkg.com/react-content-loader/-/react-content-loader-5.1.1.tgz#0e0ac1d582c5535f4006dcec4c7d3378df427d37"
   integrity sha512-PZ9J8B3i/w8bs32xZfGjJDPEOfo8CYBpwOVwklAR1FZ/ymMkZHbTK2ccuaHP9KrlixkBNpNZw5vsim97lsOCMA==
 
-react-countup@^4.3.3:
-  version "4.3.3"
-  resolved "https://registry.yarnpkg.com/react-countup/-/react-countup-4.3.3.tgz#143a8d854d47290b73d6915eac20a12d839153c2"
-  integrity sha512-pWnxpwdPNRyJFha/YKKbyc4RLAw8PzmULdgCziGIgw6vxhT1VdccrvQgj38HBSoM2qF/MoLmn4M2klvDWVIdaw==
-  dependencies:
-    countup.js "^1.9.3"
-    prop-types "^15.7.2"
-    warning "^4.0.3"
-
 react-device-detect@^1.17.0:
   version "1.17.0"
   resolved "https://registry.yarnpkg.com/react-device-detect/-/react-device-detect-1.17.0.tgz#a00b4fd6880cebfab3fd8a42a79dc0290cdddca9"
@@ -9630,13 +9598,6 @@ react-dom@17.0.2:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     scheduler "^0.20.2"
-
-react-fitty@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/react-fitty/-/react-fitty-1.0.1.tgz#e8a3b13da173f19e50eb538c9ab11986f178f284"
-  integrity sha512-mO+Sbon+bO8Kazv38qu3uwi52vYDdty6P8fla91TkQEc2KwfZjNLT4j31cXix3ZTlBMWmavWAu5SfG6J9SpaFQ==
-  dependencies:
-    fitty "2"
 
 react-focus-lock@^2.5.0:
   version "2.5.0"
@@ -9727,25 +9688,6 @@ react-style-singleton@^2.1.0:
     get-nonce "^1.0.0"
     invariant "^2.2.4"
     tslib "^1.0.0"
-
-react-toastify@^6.0.8:
-  version "6.0.8"
-  resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-6.0.8.tgz#84625d81d0fd01902a7f4c6f317eb074cb3bba67"
-  integrity sha512-NSqCNwv+C4IfR+c92PFZiNyeBwOJvigrP2bcRi2f6Hg3WqcHhEHOknbSQOs9QDFuqUjmK3SOrdvScQ3z63ifXg==
-  dependencies:
-    classnames "^2.2.6"
-    prop-types "^15.7.2"
-    react-transition-group "^4.4.1"
-
-react-transition-group@^4.4.1:
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.4.1.tgz#63868f9325a38ea5ee9535d828327f85773345c9"
-  integrity sha512-Djqr7OQ2aPUiYurhPalTrVy9ddmFCCzwhqQmtN+J3+3DzLO209Fdr70QrN8Z3DsglWql6iY1lDWAfpFiBtuKGw==
-  dependencies:
-    "@babel/runtime" "^7.5.5"
-    dom-helpers "^5.0.1"
-    loose-envify "^1.4.0"
-    prop-types "^15.6.2"
 
 react@17.0.2:
   version "17.0.2"
@@ -11592,11 +11534,6 @@ use-subscription@1.5.1:
   integrity sha512-Xv2a1P/yReAjAbhylMfFplFKj9GssgTwN7RlcTxBujFQcloStWNDQdc4g4NRWH9xS4i/FDk04vQBptAXoF3VcA==
   dependencies:
     object-assign "^4.1.1"
-
-use-window-focus@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/use-window-focus/-/use-window-focus-1.2.0.tgz#e60f29865642575b0cd7861d24397b3f8b790a2f"
-  integrity sha512-PZXDqoNZZYz47C9rCv4geeD5PZRJ9uhaEqYij3KNQQ6KA6Cqg7qYi0JLppeMD7lr0g7hF8sAt8lSNbELdM+6FA==
 
 use@^3.1.0:
   version "3.1.1"

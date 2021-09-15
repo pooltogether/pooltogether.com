@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import * as Fathom from 'fathom-client'
-import { ToastContainer } from 'react-toastify'
 import { ReactQueryDevtools } from 'react-query-devtools'
 import {
   QueryCache,
@@ -10,7 +9,6 @@ import {
 import { AllContextProviders } from 'lib/components/AllContextProviders'
 import { Layout } from 'lib/components/Layout'
 
-import 'react-toastify/dist/ReactToastify.css'
 import '@reach/dialog/styles.css'
 import '@reach/menu-button/styles.css'
 import '@reach/tooltip/styles.css'
@@ -26,8 +24,6 @@ import 'assets/styles/tables.css'
 import 'assets/styles/pool.css'
 import 'assets/styles/animations.css'
 import 'assets/styles/transitions.css'
-
-import 'assets/styles/pool-toast.css'
 
 import 'assets/styles/reach--custom.css'
 import 'assets/styles/vx--custom.css'
@@ -104,12 +100,6 @@ function MyApp({ Component, pageProps, router }) {
         
       <ReactQueryDevtools />
     </ReactQueryCacheProvider>
-
-    <ToastContainer
-      className='pool-toast'
-      position='top-center'
-      autoClose={7000}
-    />
   </>
 }
 

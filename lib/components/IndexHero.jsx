@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ReactFitty } from 'react-fitty'
+// import { ReactFitty } from 'react-fitty'
 
 import { ButtonLink } from 'lib/components/ButtonLink'
 import { TVLAndWeeklyPrizesBanner } from 'lib/components/TVLAndWeeklyPrizesBanner'
@@ -27,13 +27,13 @@ export const IndexHero = (props) => {
         <div className='pool-container flex flex-col sm:flex-row justify-between pt-12 mx-auto'>
           <div className='relative hero-text-left mb-12 sm:mb-0'>
             <div className='w-3/4 xs:w-7/12 sm:w-full mx-auto'>
-              <ReactFitty className='font-bold leading-none text-center'>
+              {/* <ReactFitty className='font-bold leading-none text-center'>
                 <span className='text-flashy'>Save, pool funds,</span>
-              </ReactFitty>
+              </ReactFitty> */}
 
-              <ReactFitty className='mt-2 font-bold leading-none text-center'>
+              {/* <ReactFitty className='mt-2 font-bold leading-none text-center'>
                 <span className='text-flashy'>& win prizes together</span>
-              </ReactFitty>
+              </ReactFitty> */}
 
               <div className='text-center mt-6 sm:mt-12'>
                 <ButtonLink
