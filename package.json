@@ -58,8 +58,8 @@
     "react-device-detect": "^1.17.0",
     "react-dom": "17.0.2",
     "react-i18next": "11.8.5",
-    "react-intersection-observer": "^8.28.5",
-    "react-query": "^2.26.2",
+    "react-intersection-observer": "^8.32.1",
+    "react-query": "2.26.2",
     "react-query-devtools": "^2.6.3",
     "tailwindcss": "^2.2.15",
     "wistia-player-api-loader": "^1.0.0"
