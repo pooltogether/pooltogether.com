@@ -24,33 +24,31 @@ export const IndexHero = (props) => {
   return (
     <>
       <div className='relative'>
-        <div className='pool-container flex flex-col sm:flex-row justify-between mt-32 mx-auto'>
-          <div className='relative w-full sm:w-5/12'>
-            <div className='mx-auto'>
-              {/* <ReactFitty className='font-bold leading-none text-center'>
+        <div className='pool-container flex flex-col sm:flex-row justify-between mt-24 mx-auto'>
+          <div className='relative w-full sm:w-5/12 mt-6'>
+            {/* <ReactFitty className='font-bold leading-none text-center'>
                 <span className='text-flashy'>Save, pool funds,</span>
               </ReactFitty> */}
-              {/* <ReactFitty className='mt-2 font-bold leading-none text-center'>
+            {/* <ReactFitty className='mt-2 font-bold leading-none text-center'>
                 <span className='text-flashy'>& win prizes together</span>
               </ReactFitty> */}
-              {/* text-flashy */}
-              <span className='font-semibold font-sans-regular text-4xl lg:text-6xl leading-tight text-new-gradient'>
-                Win by saving with PoolTogether.
-              </span>
-              <div className='text-center mt-6 sm:mt-12'>
-                <ButtonLink
-                  width='w-full'
-                  textSize='xl'
-                  href='https://app.pooltogether.com'
-                  as='https://app.pooltogether.com'
-                >
-                  Join the Pool
-                </ButtonLink>
-              </div>
+            {/* text-flashy */}
+            <span className='font-semibold font-sans-regular text-4xl lg:text-6xl leading-tight text-new-gradient'>
+              Win by saving with PoolTogether.
+            </span>
+            <div className='text-center mt-6 sm:mt-12' style={{ maxWidth: 406 }}>
+              <ButtonLink
+                width='w-full'
+                textSize='xl'
+                href='https://app.pooltogether.com'
+                as='https://app.pooltogether.com'
+              >
+                Join the Pool
+              </ButtonLink>
             </div>
           </div>
 
-          <div className='w-full sm:w-1/2 mx-auto'>
+          <div className='w-full sm:w-1/2'>
             <div className='bg-prize-amount text-center pt-8'>
               <h1 className='text-9xl'>
                 <WeeklyPrizeAmount />

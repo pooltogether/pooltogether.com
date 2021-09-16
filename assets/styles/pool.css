@@ -212,7 +212,7 @@ input[type='submit'][disabled] {
   -webkit-text-fill-color: transparent;
 
   background-size: 200% auto;
-  animation: cycleBackgroundPos 10s infinite;
+  animation: cycleBackgroundPos 10s infinite steps(100);
 }
 
 @keyframes cycleBackgroundPos {

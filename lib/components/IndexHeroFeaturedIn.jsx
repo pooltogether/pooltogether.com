@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer'
 import { motion, useAnimation } from 'framer-motion'
 
 import { GridItemSupportedBy } from 'lib/components/GridItemSupportedBy'
+import { Icon } from 'lib/components/Icon'
 
 import BinanceAcademySvg from 'assets/images/binance-academy.svg'
 // import EthereumPng from 'assets/images/ethereum-org.png'
@@ -34,7 +35,9 @@ export const IndexHeroFeaturedIn = () => {
   return (
     <div id='featured-in' className='text-center pt-10'>
       <div className='pool-container mx-auto'>
-        <h5 className='my-0 sm:mt-4 leading-tight'>Featured in:</h5>
+        <span className='text-default text-xs font-semibold my-0 leading-tight uppercase'>
+          Featured in
+        </span>
 
         <motion.div
           className={classnames(
@@ -46,19 +49,21 @@ export const IndexHeroFeaturedIn = () => {
           initial='hidden'
           variants={containerVariants}
         >
-          <GridItemSupportedBy
+          {/* <GridItemSupportedBy
             altBg
             title={'Binance Academy'}
             img={BinanceAcademySvg}
             url='https://academy.binance.com/en/articles/how-pool-together-turns-saving-money-into-a-game'
-          />
+          /> */}
 
-          <GridItemSupportedBy
+          <Icon name='fortune' width={100} />
+          {/* <GridItemSupportedBy
             altBg
             title={'Fortune Magazine'}
-            img={FortuneSvg}
+            Icon={<Icon name='fortune' width={100} />}
             url=''
-          />
+          /> */}
+          {/* <GridItemSupportedBy altBg title={'Fortune Magazine'} img={FortuneSvg} url='' /> */}
 
           {/* <GridItemSupportedBy
             altBg
@@ -66,7 +71,7 @@ export const IndexHeroFeaturedIn = () => {
             img={ZapperFiSvg}
             url='https://learn.zapper.fi/articles/how-to-tranfer-eth-from-coinbase-to-defi'
           /> */}
-{/* 
+          {/* 
           <GridItemSupportedBy
             altBg
             title={'Ethereum.org'}
@@ -80,13 +85,13 @@ export const IndexHeroFeaturedIn = () => {
             img={BanklessPng}
             url='https://shows.banklesshq.com/p/early-access-meet-the-nation-pooltogether'
           /> */}
-
+          {/* 
           <GridItemSupportedBy
             altBg
             title={'CoinDesk'}
             img={CoinDeskPng}
             url='https://www.coindesk.com/tag/pooltogether'
-          />
+          /> */}
         </motion.div>
       </div>
     </div>
