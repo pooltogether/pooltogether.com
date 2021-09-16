@@ -19,6 +19,15 @@
 
 * {
   --flashyGradient: linear-gradient(40deg, #ff62cc 10%, #f7fe0c 40%, #2af787 60%, #00f0d0 80%);
+  --newGradient: linear-gradient(
+    80deg,
+    #4c249f -50%,
+    #17e1fd 20%,
+    #ff77e1 40%,
+    #ff77e1 70%,
+    #ffeb77 90%,
+    #fff177
+  );
 }
 
 html {
@@ -197,6 +206,15 @@ input[type='submit'][disabled] {
   animation: cycleBackgroundPos 6000ms infinite steps(100);
 }
 
+.text-new-gradient {
+  background: var(--newGradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-size: 200% auto;
+  animation: cycleBackgroundPos 10s infinite;
+}
+
 @keyframes cycleBackgroundPos {
   0% {
     background-position: 0% 50%;
@@ -350,22 +368,6 @@ li.nav-mobile-listitem {
   display: flex;
   align-items: center;
   cursor: pointer;
-}
-
-.hero-text-left {
-  top: -8px;
-}
-
-@screen sm {
-  .hero-text-left {
-    width: 300px;
-  }
-}
-
-@screen lg {
-  .hero-text-left {
-    width: 420px;
-  }
 }
 
 .bg-vid-holo {
@@ -553,5 +555,23 @@ li.nav-mobile-listitem {
 .bg-holographic {
   background-image: url('/bg-holographic@2x.png');
   background-size: cover;
+  width: 100%;
+}
+
+.bg-prize-amount {
+  background-image: url('/bg-prize-amount@2x.png');
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  /* 16:9 */
+  /* padding-bottom: 56.25%; */
+  /* height: 0; */
+
+  /* 16:9 */
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  position: relative;
   width: 100%;
 }

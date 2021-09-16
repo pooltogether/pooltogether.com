@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 // import { ReactFitty } from 'react-fitty'
 
 import { ButtonLink } from 'lib/components/ButtonLink'
-import { TVLAndWeeklyPrizesBanner } from 'lib/components/TVLAndWeeklyPrizesBanner'
+import { WeeklyPrizeAmount } from 'lib/components/WeeklyPrizeAmount'
 import { WistiaPlayer } from 'lib/components/WistiaPlayer'
 import { IndexHeroFeaturedIn } from 'lib/components/IndexHeroFeaturedIn'
 
@@ -24,18 +24,19 @@ export const IndexHero = (props) => {
   return (
     <>
       <div className='relative'>
-        <div className='pool-container flex flex-col sm:flex-row justify-between pt-12 mx-auto'>
-          <div className='relative hero-text-left mb-12 sm:mb-0'>
-            <div className='w-3/4 xs:w-7/12 sm:w-full mx-auto'>
+        <div className='pool-container flex flex-col sm:flex-row justify-between mt-32 mx-auto'>
+          <div className='relative w-full sm:w-6/12'>
+            <div className='mx-auto'>
               {/* <ReactFitty className='font-bold leading-none text-center'>
                 <span className='text-flashy'>Save, pool funds,</span>
               </ReactFitty> */}
-
               {/* <ReactFitty className='mt-2 font-bold leading-none text-center'>
                 <span className='text-flashy'>& win prizes together</span>
               </ReactFitty> */}
-              <span className='text-flashy'>Win by saving with PoolTogether.</span>
-
+              {/* text-flashy */}
+              <span className='font-semibold font-sans-regular text-6xl leading-tight text-new-gradient'>
+                Win by saving with PoolTogether.
+              </span>
               <div className='text-center mt-6 sm:mt-12'>
                 <ButtonLink
                   width='w-full'
@@ -49,10 +50,16 @@ export const IndexHero = (props) => {
             </div>
           </div>
 
-          <img src='/placeholder-right.png' />
+          <div className='w-full sm:w-1/2 mx-auto'>
+            <div className='bg-prize-amount text-center pt-8'>
+              <h1 className='text-9xl'>
+                <WeeklyPrizeAmount />
+              </h1>
+              <div className='uppercase font-semibold text-default -mt-2'>In weekly prizes</div>
+              {/* Awarded every Thursday! */}
+            </div>
+          </div>
         </div>
-
-        <TVLAndWeeklyPrizesBanner />
 
         <IndexHeroFeaturedIn />
 
