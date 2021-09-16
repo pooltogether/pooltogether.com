@@ -34,6 +34,7 @@ export const IndexHero = (props) => {
               {/* <ReactFitty className='mt-2 font-bold leading-none text-center'>
                 <span className='text-flashy'>& win prizes together</span>
               </ReactFitty> */}
+              <span className='text-flashy'>Win by saving with PoolTogether.</span>
 
               <div className='text-center mt-6 sm:mt-12'>
                 <ButtonLink
@@ -48,21 +49,7 @@ export const IndexHero = (props) => {
             </div>
           </div>
 
-          <div>
-            <button
-              onClick={startVideo}
-              className='bg-vid-holo flex items-start justify-center trans'
-              role='img'
-            >
-              <div className='bg-vid-holo--inner flex items-center justify-center'>
-                <WistiaPlayer play={playVideo} />
-
-                <div className='bg-vid-circle rounded-full flex items-center justify-center hover:bg-highlight-2 trans'>
-                  <div className='bg-vid-tri' />
-                </div>
-              </div>
-            </button>
-          </div>
+          <img src='/placeholder-right.png' />
         </div>
 
         <TVLAndWeeklyPrizesBanner />

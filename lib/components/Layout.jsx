@@ -44,7 +44,7 @@ export const Layout = (props) => {
         )}
       >
         <div
-          className='flex justify-between items-center w-full px-4 sm:px-0 py-10 mx-auto'
+          className='flex justify-between items-center w-full px-4 sm:px-0 py-4 mx-auto'
         >
           <HeaderLogo />
           <Nav />

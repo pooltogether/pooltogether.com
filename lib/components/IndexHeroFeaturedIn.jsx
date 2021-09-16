@@ -6,9 +6,10 @@ import { motion, useAnimation } from 'framer-motion'
 import { GridItemSupportedBy } from 'lib/components/GridItemSupportedBy'
 
 import BinanceAcademySvg from 'assets/images/binance-academy.svg'
-import EthereumPng from 'assets/images/ethereum-org.png'
-import BanklessPng from 'assets/images/bankless.png'
+// import EthereumPng from 'assets/images/ethereum-org.png'
+// import BanklessPng from 'assets/images/bankless.png'
 import CoinDeskPng from 'assets/images/coindesk.png'
+import FortuneSvg from 'assets/images/fortune-logo.svg'
 import ZapperFiSvg from 'assets/images/zapper-white.svg'
 
 export const IndexHeroFeaturedIn = () => {
@@ -37,7 +38,7 @@ export const IndexHeroFeaturedIn = () => {
 
         <motion.div
           className={classnames(
-            'flex flex-col xs:flex-row xs:flex-wrap justify-start items-start',
+            'flex flex-col xs:flex-row xs:flex-wrap justify-center items-start',
             'mt-2 mb-4 px-4 xs:px-8 rounded-xl -mx-4 sm:-mx-12 lg:-mx-16'
           )}
           ref={ref}
@@ -54,24 +55,31 @@ export const IndexHeroFeaturedIn = () => {
 
           <GridItemSupportedBy
             altBg
+            title={'Fortune Magazine'}
+            img={FortuneSvg}
+            url=''
+          />
+
+          {/* <GridItemSupportedBy
+            altBg
             title={'Zapper'}
             img={ZapperFiSvg}
             url='https://learn.zapper.fi/articles/how-to-tranfer-eth-from-coinbase-to-defi'
-          />
-
+          /> */}
+{/* 
           <GridItemSupportedBy
             altBg
             title={'Ethereum.org'}
             img={EthereumPng}
             url='https://ethereum.org/en/dapps/'
-          />
+          /> */}
 
-          <GridItemSupportedBy
+          {/* <GridItemSupportedBy
             altBg
             title={'Bankless'}
             img={BanklessPng}
             url='https://shows.banklesshq.com/p/early-access-meet-the-nation-pooltogether'
-          />
+          /> */}
 
           <GridItemSupportedBy
             altBg

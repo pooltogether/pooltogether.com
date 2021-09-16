@@ -11,8 +11,11 @@ export const Nav = (props) => {
   const router = useRouter()
 
   const developersPage = router.pathname.match('developers')
+  const governancePage = router.pathname.match('governance')
+  const communityPage = router.pathname.match('community')
+  const morePage = router.pathname.match('more')
 
-  const navLinkClasses = 'capitalize text-center leading-none rounded-full flex justify-start items-center text-lg py-3 px-4 lg:px-8 trans tracking-wider outline-none focus:outline-none active:outline-none text-white'
+  const navLinkClasses = 'font-titillium capitalize text-center leading-none rounded-full flex justify-start items-center text-lg py-3 px-4 trans tracking-wider outline-none focus:outline-none active:outline-none text-white'
 
   return <>
     <nav
@@ -36,6 +39,58 @@ export const Nav = (props) => {
           {t('developers')}
         </a>
       </Link>
+
+      <Link
+        href='/governance'
+        as='/governance'
+        shallow
+      >
+        <a
+          className={classnames(
+            'mr-3',
+            navLinkClasses,
+            {
+              'text-white hover:text-highlight-2': !governancePage,
+              'text-highlight-2 hover:text-highlight-2': governancePage
+            }
+          )}
+        >
+          {t('governance', 'Governance')}
+        </a>
+      </Link>
+
+      <Link
+        href='/community'
+        as='/community'
+        shallow
+      >
+        <a
+          className={classnames(
+            'mr-3',
+            navLinkClasses,
+            {
+              'text-white hover:text-highlight-2': !communityPage,
+              'text-highlight-2 hover:text-highlight-2': communityPage
+            }
+          )}
+        >
+          {t('community', 'Community')}
+        </a>
+      </Link>
+
+      <a
+        className={classnames(
+          'mr-3',
+          navLinkClasses,
+          {
+            'text-white hover:text-highlight-2': !morePage,
+            'text-highlight-2 hover:text-highlight-2': morePage
+          }
+        )}
+      >
+        {t('more', 'More')}
+      </a>
+
 
       <Link
         href='https://app.pooltogether.com'

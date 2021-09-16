@@ -21,23 +21,21 @@ export const GridItemSupportedBy = (props) => {
     <>
       <motion.a
         href={url}
-        title={`View ${title}`}
+        title={`Open the ${title} site`}
         target='_blank'
-        title={`Open ${title}'s website`}
+        title={`Open the ${title}'s site`}
         rel='noopener noreferrer'
-        className='w-full sm:w-1/3 rounded-lg my-1 p-2 trans flex flex-col no-underline px-4 lg:px-8 mx-auto'
+        className='rounded-lg my-1 p-2 trans flex flex-col no-underline px-4 lg:px-8'
         variants={itemVariants}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.97 }}
       >
         <div
-          className={`${
-            altBg ? 'interactable-chip-alt-bg' : 'interactable-chip-main-bg'
-          } interactable-chip items-center justify-center hover:shadow-xl flex flex-col justify-center trans p-2 xs:px-10 h-20`}
+          className={`bg-green items-center justify-center flex flex-col justify-center trans p-2 xs:px-10 h-20`}
         >
           <img
             src={img}
-            className={`${small ? 'w-full xs:w-auto xs:h-12' : 'h-32'} fill-white text-center`}
+            className={`h-32 fill-white text-center`}
             title={attribution || ''}
             style={{
               maxHeight
