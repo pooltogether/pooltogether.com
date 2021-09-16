@@ -25,7 +25,7 @@ export const IndexHero = (props) => {
     <>
       <div className='relative'>
         <div className='pool-container flex flex-col sm:flex-row justify-between mt-32 mx-auto'>
-          <div className='relative w-full sm:w-6/12'>
+          <div className='relative w-full sm:w-5/12'>
             <div className='mx-auto'>
               {/* <ReactFitty className='font-bold leading-none text-center'>
                 <span className='text-flashy'>Save, pool funds,</span>
@@ -34,7 +34,7 @@ export const IndexHero = (props) => {
                 <span className='text-flashy'>& win prizes together</span>
               </ReactFitty> */}
               {/* text-flashy */}
-              <span className='font-semibold font-sans-regular text-6xl leading-tight text-new-gradient'>
+              <span className='font-semibold font-sans-regular text-4xl lg:text-6xl leading-tight text-new-gradient'>
                 Win by saving with PoolTogether.
               </span>
               <div className='text-center mt-6 sm:mt-12'>

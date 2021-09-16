@@ -1,10 +1,11 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -39,7 +40,7 @@ body {
 
 @screen sm {
   .pool-container {
-    max-width: 800px;
+    max-width: 880px;
   }
 }
 
