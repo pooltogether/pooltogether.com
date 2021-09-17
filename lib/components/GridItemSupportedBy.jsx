@@ -12,7 +12,7 @@ export const GridItemSupportedBy = (props) => {
         target='_blank'
         title={`Open the ${title}'s site`}
         rel='noopener noreferrer'
-        className={classnames(props.className, 'flex flex-col items-center rounded-lg px-4 lg:px-8 trans no-underline trans h-8 text-accent-1 hover:text-inverse')}
+        className={classnames(props.className, 'flex flex-col items-center rounded-lg mb-8 sm:mb-0 px-4 lg:px-8 trans no-underline trans h-8 text-default hover:text-inverse')}
         style={{minWidth: 230}}
       >
         {img}

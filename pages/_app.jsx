@@ -1,10 +1,7 @@
 import React, { useEffect } from 'react'
 import * as Fathom from 'fathom-client'
 import { ReactQueryDevtools } from 'react-query-devtools'
-import {
-  QueryCache,
-  ReactQueryCacheProvider
-} from 'react-query'
+import { QueryCache, ReactQueryCacheProvider } from 'react-query'
 
 import { AllContextProviders } from 'lib/components/AllContextProviders'
 import { Layout } from 'lib/components/Layout'
@@ -13,20 +10,13 @@ import '@reach/dialog/styles.css'
 import '@reach/menu-button/styles.css'
 import '@reach/tooltip/styles.css'
 
-import 'assets/styles/utils.css'
 import 'assets/styles/index.css'
+
+// pooltogether.com specific:
 import 'assets/styles/layout.css'
-import 'assets/styles/loader.css'
-import 'assets/styles/themes.css'
-
-import 'assets/styles/typography.css'
-import 'assets/styles/tables.css'
 import 'assets/styles/pool.css'
-import 'assets/styles/animations.css'
-import 'assets/styles/transitions.css'
 
-import 'assets/styles/reach--custom.css'
-import 'assets/styles/vx--custom.css'
+import '@pooltogether/react-components/dist/index.css'
 
 const queryCache = new QueryCache()
 
@@ -37,7 +27,7 @@ if (process.env.NEXT_JS_SENTRY_DSN) {
   })
 }
 
-function MyApp({ Component, pageProps, router }) {
+function MyApp ({ Component, pageProps, router }) {
   // const [initialized, setInitialized] = useState(false)
 
   useEffect(() => {
@@ -59,13 +49,10 @@ function MyApp({ Component, pageProps, router }) {
     if (fathomSiteId) {
       Fathom.load(process.env.NEXT_JS_FATHOM_SITE_ID, {
         url: 'https://goose.pooltogether.com/script.js',
-        includedDomains: [
-          'pooltogether.com',
-          'www.pooltogether.com',
-        ]
+        includedDomains: ['pooltogether.com', 'www.pooltogether.com']
       })
 
-      function onRouteChangeComplete(url) {
+      function onRouteChangeComplete (url) {
         if (window['fathom']) {
           window['fathom'].trackPageview()
         }
@@ -88,19 +75,19 @@ function MyApp({ Component, pageProps, router }) {
   //   initi18next()
   // }, [])
 
-  return <>
-    <ReactQueryCacheProvider queryCache={queryCache}>
-      <AllContextProviders>
-        <Layout
-          props={pageProps}
-        >
-          <Component {...pageProps} />
-        </Layout>
-      </AllContextProviders>
-        
-      <ReactQueryDevtools />
-    </ReactQueryCacheProvider>
-  </>
+  return (
+    <>
+      <ReactQueryCacheProvider queryCache={queryCache}>
+        <AllContextProviders>
+          <Layout props={pageProps}>
+            <Component {...pageProps} />
+          </Layout>
+        </AllContextProviders>
+
+        <ReactQueryDevtools />
+      </ReactQueryCacheProvider>
+    </>
+  )
 }
 
 export default MyApp

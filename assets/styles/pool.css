@@ -405,7 +405,7 @@ li.nav-mobile-listitem {
 }
 
 .bg-vid-circle {
-  @apply shadow-elevation;
+  /* @apply shadow-elevation; */
   background: rgba(76, 36, 159, 0.8);
   height: 104px;
   width: 104px;

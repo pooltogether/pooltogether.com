@@ -66,8 +66,8 @@ export const Nav = (props) => {
         <Link href='https://app.pooltogether.com' as='https://app.pooltogether.com'>
           <a
             className={classnames(
-              'font-titillium inline-flex items-center justify-center capitalize font-bold tracking-wider outline-none focus:outline-none active:outline-none',
-              'hover:bg-default rounded-full border-2 border-highlight-2 px-10 py-1 trans trans-fast text-sm lg:text-lg'
+              'font-titillium inline-flex items-center justify-center capitalize tracking-wider outline-none focus:outline-none active:outline-none',
+              'hover:bg-default rounded-full border-2 border-highlight-2 px-10 py-1 trans trans-fast text-sm lg:text-lg font-semibold'
             )}
           >
             {t('app')}
