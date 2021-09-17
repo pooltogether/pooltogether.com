@@ -1,9 +1,14 @@
 import React, { useState } from 'react'
 import FeatherIcon from 'feather-icons-react'
+import classnames from 'classnames'
 
 import { WeeklyPrizeAmount } from 'lib/components/WeeklyPrizeAmount'
 import { WistiaPlayer } from 'lib/components/WistiaPlayer'
 import { IndexHeroFeaturedIn } from 'lib/components/IndexHeroFeaturedIn'
+
+import GithubLogo from 'assets/images/github-logo.svg'
+import DiscordLogo from 'assets/images/discord-logo.svg'
+import TwitterLogo from 'assets/images/twitter-logo.svg'
 
 import Squiggle from 'assets/images/squiggle.svg'
 import SquiggleMobile from 'assets/images/squiggle-mobile.svg'
@@ -33,8 +38,14 @@ export const IndexHero = (props) => {
             </span>
             <p className='text-accent-1 text-lg mt-4'>
               PoolTogether is a crypto-powered savings protocol based on{' '}
-              <a href='https://en.wikipedia.org/wiki/Premium_Bond'>Premium Bonds</a>. Save your
-              money and have a chance to win prizes every week.
+              <a
+                href='https://en.wikipedia.org/wiki/Premium_Bond'
+                target='_blank'
+                title='Wikipedia entry for Premium Bonds'
+              >
+                Premium Bonds
+              </a>
+              . Save your money and have a chance to win prizes every week.
             </p>
             <p className='text-xl mt-8'>The more you save, the more you win!</p>
             <div className='mt-4' style={{ width: 446 }}>
@@ -46,6 +57,20 @@ export const IndexHero = (props) => {
                 <FeatherIcon icon={'chevron-right'} className='inline-block w-6 h-6 -mt-1' />
               </a>
             </div>
+
+            <ul className='flex mt-2'>
+              <HeroSocialItem width={23} href='https://twitter.com/PoolTogether_'>
+                <TwitterIconSvg />
+              </HeroSocialItem>
+
+              <HeroSocialItem width={18} href='https://discord.gg/hxPhPDW'>
+                <DiscordIconSvg />
+              </HeroSocialItem>
+
+              <HeroSocialItem width={19} href='https://github.com/pooltogether'>
+                <GithubIconSvg />
+              </HeroSocialItem>
+            </ul>
           </div>
 
           <div className='w-full sm:w-1/2'>
@@ -79,6 +104,23 @@ export const IndexHero = (props) => {
   )
 }
 
+const HeroSocialItem = (props) => {
+  const linkListItemClassName = 'mt-4 mr-5'
+  const linkClassName = 'trans trans-fast no-underline text-default-soft'
+
+  return (
+    <li
+      className={classnames(props.className, linkListItemClassName)}
+      style={{ width: props.width }}
+    >
+      <a href={props.href} className={linkClassName}>
+        {props.children}
+        {/* <img alt={`${props.children} icon`} src={props.iconSrc} className='mr-5 w-5' /> */}
+      </a>
+    </li>
+  )
+}
+
 const BinanceAcademySvg = (props) => {
   return (
     <svg
@@ -97,6 +139,71 @@ const BinanceAcademySvg = (props) => {
           <path fill='#fff' transform='translate(.111)' d='M0 0h146.991v37.037H0z' />
         </clipPath>
       </defs>
+    </svg>
+  )
+}
+
+const TwitterIconSvg = (props) => {
+  return (
+    <svg
+      {...props}
+      className='fill-current'
+      width='100%'
+      viewBox='0 0 21 16'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <path d='M6.604 16c7.925 0 12.259-6.156 12.259-11.495 0-.175 0-.349-.013-.522A8.484 8.484 0 0021 1.892a9.05 9.05 0 01-2.475.635A4.112 4.112 0 0020.42.293a8.991 8.991 0 01-2.736.98 4.408 4.408 0 00-2.445-1.22 4.563 4.563 0 00-2.732.425 4.162 4.162 0 00-1.893 1.896 3.813 3.813 0 00-.273 2.584 12.874 12.874 0 01-4.918-1.225A12.12 12.12 0 011.462.737 3.826 3.826 0 00.99 3.681c.248 1.002.893 1.878 1.806 2.45A4.496 4.496 0 01.84 5.623v.052c0 .932.345 1.836.975 2.558a4.368 4.368 0 002.482 1.402 4.58 4.58 0 01-1.946.07 4.064 4.064 0 001.533 2.007 4.502 4.502 0 002.492.798 9.018 9.018 0 01-5.35 1.733c-.343-.001-.686-.02-1.026-.059a12.795 12.795 0 006.604 1.812' />
+    </svg>
+  )
+}
+
+const DiscordIconSvg = (props) => {
+  return (
+    <svg
+      {...props}
+      className='fill-current'
+      width='100%'
+      viewBox='0 0 19 21'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <path d='M11.156 8.766c-.6 0-1.074.516-1.074 1.159 0 .642.484 1.158 1.074 1.158.601 0 1.075-.516 1.075-1.159 0-.642-.485-1.158-1.075-1.158zm-3.845 0c-.6 0-1.074.516-1.074 1.159 0 .642.484 1.158 1.074 1.158.6 0 1.075-.516 1.075-1.159.01-.642-.474-1.158-1.075-1.158z' />
+      <path d='M16.277 0H2.16C.97 0 0 .97 0 2.16v14.117c0 1.19.97 2.16 2.16 2.16h11.947l-.559-1.928 1.349 1.243 1.275 1.17 2.275 1.97V2.16A2.179 2.179 0 0016.277 0zM12.21 13.643s-.379-.453-.695-.843c1.38-.39 1.907-1.243 1.907-1.243a6.033 6.033 0 01-1.212.622 7.558 7.558 0 01-1.527.453 7.38 7.38 0 01-2.729-.01 8.015 8.015 0 01-1.549-.454 6.17 6.17 0 01-.769-.358c-.031-.021-.063-.032-.094-.053-.022-.01-.032-.02-.043-.02-.19-.106-.295-.18-.295-.18s.506.832 1.844 1.233c-.316.4-.706.864-.706.864-2.328-.074-3.213-1.591-3.213-1.591 0-3.36 1.517-6.09 1.517-6.09 1.517-1.127 2.95-1.095 2.95-1.095l.105.126c-1.896.538-2.76 1.37-2.76 1.37s.232-.127.622-.295a8.255 8.255 0 012.391-.664c.063-.01.116-.021.18-.021a8.914 8.914 0 012.127-.021c1.001.116 2.076.41 3.171 1 0 0-.832-.79-2.623-1.327l.148-.168s1.443-.032 2.95 1.095c0 0 1.517 2.73 1.517 6.09 0-.01-.885 1.506-3.214 1.58z' />
+    </svg>
+  )
+}
+
+const GithubIconSvg = (props) => {
+  return (
+    <svg
+      {...props}
+      className='fill-current'
+      width='100%'
+      viewBox='0 0 18 18'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <path d='M9 0C4.03 0 0 4.132 0 9.228c0 4.077 2.579 7.535 6.155 8.755.45.085.614-.2.614-.444 0-.22-.008-.947-.012-1.718-2.503.558-3.032-1.088-3.032-1.088-.41-1.065-1-1.349-1-1.349-.817-.572.063-.561.063-.561.903.064 1.38.95 1.38.95.802 1.411 2.106 1.003 2.618.767.082-.595.315-1.003.572-1.233-1.998-.233-4.1-1.025-4.1-4.56 0-1.009.351-1.83.926-2.477-.092-.234-.402-1.173.089-2.443 0 0 .754-.248 2.475.946A8.37 8.37 0 019 4.463a8.387 8.387 0 012.253.311c1.717-1.195 2.473-.946 2.473-.946.492 1.271.183 2.209.09 2.442.577.646.925 1.468.925 2.477 0 3.544-2.104 4.325-4.11 4.554.325.286.611.847.611 1.707 0 1.234-.012 2.228-.012 2.532 0 .246.164.533.62.443 3.574-1.222 6.15-4.68 6.15-8.755C18 4.132 13.97 0 9 0z' />
+    </svg>
+  )
+}
+
+const MediumIconSvg = (props) => {
+  return (
+    <svg
+      {...props}
+      className='fill-current'
+      width='100%'
+      viewBox='0 0 20 16'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <path
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M2.372 3.264a.783.783 0 00-.253-.658L.252.338V0h5.799l4.482 9.905L14.473 0H20v.338l-1.597 1.543a.473.473 0 00-.177.452v11.335a.472.472 0 00.177.45l1.56 1.544V16h-7.844v-.338l1.616-1.58c.158-.16.158-.207.158-.452V4.468l-4.49 11.495h-.607L3.566 4.468v7.704c-.043.324.064.65.29.884l2.1 2.568v.34H0v-.34l2.1-2.568c.226-.234.326-.563.272-.884V3.264z'
+      />
     </svg>
   )
 }
