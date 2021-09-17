@@ -1,6 +1,6 @@
 const chalk = require("chalk")
 const path = require('path')
-// const withImages = require('next-images')
+const withImages = require('next-images')
 const webpack = require('webpack')
 const _ = require('lodash')
 
@@ -23,7 +23,7 @@ const nextConfig = {
 
 const allConfig =
   withBundleAnalyzer(
-  // withImages(
+  withImages(
     {
       ...nextConfig,
       async redirects() {
@@ -41,13 +41,6 @@ const allConfig =
         locizeVersion: process.env.NEXT_JS_LOCIZE_VERSION
       },
       webpack(config, options) {
-        config.module.rules.push({
-          test: /\.svg$/,
-          use: ["@svgr/webpack"]
-        });
-
-        // config.optimization.minimizer = []
-
         config.mode = isProduction ? 'production' : 'development'
         config.devtool = isProduction ? 'hidden-source-map' : 'eval-source-map'
 
@@ -58,7 +51,7 @@ const allConfig =
         return config
       }
     }
-  )//)
+  ))
 
 console.log('')
 console.log(chalk.green('Using next.js config options:'))

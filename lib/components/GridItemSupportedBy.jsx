@@ -1,9 +1,8 @@
 import React from 'react'
+import classnames from 'classnames'
 
 export const GridItemSupportedBy = (props) => {
-  const { attribution, Icon, title, url } = props
-
-  let maxHeight = props.maxHeight || 30
+  const { img, title, url } = props
 
   return (
     <>
@@ -13,21 +12,10 @@ export const GridItemSupportedBy = (props) => {
         target='_blank'
         title={`Open the ${title}'s site`}
         rel='noopener noreferrer'
-        className='rounded-lg px-4 lg:px-8 px-2 trans flex flex-col no-underline'
+        className={classnames(props.className, 'flex flex-col items-center rounded-lg px-4 lg:px-8 trans no-underline trans h-8 text-accent-1 hover:text-inverse')}
+        style={{minWidth: 230}}
       >
-        <div
-          className={`items-center justify-center flex flex-col justify-center trans px-2 h-12 hover:text-green`}
-        >
-          <Icon />
-          {/* <img
-            src={img}
-            className={`h-12 text-center fill-current`}
-            title={attribution || ''}
-            style={{
-              maxHeight
-            }}
-          /> */}
-        </div>
+        {img}
       </a>
     </>
   )

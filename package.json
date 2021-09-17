@@ -30,7 +30,6 @@
     "@reach/dialog": "^0.16.0",
     "@reach/menu-button": "^0.16.1",
     "@reach/tooltip": "^0.16.0",
-    "@svgr/webpack": "^5.5.0",
     "autoprefixer": "^10.3.4",
     "axios": "^0.21.4",
     "classnames": "^2.3.1",
