@@ -85,7 +85,7 @@ export const IndexHero = (props) => {
         <IndexHeroFeaturedIn />
 
         <div className='text-center relative flex flex-col sm:flex-row mt-10 mb-16 sm:my-20 mx-auto'>
-          <div className='bg-card mx-auto w-full sm:w-full py-8 sm:py-8 lg:px-12 lg:py-12 text-center sm:text-left'>
+          <div className='bg-luckiest-winners-gradient mx-auto w-full sm:w-full py-8 sm:py-8 lg:px-12 lg:py-12 text-center sm:text-left'>
             <div className='font-inter text-sm text-center text-green font-black uppercase'>
               Luckiest Winners
             </div>
