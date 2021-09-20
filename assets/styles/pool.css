@@ -573,8 +573,7 @@ li.nav-mobile-listitem {
   /* padding-bottom: 56.25%; */
   /* height: 0; */
 
-  /* 16:9 */
-  padding-bottom: 56.25%;
+  padding-bottom: 45%;
   height: 0;
   overflow: hidden;
   position: relative;
@@ -611,4 +610,17 @@ li.nav-mobile-listitem {
   100% {
     transform: scale(1, 1) translateY(0);
   }
+}
+
+
+.sm-max-width-hero {
+  @apply mx-auto;
+  max-width: 446px;
+}
+
+@screen sm {
+  .sm-max-width-hero {
+    @apply mx-0;
+    max-width: 446px;
+  } 
 }
