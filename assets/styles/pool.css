@@ -573,11 +573,27 @@ li.nav-mobile-listitem {
   /* padding-bottom: 56.25%; */
   /* height: 0; */
 
-  padding-bottom: 45%;
-  height: 0;
+  /* padding-bottom: 45%; */
+  height: 200px;
   overflow: hidden;
   position: relative;
   width: 100%;
+}
+
+@screen xs {
+.bg-prize-amount {
+  height: 260px;
+}
+}
+@screen sm {
+.bg-prize-amount {
+  height: 250px;
+}
+}
+@screen lg {
+.bg-prize-amount {
+  height: 290px;
+}
 }
 
 .bounce {

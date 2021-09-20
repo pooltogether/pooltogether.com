@@ -105,7 +105,7 @@ const HeroRight = () => {
           </h1>
           <div className='uppercase font-semibold text-default -mt-2'>In weekly prizes</div>
         </div>
-        <div className='uppercase font-semibold text-green sm:mt-8 text-xs xs:text-lg lg:text-xl w-1/2 mx-auto'>
+        <div className='uppercase font-semibold text-green mb-12 text-xs xs:text-lg lg:text-xl w-1/2 mx-auto'>
           Awarded every Thursday!
         </div>
       </div>
