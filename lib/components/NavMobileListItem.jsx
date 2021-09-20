@@ -19,30 +19,26 @@ const variants = {
   }
 }
 
-const colors = ['#FF81ED', '#FFD1B3', '#69FEB8', '#80FFF6', '#5FA3FF']
+const colors = ['#ff77e1', '#69FEB8', '#17e1fd', '#ffeb77', '#7FB3FF']
 
 export const NavMobileListItem = ({ link, index, toggleOpen }) => {
   const style = { color: `${colors[index]}` }
 
-  return <>
-    <motion.li
-      variants={variants}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-      className='font-bold text-center mb-6 text-xl'
-      style={style}
-    >
-      <Link
-        href={link.href}
-        as={link.as}
+  return (
+    <>
+      <motion.li
+        variants={variants}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        className='font-bold text-center mb-6 text-xl'
+        style={style}
       >
-        <a
-          onClick={toggleOpen}
-          style={style}
-        >
-          {link.label}
-        </a>
-      </Link>
-    </motion.li>
-  </>
+        <Link href={link.href} as={link.as}>
+          <a onClick={toggleOpen} style={style}>
+            {link.label}
+          </a>
+        </Link>
+      </motion.li>
+    </>
+  )
 }

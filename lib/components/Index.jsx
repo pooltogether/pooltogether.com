@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import FeatherIcon from 'feather-icons-react'
 import classnames from 'classnames'
 import { useRouter } from 'next/router'
 
 import { WeeklyPrizeAmount } from 'lib/components/WeeklyPrizeAmount'
-import { WistiaPlayer } from 'lib/components/WistiaPlayer'
 import { IndexHeroFeaturedIn } from 'lib/components/IndexHeroFeaturedIn'
 
 import { IndexGetInvolved } from 'lib/components/IndexGetInvolved'
@@ -26,17 +25,6 @@ export const Index = (props) => {
 
   if (router.pathname !== '/') {
     return null
-  }
-
-  const [playVideo, setPlayVideo] = useState(false)
-
-  const startVideo = (e) => {
-    e.preventDefault()
-    setPlayVideo(true)
-
-    setTimeout(() => {
-      setPlayVideo(false)
-    }, 500)
   }
 
   return (
@@ -64,8 +52,8 @@ export const Index = (props) => {
       </div>
 
       <div className='text-inverse'>
-        <IndexIntegrations />
         <IndexHowItWorks />
+        <IndexIntegrations />
         <IndexPoolToken />
         <IndexSecurity />
         {/* <IndexSupportedBy /> */}

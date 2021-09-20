@@ -345,8 +345,13 @@ input[type='submit'][disabled] {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  /* background: transparent; */
   z-index: 50;
+  background: #190742;
+}
+
+.hamburger-button.open {
+  @apply bg-green;
+  transition: background 0.3s ease-in-out;
 }
 
 .hamburger-button > svg {
@@ -376,12 +381,12 @@ li.nav-mobile-listitem {
 }
 
 .bg-vid-holo {
-  background-image: url('/vid@2x.png');
+  background-image: url('/bg-green-tsunami@2x.png');
   background-size: contain;
   background-position: top center;
   background-repeat: no-repeat;
 
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 65%;
   height: 0;
   overflow: hidden;
   position: relative;
@@ -391,13 +396,13 @@ li.nav-mobile-listitem {
 @screen sm {
   .bg-vid-holo {
     background-position: top right;
-    width: 430px;
+    width: 366px;
   }
 }
 
 @screen lg {
   .bg-vid-holo {
-    width: 556px;
+    width: 446px;
   }
 }
 
@@ -445,41 +450,6 @@ li.nav-mobile-listitem {
 
 .bg-overlay {
   background-image: linear-gradient(40deg, #4c249f 30%, #9c48ba 100%) !important;
-}
-
-.interactable-chip {
-  @apply rounded-lg flex;
-  min-height: 50px;
-  min-width: 80px;
-}
-
-.interactable-chip-main-bg {
-  @apply bg-secondary hover:bg-highlight-3;
-}
-
-.interactable-chip-alt-bg {
-  @apply bg-default hover:bg-highlight-3;
-}
-
-@screen xs {
-  .interactable-chip {
-    min-height: 70px;
-    min-width: 100px;
-  }
-}
-
-@screen sm {
-  .interactable-chip {
-    min-height: 70px;
-    min-width: 150px;
-  }
-}
-
-@screen lg {
-  .interactable-chip {
-    min-height: 90px;
-    min-width: 180px;
-  }
 }
 
 .collapsible-target:hover * {

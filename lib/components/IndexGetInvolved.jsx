@@ -5,7 +5,7 @@ import { SocialCTAs } from 'lib/components/SocialCTAs'
 export const IndexGetInvolved = () => {
   return (
     <>
-      <div className='bg-secondary bg-get-involved'>
+      <div className='bg-get-involved'>
         <div className='pool-container mx-auto pt-12 pb-20 sm:pt-10 sm:pb-16'>
           <h1 className='text-center'>Get involved</h1>
 

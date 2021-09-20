@@ -32,7 +32,7 @@ export const IndexIntegrations = () => {
 
   return (
     <>
-      <div id='integ' className='bg-secondary'>
+      <div>
         <div className='pool-container mx-auto pt-12 pb-6 sm:pt-20 sm:pb-16'>
           <div className='lg:px-20'>
             <div className='flex items-center justify-between'>
