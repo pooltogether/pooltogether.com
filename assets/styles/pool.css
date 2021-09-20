@@ -19,12 +19,7 @@
 
 * {
   --flashyGradient: linear-gradient(40deg, #ff62cc 10%, #f7fe0c 40%, #2af787 60%, #00f0d0 80%);
-  --luckiestWinnersGradient: linear-gradient(
-    40deg,
-    #4C249F  0%,
-    #1C3857 50%,
-    #650380 100%
-  );
+  --luckiestWinnersGradient: linear-gradient(40deg, #4c249f 0%, #1c3857 50%, #650380 100%);
   --newGradient: linear-gradient(
     80deg,
     #4c249f -50%,
@@ -584,4 +579,36 @@ li.nav-mobile-listitem {
   overflow: hidden;
   position: relative;
   width: 100%;
+}
+
+.bounce {
+  animation-delay: 2s;
+  animation: bounce-7 10s infinite cubic-bezier(0.78, 0.84, 0.42, 1);
+}
+
+@keyframes bounce-7 {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  2% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  6% {
+    transform: scale(0.9, 1.1) translateY(-20px);
+  }
+  10% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  11% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+  13% {
+    transform: scale(1, 1) translateY(0);
+  }
+  20% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
 }

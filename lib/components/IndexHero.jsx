@@ -6,7 +6,12 @@ import { WeeklyPrizeAmount } from 'lib/components/WeeklyPrizeAmount'
 import { WistiaPlayer } from 'lib/components/WistiaPlayer'
 import { IndexHeroFeaturedIn } from 'lib/components/IndexHeroFeaturedIn'
 
-import { TwitterIconSvg, DiscordIconSvg, GithubIconSvg } from 'lib/components/SvgComponents'
+import {
+  DownArrowSvg,
+  TwitterIconSvg,
+  DiscordIconSvg,
+  GithubIconSvg
+} from 'lib/components/SvgComponents'
 
 import Squiggle from 'assets/images/squiggle.svg'
 import SquiggleMobile from 'assets/images/squiggle-mobile.svg'
@@ -39,8 +44,30 @@ export const IndexHero = (props) => {
         <IndexHeroFeaturedIn />
 
         <LuckiestWinnersBanner />
+
+        <DownArrow />
       </div>
     </>
+  )
+}
+
+const DownArrow = () => {
+  return (
+    <a
+      className='bounce block p-2 text-white w-16 mx-auto mb-16 hover:opacity-100 opacity-90 trans'
+      onClick={() => {
+        const node = document.getElementById('integ')
+
+        // This feels much smoother than `href='#integ'` or `scrollIntoView()`
+        window.scrollTo({
+          top: node.offsetTop + 100,
+          left: 0,
+          behavior: 'smooth'
+        })
+      }}
+    >
+      <DownArrowSvg />
+    </a>
   )
 }
 
