@@ -1,9 +1,4 @@
-import { IndexUI } from 'lib/components/IndexUI'
-
-export default function IndexPage(props) {
-  return <>
-    <IndexUI
-      {...props}
-    />
-  </>
+// Rendered in Layout.jsx
+export default function IndexPage (props) {
+  return <></>
 }

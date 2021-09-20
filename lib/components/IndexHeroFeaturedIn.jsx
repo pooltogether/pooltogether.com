@@ -36,7 +36,7 @@ export const IndexHeroFeaturedIn = () => {
   }
 
   return (
-    <div id='featured-in' className='text-center pt-10'>
+    <div id='featured-in' className='text-center w-full' style={{ padding: '2vh' }}>
       {/* lol, if you remove this then the SVGs render clipped ... wtf? */}
       <div className='hidden'>
         <CoindeskSvg />

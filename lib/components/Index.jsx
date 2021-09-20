@@ -1,10 +1,18 @@
 import React, { useState } from 'react'
 import FeatherIcon from 'feather-icons-react'
 import classnames from 'classnames'
+import { useRouter } from 'next/router'
 
 import { WeeklyPrizeAmount } from 'lib/components/WeeklyPrizeAmount'
 import { WistiaPlayer } from 'lib/components/WistiaPlayer'
 import { IndexHeroFeaturedIn } from 'lib/components/IndexHeroFeaturedIn'
+
+import { IndexGetInvolved } from 'lib/components/IndexGetInvolved'
+import { IndexPoolToken } from 'lib/components/IndexPoolToken'
+import { IndexHowItWorks } from 'lib/components/IndexHowItWorks'
+import { IndexIntegrations } from 'lib/components/IndexIntegrations'
+import { IndexSupportedBy } from 'lib/components/IndexSupportedBy'
+import { IndexSecurity } from 'lib/components/IndexSecurity'
 
 import {
   DownArrowSvg,
@@ -13,10 +21,13 @@ import {
   GithubIconSvg
 } from 'lib/components/SvgComponents'
 
-import Squiggle from 'assets/images/squiggle.svg'
-import SquiggleMobile from 'assets/images/squiggle-mobile.svg'
+export const Index = (props) => {
+  const router = useRouter()
 
-export const IndexHero = (props) => {
+  if (router.pathname !== '/') {
+    return null
+  }
+
   const [playVideo, setPlayVideo] = useState(false)
 
   const startVideo = (e) => {
@@ -30,8 +41,15 @@ export const IndexHero = (props) => {
 
   return (
     <>
-      <div className='relative'>
-        <div className='pool-container flex flex-col sm:flex-row justify-between mt-24 mx-auto'>
+      {/* mt-24  */}
+      <div
+        class='w-full flex flex-col justify-between w-full text-inverse'
+        style={{ height: `calc(100vh - ${props.navHeight}px)` }}
+      >
+        <div
+          className='pool-container flex flex-col sm:flex-row justify-between mx-auto w-full'
+          style={{ paddingTop: '5vh' }}
+        >
           <div className='relative w-full sm:w-5/12 mt-6'>
             <HeroLeft />
           </div>
@@ -47,6 +65,15 @@ export const IndexHero = (props) => {
 
         <DownArrow />
       </div>
+
+      <div className='text-inverse'>
+        <IndexIntegrations />
+        <IndexHowItWorks />
+        <IndexPoolToken />
+        <IndexSecurity />
+        <IndexSupportedBy />
+        <IndexGetInvolved />
+      </div>
     </>
   )
 }
@@ -54,13 +81,13 @@ export const IndexHero = (props) => {
 const DownArrow = () => {
   return (
     <a
-      className='bounce block p-2 text-white w-16 mx-auto mb-16 hover:opacity-100 opacity-90 trans'
+      className='bounce block text-white w-12 mx-auto trans mb-8 p-2'
       onClick={() => {
-        const node = document.getElementById('integ')
+        const pageHeight = window.innerHeight
 
         // This feels much smoother than `href='#integ'` or `scrollIntoView()`
         window.scrollTo({
-          top: node.offsetTop + 100,
+          top: pageHeight,
           left: 0,
           behavior: 'smooth'
         })
@@ -78,7 +105,9 @@ const HeroRight = () => {
         <WeeklyPrizeAmount />
       </h1>
       <div className='uppercase font-semibold text-default -mt-2'>In weekly prizes</div>
-      {/* Awarded every Thursday! */}
+      <div className='uppercase font-semibold text-green mt-8 text-xl w-1/2 mx-auto'>
+        Awarded every Thursday!
+      </div>
     </div>
   )
 }
@@ -147,13 +176,12 @@ const HeroSocialItem = (props) => {
   )
 }
 
-// const Bullet = () => <span className='mx-6 inline-block opacity-30'>&bull;</span>
 const Bullet = () => <span className='mx-6' />
 
 const LuckiestWinnersBanner = (props) => {
   return (
     <>
-      <div className='text-center relative flex flex-col sm:flex-row mt-10 mb-16 sm:my-20 mx-auto'>
+      <div className='text-center relative flex flex-col sm:flex-row mx-auto w-full'>
         <div className='bg-luckiest-winners-gradient mx-auto w-full sm:w-full py-8 sm:py-8 text-center sm:text-left overflow-hidden'>
           <div className='font-inter text-sm text-center text-green font-black uppercase'>
             Luckiest Winners
