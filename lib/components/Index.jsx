@@ -29,9 +29,8 @@ export const Index = (props) => {
 
   return (
     <>
-      {/* mt-24  */}
       <div
-        class='w-full flex flex-col justify-between w-full text-inverse text-center sm:text-left'
+        className='w-full flex flex-col justify-between w-full text-inverse text-center sm:text-left'
         style={{ height: `calc(100vh - ${props.navHeight}px)` }}
       >
         <div className='pool-container flex flex-col sm:flex-row justify-between mx-auto w-full pt-2 sm:pt-16'>
@@ -177,10 +176,10 @@ const LuckiestWinnersBanner = (props) => {
           <div className='font-inter text-sm text-center text-green font-black uppercase'>
             Luckiest Winners
           </div>
-          <nav class='menu'>
-            <div class='menu__item'>
-              <div class='marquee'>
-                <div class='marquee__inner' aria-hidden='true'>
+          <nav className='menu'>
+            <div className='menu__item'>
+              <div className='marquee'>
+                <div className='marquee__inner' aria-hidden='true'>
                   <span>
                     <SameText />
                   </span>

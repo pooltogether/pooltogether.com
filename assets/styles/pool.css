@@ -396,13 +396,14 @@ li.nav-mobile-listitem {
 @screen sm {
   .bg-vid-holo {
     background-position: top right;
+    padding-bottom: 65%;
     width: 366px;
   }
 }
 
 @screen lg {
   .bg-vid-holo {
-    width: 446px;
+    width: 546px;
   }
 }
 

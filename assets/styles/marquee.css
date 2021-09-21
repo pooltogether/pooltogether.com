@@ -157,7 +157,7 @@ body {
 
 	.frame__title-wrap {
 		display: flex;
-		align-items: start;
+		align-items: flex-start;
 	}
 
 	.frame__info {
