@@ -13,6 +13,8 @@ import { IndexIntegrations } from 'lib/components/IndexIntegrations'
 import { IndexSupportedBy } from 'lib/components/IndexSupportedBy'
 import { IndexSecurity } from 'lib/components/IndexSecurity'
 
+import { useScreenSize, ScreenSize } from 'lib/hooks/useScreenSize'
+
 import {
   DownArrowSvg,
   TwitterIconSvg,
@@ -27,18 +29,26 @@ export const Index = (props) => {
     return null
   }
 
+  const screenSize = useScreenSize()
+  const isSmall = screenSize <= ScreenSize.sm
+
+  let height
+  if (!isSmall) {
+    height = `calc(100vh - ${props.navHeight}px)`
+  }
+
   return (
     <>
       <div
         className='w-full flex flex-col justify-between w-full text-inverse text-center sm:text-left'
-        style={{ height: `calc(100vh - ${props.navHeight}px)` }}
+        style={{ height }}
       >
-        <div className='pool-container flex flex-col sm:flex-row justify-between mx-auto w-full pt-2 sm:pt-16'>
+        <div className='pool-container flex flex-col sm:flex-row justify-between mx-auto w-full sm:pt-16'>
           <div className='relative w-full sm:w-5/12 mt-6'>
             <HeroLeft />
           </div>
 
-          <div className='w-full sm:w-7/12 lg:w-1/2 mt-6'>
+          <div className='w-full sm:w-7/12 lg:w-1/2 mt-12 sm:mt-6'>
             <HeroRight />
           </div>
         </div>
@@ -85,8 +95,8 @@ const DownArrow = () => {
 const HeroRight = () => {
   return (
     <>
-      <div className='bg-prize-amount flex flex-col justify-between text-center pt-8'>
-        <div className='pb-10'>
+      <div className='bg-prize-amount flex flex-col justify-between text-center pt-8 h-48'>
+        <div className='sm:pb-10'>
           <h1 className='text-4xl xs:text-6xl sm:text-9xl -mt-6 sm:-mt-0'>
             <WeeklyPrizeAmount />
           </h1>
@@ -97,7 +107,8 @@ const HeroRight = () => {
         </div>
       </div>
 
-      <ul className='flex justify-center sm:justify-end mt-0 mb-8 sm:mb-0 mx-auto sm:pr-20'>
+      {/* -mt-6  */}
+      <ul className='flex justify-center sm:justify-end xs:mt-0 mb-8 sm:mb-0 mx-auto sm:pr-20'>
         <HeroSocialItem width={23} href='https://twitter.com/PoolTogether_'>
           <TwitterIconSvg />
         </HeroSocialItem>
@@ -137,7 +148,7 @@ const HeroLeft = () => {
       <div className='text-sm xs:text-base sm:text-xl mt-8'>
         The more you save, the more you win!
       </div>
-      <div className='mt-4 mb-12 sm:mb-0 sm-max-width-hero'>
+      <div className='mt-2 sm:mt-4 mb-4 sm:mb-0 sm-max-width-hero'>
         <a
           href='https://app.pooltogether.com'
           className='new-btn block text-center text-xl w-full capitalize text-xs px-2 py-2 mt-2'

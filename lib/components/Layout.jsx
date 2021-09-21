@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import classnames from 'classnames'
-import { motion, useViewportScroll } from 'framer-motion'
+import { useViewportScroll } from 'framer-motion'
 
 import { HeaderLogo } from 'lib/components/HeaderLogo'
 import { NavMobile } from 'lib/components/NavMobile'

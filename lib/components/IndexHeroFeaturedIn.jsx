@@ -48,7 +48,7 @@ export const IndexHeroFeaturedIn = () => {
 
         <motion.div
           className={classnames(
-            'flex flex-col sm:flex-row sm:flex-wrap justify-center items-center sm:items-start',
+            'flex flex-col-reverse sm:flex-row sm:flex-wrap justify-center items-center sm:items-start',
             'mt-2 mb-4 px-4 sm:px-8 rounded-xl -mx-4 sm:-mx-12 lg:-mx-16'
           )}
           ref={ref}
