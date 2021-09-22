@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { SquareLink, SquareButtonTheme } from '@pooltogether/react-components'
 
 const itemVariants = {
   hidden: {
@@ -17,30 +18,36 @@ export const GridItem = (props) => {
 
   return (
     <>
-      <motion.a
+      <motion.div
         href={url}
         title={`View ${title}`}
         target='_blank'
         rel='noopener noreferrer'
-        className='w-full sm:w-1/3 rounded-lg  p-2 trans flex flex-col no-underline px-4 lg:px-8 mx-auto'
+        className='w-full sm:w-1/3 rounded-lg trans flex flex-col no-underline mx-auto px-12 lg:px-12 mb-12'
         variants={itemVariants}
-        whileHover={{ scale: 1.03 }}
-        whileTap={{ scale: 0.97 }}
       >
-        <div className='interactable-chip-alt-bg text-white interactable-chip hover:shadow-xl flex flex-col justify-center trans py-4 px-10 sm:px-8 h-32'>
-          <div className='flex items-center justify-between w-full'>
-            <div className='font-bold text-xl sm:text-lg lg:text-xl'>{title}</div>
-            <img
-              src={img}
-              className='w-6 h-6 lg:w-8 lg:h-8'
-              title={attribution || ''}
-              style={imgStyle}
-            />
-          </div>
+        <img src={img} className='w-24 h-24' title={attribution || ''} style={imgStyle} />
 
-          <div className='mt-2 sm:mt-4 no-underline text-gray-600 text-xxs'>{description}</div>
+        <div className='text-white flex flex-col trans py-6'>
+          <div className='font-inter font-semibold text-3xl'>{title}</div>
+
+          <div className='sm:mt-2 text-accent-1 text-lg'>{description}</div>
+
+          <SquareLink theme={SquareButtonTheme.teal} href='https://app.pooltogether.com'>
+            Open
+          </SquareLink>
+
+          {/* <NewButton
+            theme={NEW_BUTTON_THEME.smallBlack}
+            href='https://app.pooltogether.com'
+            className='mx-auto sm:mx-0 max-w-md'
+          >
+            Open
+          </NewButton> */}
         </div>
-      </motion.a>
+      </motion.div>
     </>
   )
 }
+
+// sm:mr-8 sm:pr-4

@@ -599,15 +599,8 @@ li.nav-mobile-listitem {
   }
 }
 
-
-.sm-max-width-hero {
-  @apply mx-auto;
-  /* max-width: 446px; */
-}
-
 @screen sm {
   .sm-max-width-hero {
-    @apply mx-0;
     max-width: 446px;
   } 
 }

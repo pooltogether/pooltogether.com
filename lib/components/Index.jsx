@@ -1,17 +1,18 @@
 import React from 'react'
-import FeatherIcon from 'feather-icons-react'
 import classnames from 'classnames'
 import { useRouter } from 'next/router'
 
 import { WeeklyPrizeAmount } from 'lib/components/WeeklyPrizeAmount'
 import { IndexHeroFeaturedIn } from 'lib/components/IndexHeroFeaturedIn'
 
+import { IndexAnalytics } from 'lib/components/IndexAnalytics'
 import { IndexGetInvolved } from 'lib/components/IndexGetInvolved'
 import { IndexPoolToken } from 'lib/components/IndexPoolToken'
 import { IndexHowItWorks } from 'lib/components/IndexHowItWorks'
-import { IndexIntegrations } from 'lib/components/IndexIntegrations'
+import { IndexEcosystem } from 'lib/components/IndexEcosystem'
 import { IndexSupportedBy } from 'lib/components/IndexSupportedBy'
 import { IndexSecurity } from 'lib/components/IndexSecurity'
+import { NewButton } from 'lib/components/NewButton'
 
 import { useScreenSize, ScreenSize } from 'lib/hooks/useScreenSize'
 
@@ -62,7 +63,8 @@ export const Index = (props) => {
 
       <div className='text-inverse'>
         <IndexHowItWorks />
-        <IndexIntegrations />
+        <IndexAnalytics />
+        <IndexEcosystem />
         <IndexPoolToken />
         <IndexSecurity />
         {/* <IndexSupportedBy /> */}
@@ -103,7 +105,7 @@ const HeroRight = () => {
           <div className='uppercase font-semibold text-default -mt-2'>In weekly prizes</div>
         </div>
         <div className='uppercase font-semibold text-green mb-12 text-xs xs:text-lg lg:text-xl w-1/2 mx-auto'>
-          Awarded every Thursday!
+          Awarded every Friday!
         </div>
       </div>
 
@@ -149,13 +151,9 @@ const HeroLeft = () => {
         The more you save, the more you win!
       </div>
       <div className='mt-2 sm:mt-4 mb-4 sm:mb-0 sm-max-width-hero'>
-        <a
-          href='https://app.pooltogether.com'
-          className='new-btn block text-center text-xl w-full capitalize text-xs px-2 py-2 mt-2'
-        >
-          Start saving & winning{' '}
-          <FeatherIcon icon={'chevron-right'} className='inline-block w-6 h-6 -mt-1' />
-        </a>
+        <NewButton href='https://app.pooltogether.com' className='mx-auto sm:mx-0 max-w-md'>
+          Start saving & winning
+        </NewButton>
       </div>
     </>
   )
