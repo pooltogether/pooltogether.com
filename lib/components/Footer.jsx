@@ -41,14 +41,12 @@ export const Footer = () => {
 
   return (
     <>
-      <footer className='footer pool-container w-full text-accent-1 text-sm mx-auto'>
+      <footer className='footer pool-container w-full text-default text-sm mx-auto'>
         <div className='flex flex-col pt-10 lg:pt-20'>
           <div className='pt-6 sm:pt-0 pb-8 flex flex-col sm:flex-row justify-between'>
             <div className='footer--pool-logo-container '>
               <Link href='/' as='/' shallow>
-                <a title={'Back to home'} className='pool-logo border-0 trans block w-full'>
-                  <img src={PoolTogetherLogo} />
-                </a>
+                <a title={'Back to home'} className='pool-logo border-0 trans block w-full' />
               </Link>
             </div>
 
@@ -148,7 +146,7 @@ export const Footer = () => {
             </nav>
           </div>
 
-          <div className='flex justify-between flex-col sm:flex-row sm:pt-2 pb-10 sm:pb-20 lg:pb-20 text-xs border-t'>
+          <div className='flex justify-between flex-col sm:flex-row sm:pt-2 pb-10 sm:pb-20 lg:pb-20 text-xs border-t border-green'>
             <div className='w-32 lg:w-32'>
               <nav className='flex justify-between w-full'>
                 {/* <a
@@ -160,7 +158,7 @@ export const Footer = () => {
               >
                 Privacy
               </a> */}
-                <a className={classnames('mt-2 sm:mt-4', linkClassNames)} href='/terms'>
+                <a className={classnames('mt-2 sm:mt-4 mr-6', linkClassNames)} href='/terms'>
                   Terms
                 </a>
                 <a className={classnames('mt-2 sm:mt-4', linkClassNames)} href='/sitemap.xml'>

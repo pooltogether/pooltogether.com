@@ -6,12 +6,13 @@ import { WeeklyPrizeAmount } from 'lib/components/WeeklyPrizeAmount'
 import { IndexHeroFeaturedIn } from 'lib/components/IndexHeroFeaturedIn'
 
 import { IndexAnalytics } from 'lib/components/IndexAnalytics'
-import { IndexGetInvolved } from 'lib/components/IndexGetInvolved'
-import { IndexPoolToken } from 'lib/components/IndexPoolToken'
+import { IndexGovernance } from 'lib/components/IndexGovernance'
+// import { IndexGetInvolved } from 'lib/components/IndexGetInvolved'
+// import { IndexPoolToken } from 'lib/components/IndexPoolToken'
 import { IndexHowItWorks } from 'lib/components/IndexHowItWorks'
 import { IndexEcosystem } from 'lib/components/IndexEcosystem'
-import { IndexSupportedBy } from 'lib/components/IndexSupportedBy'
-import { IndexSecurity } from 'lib/components/IndexSecurity'
+// import { IndexSupportedBy } from 'lib/components/IndexSupportedBy'
+// import { IndexSecurity } from 'lib/components/IndexSecurity'
 import { NewButton } from 'lib/components/NewButton'
 
 import { useScreenSize, ScreenSize } from 'lib/hooks/useScreenSize'
@@ -65,10 +66,7 @@ export const Index = (props) => {
         <IndexHowItWorks />
         <IndexAnalytics />
         <IndexEcosystem />
-        <IndexPoolToken />
-        <IndexSecurity />
-        {/* <IndexSupportedBy /> */}
-        <IndexGetInvolved />
+        <IndexGovernance />
       </div>
     </>
   )

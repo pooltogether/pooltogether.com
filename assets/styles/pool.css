@@ -236,16 +236,13 @@ input[type='submit'][disabled] {
   background-color: #0c021b;
 }
 
-.footer {
-}
-
-/* .footer a {
-  @apply text-primary border-0;
+.footer a {
+  color: var(--color-text-green) !important;
 }
 
 .footer a:hover {
-  @apply text-secondary;
-} */
+  color: white !important;
+}
 
 .footer .img-link:hover {
   @apply border-0 no-underline;

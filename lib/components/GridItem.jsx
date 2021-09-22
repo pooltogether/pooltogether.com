@@ -14,7 +14,7 @@ const itemVariants = {
 }
 
 export const GridItem = (props) => {
-  const { attribution, description, img, svg, title, url, imgStyle } = props
+  const { attribution, description, buttonText, img, svg, title, url, imgStyle } = props
 
   return (
     <>
@@ -36,22 +36,14 @@ export const GridItem = (props) => {
 
           <SquareLink
             chevron
-            size={SquareButtonSize.sm}
+            size={SquareButtonSize.md}
             theme={SquareButtonTheme.black}
             href={url}
-            className='w-1/2 mt-4 text-center'
+            className='w-2/3 mt-4 text-center'
             target='_blank'
           >
-            Open
+            {buttonText || 'Open'}
           </SquareLink>
-
-          {/* <NewButton
-            theme={NEW_BUTTON_THEME.smallBlack}
-            href='https://app.pooltogether.com'
-            className='mx-auto sm:mx-0 max-w-md'
-          >
-            Open
-          </NewButton> */}
         </div>
       </motion.div>
     </>

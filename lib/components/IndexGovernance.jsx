@@ -4,13 +4,7 @@ import { motion, useAnimation } from 'framer-motion'
 
 import { GridItem } from 'lib/components/GridItem'
 
-import DharmaLogo from 'assets/images/dharma@2x.png'
-// import ZerionSvg from 'assets/images/zerion.svg'
-// import ZapperFiSvg from 'assets/images/zapperfi.svg'
-
-import { ZapperSvg, ZerionSvg } from 'lib/components/SvgComponents'
-
-export const IndexEcosystem = () => {
+export const IndexGovernance = () => {
   const controls = useAnimation()
   const [ref, inView] = useInView()
 
@@ -33,12 +27,19 @@ export const IndexEcosystem = () => {
     <>
       <div className='py-24'>
         <div className='pool-container mx-auto'>
-          <h5 className='uppercase text-highlight-1 pb-4'>Ecosystem:</h5>
+          <h5 className='uppercase text-highlight-1 pb-4'>Governance:</h5>
 
           <div className='flex flex-col'>
             <p className='text-sm xs:text-xl sm:text-lg lg:text-xl sm:max-w-2xl'>
-              Decentralized Finance (DeFi) platforms, neobanks and savings customers all working
-              together to win.
+              PoolTogether is a decentralized, autonomously goverened system. Changes and upgrades
+              are proposed and voted on by the{' '}
+              <a
+                href='https://medium.com/pooltogether/introducing-pool-23b09f36db48'
+                target='_blank'
+              >
+                POOL
+              </a>{' '}
+              token holders.
             </p>
 
             <motion.div
@@ -52,29 +53,26 @@ export const IndexEcosystem = () => {
             >
               <GridItem
                 altBg
-                title={'Zapper'}
-                description={`Join PoolTogether using this portal to DeFi.`}
-                svg={<ZapperSvg />}
-                url='https://www.zapper.fi'
-                buttonText='Open Zapper'
+                title={'Governance Forum'}
+                description={`Discuss sentiment for changes prior to making proposals and discuss on the forum.`}
+                url='https://gov.pooltogether.com'
+                buttonText='Read forum'
               />
 
               <GridItem
                 altBg
-                title={'Dharma'}
-                description={`Deposit into PoolTogether from your US bank.`}
-                img={DharmaLogo}
-                url='https://www.dharma.io/'
-                buttonText='Open Dharma'
+                title={'Tally'}
+                description={`View proposal and voting history, active voters, and delegate your votes on Tally.`}
+                url='https://withtally.com'
+                buttonText='Use Tally'
               />
 
               <GridItem
                 altBg
-                title={'Zerion'}
-                description={`Access DeFi & view your PoolTogether deposits.`}
-                svg={<ZerionSvg />}
-                url='https://zerion.io/'
-                buttonText='Open Zerion'
+                title={'Vote'}
+                description={`PoolTogether’s Vote provides you with an easy proposal creation system and voting tools.`}
+                url='https://vote.pooltogether.com'
+                buttonText='Use Vote'
               />
             </motion.div>
           </div>

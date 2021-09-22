@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import classnames from 'classnames'
 import { useViewportScroll } from 'framer-motion'
+import { useRouter } from 'next/router'
 
 import { HeaderLogo } from 'lib/components/HeaderLogo'
 import { NavMobile } from 'lib/components/NavMobile'
@@ -20,7 +21,9 @@ export const Layout = (props) => {
     setYScrollPosition(y)
   })
 
-  // const router = useRouter()
+  const router = useRouter()
+
+  const isIndex = router.pathname === '/'
 
   // const signIn = router.query.signIn
   // const deposit = /deposit/.test(router.asPath)
@@ -45,32 +48,34 @@ export const Layout = (props) => {
 
       <Index navHeight={navHeight} />
 
-      <div
-        className='flex flex-col w-full'
-        style={{
-          minHeight: '100vh'
-        }}
-      >
-        <div className='content'>
-          <div className='mx-auto w-full flex flex-grow relative z-10 h-full page'>
-            <div className='flex flex-col flex-grow'>
-              <div
-                className='relative text-inverse flex flex-col flex-grow h-full z-10'
-                style={{
-                  flex: 1
-                }}
-              >
-                {React.cloneElement(children, {
-                  ...props
-                })}
+      {!isIndex && (
+        <div
+          className='flex flex-col w-full'
+          style={{
+            minHeight: '100vh'
+          }}
+        >
+          <div className='content'>
+            <div className='mx-auto w-full flex flex-grow relative z-10 h-full page'>
+              <div className='flex flex-col flex-grow'>
+                <div
+                  className='relative text-inverse flex flex-col flex-grow h-full z-10'
+                  style={{
+                    flex: 1
+                  }}
+                >
+                  {React.cloneElement(children, {
+                    ...props
+                  })}
+                </div>
               </div>
             </div>
           </div>
         </div>
+      )}
 
-        <div className='footer--container'>
-          <Footer />
-        </div>
+      <div className='footer--container'>
+        <Footer />
       </div>
     </>
   )
