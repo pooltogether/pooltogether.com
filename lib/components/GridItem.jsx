@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { SquareLink, SquareButtonTheme } from '@pooltogether/react-components'
+import { SquareLink, SquareButtonTheme, SquareButtonSize } from '@pooltogether/react-components'
 
 const itemVariants = {
   hidden: {
@@ -14,7 +14,7 @@ const itemVariants = {
 }
 
 export const GridItem = (props) => {
-  const { attribution, description, img, title, url, imgStyle } = props
+  const { attribution, description, img, svg, title, url, imgStyle } = props
 
   return (
     <>
@@ -23,17 +23,25 @@ export const GridItem = (props) => {
         title={`View ${title}`}
         target='_blank'
         rel='noopener noreferrer'
-        className='w-full sm:w-1/3 rounded-lg trans flex flex-col no-underline mx-auto px-12 lg:px-12 mb-12'
+        className='w-full sm:w-1/3 rounded-lg trans flex flex-col no-underline mx-auto px-4 lg:px-12 mb-12'
         variants={itemVariants}
       >
-        <img src={img} className='w-24 h-24' title={attribution || ''} style={imgStyle} />
+        {img && <img src={img} className='w-24 h-24' title={attribution || ''} style={imgStyle} />}
+        {svg && <div className='w-24 h-24'>{svg}</div>}
 
         <div className='text-white flex flex-col trans py-6'>
           <div className='font-inter font-semibold text-3xl'>{title}</div>
 
           <div className='sm:mt-2 text-accent-1 text-lg'>{description}</div>
 
-          <SquareLink theme={SquareButtonTheme.teal} href='https://app.pooltogether.com'>
+          <SquareLink
+            chevron
+            size={SquareButtonSize.sm}
+            theme={SquareButtonTheme.black}
+            href={url}
+            className='w-1/2 mt-4 text-center'
+            target='_blank'
+          >
             Open
           </SquareLink>
 

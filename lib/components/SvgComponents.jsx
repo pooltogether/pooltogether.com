@@ -2,6 +2,81 @@ import React from 'react'
 
 // SVG Components created by pasting SVG into:
 // https://react-svgr.com/playground/
+export const ZapperSvg = (props) => {
+  return (
+    <svg
+      {...props}
+      height='100%'
+      className='stroke-current'
+      viewBox='0 0 100 100'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <rect width={100} height={100} rx={20} fill='#fff' />
+      <path
+        d='M85 50c0-19.33-15.67-35-35-35S15 30.67 15 50s15.67 35 35 35 35-15.67 35-35z'
+        fill='#784FFE'
+      />
+      <path
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M36.607 41.302l24.678-.122-5.909 8.904 13.944-.068-5.91 8.755-24.837.16 6.002-8.842-13.895-.006 5.927-8.781z'
+        fill='#fff'
+      />
+    </svg>
+  )
+}
+
+export const ZerionSvg = (props) => {
+  return (
+    <svg
+      {...props}
+      height='100%'
+      className='stroke-current'
+      viewBox='0 0 100 100'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <rect width={100} height={100} rx={20} fill='#fff' />
+      <g clipPath='url(#prefix__clip0)'>
+        <path
+          d='M71 15H29c-7.732 0-14 6.268-14 14v42c0 7.732 6.268 14 14 14h42c7.732 0 14-6.268 14-14V29c0-7.732-6.268-14-14-14z'
+          fill='#2962EF'
+        />
+        <g filter='url(#prefix__filter0_d)' fill='#fff'>
+          <path d='M45.208 63.477c.03-.041 1.97-2.823 4.697-6.733l-9.826.038c-4.146 5.828-7.586 10.662-7.692 10.809-.526.826-.31 1.805-.31 1.805 0 .592.56 1.125 1.182 1.125h34.18a.406.406 0 00.414-.395.384.384 0 00-.133-.29l-6.966-6.135a.425.425 0 00-.282-.105l-15.264-.001s-.102.02 0-.118zM54.642 36.688l-4.776 6.62 9.573.052a4575.592 4575.592 0 008.12-11.508c.38-.561.283-1.16.283-1.16 0-.583-.56-1.109-1.182-1.109H32.45c-.37 0-.556.419-.295.664l6.4 6.054a.43.43 0 00.295.116h6.396l9.396.038s.18-.014 0 .233z' />
+        </g>
+      </g>
+      <defs>
+        <clipPath id='prefix__clip0'>
+          <path fill='#fff' transform='translate(15 15)' d='M0 0h70v70H0z' />
+        </clipPath>
+        <filter
+          id='prefix__filter0_d'
+          x={-42.633}
+          y={-26.416}
+          width={185.153}
+          height={190.271}
+          filterUnits='userSpaceOnUse'
+          colorInterpolationFilters='sRGB'
+        >
+          <feFlood floodOpacity={0} result='BackgroundImageFix' />
+          <feColorMatrix
+            in='SourceAlpha'
+            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+            result='hardAlpha'
+          />
+          <feOffset dy={18.667} />
+          <feGaussianBlur stdDeviation={37.333} />
+          <feColorMatrix values='0 0 0 0 0.0223611 0 0 0 0 0.0618016 0 0 0 0 0.191667 0 0 0 0.12 0' />
+          <feBlend in2='BackgroundImageFix' result='effect1_dropShadow' />
+          <feBlend in='SourceGraphic' in2='effect1_dropShadow' result='shape' />
+        </filter>
+      </defs>
+    </svg>
+  )
+}
+
 export const DownArrowSvg = (props) => {
   return (
     <svg

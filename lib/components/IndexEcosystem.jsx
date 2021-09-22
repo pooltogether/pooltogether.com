@@ -5,9 +5,11 @@ import { motion, useAnimation } from 'framer-motion'
 
 import { GridItem } from 'lib/components/GridItem'
 
-import DharmaSvg from 'assets/images/dharma-logo.png'
-import ZerionSvg from 'assets/images/zerion.svg'
-import ZapperFiSvg from 'assets/images/zapperfi.svg'
+import DharmaLogo from 'assets/images/dharma@2x.png'
+// import ZerionSvg from 'assets/images/zerion.svg'
+// import ZapperFiSvg from 'assets/images/zapperfi.svg'
+
+import { ZapperSvg, ZerionSvg } from 'lib/components/SvgComponents'
 
 export const IndexEcosystem = () => {
   const controls = useAnimation()
@@ -42,7 +44,7 @@ export const IndexEcosystem = () => {
 
             <motion.div
               className={
-                'flex flex-col sm:flex-row sm:flex-wrap mt-12 text-base lg:text-lg -mx-12 lg:-mx-12'
+                'flex flex-col sm:flex-row sm:flex-wrap mt-12 text-base lg:text-lg -mx-4 lg:-mx-12'
               }
               ref={ref}
               animate={controls}
@@ -53,15 +55,15 @@ export const IndexEcosystem = () => {
                 altBg
                 title={'Zapper'}
                 description={`Join PoolTogether using this portal to DeFi.`}
-                img={ZapperFiSvg}
-                url='https://www.zapper.fi/#/dashboard'
+                svg={<ZapperSvg />}
+                url='https://www.zapper.fi'
               />
 
               <GridItem
                 altBg
                 title={'Dharma'}
                 description={`Deposit into PoolTogether from your US bank.`}
-                img={DharmaSvg}
+                img={DharmaLogo}
                 url='https://www.dharma.io/'
               />
 
@@ -69,7 +71,7 @@ export const IndexEcosystem = () => {
                 altBg
                 title={'Zerion'}
                 description={`Access DeFi & view your PoolTogether deposits.`}
-                img={ZerionSvg}
+                svg={<ZerionSvg />}
                 url='https://zerion.io/'
               />
             </motion.div>
