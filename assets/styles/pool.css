@@ -65,46 +65,6 @@ p {
   @apply mb-2;
 }
 
-#video-player_popover_container {
-  pointer-events: none;
-}
-
-body.wistia_popover_mode #video-player_popover_container {
-  pointer-events: auto;
-}
-
-body.wistia_popover_mode #video-player_popover_container {
-  overflow: hidden;
-}
-
-.wistia_popover_mode {
-  overflow: hidden;
-}
-
-.wistia_popover_overlay {
-  outline: 0 !important;
-  width: 100% !important;
-}
-
-.wistia_popover_embed {
-  border-image-width: none !important;
-  top: 10vh !important;
-  box-shadow: none !important;
-  left: 0 !important;
-  right: 0 !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  outline: 0 !important;
-}
-
-.w-video-wrapper {
-  background: #200546 !important;
-}
-
-.wistia_placebo_close_button {
-  display: none;
-}
-
 input:-internal-autofill-previewed,
 input:-internal-autofill-selected,
 textarea:-internal-autofill-previewed,
@@ -380,7 +340,7 @@ li.nav-mobile-listitem {
 .bg-vid-holo {
   background-image: url('/bg-green-tsunami@2x.png');
   background-size: contain;
-  background-position: top center;
+  background-position: top left;
   background-repeat: no-repeat;
 
   padding-bottom: 65%;
@@ -392,7 +352,6 @@ li.nav-mobile-listitem {
 
 @screen sm {
   .bg-vid-holo {
-    background-position: top right;
     padding-bottom: 65%;
     width: 366px;
   }
@@ -400,6 +359,7 @@ li.nav-mobile-listitem {
 
 @screen lg {
   .bg-vid-holo {
+    padding-bottom: 64%;
     width: 546px;
   }
 }
@@ -596,7 +556,11 @@ li.nav-mobile-listitem {
   }
 }
 
-@screen sm {
+.sm-max-width-hero {
+  max-width: 296px;
+} 
+
+@screen xs {
   .sm-max-width-hero {
     max-width: 446px;
   } 

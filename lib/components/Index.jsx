@@ -1,6 +1,7 @@
 import React from 'react'
 import classnames from 'classnames'
 import { useRouter } from 'next/router'
+import { SquareLink, SquareButtonTheme, SquareButtonSize } from '@pooltogether/react-components'
 
 import { WeeklyPrizeAmount } from 'lib/components/WeeklyPrizeAmount'
 import { IndexHeroFeaturedIn } from 'lib/components/IndexHeroFeaturedIn'
@@ -13,7 +14,6 @@ import { IndexHowItWorks } from 'lib/components/IndexHowItWorks'
 import { IndexEcosystem } from 'lib/components/IndexEcosystem'
 // import { IndexSupportedBy } from 'lib/components/IndexSupportedBy'
 // import { IndexSecurity } from 'lib/components/IndexSecurity'
-import { NewButton } from 'lib/components/NewButton'
 
 import { useScreenSize, ScreenSize } from 'lib/hooks/useScreenSize'
 
@@ -50,7 +50,7 @@ export const Index = (props) => {
             <HeroLeft />
           </div>
 
-          <div className='w-full sm:w-7/12 lg:w-1/2 mt-12 sm:mt-6'>
+          <div className='w-full sm:w-7/12 lg:w-1/2 mt-6'>
             <HeroRight />
           </div>
         </div>
@@ -75,7 +75,7 @@ export const Index = (props) => {
 const DownArrow = () => {
   return (
     <a
-      className='bounce block text-white w-12 mx-auto trans mb-8 p-2'
+      className='bounce block text-white w-12 mx-auto trans mb-8 p-2 hidden sm:block'
       onClick={() => {
         const pageHeight = window.innerHeight
 
@@ -95,7 +95,7 @@ const DownArrow = () => {
 const HeroRight = () => {
   return (
     <>
-      <div className='bg-prize-amount flex flex-col justify-between text-center pt-8 h-48'>
+      <div className='bg-prize-amount flex flex-col justify-between text-center pt-12 sm:pt-8 h-48'>
         <div className='sm:pb-10'>
           <h1 className='text-4xl xs:text-6xl sm:text-9xl -mt-6 sm:-mt-0'>
             <WeeklyPrizeAmount />
@@ -134,7 +134,7 @@ const HeroLeft = () => {
       >
         Win by saving with PoolTogether.
       </span>
-      <p className='text-accent-1 mt-4 sm-max-width-hero'>
+      <p className='text-accent-1 mt-4 sm-max-width-hero mx-auto sm:mx-0'>
         PoolTogether is a crypto-powered savings protocol based on{' '}
         <a
           href='https://en.wikipedia.org/wiki/Premium_Bond'
@@ -148,17 +148,23 @@ const HeroLeft = () => {
       <div className='text-sm xs:text-base sm:text-xl mt-8'>
         The more you save, the more you win!
       </div>
-      <div className='mt-2 sm:mt-4 mb-4 sm:mb-0 sm-max-width-hero'>
-        <NewButton href='https://app.pooltogether.com' className='mx-auto sm:mx-0 max-w-md'>
+      <div className='mt-2 sm:mt-4 mb-4 sm:mb-0 sm-max-width-hero mx-auto sm:mx-0 text-center'>
+        <SquareLink
+          chevron
+          size={SquareButtonSize.md}
+          theme={SquareButtonTheme.teal}
+          href='https://app.pooltogether.com'
+          className='mx-auto sm:mx-0 max-w-md mt-2 block'
+        >
           Start saving & winning
-        </NewButton>
+        </SquareLink>
       </div>
     </>
   )
 }
 
 const HeroSocialItem = (props) => {
-  const linkListItemClassName = 'mt-4 mr-5'
+  const linkListItemClassName = 'mt-4 sm:mt-4 mx-2 sm:mr-5'
   const linkClassName = 'trans trans-fast no-underline text-default-soft'
 
   return (

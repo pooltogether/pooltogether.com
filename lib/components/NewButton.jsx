@@ -21,7 +21,7 @@ export const NewButton = (props) => {
       className={classnames(
         props.className,
         themeClassName,
-        'new-btn block text-center text-xl w-full capitalize text-xs px-2 py-2 mt-2'
+        'new-btn block text-center text-xl w-full text-xs px-2 py-2 mt-2'
       )}
     >
       {props.children} <FeatherIcon icon={'chevron-right'} className='inline-block w-6 h-6 -mt-1' />

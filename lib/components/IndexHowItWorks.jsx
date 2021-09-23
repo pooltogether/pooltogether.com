@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-
-import { WistiaPlayer } from 'lib/components/WistiaPlayer'
+import ReactPlayer from 'react-player'
 
 const HowItWorksBox = (props) => {
   return (
@@ -20,10 +19,6 @@ export const IndexHowItWorks = () => {
   const startVideo = (e) => {
     e.preventDefault()
     setPlayVideo(true)
-
-    setTimeout(() => {
-      setPlayVideo(false)
-    }, 500)
   }
 
   return (
@@ -40,11 +35,13 @@ export const IndexHowItWorks = () => {
                 role='img'
               >
                 <div className='bg-vid-holo--inner flex items-center justify-center'>
-                  <WistiaPlayer play={playVideo} />
-
-                  <div className='bg-vid-circle rounded-full flex items-center justify-center hover:bg-highlight-2 trans'>
-                    <div className='bg-vid-tri' />
-                  </div>
+                  {playVideo ? (
+                    <ReactPlayer playing url='https://www.youtube.com/watch?v=-QjnvmCQdoE' />
+                  ) : (
+                    <div className='bg-vid-circle rounded-full flex items-center justify-center hover:bg-highlight-2 trans'>
+                      <div className='bg-vid-tri' />
+                    </div>
+                  )}
                 </div>
               </button>
             </div>

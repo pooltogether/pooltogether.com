@@ -36,7 +36,7 @@ export const IndexHeroFeaturedIn = () => {
   }
 
   return (
-    <div id='featured-in' className='text-center w-full' style={{ padding: '2vh' }}>
+    <div id='featured-in' className='text-center w-full' style={{ paddingBottom: '2vh' }}>
       {/* lol, if you remove this then the SVGs render clipped ... wtf? */}
       <div className='hidden'>
         <CoindeskSvg />
@@ -48,8 +48,8 @@ export const IndexHeroFeaturedIn = () => {
 
         <motion.div
           className={classnames(
-            'flex flex-col-reverse sm:flex-row sm:flex-wrap justify-center items-center sm:items-start',
-            'mt-2 mb-4 px-4 sm:px-8 rounded-xl -mx-4 sm:-mx-12 lg:-mx-16'
+            'flex flex-col-reverse xs:flex-row xs:flex-wrap justify-center items-center xs:items-start',
+            'mt-2 mb-4 xs:px-8 rounded-xl xs:-mx-12 lg:-mx-16'
           )}
           ref={ref}
           animate={controls}
@@ -61,7 +61,8 @@ export const IndexHeroFeaturedIn = () => {
             title={'Binance Academy site'}
             img={<BinanceAcademySvg />}
             url='https://academy.binance.com/en/articles/how-pool-together-turns-saving-money-into-a-game'
-            className='sm:ml-2 sm:-mr-2'
+            className='xs:ml-3 xs:-mr-3'
+            heightClassName='h-10'
           />
 
           <GridItemSupportedBy
@@ -69,6 +70,7 @@ export const IndexHeroFeaturedIn = () => {
             title={'Fortune Magazine site'}
             img={<FortuneSvg />}
             url='https://fortune.com/longform/decentralized-finance-crypto-wall-street'
+            className='mt-1'
           />
 
           <GridItemSupportedBy
@@ -76,6 +78,7 @@ export const IndexHeroFeaturedIn = () => {
             title={'CoinDesk site'}
             img={<CoindeskSvg />}
             url='https://old.coindesk.com/tag/pooltogether'
+            className='mt-1'
           />
         </motion.div>
       </div>
