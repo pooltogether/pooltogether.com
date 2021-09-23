@@ -1,5 +1,4 @@
 const chalk = require("chalk")
-const path = require('path')
 const withImages = require('next-images')
 const webpack = require('webpack')
 const _ = require('lodash')

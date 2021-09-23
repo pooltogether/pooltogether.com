@@ -1,14 +1,13 @@
 import React from 'react'
+import { ThemedClipSpinner } from '@pooltogether/react-components'
 
 // import { useTranslation } from 'lib/../i18n'
 import { numberWithCommas } from 'lib/utils/numberWithCommas'
-import { usePooltogetherTvl, usePooltogetherTotalPrizes } from 'lib/hooks/usePooltogetherTvl'
-import { BannerUILoader } from 'lib/components/BannerUILoader'
+import { usePooltogetherTotalPrizes } from 'lib/hooks/usePooltogetherTvl'
 
 export const WeeklyPrizeAmount = (props) => {
   // const { t } = useTranslation()
 
-  const totalValueLocked = usePooltogetherTvl()
   const totalPrizes = usePooltogetherTotalPrizes()
 
   const formatNumbers = (num) => {
@@ -22,16 +21,12 @@ export const WeeklyPrizeAmount = (props) => {
   }
 
   // Check if data has loaded
-  if (totalValueLocked === null || totalPrizes === null) {
-    return (
-      <div className='pool-container mx-auto mt-12'>
-        <BannerUILoader />
-      </div>
-    )
+  if (totalPrizes === null) {
+    return <ThemedClipSpinner />
+    // return <>...</>
   }
 
   const totalPrizeFormatted = formatNumbers(totalPrizes)
-  // const totalValueLockedFormatted = formatNumbers(totalValueLocked)
 
   return totalPrizeFormatted
 }

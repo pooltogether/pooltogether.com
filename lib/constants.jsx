@@ -15,6 +15,10 @@ export const COOKIE_OPTIONS = {
   domain
 }
 
-export const QUERY_KEYS = {
-  usePools: 'usePools'
-}
+export const DEFAULT_QUERY_OPTIONS = Object.freeze({
+  refetchInterval: false,
+  refetchOnReconnect: false,
+  refetchOnWindowFocus: false,
+  refetchOnMount: false,
+  staleTime: 15000
+})

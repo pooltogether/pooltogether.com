@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
 import * as Fathom from 'fathom-client'
-import { ReactQueryDevtools } from 'react-query-devtools'
-import { QueryCache, ReactQueryCacheProvider } from 'react-query'
+// import { ReactQueryDevtools } from 'react-query/devtools'
+import { QueryClient, QueryClientProvider } from 'react-query'
 
+import { DEFAULT_QUERY_OPTIONS } from 'lib/constants'
 import { AllContextProviders } from 'lib/components/AllContextProviders'
 import { Layout } from 'lib/components/Layout'
 
@@ -19,7 +20,13 @@ import 'assets/styles/marquee.css'
 
 import '@pooltogether/react-components/dist/index.css'
 
-const queryCache = new QueryCache()
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      ...DEFAULT_QUERY_OPTIONS
+    }
+  }
+})
 
 if (process.env.NEXT_JS_SENTRY_DSN) {
   Sentry.init({
@@ -78,15 +85,15 @@ function MyApp ({ Component, pageProps, router }) {
 
   return (
     <>
-      <ReactQueryCacheProvider queryCache={queryCache}>
+      <QueryClientProvider client={queryClient}>
         <AllContextProviders>
           <Layout props={pageProps}>
             <Component {...pageProps} />
           </Layout>
         </AllContextProviders>
 
-        <ReactQueryDevtools />
-      </ReactQueryCacheProvider>
+        {/* <ReactQueryDevtools /> */}
+      </QueryClientProvider>
     </>
   )
 }
