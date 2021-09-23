@@ -3,8 +3,7 @@ import classnames from 'classnames'
 import { useInView } from 'react-intersection-observer'
 import { motion, useAnimation } from 'framer-motion'
 import { numberWithCommas } from '@pooltogether/utilities'
-
-import { NewButton } from 'lib/components/NewButton'
+import { SquareLink, SquareButtonTheme, SquareButtonSize } from '@pooltogether/react-components'
 
 export const IndexAnalytics = () => {
   const controls = useAnimation()
@@ -48,14 +47,16 @@ export const IndexAnalytics = () => {
           </motion.div>
         </div>
 
-        <div className='pool-container mx-auto'>
-          <NewButton
-            target='_blank'
+        <div className='flex items-center w-full sm-max-width-hero mx-auto text-center'>
+          <SquareLink
+            chevron
+            size={SquareButtonSize.md}
+            theme={SquareButtonTheme.teal}
             href='https://info.pooltogether.com'
-            className='mx-auto max-w-md'
+            className='mx-auto block'
           >
             See more protocol analytics
-          </NewButton>
+          </SquareLink>
         </div>
       </div>
     </>

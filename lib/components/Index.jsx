@@ -95,7 +95,7 @@ const DownArrow = () => {
 const HeroRight = () => {
   return (
     <>
-      <div className='bg-prize-amount flex flex-col justify-between text-center pt-12 sm:pt-8 h-48'>
+      <div className='bg-prize-amount flex flex-col justify-between text-center pt-10 sm:pt-8 h-48'>
         <div className='sm:pb-10'>
           <h1 className='text-4xl xs:text-6xl sm:text-9xl -mt-6 sm:-mt-0'>
             <WeeklyPrizeAmount />

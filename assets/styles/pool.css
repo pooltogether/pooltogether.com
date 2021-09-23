@@ -204,6 +204,14 @@ input[type='submit'][disabled] {
   color: white !important;
 }
 
+.footer a.terms {
+  color: var(--color-text-accent-4) !important;
+}
+
+.footer a.terms:hover {
+  color: white !important;
+}
+
 .footer .img-link:hover {
   @apply border-0 no-underline;
 }

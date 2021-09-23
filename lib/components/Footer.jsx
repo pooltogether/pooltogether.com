@@ -6,19 +6,18 @@ import { useTranslation } from 'lib/../i18n'
 
 // import MailIcon from 'assets/images/mail-footer.svg'
 
-import MediumLogo from 'assets/images/medium-logo.svg'
-import GithubLogo from 'assets/images/github-logo.svg'
-import DiscordLogo from 'assets/images/discord-logo.svg'
-import TwitterLogo from 'assets/images/twitter-logo.svg'
-
-import PoolTogetherLogo from 'assets/images/pooltogether-logo.svg'
+import {
+  TwitterIconSvg,
+  DiscordIconSvg,
+  GithubIconSvg,
+  MediumIconSvg
+} from 'lib/components/SvgComponents'
 
 export const Footer = () => {
   const [t] = useTranslation()
 
   const linkListItemClassNames = 'my-2'
   const linkClassNames = 'trans trans-fast text-accent-1 no-underline'
-  // mt-1 sm:mt-3
 
   const FooterLink = (props) => (
     <>
@@ -29,9 +28,14 @@ export const Footer = () => {
               flex: props.iconSrc
             })}
           >
-            {props.iconSrc && (
-              <img alt={`${props.children} icon/logo`} src={props.iconSrc} className='mr-4 w-4' />
-            )}{' '}
+            {props.svg && (
+              <div
+                className={classnames(props.svgClassName, 'relative inline-block mr-4 w-5 ')}
+                style={props.svgStyle}
+              >
+                {props.svg}
+              </div>
+            )}
             {props.children}
           </a>
         </Link>
@@ -41,7 +45,7 @@ export const Footer = () => {
 
   return (
     <>
-      <footer className='footer pool-container w-full text-default text-sm mx-auto'>
+      <footer className='footer pool-container w-full text-primary-soft text-sm mx-auto'>
         <div className='flex flex-col pt-10 lg:pt-20'>
           <div className='pt-6 sm:pt-0 pb-8 flex flex-col sm:flex-row justify-between'>
             <div className='footer--pool-logo-container '>
@@ -52,7 +56,7 @@ export const Footer = () => {
 
             <nav className='flex flex-wrap w-full sm:flex-no-wrap sm:justify-between sm:w-1/2'>
               <div className='w-full sm:w-1/3 sm:w-auto flex flex-col mb-8 mt-12 sm:my-0'>
-                <span className='font-bold block'>Ecosystem</span>
+                <span className='font-semibold block'>Ecosystem</span>
                 <ul>
                   <FooterLink href='/developers'>Developers</FooterLink>
                   <FooterLink href='/audits'>Security</FooterLink>
@@ -66,9 +70,11 @@ export const Footer = () => {
               </div>
 
               <div className='w-full sm:w-1/3 flex flex-col mb-8 sm:my-0'>
-                <span className='font-bold block'>Releases</span>
+                <span className='font-semibold block'>Releases</span>
 
                 <ul>
+                  <FooterLink href='https://v4.pooltogether.com'>Version 4</FooterLink>
+                  <FooterLink href='https://app.pooltogether.com'>Version 3</FooterLink>
                   <FooterLink href='https://v2.pooltogether.com'>Version 2</FooterLink>
                   <FooterLink href='https://v1.pooltogether.com'>Version 1</FooterLink>
                 </ul>
@@ -80,88 +86,60 @@ export const Footer = () => {
                   width: 108
                 }}
               >
-                <span className='font-bold block'>Community</span>
+                <span className='font-semibold block'>Community</span>
 
                 <ul>
-                  <FooterLink href='https://twitter.com/PoolTogether_' iconSrc={TwitterLogo}>
+                  <FooterLink
+                    href='https://twitter.com/PoolTogether_'
+                    svg={<TwitterIconSvg />}
+                    svgStyle={{ top: 1 }}
+                  >
                     Twitter
                   </FooterLink>
 
-                  <FooterLink href='https://discord.gg/hxPhPDW' iconSrc={DiscordLogo}>
+                  <FooterLink
+                    href='https://discord.gg/hxPhPDW'
+                    svg={<DiscordIconSvg />}
+                    svgStyle={{ top: 4 }}
+                  >
                     Discord
                   </FooterLink>
 
-                  <FooterLink href='https://github.com/pooltogether' iconSrc={GithubLogo}>
+                  <FooterLink
+                    href='https://github.com/pooltogether'
+                    svg={<GithubIconSvg />}
+                    svgStyle={{ top: 2 }}
+                  >
                     Github
                   </FooterLink>
 
-                  <FooterLink href='https://medium.com/pooltogether' iconSrc={MediumLogo}>
+                  <FooterLink href='https://medium.com/pooltogether' svg={<MediumIconSvg />}>
                     Medium
                   </FooterLink>
-
-                  {/* 
-                      <FooterLink
-                        href=''
-                      >
-                        Advocates
-                      </FooterLink>
-
-                      <FooterLink
-                        href=''
-                      >
-                        Invite friends
-                      </FooterLink> */}
                 </ul>
               </div>
-
-              {/* 
-                  <div
-                    className='w-full sm:w-1/3 md:w-auto flex flex-col mb-8 md:my-0'
-                  >
-                    <span
-                      className='font-bold block'
-                    >
-                      Products
-                    </span>
-                    <a
-                      className={linkClassNames}
-                      href='https://help.pooltogether.com'
-                      title='Get answers at the help centre'
-                    >
-                      Help Centre
-                    </a>
-                    <a
-                      className={linkClassNames}
-                      href='https://app.pooltogether.com'
-                    >
-                      v2
-                    </a>
-                    <a
-                      className={linkClassNames}
-                      href='https://v1.pooltogether.com'
-                    >
-                      v1
-                    </a>
-                  </div> */}
             </nav>
           </div>
 
-          <div className='flex justify-between flex-col sm:flex-row sm:pt-2 pb-10 sm:pb-20 lg:pb-20 text-xs border-t border-green'>
+          <div className='flex justify-between flex-col sm:flex-row sm:pt-2 pb-10 sm:pb-20 lg:pb-20 text-xs border-t border-accent-4'>
             <div className='w-32 lg:w-32'>
               <nav className='flex justify-between w-full'>
-                {/* <a
-                className={classnames(
-                  'mt-2 sm:mt-4',
-                  linkClassNames,
-                )}
-                href='/privacy'
-              >
-                Privacy
-              </a> */}
-                <a className={classnames('mt-2 sm:mt-4 mr-6', linkClassNames)} href='/terms'>
+                <a
+                  className={classnames(
+                    'terms mt-2 sm:mt-4 mr-6 text-accent-1',
+                    'trans trans-fast text-accent-1 no-underline'
+                  )}
+                  href='/terms'
+                >
                   Terms
                 </a>
-                <a className={classnames('mt-2 sm:mt-4', linkClassNames)} href='/sitemap.xml'>
+                <a
+                  className={classnames(
+                    'terms mt-2 sm:mt-4',
+                    'trans trans-fast text-accent-1 no-underline'
+                  )}
+                  href='/sitemap.xml'
+                >
                   Sitemap
                 </a>
               </nav>
