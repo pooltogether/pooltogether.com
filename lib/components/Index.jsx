@@ -217,11 +217,14 @@ const LuckiestWinnersBanner = (props) => {
 
 const SameText = () => (
   <>
-    0x614d... 🌊🏆 won $11,304 with only $73 deposited <Bullet />
-    jon.eth 🌊🏆 won $2,669 with only $102 deposited <Bullet />
-    0x9a84... 🌊🏆 won $11,115 with only $247 deposited <Bullet />
-    ... and have a chance to win prizes... <Bullet />
-    based on Francesco Zagami's https://dribbble.com/shots/9524661-Homepage-Menu-Interaction{' '}
+    0x614d... ✌🤑🥇 won $11,304 with only $73 deposited! <Bullet />
+    0xc12c... ✨🥳🥈 won $2,669 with only $102 deposited! <Bullet />
+    0x8d3b... 💸🤯🥉 won $11,115 with only $247 deposited! <Bullet />
+    see all the luckiest winners on{' '}
+    <a href='https://smallfish.win' target='_blank'>
+      smallfish.win
+    </a>{' '}
+    🌊😎🏆
     <Bullet />
   </>
 )

@@ -95,7 +95,7 @@ body {
 	left: 0;
 	width: var(--marquee-width);
 	overflow: hidden;
-	pointer-events: none;
+	/* pointer-events: none; */
 	/* mix-blend-mode: color-burn; */
 }
 
