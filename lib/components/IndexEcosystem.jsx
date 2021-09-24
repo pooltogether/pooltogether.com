@@ -31,7 +31,7 @@ export const IndexEcosystem = () => {
 
   return (
     <>
-      <div className='py-24'>
+      <div className='py-12 sm:py-24'>
         <div className='pool-container mx-auto'>
           <h5 className='uppercase text-highlight-1 pb-4'>Ecosystem:</h5>
 

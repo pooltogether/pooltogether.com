@@ -26,7 +26,7 @@ export const IndexAnalytics = () => {
 
   return (
     <>
-      <div className='py-24'>
+      <div className='py-12 sm:py-24'>
         <div className='pool-container mx-auto pt-24 pb-8'>
           <h5 className='uppercase text-highlight-1 pb-4'>Protocol analytics:</h5>
 

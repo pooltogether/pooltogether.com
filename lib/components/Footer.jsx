@@ -121,7 +121,7 @@ export const Footer = () => {
             </nav>
           </div>
 
-          <div className='flex justify-between flex-col sm:flex-row sm:pt-2 pb-10 sm:pb-20 lg:pb-20 text-xs border-t border-accent-4'>
+          <div className='flex justify-between flex-col sm:flex-row pt-2 pb-10 sm:pb-20 lg:pb-20 text-xs border-t border-accent-4'>
             <div className='w-32 lg:w-32'>
               <nav className='flex justify-between w-full'>
                 <a

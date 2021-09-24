@@ -1,9 +1,7 @@
 import React from 'react'
-import Slider from 'react-slick'
 import classnames from 'classnames'
 import { useRouter } from 'next/router'
 import { SquareLink, SquareButtonTheme, SquareButtonSize } from '@pooltogether/react-components'
-import { TwitterTweetEmbed } from 'react-twitter-embed'
 
 import { WeeklyPrizeAmount } from 'lib/components/WeeklyPrizeAmount'
 import { IndexHeroFeaturedIn } from 'lib/components/IndexHeroFeaturedIn'
@@ -16,6 +14,7 @@ import { IndexHowItWorks } from 'lib/components/IndexHowItWorks'
 import { IndexEcosystem } from 'lib/components/IndexEcosystem'
 // import { IndexSupportedBy } from 'lib/components/IndexSupportedBy'
 // import { IndexSecurity } from 'lib/components/IndexSecurity'
+import { IndexTweetSlideshow } from 'lib/components/IndexTweetSlideshow'
 
 import { useScreenSize, ScreenSize } from 'lib/hooks/useScreenSize'
 
@@ -39,38 +38,6 @@ export const Index = (props) => {
   let height
   if (!isSmall) {
     height = `calc(100vh - ${props.navHeight}px)`
-  }
-
-  var settings = {
-    className: 'center',
-    infinite: true,
-    speed: 700,
-    autoplay: true,
-    autoplaySpeed: 3500,
-    cssEase: 'ease',
-    pauseOnHover: true,
-    swipeToSlide: true,
-    arrows: false,
-    focusOnSelect: true,
-    centerMode: true,
-    slidesToShow: 3,
-    responsive: [
-      {
-        breakpoint: 1480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 940,
-        settings: {
-          centerMode: true,
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
   }
 
   return (
@@ -101,54 +68,9 @@ export const Index = (props) => {
         <IndexAnalytics />
         <IndexEcosystem />
         <IndexGovernance />
-
-        <div className='py-4 bg-slick-slide w-full'>
-          <Slider {...settings}>
-            <Slide
-              href='https://twitter.com/gavinandresen/status/1212467515668008962'
-              imgSrc='/gavin-tweet-1212467515668008962.png'
-            />
-            <Slide
-              href='https://twitter.com/VitalikButerin/status/1278337661988716547'
-              imgSrc='/vitalik-tweet-1278337661988716547.png'
-            />
-            <Slide
-              href='https://twitter.com/jordanfrankfurt/status/1440756330327789580'
-              imgSrc='/jordan-tweet-1440756330327789580.png'
-            />
-            <Slide
-              href='https://twitter.com/gavinandresen/status/1212467515668008962'
-              imgSrc='/gavin-tweet-1212467515668008962.png'
-            />
-            <Slide
-              href='https://twitter.com/VitalikButerin/status/1278337661988716547'
-              imgSrc='/vitalik-tweet-1278337661988716547.png'
-            />
-            <Slide
-              href='https://twitter.com/jordanfrankfurt/status/1440756330327789580'
-              imgSrc='/jordan-tweet-1440756330327789580.png'
-            />
-          </Slider>
-        </div>
-        {/* <div className='bg-darkened p-20 relative overflow-hidden' style={{ height: 580 }}>
-          <div className='flex absolute p-4 t-0 l-0' style={{ width: 1710 }}>
-            
-          </div>
-        </div> */}
-
-        <script async src='https://platform.twitter.com/widgets.js' charset='utf-8'></script>
+        <IndexTweetSlideshow />
       </div>
     </>
-  )
-}
-
-const Slide = (props) => {
-  return (
-    <div>
-      <a href={props.href} target='_blank'>
-        <img src={props.imgSrc} className='mx-auto rounded-xl hover:opacity-90 trans' />
-      </a>
-    </div>
   )
 }
 

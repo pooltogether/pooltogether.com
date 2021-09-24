@@ -1,0 +1,77 @@
+import React from 'react'
+import Slider from 'react-slick'
+
+const Slide = (props) => {
+  return (
+    <div>
+      <a href={props.href} target='_blank'>
+        <img src={props.imgSrc} className='mx-auto rounded-xl hover:opacity-90 trans' />
+      </a>
+    </div>
+  )
+}
+
+export const IndexTweetSlideshow = () => {
+  var settings = {
+    className: 'center',
+    infinite: true,
+    speed: 700,
+    autoplay: true,
+    autoplaySpeed: 3500,
+    cssEase: 'ease',
+    pauseOnHover: true,
+    swipeToSlide: true,
+    arrows: false,
+    focusOnSelect: true,
+    centerMode: true,
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 1480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 940,
+        settings: {
+          centerMode: true,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  }
+
+  return (
+    <div className='py-4 bg-slick-slide w-full'>
+      <Slider {...settings}>
+        <Slide
+          href='https://twitter.com/gavinandresen/status/1212467515668008962'
+          imgSrc='/gavin-tweet-1212467515668008962.png'
+        />
+        <Slide
+          href='https://twitter.com/VitalikButerin/status/1278337661988716547'
+          imgSrc='/vitalik-tweet-1278337661988716547.png'
+        />
+        <Slide
+          href='https://twitter.com/jordanfrankfurt/status/1440756330327789580'
+          imgSrc='/jordan-tweet-1440756330327789580.png'
+        />
+        <Slide
+          href='https://twitter.com/gavinandresen/status/1212467515668008962'
+          imgSrc='/gavin-tweet-1212467515668008962.png'
+        />
+        <Slide
+          href='https://twitter.com/VitalikButerin/status/1278337661988716547'
+          imgSrc='/vitalik-tweet-1278337661988716547.png'
+        />
+        <Slide
+          href='https://twitter.com/jordanfrankfurt/status/1440756330327789580'
+          imgSrc='/jordan-tweet-1440756330327789580.png'
+        />
+      </Slider>
+    </div>
+  )
+}

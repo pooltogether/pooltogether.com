@@ -1,40 +1,36 @@
 import React from 'react'
 
-import MediumLogo from 'assets/images/logo-medium-white.svg'
-import GithubLogo from 'assets/images/logo-github-white.svg'
-import DiscordLogo from 'assets/images/logo-discord-white.svg'
-import TwitterLogo from 'assets/images/logo-twitter-white.svg'
+import {
+  MediumIconSvg,
+  TwitterIconSvg,
+  DiscordIconSvg,
+  GithubIconSvg
+} from 'lib/components/SvgComponents'
 
 export const SocialCTAs = () => {
   return (
     <>
-      <div className='pt-6 flex flex-col sm:flex-row justify-between w-10/12 xs:w-10/12 sm:w-full lg:w-10/12'>
+      <div className='pt-6 flex justify-between w-8/12 xs:w-5/12 sm:w-4/12 lg:w-1/4'>
         <a
           href='https://twitter.com/PoolTogether_'
-          className='interactable-chip interactable-chip-main-bg items-center justify-center my-2'
+          className='my-2 text-white hover:text-green w-10 t-1 relative'
         >
-          <img alt={`Twitter logo`} src={TwitterLogo} className='h-6 xs:h-8' />
+          <TwitterIconSvg />
         </a>
 
-        <a
-          href='https://discord.gg/hxPhPDW'
-          className='interactable-chip interactable-chip-main-bg items-center justify-center my-2'
-        >
-          <img alt={`Discord logo`} src={DiscordLogo} className='h-6 xs:h-8' />
+        <a href='https://discord.gg/hxPhPDW' className='my-2 text-white hover:text-green w-10'>
+          <DiscordIconSvg />
         </a>
 
-        <a
-          href='https://github.com/pooltogether'
-          className='interactable-chip interactable-chip-main-bg items-center justify-center my-2'
-        >
-          <img alt={`Github logo`} src={GithubLogo} className='h-6 xs:h-8' />
+        <a href='https://github.com/pooltogether' className='my-2 text-white hover:text-green w-10'>
+          <GithubIconSvg />
         </a>
 
         <a
           href='https://medium.com/pooltogether'
-          className='interactable-chip interactable-chip-main-bg items-center justify-center my-2'
+          className='my-2 text-white hover:text-green w-10 t-1 relative'
         >
-          <img alt={`Medium logo`} src={MediumLogo} className='h-6 xs:h-8' />
+          <MediumIconSvg />
         </a>
       </div>
     </>

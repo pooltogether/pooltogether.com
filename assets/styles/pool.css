@@ -222,12 +222,23 @@ input[type='submit'][disabled] {
 
 .nav--pool-logo-container {
   position: relative;
-  left: -6px;
 }
 
 @screen sm {
   .nav--pool-logo-container {
     left: 0;
+  }
+}
+
+@screen sm {
+  .pool-logo {
+    width: 154px !important;
+  }
+}
+
+@screen sm {
+  .pool-logo:after {
+    width: 154px !important;
   }
 }
 
@@ -469,11 +480,11 @@ li.nav-mobile-listitem {
 }
 
 .bg-developers {
-  background-image: linear-gradient(180deg, #32025e 0%, #150429 50%) !important;
+  /* background-image: linear-gradient(180deg, #32025e 0%, #150429 50%) !important; */
 }
 
 .bg-developers-art-waves {
-  background-image: url('/bg-developers-art-waves@2x.png');
+  /* background-image: url('/bg-developers-art-waves@2x.png'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
