@@ -14,7 +14,7 @@
   pointer-events: all;
 }
 
-.center div {
+:not(.slick-current) .wrapper {
   cursor: pointer;
 }
 
@@ -33,6 +33,10 @@
   opacity: 1;
   pointer-events: all;
   transform: scale(1.05);
+}
+
+.slick-slide.slick-active.slick-current a:hover img {
+  opacity: 0.8;
 }
 
 .slick-slide.slick-active img {

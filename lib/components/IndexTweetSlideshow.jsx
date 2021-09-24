@@ -4,9 +4,11 @@ import Slider from 'react-slick'
 const Slide = (props) => {
   return (
     <div>
-      <a href={props.href} target='_blank'>
-        <img src={props.imgSrc} className='mx-auto rounded-xl hover:opacity-90 trans' />
-      </a>
+      <div className='wrapper inline-block'>
+        <a href={props.href} target='_blank' className='inline-block'>
+          <img src={props.imgSrc} className='mx-0 rounded-xl trans mr-0' />
+        </a>
+      </div>
     </div>
   )
 }
@@ -15,9 +17,9 @@ export const IndexTweetSlideshow = () => {
   var settings = {
     className: 'center',
     infinite: true,
-    speed: 700,
+    speed: 600,
     autoplay: true,
-    autoplaySpeed: 3500,
+    autoplaySpeed: 4500,
     cssEase: 'ease',
     pauseOnHover: true,
     swipeToSlide: true,
