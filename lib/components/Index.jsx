@@ -2,6 +2,7 @@ import React from 'react'
 import classnames from 'classnames'
 import { useRouter } from 'next/router'
 import { SquareLink, SquareButtonTheme, SquareButtonSize } from '@pooltogether/react-components'
+import { TwitterTweetEmbed } from 'react-twitter-embed'
 
 import { WeeklyPrizeAmount } from 'lib/components/WeeklyPrizeAmount'
 import { IndexHeroFeaturedIn } from 'lib/components/IndexHeroFeaturedIn'
@@ -67,6 +68,22 @@ export const Index = (props) => {
         <IndexAnalytics />
         <IndexEcosystem />
         <IndexGovernance />
+
+        <div className='bg-darkened p-20 relative overflow-hidden' style={{ height: 430 }}>
+          <div className='flex absolute p-4 t-0 l-0' style={{ width: 2000 }}>
+            <a href='https://twitter.com/gavinandresen/status/1212467515668008962' target='_blank'>
+              <img src='/gavin-tweet.png' className='mx-2 rounded-xl' style={{ height: 400 }} />
+            </a>
+            <a href='https://twitter.com/gavinandresen/status/1212467515668008962' target='_blank'>
+              <img src='/gavin-tweet.png' className='mx-2 rounded-xl' style={{ height: 400 }} />
+            </a>
+            <a href='https://twitter.com/gavinandresen/status/1212467515668008962' target='_blank'>
+              <img src='/gavin-tweet.png' className='mx-2 rounded-xl' style={{ height: 400 }} />
+            </a>
+          </div>
+        </div>
+
+        <script async src='https://platform.twitter.com/widgets.js' charset='utf-8'></script>
       </div>
     </>
   )

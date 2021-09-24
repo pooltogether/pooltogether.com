@@ -16,6 +16,7 @@ import 'assets/styles/index.css'
 // pooltogether.com specific:
 import 'assets/styles/layout.css'
 import 'assets/styles/pool.css'
+import 'assets/styles/tweets.css'
 import 'assets/styles/marquee.css'
 
 import '@pooltogether/react-components/dist/index.css'
