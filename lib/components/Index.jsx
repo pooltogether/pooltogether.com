@@ -102,7 +102,7 @@ export const Index = (props) => {
         <IndexEcosystem />
         <IndexGovernance />
 
-        <div className='p-4 bg-slick-slide w-full'>
+        <div className='py-4 bg-slick-slide w-full'>
           <Slider {...settings}>
             <Slide
               href='https://twitter.com/gavinandresen/status/1212467515668008962'
