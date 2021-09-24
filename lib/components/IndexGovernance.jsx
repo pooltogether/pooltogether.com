@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react'
+import FeatherIcon from 'feather-icons-react'
+import classnames from 'classnames'
 import { useInView } from 'react-intersection-observer'
 import { motion, useAnimation } from 'framer-motion'
 
@@ -41,6 +43,16 @@ export const IndexGovernance = () => {
               </a>{' '}
               token holders.
             </p>
+            <p className='mt-2'>
+              <a href='https://medium.com/pooltogether/governance-101-fca9ab8b8ba2' target='_blank'>
+                Learn more about PoolTogether governance{' '}
+                <FeatherIcon
+                  icon='arrow-up-right'
+                  className='relative inline-block ml-1 w-5 h-5'
+                  style={{ top: -2 }}
+                />
+              </a>
+            </p>
 
             <motion.div
               className={
@@ -53,26 +65,54 @@ export const IndexGovernance = () => {
             >
               <GridItem
                 altBg
-                title={'Governance Forum'}
-                description={`Discuss sentiment for changes prior to making proposals and discuss on the forum.`}
-                url='https://gov.pooltogether.com'
+                title={
+                  <>
+                    Learn{' '}
+                    <FeatherIcon
+                      icon='message-circle'
+                      className='relative inline-block ml-1 w-6 h-6'
+                      style={{ top: -2 }}
+                    />
+                  </>
+                }
+                description={`See how governance has evolved.`}
+                url='https://gov.pooltogether.com/c/ptips/8'
                 buttonText='Read forum'
               />
 
               <GridItem
                 altBg
-                title={'Tally'}
-                description={`View proposal and voting history, active voters, and delegate your votes on Tally.`}
+                title={
+                  <>
+                    Delegate{' '}
+                    <FeatherIcon
+                      icon='award'
+                      className='relative inline-block ml-1 w-6 h-6'
+                      style={{ top: -2 }}
+                    />
+                  </>
+                }
+                description={`See voters and delegate your votes.`}
                 url='https://withtally.com'
-                buttonText='Use Tally'
+                buttonText='Delegate on Tally'
               />
+              {/* Discuss - link to discord where people chat */}
 
               <GridItem
                 altBg
-                title={'Vote'}
-                description={`PoolTogether’s Vote provides you with an easy proposal creation system and voting tools.`}
+                title={
+                  <>
+                    Vote{' '}
+                    <FeatherIcon
+                      icon='check-square'
+                      className='relative inline-block ml-1 w-6 h-6'
+                      style={{ top: -2 }}
+                    />
+                  </>
+                }
+                description={`Easily create proposals and vote.`}
                 url='https://vote.pooltogether.com'
-                buttonText='Use Vote'
+                buttonText='Vote'
               />
             </motion.div>
           </div>
