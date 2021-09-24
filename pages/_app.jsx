@@ -11,6 +11,9 @@ import '@reach/dialog/styles.css'
 import '@reach/menu-button/styles.css'
 import '@reach/tooltip/styles.css'
 
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
 import 'assets/styles/index.css'
 
 // pooltogether.com specific:

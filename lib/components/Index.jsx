@@ -1,4 +1,5 @@
 import React from 'react'
+import Slider from 'react-slick'
 import classnames from 'classnames'
 import { useRouter } from 'next/router'
 import { SquareLink, SquareButtonTheme, SquareButtonSize } from '@pooltogether/react-components'
@@ -40,6 +41,38 @@ export const Index = (props) => {
     height = `calc(100vh - ${props.navHeight}px)`
   }
 
+  var settings = {
+    className: 'center',
+    infinite: true,
+    speed: 700,
+    autoplay: true,
+    autoplaySpeed: 3500,
+    cssEase: 'ease',
+    pauseOnHover: true,
+    swipeToSlide: true,
+    arrows: false,
+    focusOnSelect: true,
+    centerMode: true,
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 1480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 940,
+        settings: {
+          centerMode: true,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  }
+
   return (
     <>
       <div
@@ -69,23 +102,53 @@ export const Index = (props) => {
         <IndexEcosystem />
         <IndexGovernance />
 
-        <div className='bg-darkened p-20 relative overflow-hidden' style={{ height: 430 }}>
-          <div className='flex absolute p-4 t-0 l-0' style={{ width: 2000 }}>
-            <a href='https://twitter.com/gavinandresen/status/1212467515668008962' target='_blank'>
-              <img src='/gavin-tweet.png' className='mx-2 rounded-xl' style={{ height: 400 }} />
-            </a>
-            <a href='https://twitter.com/gavinandresen/status/1212467515668008962' target='_blank'>
-              <img src='/gavin-tweet.png' className='mx-2 rounded-xl' style={{ height: 400 }} />
-            </a>
-            <a href='https://twitter.com/gavinandresen/status/1212467515668008962' target='_blank'>
-              <img src='/gavin-tweet.png' className='mx-2 rounded-xl' style={{ height: 400 }} />
-            </a>
-          </div>
+        <div className='p-4 bg-slick-slide w-full'>
+          <Slider {...settings}>
+            <Slide
+              href='https://twitter.com/gavinandresen/status/1212467515668008962'
+              imgSrc='/gavin-tweet-1212467515668008962.png'
+            />
+            <Slide
+              href='https://twitter.com/VitalikButerin/status/1278337661988716547'
+              imgSrc='/vitalik-tweet-1278337661988716547.png'
+            />
+            <Slide
+              href='https://twitter.com/jordanfrankfurt/status/1440756330327789580'
+              imgSrc='/jordan-tweet-1440756330327789580.png'
+            />
+            <Slide
+              href='https://twitter.com/gavinandresen/status/1212467515668008962'
+              imgSrc='/gavin-tweet-1212467515668008962.png'
+            />
+            <Slide
+              href='https://twitter.com/VitalikButerin/status/1278337661988716547'
+              imgSrc='/vitalik-tweet-1278337661988716547.png'
+            />
+            <Slide
+              href='https://twitter.com/jordanfrankfurt/status/1440756330327789580'
+              imgSrc='/jordan-tweet-1440756330327789580.png'
+            />
+          </Slider>
         </div>
+        {/* <div className='bg-darkened p-20 relative overflow-hidden' style={{ height: 580 }}>
+          <div className='flex absolute p-4 t-0 l-0' style={{ width: 1710 }}>
+            
+          </div>
+        </div> */}
 
         <script async src='https://platform.twitter.com/widgets.js' charset='utf-8'></script>
       </div>
     </>
+  )
+}
+
+const Slide = (props) => {
+  return (
+    <div>
+      <a href={props.href} target='_blank'>
+        <img src={props.imgSrc} className='mx-auto rounded-xl hover:opacity-90 trans' />
+      </a>
+    </div>
   )
 }
 

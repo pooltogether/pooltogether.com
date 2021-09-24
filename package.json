@@ -64,7 +64,9 @@
     "react-player": "^2.9.0",
     "react-query": "3.24.4",
     "react-query-devtools": "^2.6.3",
+    "react-slick": "^0.28.1",
     "react-twitter-embed": "^3.0.3",
+    "slick-carousel": "^1.8.1",
     "tailwindcss": "^2.2.15"
   }
 }

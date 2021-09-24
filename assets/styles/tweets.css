@@ -1,19 +1,48 @@
-.twitter-tweet {
-  display: inline-block;
-  font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 16px;
-  border-color: #eee #ddd #bbb;
-  border-radius: 5px;
-  border-style: solid;
-  border-width: 1px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-  margin: 10px 5px;
-  padding: 0 16px 16px 16px;
-  max-width: 468px;
+.bg-slick-slide {
+  background-color: #1c023f;
+  background-image: linear-gradient(40deg, #1c023f -20%, #0f0027 50%, #1c023f 120%);
 }
 
-.twitter-tweet article {
-  background-color: orange !important;
+.slick-track {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.center .slick-current a {
+  pointer-events: all;
+}
+
+.center div {
+  cursor: pointer;
+}
+
+.center a {
+  pointer-events: none;
+}
+
+.center a,
+.center a:focus,
+.center a:active, {
+  outline: none;
+}
+
+.slick-slide.slick-active.slick-current img {
+  filter: none;
+  opacity: 1;
+  pointer-events: all;
+  transform: scale(1.05);
+}
+
+.slick-slide.slick-active img {
+  filter: blur(2px);
+  opacity: 0.8;
+}
+
+.slick-slide img {
+  filter: blur(2px);
+  opacity: 0.3;
+  pointer-events: none;
+  transition: all 1000ms ease;
 }
