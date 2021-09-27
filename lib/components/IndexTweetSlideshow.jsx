@@ -19,7 +19,7 @@ export const IndexTweetSlideshow = () => {
     infinite: true,
     speed: 600,
     autoplay: true,
-    autoplaySpeed: 4500,
+    autoplaySpeed: 8500,
     cssEase: 'ease',
     pauseOnHover: true,
     swipeToSlide: true,

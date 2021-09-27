@@ -47,7 +47,7 @@ export const Index = (props) => {
         style={{ height }}
       >
         <div className='pool-container flex flex-col sm:flex-row justify-between mx-auto w-full sm:pt-16'>
-          <div className='relative w-full sm:w-5/12 mt-6'>
+          <div className='relative w-full sm:w-5/12 mt-6 sm:mt-12'>
             <HeroLeft />
           </div>
 
@@ -102,9 +102,11 @@ const HeroRight = () => {
           <h1 className='text-4xl xs:text-6xl sm:text-9xl -mt-6 sm:-mt-0'>
             <WeeklyPrizeAmount />
           </h1>
-          <div className='uppercase font-semibold text-default -mt-2'>In weekly prizes</div>
+          <div className='uppercase font-semibold text-default text-xxs xs:text-lg lg:text-xl -mt-2'>
+            In weekly prizes
+          </div>
         </div>
-        <div className='uppercase font-semibold text-green mb-12 text-xs xs:text-lg lg:text-xl w-1/2 mx-auto'>
+        <div className='uppercase font-semibold text-green mb-12 text-xxs xs:text-lg lg:text-xl w-1/2 mx-auto'>
           Awarded every Friday!
         </div>
       </div>
@@ -134,9 +136,9 @@ const HeroLeft = () => {
         className='font-medium font-inter text-2xl xs:text-3xl lg:text-6xl text-new-gradient'
         style={{ lineHeight: 1.25 }}
       >
-        Win by saving with PoolTogether.
+        Win by saving.
       </span>
-      <p className='text-accent-1 mt-4 sm-max-width-hero mx-auto sm:mx-0'>
+      <p className='text-accent-1 mt-2 sm:mt-4 sm-max-width-hero mx-auto sm:mx-0'>
         PoolTogether is a crypto-powered savings protocol based on{' '}
         <a
           href='https://en.wikipedia.org/wiki/Premium_Bond'
@@ -145,12 +147,12 @@ const HeroLeft = () => {
         >
           Premium Bonds
         </a>
-        . Save your money and have a chance to win prizes every week.
+        . Save money and have a chance to win every week.
       </p>
-      <div className='text-sm xs:text-base sm:text-xl mt-8'>
+      {/* <div className='hidden xs:block text-sm xs:text-base sm:text-xl mt-8'>
         The more you save, the more you win!
-      </div>
-      <div className='mt-2 sm:mt-4 mb-4 sm:mb-0 sm-max-width-hero mx-auto sm:mx-0 text-center'>
+      </div> */}
+      <div className='mt-4 sm:mt-8 mb-4 sm:mb-0 sm-max-width-hero mx-auto sm:mx-0 text-center'>
         <SquareLink
           chevron
           size={SquareButtonSize.md}
