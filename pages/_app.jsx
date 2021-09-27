@@ -7,13 +7,6 @@ import { DEFAULT_QUERY_OPTIONS } from 'lib/constants'
 import { AllContextProviders } from 'lib/components/AllContextProviders'
 import { Layout } from 'lib/components/Layout'
 
-import '@reach/dialog/styles.css'
-import '@reach/menu-button/styles.css'
-import '@reach/tooltip/styles.css'
-
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
-
 import 'assets/styles/index.css'
 
 // pooltogether.com specific:
@@ -21,6 +14,13 @@ import 'assets/styles/layout.css'
 import 'assets/styles/pool.css'
 import 'assets/styles/tweets.css'
 import 'assets/styles/marquee.css'
+
+import '@reach/dialog/styles.css'
+import '@reach/menu-button/styles.css'
+import '@reach/tooltip/styles.css'
+
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 import '@pooltogether/react-components/dist/index.css'
 

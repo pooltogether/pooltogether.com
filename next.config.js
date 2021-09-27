@@ -40,8 +40,10 @@ const allConfig =
         locizeVersion: process.env.NEXT_JS_LOCIZE_VERSION
       },
       webpack(config, options) {
-        config.mode = isProduction ? 'production' : 'development'
-        config.devtool = isProduction ? 'hidden-source-map' : 'eval-source-map'
+        config.mode = 'production'
+        // config.devtool = 'hidden-source-map'
+        // config.mode = isProduction ? 'production' : 'development'
+        // config.devtool = isProduction ? 'hidden-source-map' : 'eval-source-map'
 
         var appVars = _.keys(process.env).filter(key => key.startsWith('NEXT_JS_'))
 
