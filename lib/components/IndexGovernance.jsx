@@ -94,7 +94,7 @@ export const IndexGovernance = () => {
                 }
                 description={`See voters and delegate your votes.`}
                 url='https://withtally.com'
-                buttonText='Delegate on Tally'
+                buttonText='Use Tally'
               />
               {/* Discuss - link to discord where people chat */}
 

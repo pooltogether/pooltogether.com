@@ -31,7 +31,7 @@ export const Nav = (props) => {
             {t('developers')}
           </a>
         </Link>
-
+        {/* 
         <Link href='/governance' as='/governance' shallow>
           <a
             className={classnames('mr-3', navLinkClasses, {
@@ -41,9 +41,9 @@ export const Nav = (props) => {
           >
             {t('governance', 'Governance')}
           </a>
-        </Link>
+        </Link> */}
 
-        <Link href='/community' as='/community' shallow>
+        {/* <Link href='/community' as='/community' shallow>
           <a
             className={classnames('mr-3', navLinkClasses, {
               'text-white hover:text-highlight-2': !communityPage,
@@ -52,16 +52,16 @@ export const Nav = (props) => {
           >
             {t('community', 'Community')}
           </a>
-        </Link>
+        </Link> */}
 
-        <a
+        {/* <a
           className={classnames('mr-3', navLinkClasses, {
             'text-white hover:text-highlight-2': !morePage,
             'text-highlight-2 hover:text-highlight-2': morePage
           })}
         >
           {t('more', 'More')}
-        </a>
+        </a> */}
 
         <Link href='https://app.pooltogether.com' as='https://app.pooltogether.com'>
           <a

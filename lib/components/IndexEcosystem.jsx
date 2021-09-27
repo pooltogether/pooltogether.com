@@ -5,6 +5,7 @@ import { motion, useAnimation } from 'framer-motion'
 import { GridItem } from 'lib/components/GridItem'
 
 import DharmaLogo from 'assets/images/dharma@2x.png'
+import OrangeLogo from 'assets/images/orange@2x.png'
 // import ZerionSvg from 'assets/images/zerion.svg'
 // import ZapperFiSvg from 'assets/images/zapperfi.svg'
 
@@ -76,6 +77,18 @@ export const IndexEcosystem = () => {
                 url='https://zerion.io/'
                 buttonText='Open Zerion'
               />
+
+              <GridItem
+                altBg
+                title={'Orange'}
+                description={`Smart L2 wallet focusing on the Polygon network.`}
+                img={OrangeLogo}
+                url='https://orangewallet.app/'
+                buttonText='Open Orange'
+              />
+
+              <div className='w-full sm:w-1/3 mx-auto mb-12 sm:mb-12 h-0'>&nbsp;</div>
+              <div className='w-full sm:w-1/3 mx-auto mb-12 sm:mb-12 h-0'>&nbsp;</div>
             </motion.div>
           </div>
         </div>

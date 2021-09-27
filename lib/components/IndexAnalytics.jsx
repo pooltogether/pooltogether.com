@@ -27,7 +27,14 @@ export const IndexAnalytics = () => {
   return (
     <>
       <div className='py-12 sm:py-24'>
-        <div className='pool-container mx-auto pt-24 pb-8'>
+        <div className='pool-container mx-auto pt-24 pb-8 relative'>
+          <div className=' absolute t-0 r-0 l-0 b-0 w-full  items-center flex justify-center text-7xl text-white z-20'>
+            FINISH IMPLEMENTING!
+            <div
+              className='rounded-xl  absolute  r-0 l-0 b-0 w-full bg-red opacity-40 z-10'
+              style={{ top: 100 }}
+            ></div>
+          </div>
           <h5 className='uppercase text-highlight-1 pb-4'>Protocol analytics:</h5>
 
           <motion.div

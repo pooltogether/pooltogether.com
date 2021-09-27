@@ -14,8 +14,8 @@ export const GridItemSupportedBy = (props) => {
         rel='noopener noreferrer'
         className={classnames(
           props.className,
-          heightClassName || 'h-8',
-          'flex flex-col items-center rounded-lg mb-5 sm:mb-0 lg:px-8 trans no-underline trans text-default hover:text-inverse w-52'
+          heightClassName || 'h-12',
+          'flex flex-col items-center rounded-lg mb-10 sm:mb-0 lg:px-8 trans no-underline trans text-default hover:text-inverse w-64'
         )}
       >
         {img}

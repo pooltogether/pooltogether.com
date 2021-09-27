@@ -38,12 +38,14 @@ export const IndexHeroFeaturedIn = () => {
   return (
     <div id='featured-in' className='text-center w-full' style={{ paddingBottom: '2vh' }}>
       <div className='pool-container mx-auto'>
-        <div className='text-default text-xs font-semibold mb-4 uppercase'>Featured in</div>
+        <div className='text-default text-sm font-black mt-12 sm:mt-0 mb-4 uppercase'>
+          Featured in
+        </div>
 
         <motion.div
           className={classnames(
             'flex flex-col-reverse xs:flex-row xs:flex-wrap justify-center items-center xs:items-start',
-            'mt-2 mb-4 xs:px-8 lg:-mx-16'
+            'mt-2 mb-4'
           )}
           ref={ref}
           animate={controls}
@@ -55,8 +57,8 @@ export const IndexHeroFeaturedIn = () => {
             title={'Binance Academy site'}
             img={<BinanceAcademySvg />}
             url='https://academy.binance.com/en/articles/how-pool-together-turns-saving-money-into-a-game'
-            className='xs:ml-3 xs:-mr-3'
-            heightClassName='h-10'
+            className='-mr-2 sm:mr-12'
+            heightClassName='h-14'
           />
 
           <GridItemSupportedBy
@@ -72,7 +74,7 @@ export const IndexHeroFeaturedIn = () => {
             title={'CoinDesk site'}
             img={<CoindeskSvg />}
             url='https://old.coindesk.com/tag/pooltogether'
-            className='mt-1'
+            className='mt-1 ml-3 sm:ml-12'
           />
         </motion.div>
       </div>

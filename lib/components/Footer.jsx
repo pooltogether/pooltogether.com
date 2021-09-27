@@ -45,7 +45,7 @@ export const Footer = () => {
 
   return (
     <>
-      <footer className='footer pool-container w-full text-primary-soft text-sm mx-auto'>
+      <footer className='footer pool-container w-full text-white text-sm mx-auto'>
         <div className='flex flex-col pt-10 lg:pt-20'>
           <div className='pt-6 sm:pt-0 pb-8 flex flex-col sm:flex-row justify-between'>
             <div className='footer--pool-logo-container '>

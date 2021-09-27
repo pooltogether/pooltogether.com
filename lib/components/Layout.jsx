@@ -38,7 +38,7 @@ export const Layout = (props) => {
 
       <div className={classnames('header pool-container w-full z-30 mx-auto')}>
         <div
-          className='flex justify-between items-center w-full px-4 sm:px-0 py-2 mx-auto'
+          className='flex justify-between items-center w-full px-4 sm:px-0 pt-8 pb-2 sm:pt-2 mx-auto'
           style={{ height: navHeight }}
         >
           <HeaderLogo />
