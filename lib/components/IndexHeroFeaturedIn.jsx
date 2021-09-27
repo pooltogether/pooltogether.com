@@ -37,12 +37,6 @@ export const IndexHeroFeaturedIn = () => {
 
   return (
     <div id='featured-in' className='text-center w-full' style={{ paddingBottom: '2vh' }}>
-      {/* lol, if you remove this then the SVGs render clipped ... wtf? */}
-      <div className='hidden'>
-        <CoindeskSvg />
-      </div>
-      {/* end lol */}
-
       <div className='pool-container mx-auto'>
         <div className='text-default text-xs font-semibold mb-4 uppercase'>Featured in</div>
 
