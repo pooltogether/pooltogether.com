@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import { SquareLink, SquareButtonTheme, SquareButtonSize } from '@pooltogether/react-components'
 
 import { SocialCTAs } from 'lib/components/SocialCTAs'
@@ -76,6 +77,7 @@ export const DevelopersPage = (props) => {
             <div className='mt-8'>
               <SquareLink
                 chevron
+                Link={Link}
                 size={SquareButtonSize.md}
                 theme={SquareButtonTheme.teal}
                 href='https://medium.com/p/23b09f36db48'
@@ -89,6 +91,7 @@ export const DevelopersPage = (props) => {
             <div className='mt-8'>
               <SquareLink
                 chevron
+                Link={Link}
                 size={SquareButtonSize.md}
                 theme={SquareButtonTheme.tealOutline}
                 href='https://gov.pooltogether.com'

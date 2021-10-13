@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import classnames from 'classnames'
+import Link from 'next/link'
 import { useInView } from 'react-intersection-observer'
 import { motion, useAnimation } from 'framer-motion'
 import { numberWithCommas } from '@pooltogether/utilities'
@@ -57,6 +58,7 @@ export const IndexAnalytics = () => {
         <div className='flex items-center w-full sm-max-width-hero mx-auto text-center'>
           <SquareLink
             chevron
+            Link={Link}
             size={SquareButtonSize.md}
             theme={SquareButtonTheme.teal}
             href='https://info.pooltogether.com'

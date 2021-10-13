@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import FeatherIcon from 'feather-icons-react'
-import classnames from 'classnames'
 import { useInView } from 'react-intersection-observer'
 import { motion, useAnimation } from 'framer-motion'
 

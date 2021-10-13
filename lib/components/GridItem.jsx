@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { SquareLink, SquareButtonTheme, SquareButtonSize } from '@pooltogether/react-components'
 
@@ -36,6 +37,7 @@ export const GridItem = (props) => {
 
           <SquareLink
             chevron
+            Link={Link}
             size={SquareButtonSize.md}
             theme={SquareButtonTheme.tealOutline}
             href={url}

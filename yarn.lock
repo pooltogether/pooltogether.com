@@ -899,10 +899,10 @@
   resolved "https://registry.yarnpkg.com/@pooltogether/fixed-point/-/fixed-point-1.0.0-beta.2.tgz#d76a1e77f21833e9b680296d65526b0ffd7415d7"
   integrity sha512-aUw4R0Z2oM0AK3W4LIXyBaojTOzRRbhLDHX0egeuvxfjy4gBb6X66v81gI7Wngg/7O0y9QL/B8jWkUnAFzhTig==
 
-"@pooltogether/hooks@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@pooltogether/hooks/-/hooks-1.0.0.tgz#fdca1415d09e9ee67f1912ca8bc9f59a943db084"
-  integrity sha512-JSslcloACndkLd3YGjWtrKPKLKOjfKtHJctKEln+8QxlPc/873IqSN9WRB7MRbmUbJjV20BD0KoG6GxMoWvHfQ==
+"@pooltogether/hooks@^1.1.10":
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/@pooltogether/hooks/-/hooks-1.1.10.tgz#6d4a70880ff7939fd9ca0531d9f3d9d05ce49f5c"
+  integrity sha512-J0A75IhysaHlTHC0vBM3lmNBK8tRLXn6EBuAMVrfn7fwj7S6RWQOyl5dLAs8zqvVT74pXPI/hnXNYaz8vOYwQA==
 
 "@pooltogether/pooltogether-contracts@3.4.5":
   version "3.4.5"
@@ -921,10 +921,10 @@
   resolved "https://registry.yarnpkg.com/@pooltogether/pooltogether-rng-contracts/-/pooltogether-rng-contracts-1.0.0.tgz#191d155dc960559cce06b7ec3b0f9ed2caed0f46"
   integrity sha512-jQub/+qPLQwTFtbBCvvyIEqxJDEBEV/hgLKnuocBg2/GySWtHLz67WCy17bNn1hZw8nWIt8Ih8h+7iT2UJhtmQ==
 
-"@pooltogether/react-components@^0.3.4":
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/@pooltogether/react-components/-/react-components-0.3.4.tgz#c854f24bcc182cc6062b16425991f3f163c5880e"
-  integrity sha512-ZXyk0JxN8QO+kuaRxzdSMWkGr6RNGaMVP4hoTReNYbDD4/biUX66Eem70C/z37SusFRHWTCfw0rYUVSiMesudA==
+"@pooltogether/react-components@^1.1.29":
+  version "1.1.29"
+  resolved "https://registry.yarnpkg.com/@pooltogether/react-components/-/react-components-1.1.29.tgz#6261fa4b46ac0c67189f77188f165968ef8d969c"
+  integrity sha512-4D2ZmOi830Svhdc5N2zxqsz4eButkGj8Nt1xSXQN030d9LIMRFd9qDllEIy95m/BhiAbNm9TSXFqdiaXwqQ1vw==
   dependencies:
     "@download/blockies" "^1.0.3"
     "@pooltogether/evm-chains-extended" "^0.5.3"
@@ -950,10 +950,10 @@
   resolved "https://registry.yarnpkg.com/@pooltogether/uniform-random-number/-/uniform-random-number-1.0.0-beta.1.tgz#72257401fe8536e95f9f812f1d249262659084a7"
   integrity sha512-V4iqLOpNFNhnUqfKRlvqUeRwvKaODdz+qn4Qi65C3iMOnDb0J31tBvyhwKbhP4wauNuUN64WfepqkkxET9U7EQ==
 
-"@pooltogether/utilities@0.1.3":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@pooltogether/utilities/-/utilities-0.1.3.tgz#ed8062a88c7217e6416f3bd29c8a60ce603a545b"
-  integrity sha512-rDJNidr/RH4fqkdZfqaa7oeQuQU4mUVttsQlAyaPcKb0OANjdb6lm6biPBo+5waMIakAQl+WSoRK+GPW7sbksg==
+"@pooltogether/utilities@0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@pooltogether/utilities/-/utilities-0.1.5.tgz#762209e46fe718baaa7f047c2dcb26187d286532"
+  integrity sha512-hxjvceBDYK0WwWYpVaRDFES17JdmgNRwZSmVEt7FFU0mI98mbxEImJk+ehRaIudm6DQfbGXWKz4RP0L8Fyf2jw==
 
 "@pooltogether/yield-source-interface@^1.0.1":
   version "1.0.1"

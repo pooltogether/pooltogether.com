@@ -1,5 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import {
   WeeklyPrizeAmountCard,
@@ -108,11 +109,11 @@ const HeroRight = () => {
             <WeeklyPrizeAmount />
           </h1>
           <div className='uppercase font-semibold text-default text-xxs xs:text-lg lg:text-xl -mt-2'>
-            In weekly prizes
+            In prizes
           </div>
         </div>
         <div className='uppercase font-semibold text-green mb-12 text-xxs xs:text-lg lg:text-xl w-1/2 mx-auto'>
-          Awarded every Friday!
+          Awarded every day!
         </div>
       </div>
 
@@ -160,6 +161,7 @@ const HeroLeft = () => {
       <div className='mt-4 sm:mt-8 mb-4 sm:mb-0 sm-max-width-hero mx-auto sm:mx-0 text-center'>
         <SquareLink
           chevron
+          Link={Link}
           size={SquareButtonSize.md}
           theme={SquareButtonTheme.teal}
           href='https://app.pooltogether.com'
