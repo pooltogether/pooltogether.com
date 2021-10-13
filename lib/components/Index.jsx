@@ -1,7 +1,12 @@
 import React from 'react'
 import classnames from 'classnames'
 import { useRouter } from 'next/router'
-import { SquareLink, SquareButtonTheme, SquareButtonSize } from '@pooltogether/react-components'
+import {
+  WeeklyPrizeAmountCard,
+  SquareLink,
+  SquareButtonTheme,
+  SquareButtonSize
+} from '@pooltogether/react-components'
 
 import { WeeklyPrizeAmount } from 'lib/components/WeeklyPrizeAmount'
 import { IndexHeroFeaturedIn } from 'lib/components/IndexHeroFeaturedIn'
