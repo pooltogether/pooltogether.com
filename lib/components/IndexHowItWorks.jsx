@@ -36,7 +36,7 @@ export const IndexHowItWorks = () => {
               >
                 <div className='bg-vid-holo--inner flex items-center justify-center'>
                   {playVideo ? (
-                    <ReactPlayer playing url='https://www.youtube.com/watch?v=OR26tmN1II8' />
+                    <ReactPlayer playing url='https://www.youtube.com/watch?v=-QjnvmCQdoE' />
                   ) : (
                     <div className='bg-vid-circle rounded-full flex items-center justify-center hover:bg-highlight-2 trans'>
                       <div className='bg-vid-tri' />
