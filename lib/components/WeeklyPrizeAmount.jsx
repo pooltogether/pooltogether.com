@@ -8,7 +8,7 @@ import { usePooltogetherTotalPrizes } from 'lib/hooks/usePooltogetherTvl'
 export const WeeklyPrizeAmount = (props) => {
   // const { t } = useTranslation()
 
-  const totalPrizes = usePooltogetherTotalPrizes()
+  // const totalPrizes = usePooltogetherTotalPrizes()
 
   const formatNumbers = (num) => {
     if (num > 1000000) {
@@ -20,15 +20,15 @@ export const WeeklyPrizeAmount = (props) => {
     }
   }
 
-  // Check if data has loaded
-  if (totalPrizes === null) {
-    return <ThemedClipSpinner />
-    // return <>...</>
-  }
+  // // Check if data has loaded
+  // if (totalPrizes === null) {
+  //   return <ThemedClipSpinner />
+  //   // return <>...</>
+  // }
 
-  const totalPrizeFormatted = formatNumbers(totalPrizes)
+  // const totalPrizeFormatted = formatNumbers(totalPrizes)
 
-  return formatNumbers(13630)
+  return formatNumbers(14980)
 
   return totalPrizeFormatted
 }

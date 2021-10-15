@@ -71,7 +71,7 @@ export const Index = (props) => {
 
       <div className='text-inverse'>
         <IndexHowItWorks />
-        <IndexAnalytics />
+        {/* <IndexAnalytics /> */}
         <IndexEcosystem />
         <IndexGovernance />
         <IndexTweetSlideshow />
