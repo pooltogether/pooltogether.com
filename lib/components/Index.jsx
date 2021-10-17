@@ -57,7 +57,7 @@ export const Index = (props) => {
             <HeroLeft />
           </div>
 
-          <div className='w-full sm:w-7/12 lg:w-1/2 mt-6'>
+          <div className='hero-right--width mt-6 -mx-10'>
             <HeroRight />
           </div>
         </div>
@@ -105,15 +105,21 @@ const HeroRight = () => {
     <>
       <div className='bg-prize-amount flex flex-col justify-between text-center pt-10 sm:pt-8 h-48'>
         <div className='sm:pb-10'>
-          <h1 className='text-4xl xs:text-6xl sm:text-9xl -mt-6 sm:-mt-0'>
+          <div className='uppercase font-semibold text-default text-xxs xs:text-lg lg:text-xl mx-auto -mt-4 sm:mt-3'>
+            Currently
+          </div>
+          <h1 className='text-4xl xs:text-6xl sm:text-7xl lg:text-9xl -mt-1 xs:-mt-1'>
             <WeeklyPrizeAmount />
           </h1>
           <div className='uppercase font-semibold text-default text-xxs xs:text-lg lg:text-xl -mt-2'>
-            In prizes
+            In weekly prizes!
           </div>
         </div>
-        <div className='uppercase font-semibold text-green mb-12 text-xxs xs:text-lg lg:text-xl w-1/2 mx-auto'>
+        {/* <div className='uppercase font-semibold text-green mb-12 text-xxs xs:text-lg lg:text-xl w-1/2 mx-auto'>
           Awarded every day!
+        </div> */}
+        <div className='font-semibold text-default-soft pt-8 xs:pt-0 mb-12 text-xxs w-1/2 mx-auto'>
+          * across all v3 and v4 pools
         </div>
       </div>
 

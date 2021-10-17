@@ -584,3 +584,19 @@ li.nav-mobile-listitem {
     max-width: 446px;
   } 
 }
+
+.hero-right--width {
+  width: 120%;
+}
+
+@screen sm {
+  .hero-right--width {
+    @apply w-7/12;
+  }
+}
+
+@screen lg {
+  .hero-right--width {
+    @apply w-1/2;
+  }
+}

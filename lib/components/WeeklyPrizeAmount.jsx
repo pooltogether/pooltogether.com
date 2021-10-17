@@ -1,14 +1,11 @@
 import React from 'react'
 import { ThemedClipSpinner } from '@pooltogether/react-components'
 
-// import { useTranslation } from 'lib/../i18n'
 import { numberWithCommas } from 'lib/utils/numberWithCommas'
 import { usePooltogetherTotalPrizes } from 'lib/hooks/usePooltogetherTvl'
 
 export const WeeklyPrizeAmount = (props) => {
-  // const { t } = useTranslation()
-
-  // const totalPrizes = usePooltogetherTotalPrizes()
+  const totalPrizes = usePooltogetherTotalPrizes()
 
   const formatNumbers = (num) => {
     if (num > 1000000) {
@@ -20,15 +17,15 @@ export const WeeklyPrizeAmount = (props) => {
     }
   }
 
-  // // Check if data has loaded
-  // if (totalPrizes === null) {
-  //   return <ThemedClipSpinner />
-  //   // return <>...</>
-  // }
+  // Check if data has loaded
+  if (totalPrizes === null) {
+    return <ThemedClipSpinner />
+  }
 
-  // const totalPrizeFormatted = formatNumbers(totalPrizes)
+  // add hard-coded V4 amount (as of oct 16, 2021) over 1 week:
+  // $14,980 * 7
+  // 104860
+  const totalV3AndV4PrizesWeekly = Number(totalPrizes) + 104860
 
-  return formatNumbers(10000)
-
-  return totalPrizeFormatted
+  return formatNumbers(totalV3AndV4PrizesWeekly)
 }
