@@ -9,7 +9,8 @@ export const WeeklyPrizeAmount = (props) => {
 
   const formatNumbers = (num) => {
     if (num > 1000000) {
-      return `$${numberWithCommas(num / 1000000, { precision: 2 })} ${'million'}`
+      const isOneMillion = `${num / 1000000}`.substr(0, 4) === '1.00'
+      return `$${numberWithCommas(num / 1000000, { precision: isOneMillion ? 0 : 2 })} ${'million'}`
     } else if (num >= 10000) {
       return `$${numberWithCommas(num, { precision: 0 })}`
     } else {

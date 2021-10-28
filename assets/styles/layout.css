@@ -93,8 +93,3 @@ body {
   animation-name: fadeOut;
   pointer-events: none;
 }
-
-/* canvas[resize] {
-  width: 100%;
-  height: 100vh;
-} */
