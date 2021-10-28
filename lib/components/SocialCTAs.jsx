@@ -18,7 +18,7 @@ export const SocialCTAs = () => {
           <TwitterIconSvg />
         </a>
 
-        <a href='https://discord.gg/hxPhPDW' className='my-2 text-white hover:text-green w-10'>
+        <a href='/discord' className='my-2 text-white hover:text-green w-10'>
           <DiscordIconSvg />
         </a>
 

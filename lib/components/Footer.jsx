@@ -97,11 +97,7 @@ export const Footer = () => {
                     Twitter
                   </FooterLink>
 
-                  <FooterLink
-                    href='https://discord.gg/hxPhPDW'
-                    svg={<DiscordIconSvg />}
-                    svgStyle={{ top: 4 }}
-                  >
+                  <FooterLink href='/discord' svg={<DiscordIconSvg />} svgStyle={{ top: 4 }}>
                     Discord
                   </FooterLink>
 

@@ -129,7 +129,7 @@ const HeroRight = () => {
           <TwitterIconSvg />
         </HeroSocialItem>
 
-        <HeroSocialItem width={18} href='https://discord.gg/hxPhPDW'>
+        <HeroSocialItem width={18} href='/discord'>
           <DiscordIconSvg />
         </HeroSocialItem>
 

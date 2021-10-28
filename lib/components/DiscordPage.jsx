@@ -10,6 +10,8 @@ import {
 import { axiosInstance } from 'lib/axiosInstance'
 import { DiscordIconSvg } from 'lib/components/SvgComponents'
 
+const H_CAPTCHA_SITE_KEY = '75cce6c0-2afc-4cbe-8afe-8baab045f995' // '10000000-ffff-ffff-ffff-000000000001' test
+
 const DEFAULT_BUTTON_TEXT = 'Get Discord Invite'
 
 export const DiscordPage = () => {
@@ -73,12 +75,12 @@ export const DiscordPage = () => {
         </h1>
 
         <p className='text-lg lg:text-xl text-center mt-4'>
-          Looking for help or just want to hang out with the PoolTogether community? Come join us on
-          Discord!
+          Looking for help or just want to hang out with the PoolTogether community? <br />
+          Come join us on Discord!
         </p>
 
         <HCaptcha
-          sitekey='10000000-ffff-ffff-ffff-000000000001'
+          sitekey={H_CAPTCHA_SITE_KEY}
           onVerify={setHCaptchaToken}
           onError={onError}
           onExpire={onExpire}
@@ -88,7 +90,7 @@ export const DiscordPage = () => {
         />
 
         <SquareButton
-          size={SquareButtonSize.md}
+          size={SquareButtonSize.lg}
           theme={SquareButtonTheme.tealOutline}
           className='items-center my-4 block sm:inline'
           onClick={onSubmit}
