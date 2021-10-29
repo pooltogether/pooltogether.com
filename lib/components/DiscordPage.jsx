@@ -52,14 +52,12 @@ export const DiscordPage = () => {
 
       const response = await axiosInstance({
         method: 'post',
-        url: `http://127.0.0.1:8787`,
+        url: `https://discord-invite.pooltogether-api.workers.dev/generateInvite`,
         data: bodyFormData,
         headers: { 'Content-Type': 'multipart/form-data' }
       })
 
-      console.log(response)
-      console.log(response)
-      if (response.success) {
+      if (response.status === 200) {
         setInviteToken(response.data)
       }
     }
@@ -68,8 +66,12 @@ export const DiscordPage = () => {
   useEffect(() => {
     if (inviteToken) {
       setButtonText('Redirecting ...')
-      window.location.href = `https://discord.com/invite/${inviteToken}`
-      inviteToken = null
+
+      const url = `https://discord.com/invite/${inviteToken}`
+      console.log('Redirecting ...', url)
+      window.location.href = url
+
+      setInviteToken(null)
     }
   }, [inviteToken])
 
