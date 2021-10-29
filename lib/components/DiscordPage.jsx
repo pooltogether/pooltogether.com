@@ -10,7 +10,7 @@ import {
 import { axiosInstance } from 'lib/axiosInstance'
 import { DiscordIconSvg } from 'lib/components/SvgComponents'
 
-const H_CAPTCHA_SITE_KEY = '75cce6c0-2afc-4cbe-8afe-8baab045f995' // '10000000-ffff-ffff-ffff-000000000001' test
+const H_CAPTCHA_SITE_KEY = '11cdabde-af7e-42cb-ba97-76e35b7f7c39' // '10000000-ffff-ffff-ffff-000000000001' test
 
 const DEFAULT_BUTTON_TEXT = 'Get Discord Invite'
 
@@ -57,6 +57,8 @@ export const DiscordPage = () => {
         headers: { 'Content-Type': 'multipart/form-data' }
       })
 
+      console.log(response)
+      console.log(response)
       if (response.success) {
         setInviteToken(response.data)
       }
