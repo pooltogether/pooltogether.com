@@ -16,6 +16,7 @@ const DEFAULT_BUTTON_TEXT = 'Get Discord Invite'
 
 export const DiscordPage = () => {
   const [hCaptchaToken, setHCaptchaToken] = useState(null)
+  const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [inviteToken, setInviteToken] = useState('')
   const [buttonText, setButtonText] = useState(DEFAULT_BUTTON_TEXT)
@@ -23,13 +24,16 @@ export const DiscordPage = () => {
   const captchaRef = useRef(null)
 
   const onSubmit = () => {
-    setButtonText(
-      <>
-        <ThemedClipSpinner size={12} /> Getting Discord invite ...
-      </>
-    )
+    if (!loading) {
+      setButtonText(
+        <>
+          <ThemedClipSpinner size={16} /> Getting Discord invite ...
+        </>
+      )
+      setLoading(true)
 
-    captchaRef.current.execute()
+      captchaRef.current.execute()
+    }
   }
 
   const onExpire = () => {
@@ -43,10 +47,14 @@ export const DiscordPage = () => {
 
   useEffect(async () => {
     if (hCaptchaToken) {
-      console.log(`hCaptcha Token: ${hCaptchaToken}`)
+      var bodyFormData = new FormData()
+      bodyFormData.append('h-captcha-response', hCaptchaToken)
 
-      const response = await axiosInstance.post(`https://`, {
-        hCaptchaToken
+      const response = await axiosInstance({
+        method: 'post',
+        url: `http://127.0.0.1:8787`,
+        data: bodyFormData,
+        headers: { 'Content-Type': 'multipart/form-data' }
       })
 
       if (response.success) {
@@ -91,7 +99,7 @@ export const DiscordPage = () => {
 
         <SquareButton
           size={SquareButtonSize.lg}
-          theme={SquareButtonTheme.tealOutline}
+          theme={SquareButtonTheme.teal}
           className='items-center my-4 block sm:inline'
           onClick={onSubmit}
         >
