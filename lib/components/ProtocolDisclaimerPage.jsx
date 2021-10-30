@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 
 export const ProtocolDisclaimerPage = class _ProtocolDisclaimerPage extends PureComponent {
-  render () {
+  render() {
     return (
       <>
         <div className='pool-container mx-auto flex flex-col text-base h-full z-10 relative mb-20'>
@@ -21,9 +21,9 @@ export const ProtocolDisclaimerPage = class _ProtocolDisclaimerPage extends Pure
             using the PoolTogether protocol, you should review the relevant documentation to make
             sure you understand how the PoolTogether protocol works. Additionally, just as you can
             access email email protocols such as SMTP through multiple email clients, you can access
-            the Uniswap protocol through dozens of web or mobile interfaces. You are responsible for
-            doing your own diligence on those interfaces to understand the fees and risks they
-            present.
+            the PoolTogether protocol through dozens of web or mobile interfaces. You are
+            responsible for doing your own diligence on those interfaces to understand the fees and
+            risks they present.
           </p>
 
           <p className='mb-10'>
