@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "npm-run-all --parallel start:app",
     "build": "next build && next export && yarn postexport",
-    "post-build": "cp ./node_modules/@pooltogether/contract-list-schema/src/contract-list.schema.json public/",
+    "prebuild": "cp ./node_modules/@pooltogether/contract-list-schema/src/contract-list.schema.json public/",
     "dist": "yarn build",
     "start:app": "PORT=3000 node --max-old-space-size=8192 server.js",
     "export": "next export",
