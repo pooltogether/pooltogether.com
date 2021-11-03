@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "npm-run-all --parallel start:app",
     "build": "next build && next export && yarn postexport",
+    "post-build": "cp ./node_modules/@pooltogether/contract-list-schema/src/contract-list.schema.json public/",
     "dist": "yarn build",
     "start:app": "PORT=3000 node --max-old-space-size=8192 server.js",
     "export": "next export",
@@ -21,6 +22,7 @@
   "dependencies": {
     "@ethersproject/abi": "^5.4.1",
     "@hcaptcha/react-hcaptcha": "^0.3.8",
+    "@pooltogether/contract-list-schema": "^0.1.4",
     "@pooltogether/current-pool-data": "3.7.1",
     "@pooltogether/etherplex": "^1.1.2",
     "@pooltogether/hooks": "^1.1.11",
