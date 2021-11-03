@@ -26,6 +26,7 @@ export const PageContainer = (props) => {
 
   return (
     <>
+      <Meta title={props.pageTitle} description={props.pageDescription} />
       <motion.div
         variants={variants}
         transition={transition}
@@ -34,8 +35,6 @@ export const PageContainer = (props) => {
         exit='exit'
         className={motionDivClassnames}
       >
-        <Meta title={props.pageTitle} />
-
         <div className={wrapperClassnames}>{props.pageComponent}</div>
       </motion.div>
     </>

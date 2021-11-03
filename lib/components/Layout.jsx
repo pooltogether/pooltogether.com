@@ -33,7 +33,6 @@ export const Layout = (props) => {
 
   return (
     <>
-      <Meta />
       <NavMobile />
 
       <div className={classnames('header pool-container w-full z-30 mx-auto')}>
