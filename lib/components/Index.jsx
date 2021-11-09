@@ -49,7 +49,7 @@ export const Index = (props) => {
   return (
     <>
       <div
-        className='w-full flex flex-col justify-between w-full text-inverse text-center sm:text-left'
+        className='w-full flex flex-col justify-between text-inverse text-center sm:text-left'
         style={{ height }}
       >
         <div className='pool-container flex flex-col sm:flex-row justify-between mx-auto w-full sm:pt-16'>

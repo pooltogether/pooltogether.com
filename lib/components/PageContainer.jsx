@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import { Meta } from 'lib/components/Meta'
 
 export const PageContainer = (props) => {
+  const { ignoreStyles } = props
   const router = useRouter()
 
   const transition = { duration: 0.2, ease: [0.43, 0.13, 0.23, 0.96] }
@@ -19,10 +20,10 @@ export const PageContainer = (props) => {
     }
   }
 
-  const motionDivClassnames = `pt-10 sm:pt-20 xl:pt-24 trans ${
-    router.pathname === '/developers' ? 'bg-developers' : ''
-  }`
-  const wrapperClassnames = 'min-height-container mx-auto leading-relaxed'
+  const motionDivClassnames = ignoreStyles
+    ? ''
+    : `pt-10 sm:pt-20 xl:pt-24 trans ${router.pathname === '/developers' ? 'bg-developers' : ''}`
+  const wrapperClassnames = ignoreStyles ? '' : 'min-height-container mx-auto leading-relaxed'
 
   return (
     <>
