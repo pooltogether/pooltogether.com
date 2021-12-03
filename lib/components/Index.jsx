@@ -145,12 +145,10 @@ const HeroRight = () => {
 }
 
 const HeroLeft = () => {
-  const [disclaimerModalOpen, setDisclaimerModalOpen] = useAtom(disclaimerModalOpenAtom)
+  const [, setDisclaimerModalOpen] = useAtom(disclaimerModalOpenAtom)
 
   const openDisclaimerModal = (e) => {
     e.preventDefault()
-
-    console.log('click')
 
     setDisclaimerModalOpen(true)
   }

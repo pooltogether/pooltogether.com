@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import Cookies from 'js-cookie'
+import { useRouter } from 'next/router'
 import { Modal } from '@pooltogether/react-components'
 import { SquareButton, SquareButtonTheme, SquareButtonSize } from '@pooltogether/react-components'
 
@@ -6,26 +8,62 @@ import { atom, useAtom } from 'jotai'
 
 export const disclaimerModalOpenAtom = atom(false)
 
+const getCookieOptions = () => {
+  let domain = 'localhost'
+  if (typeof window !== 'undefined' && window.location.hostname !== 'localhost') {
+    domain = `.${window.location.hostname}`
+  }
+
+  return {
+    // secure: domain === '.pooltogether.com',
+    domain
+  }
+}
+
+const cookieKey = 'disclaimerAccepted'
+
 export const DisclaimerModal = (props) => {
+  const router = useRouter()
+
   const [disclaimerModalOpen, setDisclaimerModalOpen] = useAtom(disclaimerModalOpenAtom)
-  const [acknowledged, setAcknowleged] = useState(false)
+  const [acknowledgedChecked, setAcknowlegedChecked] = useState(false)
+  const [modalActuallyOpen, setModalActuallyOpen] = useState(false)
+
+  const cookieOptions = getCookieOptions()
+
+  const redirectToApp = () => {
+    router.push('https://app.pooltogether.com')
+  }
+
+  useEffect(() => {
+    if (disclaimerModalOpen) {
+      if (Cookies.get(cookieKey, cookieOptions)) {
+        redirectToApp()
+      } else {
+        // create another state var ...
+        setModalActuallyOpen(true)
+      }
+    }
+  }, [disclaimerModalOpen])
 
   const closeModal = () => {
+    setModalActuallyOpen(false)
     setDisclaimerModalOpen(false)
+    setAcknowlegedChecked(false)
   }
 
   const setCookie = () => {
-    Cookie.set()
+    Cookies.set(cookieKey, 'true', cookieOptions)
   }
 
-  const redirectTo = () => {
+  const startRedirect = () => {
     setCookie()
-    setDisclaimerModalOpen(false)
+    redirectToApp()
   }
 
   return (
     <Modal
-      isOpen={disclaimerModalOpen}
+      isOpen={modalActuallyOpen}
       paddingClassName='px-2 xs:px-8 py-10'
       maxWidthClassName='sm:max-w-md'
       label={'Disclaimer modal'}
@@ -35,9 +73,9 @@ export const DisclaimerModal = (props) => {
         <input
           name='acknowleged'
           type='checkbox'
-          checked={acknowledged}
+          checked={acknowledgedChecked}
           onChange={() => {
-            setAcknowleged(!acknowledged)
+            setAcknowlegedChecked(!acknowledgedChecked)
           }}
         />{' '}
         I acknowledge &amp; agree
@@ -58,8 +96,8 @@ export const DisclaimerModal = (props) => {
           size={SquareButtonSize.md}
           theme={SquareButtonTheme.teal}
           className='max-w-md mt-2'
-          onClick={redirectTo}
-          disabled={!acknowledged}
+          onClick={startRedirect}
+          disabled={!acknowledgedChecked}
         >
           Continue
         </SquareButton>
