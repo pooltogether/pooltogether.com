@@ -2,12 +2,15 @@ import React from 'react'
 import classnames from 'classnames'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { useAtom } from 'jotai'
 import {
   WeeklyPrizeAmountCard,
-  SquareLink,
+  SquareButton,
   SquareButtonTheme,
   SquareButtonSize
 } from '@pooltogether/react-components'
+
+import { disclaimerModalOpenAtom, DisclaimerModal } from 'lib/components/DisclaimerModal'
 
 import { WeeklyPrizeAmount } from 'lib/components/WeeklyPrizeAmount'
 import { IndexHeroFeaturedIn } from 'lib/components/IndexHeroFeaturedIn'
@@ -142,6 +145,16 @@ const HeroRight = () => {
 }
 
 const HeroLeft = () => {
+  const [disclaimerModalOpen, setDisclaimerModalOpen] = useAtom(disclaimerModalOpenAtom)
+
+  const openDisclaimerModal = (e) => {
+    e.preventDefault()
+
+    console.log('click')
+
+    setDisclaimerModalOpen(true)
+  }
+
   return (
     <>
       <span
@@ -165,16 +178,15 @@ const HeroLeft = () => {
         The more you save, the more you win!
       </div> */}
       <div className='mt-4 sm:mt-8 mb-4 sm:mb-0 sm-max-width-hero mx-auto sm:mx-0 text-center'>
-        <SquareLink
+        <SquareButton
           chevron
-          Link={Link}
           size={SquareButtonSize.md}
           theme={SquareButtonTheme.teal}
-          href='https://app.pooltogether.com'
           className='mx-auto sm:mx-0 max-w-md mt-2 block'
+          onClick={openDisclaimerModal}
         >
           Start saving & winning
-        </SquareLink>
+        </SquareButton>
       </div>
     </>
   )

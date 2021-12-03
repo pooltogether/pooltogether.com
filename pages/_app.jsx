@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 
 import { DEFAULT_QUERY_OPTIONS } from 'lib/constants'
 import { AllContextProviders } from 'lib/components/AllContextProviders'
+import { DisclaimerModal } from 'lib/components/DisclaimerModal'
 import { Layout } from 'lib/components/Layout'
 
 import 'assets/styles/index.css'
@@ -91,6 +92,8 @@ function MyApp ({ Component, pageProps, router }) {
     <>
       <QueryClientProvider client={queryClient}>
         <AllContextProviders>
+          <DisclaimerModal />
+
           <Layout props={pageProps}>
             <Component {...pageProps} />
           </Layout>
