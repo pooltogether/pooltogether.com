@@ -33,11 +33,23 @@ export const NavMobileListItem = ({ link, index, toggleOpen }) => {
         className='font-bold text-center mb-6 text-xl'
         style={style}
       >
-        <Link href={link.href} as={link.as}>
-          <a onClick={toggleOpen} style={style}>
+        {Boolean(link.href) ? (
+          <Link href={link.href} as={link.as}>
+            <a onClick={toggleOpen} style={style}>
+              {link.label}
+            </a>
+          </Link>
+        ) : (
+          <a
+            onClick={(e) => {
+              e.preventDefault()
+              link.onClick(toggleOpen)
+            }}
+            style={style}
+          >
             {link.label}
           </a>
-        </Link>
+        )}
       </motion.li>
     </>
   )

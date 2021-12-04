@@ -23,7 +23,7 @@ import '@reach/tooltip/styles.css'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-import '@pooltogether/react-components/dist/index.css'
+// import '@pooltogether/react-components/dist/index.css'
 
 const queryClient = new QueryClient({
   defaultOptions: {

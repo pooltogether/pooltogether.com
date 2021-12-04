@@ -3,8 +3,10 @@ import Cookies from 'js-cookie'
 import { useRouter } from 'next/router'
 import { Modal } from '@pooltogether/react-components'
 import { SquareButton, SquareButtonTheme, SquareButtonSize } from '@pooltogether/react-components'
-
 import { atom, useAtom } from 'jotai'
+
+import { HeaderLogo } from 'lib/components/HeaderLogo'
+import { IpfsLogo } from 'lib/components/SvgComponents'
 
 export const disclaimerModalOpenAtom = atom(false)
 
@@ -64,11 +66,20 @@ export const DisclaimerModal = (props) => {
   return (
     <Modal
       isOpen={modalActuallyOpen}
-      paddingClassName='px-2 xs:px-8 py-10'
+      paddingClassName='px-4 xs:px-12 py-10'
       maxWidthClassName='sm:max-w-md'
       label={'Disclaimer modal'}
       closeModal={closeModal}
     >
+      <HeaderLogo />
+      <IpfsLogo />
+      <h1>Redirect Notice</h1>
+      <p>
+        By accessing this link you are leaving aave.com and are being redirected to a third party,
+        independent website. This redirect takes you to a community deployed and maintained instance
+        of the open source Aave front end, hosted and served on the distributed, peer-to-peer file
+        network known as the Interplanetary File System (IPFS).
+      </p>
       <label className='mx-auto text-center'>
         <input
           name='acknowleged'
@@ -80,7 +91,6 @@ export const DisclaimerModal = (props) => {
         />{' '}
         I acknowledge &amp; agree
       </label>
-
       {/* <a
         className={classnames(
           'font-titillium inline-flex items-center justify-center capitalize tracking-wider outline-none focus:outline-none active:outline-none',
@@ -89,7 +99,6 @@ export const DisclaimerModal = (props) => {
       >
         {t('app')}
       </a> */}
-
       <div className='text-center sm:text-right'>
         <SquareButton
           chevron
