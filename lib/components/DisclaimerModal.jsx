@@ -67,49 +67,50 @@ export const DisclaimerModal = (props) => {
     <Modal
       isOpen={modalActuallyOpen}
       paddingClassName='px-4 xs:px-12 py-10'
-      maxWidthClassName='sm:max-w-md'
+      maxWidthClassName='sm:max-w-lg'
+      className='text-white'
       label={'Disclaimer modal'}
       closeModal={closeModal}
     >
-      <HeaderLogo />
-      <IpfsLogo />
-      <h1>Redirect Notice</h1>
-      <p>
-        By accessing this link you are leaving aave.com and are being redirected to a third party,
-        independent website. This redirect takes you to a community deployed and maintained instance
-        of the open source Aave front end, hosted and served on the distributed, peer-to-peer file
-        network known as the Interplanetary File System (IPFS).
+      <div className='flex items-center justify-center'>
+        <div className='w-16 xs:w-40'>
+          <HeaderLogo />
+        </div>{' '}
+        <div className='text-white text-2xl mr-2 sm:ml-4'>&amp;</div>
+        <IpfsLogo />
+      </div>
+      <h6 className='mt-10 mb-2'>Disclaimer</h6>
+      <p className='text-sm'>
+        You are leaving pooltogether.com and are being redirected to the 3rd-party community
+        deployed and maintained instance of the open source PoolTogether frontend, hosted and served
+        on the distributed, peer-to-peer file network known as IPFS.
       </p>
-      <label className='mx-auto text-center'>
-        <input
-          name='acknowleged'
-          type='checkbox'
-          checked={acknowledgedChecked}
-          onChange={() => {
-            setAcknowlegedChecked(!acknowledgedChecked)
-          }}
-        />{' '}
-        I acknowledge &amp; agree
-      </label>
-      {/* <a
-        className={classnames(
-          'font-titillium inline-flex items-center justify-center capitalize tracking-wider outline-none focus:outline-none active:outline-none',
-          'hover:bg-default rounded-full border-2 border-highlight-2 px-10 py-1 trans trans-fast text-sm lg:text-lg font-semibold'
-        )}
-      >
-        {t('app')}
-      </a> */}
-      <div className='text-center sm:text-right'>
-        <SquareButton
-          chevron
-          size={SquareButtonSize.md}
-          theme={SquareButtonTheme.teal}
-          className='max-w-md mt-2'
-          onClick={startRedirect}
-          disabled={!acknowledgedChecked}
-        >
-          Continue
-        </SquareButton>
+
+      <div className='flex flex-col sm:flex-row items-center justify-center mt-4'>
+        <label className='mx-auto text-center text-lg sm:ml-0 mt-2'>
+          <input
+            name='acknowleged'
+            type='checkbox'
+            checked={acknowledgedChecked}
+            onChange={() => {
+              setAcknowlegedChecked(!acknowledgedChecked)
+            }}
+          />{' '}
+          I acknowledge &amp; agree
+        </label>
+
+        <div className='text-center sm:text-right'>
+          <SquareButton
+            chevron
+            size={SquareButtonSize.md}
+            theme={SquareButtonTheme.teal}
+            className='max-w-md mt-2'
+            onClick={startRedirect}
+            disabled={!acknowledgedChecked}
+          >
+            Continue
+          </SquareButton>
+        </div>
       </div>
     </Modal>
   )

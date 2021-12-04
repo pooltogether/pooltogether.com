@@ -29,8 +29,8 @@ export const DevelopersPage = (props) => {
           </ButtonLink> */}
 
           <a
-            href='https://docs.pooltogether.com'
-            as='https://docs.pooltogether.com'
+            href='https://v4.docs.pooltogether.com/'
+            as='https://v4.docs.pooltogether.com/'
             className='community-button flex items-center underline font-bold'
           >
             <svg

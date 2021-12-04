@@ -50,12 +50,7 @@ export const Layout = (props) => {
         })}
 
       {!isIndex && (
-        <div
-          className='flex flex-col w-full pb-20'
-          // style={{
-          //   minHeight: '100vh'
-          // }}
-        >
+        <div className='flex flex-col w-full pb-20'>
           <div className='content'>
             <div className='mx-auto w-full flex flex-grow relative z-10 h-full page'>
               <div className='flex flex-col flex-grow'>

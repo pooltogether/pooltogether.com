@@ -77,7 +77,7 @@ export const Nav = (props) => {
         <a
           className={classnames(
             'font-titillium inline-flex items-center justify-center capitalize tracking-wider outline-none focus:outline-none active:outline-none',
-            'hover:bg-default rounded-full border-2 border-highlight-2 px-10 py-1 trans trans-fast text-sm lg:text-lg font-semibold'
+            'hover:bg-default rounded-full border-2 border-highlight-2 px-10 py-1 trans trans-fast text-sm lg:text-lg font-semibold text-highlight-2'
           )}
           onClick={openDisclaimerModal}
         >

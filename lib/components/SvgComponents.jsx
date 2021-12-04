@@ -5,7 +5,7 @@ import React from 'react'
 export const IpfsLogo = (props) => {
   return (
     <>
-      <svg {...props} height='100%' fill='none' xmlns='http://www.w3.org/2000/svg'>
+      <svg {...props} height='50' width='130' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <g clipPath='url(#a)'>
           <path
             d='M3.43 38.4 25.6 51.2l22.17-12.8V12.8L25.6.001l-22.17 12.8V38.4Z'
