@@ -28,6 +28,7 @@ import { IndexTweetSlideshow } from 'lib/components/IndexTweetSlideshow'
 import { useScreenSize, ScreenSize } from 'lib/hooks/useScreenSize'
 
 import {
+  ButtonArrowRight,
   DownArrowSvg,
   TwitterIconSvg,
   DiscordIconSvg,
@@ -180,10 +181,10 @@ const HeroLeft = () => {
           chevron
           size={SquareButtonSize.md}
           theme={SquareButtonTheme.teal}
-          className='mx-auto sm:mx-0 max-w-md mt-2 block'
+          className='mx-auto sm:mx-0 max-w-md mt-2 block w-full'
           onClick={openDisclaimerModal}
         >
-          Start saving & winning
+          Start saving & winning <ButtonArrowRight />
         </SquareButton>
       </div>
     </>

@@ -2,6 +2,26 @@
 // https://react-svgr.com/playground/
 import React from 'react'
 
+export const ButtonArrowRight = (props) => {
+  return (
+    <svg
+      width='24'
+      height='24'
+      viewBox='0 0 24 24'
+      fill='none'
+      stroke='currentColor'
+      stroke-width='2'
+      stroke-linecap='round'
+      stroke-linejoin='round'
+      class='feather feather-chevron-right inline-block -mt-1 w-6 h-6'
+    >
+      <g>
+        <polyline points='9 18 15 12 9 6'></polyline>
+      </g>
+    </svg>
+  )
+}
+
 export const IpfsLogo = (props) => {
   return (
     <>
