@@ -60,7 +60,7 @@ export const Footer = () => {
                 <ul>
                   <FooterLink href='/developers'>Developers</FooterLink>
                   <FooterLink href='/audits'>Security</FooterLink>
-                  <FooterLink href='/faq'>FAQ</FooterLink>
+                  <FooterLink href='https://docs.pooltogether.com/faq/general'>FAQ</FooterLink>
                   <FooterLink href='/brand-assets'>Assets</FooterLink>
                   <FooterLink href='https://gov.pooltogether.com/'>Governance</FooterLink>
                   <FooterLink href='https://www.notion.so/PoolTogether-Knowledge-Base-fa721ccefa3242eaabd125a8415acd27'>
