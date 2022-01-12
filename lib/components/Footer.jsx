@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import classnames from 'classnames'
 import Link from 'next/link'
-
 import { useTranslation } from 'lib/../i18n'
 
 // import MailIcon from 'assets/images/mail-footer.svg'
@@ -14,7 +13,7 @@ import {
 } from 'lib/components/SvgComponents'
 
 export const Footer = () => {
-  const [t] = useTranslation()
+  const { t } = useTranslation()
 
   const linkListItemClassNames = 'my-2'
   const linkClassNames = 'trans trans-fast text-accent-1 no-underline'
@@ -56,21 +55,21 @@ export const Footer = () => {
 
             <nav className='flex flex-wrap w-full sm:flex-no-wrap sm:justify-between sm:w-1/2'>
               <div className='w-full sm:w-1/3 sm:w-auto flex flex-col mb-8 mt-12 sm:my-0'>
-                <span className='font-semibold block'>Ecosystem</span>
+                <span className='font-semibold block'>{t('ecosystem', 'Ecosystem')}</span>
                 <ul>
-                  <FooterLink href='/developers'>Developers</FooterLink>
-                  <FooterLink href='/audits'>Security</FooterLink>
+                  <FooterLink href='/developers'>{t('developers', 'Developers')}</FooterLink>
+                  <FooterLink href='/audits'>{t('security', 'Security')}</FooterLink>
                   <FooterLink href='https://docs.pooltogether.com/faq/general'>FAQ</FooterLink>
-                  <FooterLink href='/brand-assets'>Assets</FooterLink>
-                  <FooterLink href='https://gov.pooltogether.com/'>Governance</FooterLink>
+                  <FooterLink href='/brand-assets'>{t('assets', 'Assets')}</FooterLink>
+                  <FooterLink href='https://gov.pooltogether.com/'>{t('governance')}</FooterLink>
                   <FooterLink href='https://www.notion.so/PoolTogether-Knowledge-Base-fa721ccefa3242eaabd125a8415acd27'>
-                    Knowledge Base
+                    {t('knowledgeBase', 'Knowledge Base')}
                   </FooterLink>
                 </ul>
               </div>
 
               <div className='w-full sm:w-1/3 flex flex-col mb-8 sm:my-0'>
-                <span className='font-semibold block'>Releases</span>
+                <span className='font-semibold block'>{t('releases', 'Releases')}</span>
 
                 <ul>
                   <FooterLink href='https://v4.pooltogether.com'>Version 4</FooterLink>
@@ -86,7 +85,7 @@ export const Footer = () => {
                   width: 108
                 }}
               >
-                <span className='font-semibold block'>Community</span>
+                <span className='font-semibold block'>{t('community', 'Community')}</span>
 
                 <ul>
                   <FooterLink
@@ -127,7 +126,7 @@ export const Footer = () => {
                   )}
                   href='/terms'
                 >
-                  Terms
+                  {t('terms', 'Terms')}
                 </a>
                 <a
                   className={classnames(
@@ -136,7 +135,7 @@ export const Footer = () => {
                   )}
                   href='/sitemap.xml'
                 >
-                  Sitemap
+                  {t('sitemap', 'Sitemap')}
                 </a>
               </nav>
             </div>

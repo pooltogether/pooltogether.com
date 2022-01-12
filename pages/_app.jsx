@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import * as Fathom from 'fathom-client'
 // import { ReactQueryDevtools } from 'react-query/devtools'
 import { QueryClient, QueryClientProvider } from 'react-query'
@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 import { DEFAULT_QUERY_OPTIONS } from 'lib/constants'
 import { AllContextProviders } from 'lib/components/AllContextProviders'
 import { Layout } from 'lib/components/Layout'
+import i18next from '../i18n'
 
 import 'assets/styles/index.css'
 
@@ -39,8 +40,8 @@ if (process.env.NEXT_JS_SENTRY_DSN) {
   })
 }
 
-function MyApp ({ Component, pageProps, router }) {
-  // const [initialized, setInitialized] = useState(false)
+function MyApp({ Component, pageProps, router }) {
+  const [initialized, setInitialized] = useState(false)
 
   useEffect(() => {
     const handleExitComplete = () => {
@@ -64,7 +65,7 @@ function MyApp ({ Component, pageProps, router }) {
         includedDomains: ['pooltogether.com', 'www.pooltogether.com']
       })
 
-      function onRouteChangeComplete (url) {
+      function onRouteChangeComplete(url) {
         if (window['fathom']) {
           window['fathom'].trackPageview()
         }
@@ -78,14 +79,14 @@ function MyApp ({ Component, pageProps, router }) {
     }
   }, [])
 
-  // useEffect(() => {
-  //   const initi18next = async () => {
-  //     await i18next.initPromise.then(() => {
-  //       setInitialized(true)
-  //     })
-  //   }
-  //   initi18next()
-  // }, [])
+  useEffect(() => {
+    const initi18next = async () => {
+      await i18next.initPromise.then(() => {
+        setInitialized(true)
+      })
+    }
+    initi18next()
+  }, [])
 
   return (
     <>

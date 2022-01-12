@@ -9,7 +9,7 @@ const { publicRuntimeConfig } = getConfig()
 const { locizeProjectId, locizeApiKey, locizeVersion } = publicRuntimeConfig
 
 const nextI18NextInstance = new NextI18Next({
-  use: [LanguageDetector, initReactI18next, Locize],
+  use: [LanguageDetector, initReactI18next, Locize ],
   saveMissing: true,
   backend: {
     projectId: locizeProjectId,

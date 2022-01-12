@@ -1,19 +1,20 @@
 import React, { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { motion, useAnimation } from 'framer-motion'
+import { useTranslation } from 'lib/../i18n'
 
 import { GridItem } from 'lib/components/GridItem'
 
 import DharmaLogo from 'assets/images/dharma@2x.png'
 import OrangeLogo from 'assets/images/orange@2x.png'
-// import ZerionSvg from 'assets/images/zerion.svg'
-// import ZapperFiSvg from 'assets/images/zapperfi.svg'
 
 import { ZapperSvg, ZerionSvg } from 'lib/components/SvgComponents'
 
 export const IndexEcosystem = () => {
   const controls = useAnimation()
   const [ref, inView] = useInView()
+
+  const { t } = useTranslation()
 
   useEffect(() => {
     if (inView) {
@@ -34,12 +35,14 @@ export const IndexEcosystem = () => {
     <>
       <div className='py-12 sm:py-24'>
         <div className='pool-container mx-auto'>
-          <h5 className='uppercase text-highlight-1 pb-4'>Ecosystem:</h5>
+          <h5 className='uppercase text-highlight-1 pb-4'>{t('ecosystem', 'Ecosystem')}:</h5>
 
           <div className='flex flex-col'>
             <p className='text-sm xs:text-xl sm:text-lg lg:text-xl sm:max-w-2xl'>
-              Decentralized Finance (DeFi) platforms, neobanks and savings customers all working
-              together to win.
+              {t(
+                'defiPlatformsNeoBanksAndSavings',
+                'Decentralized Finance (DeFi) platforms, neobanks and savings customers all working together to win.'
+              )}
             </p>
 
             <motion.div
@@ -54,7 +57,7 @@ export const IndexEcosystem = () => {
               <GridItem
                 altBg
                 title={'Zapper'}
-                description={`Join PoolTogether using this portal to DeFi.`}
+                description={t('joinOnZapper', 'Join PoolTogether using this portal to DeFi.')}
                 svg={<ZapperSvg />}
                 url='https://www.zapper.fi'
                 buttonText='Open Zapper'
@@ -63,7 +66,7 @@ export const IndexEcosystem = () => {
               <GridItem
                 altBg
                 title={'Dharma'}
-                description={`Deposit into PoolTogether from your US bank.`}
+                description={t('joinOnDharma', 'Deposit into PoolTogether from your US bank.')}
                 img={DharmaLogo}
                 url='https://www.dharma.io/'
                 buttonText='Open Dharma'
@@ -72,7 +75,7 @@ export const IndexEcosystem = () => {
               <GridItem
                 altBg
                 title={'Zerion'}
-                description={`Access DeFi & view your PoolTogether deposits.`}
+                description={t('joinOnZerion', 'Access DeFi & view your PoolTogether deposits.')}
                 svg={<ZerionSvg />}
                 url='https://zerion.io/'
                 buttonText='Open Zerion'
@@ -81,7 +84,7 @@ export const IndexEcosystem = () => {
               <GridItem
                 altBg
                 title={'Orange'}
-                description={`Smart L2 wallet focusing on the Polygon network.`}
+                description={t('joinOnOrange', 'Smart L2 wallet focusing on the Polygon network.')}
                 img={OrangeLogo}
                 url='https://orangewallet.app/'
                 buttonText='Open Orange'

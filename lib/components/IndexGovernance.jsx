@@ -2,12 +2,15 @@ import React, { useEffect } from 'react'
 import FeatherIcon from 'feather-icons-react'
 import { useInView } from 'react-intersection-observer'
 import { motion, useAnimation } from 'framer-motion'
+import { useTranslation, Trans } from 'lib/../i18n'
 
 import { GridItem } from 'lib/components/GridItem'
 
 export const IndexGovernance = () => {
   const controls = useAnimation()
   const [ref, inView] = useInView()
+
+  const { t } = useTranslation()
 
   useEffect(() => {
     if (inView) {
@@ -28,23 +31,27 @@ export const IndexGovernance = () => {
     <>
       <div className='py-12 sm:py-24'>
         <div className='pool-container mx-auto'>
-          <h5 className='uppercase text-highlight-1 pb-4'>Governance:</h5>
+          <h5 className='uppercase text-highlight-1 pb-4'>{t('governance')}:</h5>
 
           <div className='flex flex-col'>
             <p className='text-sm xs:text-xl sm:text-lg lg:text-xl sm:max-w-2xl'>
-              PoolTogether is a decentralized, autonomously goverened system. Changes and upgrades
-              are proposed and voted on by the{' '}
-              <a
-                href='https://medium.com/pooltogether/introducing-pool-23b09f36db48'
-                target='_blank'
-              >
-                POOL
-              </a>{' '}
-              token holders.
+              {/* <Trans
+                t={t}
+                i18nKey='pooltogetherIsGovernedByPool'
+                defaults='PoolTogether is a decentralized, autonomously goverened system. Changes and upgrades are proposed and voted on by the <a>POOL</a> token holders.'
+                components={{
+                  a: (
+                    <a
+                      href='https://medium.com/pooltogether/introducing-pool-23b09f36db48'
+                      target='_blank'
+                    />
+                  )
+                }}
+              /> */}
             </p>
             <p className='mt-2'>
               <a href='https://medium.com/pooltogether/governance-101-fca9ab8b8ba2' target='_blank'>
-                Learn more about PoolTogether governance{' '}
+                {t('learnMoreAboutGovernance', 'Learn more about PoolTogether governance')}{' '}
                 <FeatherIcon
                   icon='arrow-up-right'
                   className='relative inline-block ml-1 w-5 h-5'
@@ -66,7 +73,7 @@ export const IndexGovernance = () => {
                 altBg
                 title={
                   <>
-                    Learn{' '}
+                    {t('learn', 'Learn')}{' '}
                     <FeatherIcon
                       icon='message-circle'
                       className='relative inline-block ml-1 w-6 h-6'
@@ -74,16 +81,16 @@ export const IndexGovernance = () => {
                     />
                   </>
                 }
-                description={`See how governance has evolved.`}
+                description={t('seeHowGovernanceHasEvolved', 'See how governance has evolved.')}
                 url='https://gov.pooltogether.com/c/ptips/8'
-                buttonText='Read forum'
+                buttonText={t('readForum', 'Read forum')}
               />
 
               <GridItem
                 altBg
                 title={
                   <>
-                    Delegate{' '}
+                    {t('delegate', 'Delegate')}{' '}
                     <FeatherIcon
                       icon='award'
                       className='relative inline-block ml-1 w-6 h-6'
@@ -91,17 +98,16 @@ export const IndexGovernance = () => {
                     />
                   </>
                 }
-                description={`See voters and delegate your votes.`}
+                description={t('seeVotersAndDelegate', 'See voters and delegate your votes.')}
                 url='https://withtally.com'
-                buttonText='Use Tally'
+                buttonText={t('useTally', 'Use Tally')}
               />
-              {/* Discuss - link to discord where people chat */}
 
               <GridItem
                 altBg
                 title={
                   <>
-                    Vote{' '}
+                    {t('vote')}{' '}
                     <FeatherIcon
                       icon='check-square'
                       className='relative inline-block ml-1 w-6 h-6'
@@ -109,9 +115,12 @@ export const IndexGovernance = () => {
                     />
                   </>
                 }
-                description={`Easily create proposals and vote.`}
+                description={t(
+                  'easilytCreateProposalsAndVote',
+                  'Easily create proposals and vote.'
+                )}
                 url='https://vote.pooltogether.com'
-                buttonText='Vote'
+                buttonText={t('vote')}
               />
             </motion.div>
           </div>

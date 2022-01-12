@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useTranslation } from 'lib/../i18n'
 import ReactPlayer from 'react-player'
 
 const HowItWorksBox = (props) => {
@@ -16,6 +17,8 @@ const HowItWorksBox = (props) => {
 export const IndexHowItWorks = () => {
   const [playVideo, setPlayVideo] = useState(false)
 
+  const { t } = useTranslation()
+
   const startVideo = (e) => {
     e.preventDefault()
     setPlayVideo(true)
@@ -24,7 +27,7 @@ export const IndexHowItWorks = () => {
   return (
     <>
       <div className='pool-container mx-auto pt-24 pb-8'>
-        <h5 className='uppercase text-highlight-1 pb-4'>How it works:</h5>
+        <h5 className='uppercase text-highlight-1 pb-4'>{t('howItWorks', 'How it works:')}</h5>
 
         <div className='flex flex-col sm:flex-row w-full justify-between'>
           <div className='sm:w-1/2'>
@@ -48,11 +51,17 @@ export const IndexHowItWorks = () => {
           </div>
 
           <div className='w-full sm:w-1/2 sm:ml-20 mt-10 sm:mt-0'>
-            <HowItWorksBox title='1.' description='Deposit money for a chance to win' />
-            <HowItWorksBox title='2.' description={`Prizes are awarded each week`} />
+            <HowItWorksBox
+              title='1.'
+              description={t('depositForAChanceToWin', 'Deposit money for a chance to win')}
+            />
+            <HowItWorksBox
+              title='2.'
+              description={t('prizesAreAwardedDaily', 'Prizes are awarded every day')}
+            />
             <HowItWorksBox
               title='3.'
-              description={`Even if you don't win, keep all of your money!`}
+              description={t('evenIfYouDontWin', `Even if you don't win, keep all of your money!`)}
             />
 
             <div className='relative bg-green z-20 text-center text-3xl font-black leading-none w-full h-14 mt-8 sm:mt-0 -ml-1 sm:ml-0'>
@@ -60,7 +69,7 @@ export const IndexHowItWorks = () => {
                 className='flex justify-center flex-col bg-secondary absolute w-full h-full z-10'
                 style={{ left: 10, top: 10 }}
               >
-                It's that simple
+                {t('itsThatSimple', `It's that simple`)}
               </div>
             </div>
           </div>
