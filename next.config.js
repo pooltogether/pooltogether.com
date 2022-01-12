@@ -13,7 +13,8 @@ const nextConfig = {
   images: {
     disableStaticImages: true
   },
-  webpack5: {
+  future: {
+    webpack5: true,
     strictPostcssConfiguration: true
   },
   inlineImageLimit: 48, // make it tiny so that it doesn't inline,
@@ -40,10 +41,8 @@ const allConfig =
         locizeVersion: process.env.NEXT_JS_LOCIZE_VERSION
       },
       webpack(config, options) {
-        config.mode = 'production'
-        // config.devtool = 'hidden-source-map'
-        // config.mode = isProduction ? 'production' : 'development'
-        // config.devtool = isProduction ? 'hidden-source-map' : 'eval-source-map'
+        config.mode = isProduction ? 'production' : 'development'
+        config.devtool = isProduction ? 'hidden-source-map' : 'eval-source-map'
 
         var appVars = _.keys(process.env).filter(key => key.startsWith('NEXT_JS_'))
 

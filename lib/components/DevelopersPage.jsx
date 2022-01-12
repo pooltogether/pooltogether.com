@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { SquareLink, SquareButtonTheme, SquareButtonSize } from '@pooltogether/react-components'
+import { useTranslation, Trans } from 'react-i18next'
 
 import { SocialCTAs } from 'lib/components/SocialCTAs'
 
@@ -8,15 +9,16 @@ import PoolBlob from 'assets/images/pool-blob@2x.png'
 import PrizeIllustration from 'assets/images/prize_transparent.png'
 
 export const DevelopersPage = (props) => {
+  const { t } = useTranslation()
   return (
     <>
       <div className='pool-container mx-auto flex flex-col text-base h-full z-10 relative'>
         <h1 className='text-center text-flashy text-4xl sm:text-7xl lg:text-10xl'>
-          Build Together
+          {t('buildTogether', 'Build Together')}
         </h1>
 
         <h4 className='mb-12 text-center sm:w-1/2 lg:w-1/3 mx-auto leading-snug'>
-          Create your own prize pools and govern the protocol.
+          {t('createPrizePoolsAndGovern', 'Create your own prize pools and govern the protocol.')}
         </h4>
 
         <div className='flex flex-col items-center'>
@@ -51,7 +53,7 @@ export const DevelopersPage = (props) => {
               <line x1='16' y1='17' x2='8' y2='17'></line>
               <polyline points='10 9 9 9 8 9'></polyline>
             </svg>{' '}
-            Developer Documentation
+            {t('developerDocumentation', 'Developer Documentation')}
           </a>
         </div>
 
@@ -63,14 +65,17 @@ export const DevelopersPage = (props) => {
           <div className='max-w-2xl mx-auto sm:mx-0 mt-10 sm:mt-0'>
             <div>
               <h2 className='leading-snug'>
-                Participate in
-                <br />
-                <span className='text-flashy'>Decentralized Governance</span>
+                <Trans
+                  i18nKey={'participateInDecentralizedGovernance'}
+                  components={{ style: <span className='text-flashy' /> }}
+                />
               </h2>
 
               <p className='my-4 leading-normal'>
-                Share your ideas, make proposals, and vote. The protocol is solely controlled by the
-                POOL token holders.
+                {t(
+                  'shareIdeasOnPoolTogether',
+                  'Share your ideas, make proposals, and vote. The protocol is solely controlled by the POOL token holders.'
+                )}
               </p>
             </div>
 
@@ -84,7 +89,7 @@ export const DevelopersPage = (props) => {
                 as='https://medium.com/p/23b09f36db48'
                 className='items-center block sm:inline'
               >
-                Learn more about governance
+                {t('learnMoreAboutGovernance', 'Learn more about governance')}
               </SquareLink>
             </div>
 
@@ -98,7 +103,7 @@ export const DevelopersPage = (props) => {
                 as='https://gov.pooltogether.com'
                 className='items-center my-4 block sm:inline'
               >
-                Join the discussion
+                {t('joinTheDiscussion', 'Join the discussion')}
               </SquareLink>
             </div>
           </div>
@@ -113,11 +118,14 @@ export const DevelopersPage = (props) => {
         <div className='pool-container mx-auto py-16'>
           <div className='flex flex-col items-center rounded-lg p-0 py-12 sm:p-10'>
             <h3 className='my-0 leading-tight mb-4 text-center'>
-              Stuck, or not sure where to start?
+              {t('stuckOrNotSureWhereToStart', 'Stuck, or not sure where to start?')}
             </h3>
 
             <div className='font-normal w-10/12 xs:w-2/3 sm:w-1/2 lg:w-1/3 text-center text-xs sm:text-sm'>
-              Join one of our community channels and get support 24/7.
+              {t(
+                'joinOurCommunityChannelsForSupport',
+                'Join one of our community channels and get support 24/7.'
+              )}
             </div>
 
             <SocialCTAs />

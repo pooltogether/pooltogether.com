@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import classnames from 'classnames'
 import Link from 'next/link'
-import { useTranslation } from 'lib/../i18n'
+import { useTranslation } from 'react-i18next'
+import { supportedLanguages } from '../../i18n'
 
 // import MailIcon from 'assets/images/mail-footer.svg'
 
@@ -47,14 +48,14 @@ export const Footer = () => {
       <footer className='footer pool-container w-full text-white text-sm mx-auto'>
         <div className='flex flex-col pt-10 lg:pt-20'>
           <div className='pt-6 sm:pt-0 pb-8 flex flex-col sm:flex-row justify-between'>
-            <div className='footer--pool-logo-container '>
+            <div className='pb-8 sm:pb-0 sm:pr-8'>
               <Link href='/' as='/' shallow>
                 <a title={'Back to home'} className='pool-logo border-0 trans block w-full' />
               </Link>
             </div>
 
-            <nav className='flex flex-wrap w-full sm:flex-no-wrap sm:justify-between sm:w-1/2'>
-              <div className='w-full sm:w-1/3 sm:w-auto flex flex-col mb-8 mt-12 sm:my-0'>
+            <nav className='flex flex-col sm:flex-row space-x-0 space-y-4 sm:space-x-10 sm:space-y-0'>
+              <div className='flex flex-col'>
                 <span className='font-semibold block'>{t('ecosystem', 'Ecosystem')}</span>
                 <ul>
                   <FooterLink href='/developers'>{t('developers', 'Developers')}</FooterLink>
@@ -68,7 +69,7 @@ export const Footer = () => {
                 </ul>
               </div>
 
-              <div className='w-full sm:w-1/3 flex flex-col mb-8 sm:my-0'>
+              <div className='flex flex-col'>
                 <span className='font-semibold block'>{t('releases', 'Releases')}</span>
 
                 <ul>
@@ -79,12 +80,7 @@ export const Footer = () => {
                 </ul>
               </div>
 
-              <div
-                className='w-1/2 md:w-auto flex flex-col mb-8 md:my-0'
-                style={{
-                  width: 108
-                }}
-              >
+              <div className='flex flex-col'>
                 <span className='font-semibold block'>{t('community', 'Community')}</span>
 
                 <ul>
@@ -111,6 +107,18 @@ export const Footer = () => {
                   <FooterLink href='https://medium.com/pooltogether' svg={<MediumIconSvg />}>
                     Medium
                   </FooterLink>
+                </ul>
+              </div>
+
+              <div className='flex flex-col'>
+                <span className='font-semibold block pb-2'>{t('language', 'Language')}</span>
+
+                <ul className='flex flex-col space-y-2'>
+                  {supportedLanguages.map((sl) => (
+                    <LanguageTrigger key={sl.locale} locale={sl.locale}>
+                      {sl.language}
+                    </LanguageTrigger>
+                  ))}
                 </ul>
               </div>
             </nav>
@@ -143,5 +151,18 @@ export const Footer = () => {
         </div>
       </footer>
     </>
+  )
+}
+
+const LanguageTrigger = (props) => {
+  const { children, locale } = props
+  const { i18n } = useTranslation()
+  return (
+    <button
+      onClick={() => i18n.changeLanguage(locale)}
+      className='text-pt-teal hover:text-white transition-colors text-left'
+    >
+      {children}
+    </button>
   )
 }

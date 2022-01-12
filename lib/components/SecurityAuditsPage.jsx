@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { BoxLinkWithImage } from 'lib/components/BoxLinkWithImage'
 
@@ -8,27 +9,21 @@ import QuantstampSymbol from 'assets/images/quantstamp.svg'
 import GithubBugsSymbol from 'assets/images/github-bugs.svg'
 import GithubDarkSymbol from 'assets/images/github-dark.svg'
 
-export const SecurityAuditsPage = class _SecurityAuditsPage extends Component {
+export const SecurityAuditsPage = () => {
+  const { t } = useTranslation()
 
-  render () {
-    return <>
-      <div
-        className='pool-container mx-auto flex flex-col text-base h-full z-10 relative mb-20'
-      >
-        <h4
-          className='mb-6'
-        >
-          Audits &amp; Security
-        </h4>
+  return (
+    <>
+      <div className='pool-container mx-auto flex flex-col text-base h-full z-10 relative mb-20'>
+        <h4 className='mb-6'>{t('audistsAndSecurity', 'Audits & Security')}</h4>
 
-        <h5
-          className='my-0'
-        >
-          OpenZeppelin
-        </h5>
+        <h5 className='my-0'>OpenZeppelin</h5>
 
         <p>
-          Our smart contracts have been reviewed extensively by OpenZeppelin:
+          {t(
+            'auditedByOpenZeppelin',
+            'Our smart contracts have been reviewed extensively by OpenZeppelin:'
+          )}
         </p>
 
         <BoxLinkWithImage
@@ -39,7 +34,7 @@ export const SecurityAuditsPage = class _SecurityAuditsPage extends Component {
         >
           OpenZeppelin V3 Audit
         </BoxLinkWithImage>
-        
+
         <BoxLinkWithImage
           isExternal
           href='https://blog.openzeppelin.com/pooltogether-pods-audit/'
@@ -57,7 +52,7 @@ export const SecurityAuditsPage = class _SecurityAuditsPage extends Component {
         >
           OpenZeppelin V2 PoolTogether Audit
         </BoxLinkWithImage>
-{/* 
+        {/* 
         <BoxLinkWithImage
           href='/quantstamp-2-pool-together-2-1.pdf'
           title='Quantstamp Certificate'
@@ -76,20 +71,15 @@ export const SecurityAuditsPage = class _SecurityAuditsPage extends Component {
 
         <br />
 
-        <h5
-          id='bug-bounties'
-          className='mt-10'
-        >
-          Security &amp; Bug Bounties
+        <h5 id='bug-bounties' className='mt-10'>
+          {t('securityAndBugBounties', 'Security & Bug Bounties')}
         </h5>
 
         <p>
-          We offer public security bug bounties to incentivize vulnerability disclosures by anyone. Bounties are <a
-            href='https://github.com/pooltogether/pooltogether-contracts/issues/1'
-            target='_blank'
-            rel='noopener noreferrer'
-            title='View our code on GitHub'
-          >described on GitHub</a>.
+          {t(
+            'weOfferBugBountiesOnGithub',
+            'We offer public security bug bounties to incentivize vulnerability disclosures by anyone. Bounties are described on GitHub.'
+          )}
         </p>
 
         <BoxLinkWithImage
@@ -98,40 +88,56 @@ export const SecurityAuditsPage = class _SecurityAuditsPage extends Component {
           title='Bug bounties on Github'
           imgSrc={GithubBugsSymbol}
         >
-          Bug bounties on Github
+          {t('bugBountiesOnGithub', 'Bug bounties on Github')}
         </BoxLinkWithImage>
 
         <br />
 
-        <h5
-          className='mt-10'
-        >
-          Public Source Code
-        </h5>
+        <h5 className='mt-10'>{t('openSourceCode', 'Open Source Code')}</h5>
 
         <p>
-          PoolTogether strives to be as transparent as possible by publishing the smart contract code publicly and verifying the smart contracts on Etherscan.
+          {t(
+            'contractsArePublicAndVerified',
+            'PoolTogether strives to be as transparent as possible by publishing the smart contract code publicly and verifying the smart contracts on popular block explorers like Etherscan.'
+          )}
         </p>
 
         <BoxLinkWithImage
           isExternal
-          href='https://github.com/pooltogether/pooltogether-contracts'
-          title='Source code on Github'
+          href='https://github.com/pooltogether/v4-core'
+          title='V4 smart contracts on Github'
           imgSrc={GithubDarkSymbol}
         >
-          Source code on Github
+          {t('v4ContractsOnGithub', 'V4 smart contracts on Github')}
         </BoxLinkWithImage>
 
         <BoxLinkWithImage
           isExternal
-          href='https://etherscan.io/address/0x29fe7d60ddf151e5b52e5fab4f1325da6b2bd958#tokentxns'
-          title='Verified code on Etherscan'
+          href='https://github.com/pooltogether/pooltogether-contracts'
+          title='V3 smart contracts on Github'
+          imgSrc={GithubDarkSymbol}
+        >
+          {t('v3ContractsOnGithub', 'V3 smart contracts on Github')}
+        </BoxLinkWithImage>
+
+        <BoxLinkWithImage
+          isExternal
+          href='https://github.com/pooltogether/v4-ui'
+          title='V4 user interface on Github'
+          imgSrc={GithubDarkSymbol}
+        >
+          {t('v4UIOnGithub', 'V4 user interface on Github')}
+        </BoxLinkWithImage>
+
+        <BoxLinkWithImage
+          isExternal
+          href='https://v4.docs.pooltogether.com/protocol/reference/deployments/mainnet'
+          title='Verified smart contracts'
           imgSrc={EtherscanSymbol}
         >
-          Verified code on Etherscan
+          {t('verifiedContracts', 'Verified smart contracts')}
         </BoxLinkWithImage>
       </div>
     </>
-  }
-
+  )
 }

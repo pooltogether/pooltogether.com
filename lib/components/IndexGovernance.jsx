@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import FeatherIcon from 'feather-icons-react'
 import { useInView } from 'react-intersection-observer'
 import { motion, useAnimation } from 'framer-motion'
-import { useTranslation, Trans } from 'lib/../i18n'
+import { useTranslation, Trans } from 'react-i18next'
 
 import { GridItem } from 'lib/components/GridItem'
 
@@ -35,7 +35,7 @@ export const IndexGovernance = () => {
 
           <div className='flex flex-col'>
             <p className='text-sm xs:text-xl sm:text-lg lg:text-xl sm:max-w-2xl'>
-              {/* <Trans
+              <Trans
                 t={t}
                 i18nKey='pooltogetherIsGovernedByPool'
                 defaults='PoolTogether is a decentralized, autonomously goverened system. Changes and upgrades are proposed and voted on by the <a>POOL</a> token holders.'
@@ -44,13 +44,18 @@ export const IndexGovernance = () => {
                     <a
                       href='https://medium.com/pooltogether/introducing-pool-23b09f36db48'
                       target='_blank'
+                      className='text-pt-teal'
                     />
                   )
                 }}
-              /> */}
+              />
             </p>
             <p className='mt-2'>
-              <a href='https://medium.com/pooltogether/governance-101-fca9ab8b8ba2' target='_blank'>
+              <a
+                href='https://medium.com/pooltogether/governance-101-fca9ab8b8ba2'
+                target='_blank'
+                className='text-pt-teal'
+              >
                 {t('learnMoreAboutGovernance', 'Learn more about PoolTogether governance')}{' '}
                 <FeatherIcon
                   icon='arrow-up-right'

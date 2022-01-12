@@ -6,11 +6,11 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 import { DEFAULT_QUERY_OPTIONS } from 'lib/constants'
 import { AllContextProviders } from 'lib/components/AllContextProviders'
 import { Layout } from 'lib/components/Layout'
-import i18next from '../i18n'
 
 import 'assets/styles/index.css'
 
 // pooltogether.com specific:
+import '../i18n'
 import 'assets/styles/layout.css'
 import 'assets/styles/pool.css'
 import 'assets/styles/tweets.css'
@@ -22,8 +22,6 @@ import '@reach/tooltip/styles.css'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-
-import '@pooltogether/react-components/dist/index.css'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -41,8 +39,6 @@ if (process.env.NEXT_JS_SENTRY_DSN) {
 }
 
 function MyApp({ Component, pageProps, router }) {
-  const [initialized, setInitialized] = useState(false)
-
   useEffect(() => {
     const handleExitComplete = () => {
       if (typeof window !== 'undefined') {
@@ -77,15 +73,6 @@ function MyApp({ Component, pageProps, router }) {
         router.events.off('routeChangeComplete', onRouteChangeComplete)
       }
     }
-  }, [])
-
-  useEffect(() => {
-    const initi18next = async () => {
-      await i18next.initPromise.then(() => {
-        setInitialized(true)
-      })
-    }
-    initi18next()
   }, [])
 
   return (

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { motion, useAnimation } from 'framer-motion'
-import { useTranslation } from 'lib/../i18n'
+import { useTranslation } from 'react-i18next'
 
 import { GridItem } from 'lib/components/GridItem'
 

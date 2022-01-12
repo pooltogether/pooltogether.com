@@ -2,8 +2,8 @@ const chalk = require('chalk')
 const express = require('express')
 const next = require('next')
 
-const i18next = require('./i18n/server')
-const nextI18NextMiddleware = require('next-i18next/middleware').default
+// const i18next = require('./i18n/server')
+// const nextI18NextMiddleware = require('next-i18next/middleware').default
 // const NextI18Next = require('next-i18next').default
 // const nextI18NextOptions = require('./lib/nextI18NextOptions').nextI18NextOptions
 // const nextI18next = new NextI18Next(nextI18NextOptions)
@@ -66,8 +66,8 @@ app
       })
     }
 
-    await i18next.initPromise
-    server.use(nextI18NextMiddleware(i18next))
+    // await i18next.initPromise
+    // server.use(nextI18NextMiddleware(i18next))
 
     // server.use(nextI18NextMiddleware(nextI18next))
 

@@ -3,7 +3,7 @@ import classnames from 'classnames'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { SquareLink, SquareButtonTheme, SquareButtonSize } from '@pooltogether/react-components'
-import { useTranslation, Trans } from 'lib/../i18n'
+import { useTranslation, Trans } from 'react-i18next'
 
 import { WeeklyPrizeAmount } from 'lib/components/WeeklyPrizeAmount'
 import { IndexHeroFeaturedIn } from 'lib/components/IndexHeroFeaturedIn'
@@ -137,7 +137,7 @@ const HeroLeft = () => {
         {t('winBySaving', 'Win by saving.')}
       </span>
       <p className='text-accent-1 mt-2 sm:mt-4 sm-max-width-hero mx-auto sm:mx-0'>
-        {/* <Trans
+        <Trans
           t={t}
           i18nKey='poolTogetherIsAPrizeSavingsProtocol'
           defaults='PoolTogether is a crypto-powered savings protocol based on <a>Premium Bonds</a>. Save money and have a chance to win every week.'
@@ -147,10 +147,11 @@ const HeroLeft = () => {
                 href='https://en.wikipedia.org/wiki/Premium_Bond'
                 target='_blank'
                 title='Wikipedia entry for Premium Bonds'
+                className='text-pt-teal'
               />
             )
           }}
-        /> */}
+        />
       </p>
       <div className='mt-4 sm:mt-8 mb-4 sm:mb-0 sm-max-width-hero mx-auto sm:mx-0 text-center'>
         <SquareLink
@@ -249,12 +250,14 @@ const SameText = () => {
         })}
       </span>
       <Bullet />
-      {/* <Trans
+      <Trans
         t={t}
         i18nKey='seeAllWinnersOnSmallFish'
         defaults='see all of the luckiest winners on <a>smallfish.win</a>'
-        components={{ a: <a href='https://smallfish.win' target='_blank' /> }}
-      />{' '} */}
+        components={{
+          a: <a href='https://smallfish.win' target='_blank' className='text-pt-teal' />
+        }}
+      />{' '}
       🌊😎🏆
       <Bullet />
     </>
