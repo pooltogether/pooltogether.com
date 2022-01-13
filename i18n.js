@@ -8,7 +8,10 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 
 export const supportedLanguages = [
   { locale: 'en', language: 'English' },
-  { locale: 'fr', language: 'Français' }
+  { locale: 'fr', language: 'Français' },
+  { locale: 'pt', language: 'Português' },
+  { locale: 'es', language: 'Español' },
+  { locale: 'de', language: 'Deutsch' }
 ]
 
 // NOTE: For future reference:

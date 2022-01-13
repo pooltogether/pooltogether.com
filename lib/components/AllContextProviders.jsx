@@ -9,11 +9,7 @@ export function AllContextProviders(props) {
   return (
     <>
       <AuthControllerContextProvider>
-        <ThemeContextProvider>
-          {/* <PoolDataContextProvider> */}
-          {children}
-          {/* </PoolDataContextProvider> */}
-        </ThemeContextProvider>
+        <ThemeContextProvider>{children}</ThemeContextProvider>
       </AuthControllerContextProvider>
     </>
   )
