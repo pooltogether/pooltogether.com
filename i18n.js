@@ -11,6 +11,7 @@ export const supportedLanguages = [
   { locale: 'fr', language: 'Français' },
   { locale: 'pt', language: 'Português' },
   { locale: 'es', language: 'Español' },
+  { locale: 'sk', language: 'Slovak' },
   { locale: 'de', language: 'Deutsch' }
 ]
 
