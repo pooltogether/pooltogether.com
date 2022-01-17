@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import * as Fathom from 'fathom-client'
 // import { ReactQueryDevtools } from 'react-query/devtools'
 import { QueryClient, QueryClientProvider } from 'react-query'
@@ -10,6 +10,7 @@ import { Layout } from 'lib/components/Layout'
 import 'assets/styles/index.css'
 
 // pooltogether.com specific:
+import '../i18n'
 import 'assets/styles/layout.css'
 import 'assets/styles/pool.css'
 import 'assets/styles/tweets.css'
@@ -21,8 +22,6 @@ import '@reach/tooltip/styles.css'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-
-import '@pooltogether/react-components/dist/index.css'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -39,9 +38,7 @@ if (process.env.NEXT_JS_SENTRY_DSN) {
   })
 }
 
-function MyApp ({ Component, pageProps, router }) {
-  // const [initialized, setInitialized] = useState(false)
-
+function MyApp({ Component, pageProps, router }) {
   useEffect(() => {
     const handleExitComplete = () => {
       if (typeof window !== 'undefined') {
@@ -64,7 +61,7 @@ function MyApp ({ Component, pageProps, router }) {
         includedDomains: ['pooltogether.com', 'www.pooltogether.com']
       })
 
-      function onRouteChangeComplete (url) {
+      function onRouteChangeComplete(url) {
         if (window['fathom']) {
           window['fathom'].trackPageview()
         }
@@ -77,15 +74,6 @@ function MyApp ({ Component, pageProps, router }) {
       }
     }
   }, [])
-
-  // useEffect(() => {
-  //   const initi18next = async () => {
-  //     await i18next.initPromise.then(() => {
-  //       setInitialized(true)
-  //     })
-  //   }
-  //   initi18next()
-  // }, [])
 
   return (
     <>

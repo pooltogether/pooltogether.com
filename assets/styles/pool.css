@@ -216,10 +216,6 @@ input[type='submit'][disabled] {
   @apply border-0 no-underline;
 }
 
-.footer--pool-logo-container {
-  width: 133px;
-}
-
 .nav--pool-logo-container {
   position: relative;
 }
@@ -528,19 +524,19 @@ li.nav-mobile-listitem {
 }
 
 @screen xs {
-.bg-prize-amount {
-  height: 260px;
-}
+  .bg-prize-amount {
+    height: 260px;
+  }
 }
 @screen sm {
-.bg-prize-amount {
-  height: 250px;
-}
+  .bg-prize-amount {
+    height: 250px;
+  }
 }
 @screen lg {
-.bg-prize-amount {
-  height: 290px;
-}
+  .bg-prize-amount {
+    height: 290px;
+  }
 }
 
 .bounce {
@@ -577,12 +573,12 @@ li.nav-mobile-listitem {
 
 .sm-max-width-hero {
   max-width: 296px;
-} 
+}
 
 @screen xs {
   .sm-max-width-hero {
     max-width: 446px;
-  } 
+  }
 }
 
 .hero-right--width {

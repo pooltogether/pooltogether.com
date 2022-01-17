@@ -2,26 +2,15 @@ import React from 'react'
 import classnames from 'classnames'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import {
-  WeeklyPrizeAmountCard,
-  SquareLink,
-  SquareButtonTheme,
-  SquareButtonSize
-} from '@pooltogether/react-components'
+import { SquareLink, SquareButtonTheme, SquareButtonSize } from '@pooltogether/react-components'
+import { useTranslation, Trans } from 'react-i18next'
 
 import { WeeklyPrizeAmount } from 'lib/components/WeeklyPrizeAmount'
 import { IndexHeroFeaturedIn } from 'lib/components/IndexHeroFeaturedIn'
-
-import { IndexAnalytics } from 'lib/components/IndexAnalytics'
 import { IndexGovernance } from 'lib/components/IndexGovernance'
-// import { IndexGetInvolved } from 'lib/components/IndexGetInvolved'
-// import { IndexPoolToken } from 'lib/components/IndexPoolToken'
 import { IndexHowItWorks } from 'lib/components/IndexHowItWorks'
 import { IndexEcosystem } from 'lib/components/IndexEcosystem'
-// import { IndexSupportedBy } from 'lib/components/IndexSupportedBy'
-// import { IndexSecurity } from 'lib/components/IndexSecurity'
 import { IndexTweetSlideshow } from 'lib/components/IndexTweetSlideshow'
-
 import { useScreenSize, ScreenSize } from 'lib/hooks/useScreenSize'
 
 import {
@@ -71,7 +60,6 @@ export const Index = (props) => {
 
       <div className='text-inverse'>
         <IndexHowItWorks />
-        {/* <IndexAnalytics /> */}
         <IndexEcosystem />
         <IndexGovernance />
         <IndexTweetSlideshow />
@@ -83,7 +71,7 @@ export const Index = (props) => {
 const DownArrow = () => {
   return (
     <a
-      className='bounce block text-white w-12 mx-auto trans mb-8 p-2 hidden sm:block'
+      className='bounce text-white w-12 mx-auto trans mb-8 p-2 hidden sm:block'
       onClick={() => {
         const pageHeight = window.innerHeight
 
@@ -101,29 +89,26 @@ const DownArrow = () => {
 }
 
 const HeroRight = () => {
+  const { t } = useTranslation()
   return (
     <>
       <div className='bg-prize-amount flex flex-col justify-between text-center pt-10 sm:pt-8 h-48'>
         <div className='sm:pb-10'>
           <div className='uppercase font-semibold text-default text-xxs xs:text-lg lg:text-xl mx-auto -mt-4 sm:mt-3'>
-            Currently
+            {t('currently', 'Currently')}
           </div>
           <h1 className='text-4xl xs:text-6xl sm:text-7xl lg:text-9xl -mt-1 xs:-mt-1'>
             <WeeklyPrizeAmount />
           </h1>
           <div className='uppercase font-semibold text-default text-xxs xs:text-lg lg:text-xl -mt-2'>
-            In weekly prizes!
+            {t('inWeeklyPrizes', 'In weekly prizes!')}
           </div>
         </div>
-        {/* <div className='uppercase font-semibold text-green mb-12 text-xxs xs:text-lg lg:text-xl w-1/2 mx-auto'>
-          Awarded every day!
-        </div> */}
         <div className='font-semibold text-default-soft pt-8 xs:pt-0 mb-12 text-xxs w-1/2 mx-auto'>
-          * across all v3 and v4 pools
+          * {t('acrossBothVersions', 'across all v3 and v4 pools')}
         </div>
       </div>
 
-      {/* -mt-6  */}
       <ul className='flex justify-center sm:justify-end xs:mt-0 mb-8 sm:mb-0 mx-auto sm:pr-20'>
         <HeroSocialItem width={23} href='https://twitter.com/PoolTogether_'>
           <TwitterIconSvg />
@@ -142,28 +127,32 @@ const HeroRight = () => {
 }
 
 const HeroLeft = () => {
+  const { t } = useTranslation()
   return (
     <>
       <span
         className='font-medium font-inter text-2xl xs:text-3xl lg:text-6xl text-new-gradient'
         style={{ lineHeight: 1.25 }}
       >
-        Win by saving.
+        {t('winBySaving', 'Win by saving.')}
       </span>
       <p className='text-accent-1 mt-2 sm:mt-4 sm-max-width-hero mx-auto sm:mx-0'>
-        PoolTogether is a crypto-powered savings protocol based on{' '}
-        <a
-          href='https://en.wikipedia.org/wiki/Premium_Bond'
-          target='_blank'
-          title='Wikipedia entry for Premium Bonds'
-        >
-          Premium Bonds
-        </a>
-        . Save money and have a chance to win every week.
+        <Trans
+          t={t}
+          i18nKey='poolTogetherIsAPrizeSavingsProtocol'
+          defaults='PoolTogether is a crypto-powered savings protocol based on <a>Premium Bonds</a>. Save money and have a chance to win every week.'
+          components={{
+            a: (
+              <a
+                href='https://en.wikipedia.org/wiki/Premium_Bond'
+                target='_blank'
+                title='Wikipedia entry for Premium Bonds'
+                className='text-pt-teal'
+              />
+            )
+          }}
+        />
       </p>
-      {/* <div className='hidden xs:block text-sm xs:text-base sm:text-xl mt-8'>
-        The more you save, the more you win!
-      </div> */}
       <div className='mt-4 sm:mt-8 mb-4 sm:mb-0 sm-max-width-hero mx-auto sm:mx-0 text-center'>
         <SquareLink
           chevron
@@ -173,7 +162,7 @@ const HeroLeft = () => {
           href='https://app.pooltogether.com'
           className='mx-auto sm:mx-0 max-w-md mt-2 block'
         >
-          Start saving & winning
+          {t('startSavingAndWinning', 'Start saving & winning')}
         </SquareLink>
       </div>
     </>
@@ -199,12 +188,13 @@ const HeroSocialItem = (props) => {
 const Bullet = () => <span className='mx-6' />
 
 const LuckiestWinnersBanner = (props) => {
+  const { t } = useTranslation()
   return (
     <>
       <div className='text-center relative flex flex-col sm:flex-row mx-auto w-full'>
         <div className='bg-luckiest-winners-gradient mx-auto w-full sm:w-full py-8 sm:py-8 text-center sm:text-left overflow-hidden'>
           <div className='font-inter text-sm text-center text-green font-black uppercase'>
-            Luckiest Winners
+            {t('luckiestWinners', 'Luckiest Winners')}
           </div>
           <nav className='menu'>
             <div className='menu__item'>
@@ -232,16 +222,44 @@ const LuckiestWinnersBanner = (props) => {
   )
 }
 
-const SameText = () => (
-  <>
-    0x614d... ✌🤑🥇 won $11,304 with only $73 deposited! <Bullet />
-    0xc12c... ✨🥳🥈 won $2,669 with only $102 deposited! <Bullet />
-    0x8d3b... 💸🤯🥉 won $11,115 with only $247 deposited! <Bullet />
-    see all the luckiest winners on{' '}
-    <a href='https://smallfish.win' target='_blank'>
-      smallfish.win
-    </a>{' '}
-    🌊😎🏆
-    <Bullet />
-  </>
-)
+const SameText = () => {
+  const { t } = useTranslation()
+  return (
+    <>
+      <span>
+        {t('userWonAmountWithOnlyAmountDeposited', {
+          address: '0x614d... ✌🤑🥇',
+          winnings: '$11,304',
+          deposit: '$73'
+        })}
+      </span>
+      <Bullet />
+      <span>
+        {t('userWonAmountWithOnlyAmountDeposited', {
+          address: '0xc12c... ✨🥳🥈',
+          winnings: '$2,669',
+          deposit: '$102'
+        })}
+      </span>
+      <Bullet />
+      <span>
+        {t('userWonAmountWithOnlyAmountDeposited', {
+          address: '0x8d3b... 💸🤯🥉',
+          winnings: '$11,115',
+          deposit: '$247'
+        })}
+      </span>
+      <Bullet />
+      <Trans
+        t={t}
+        i18nKey='seeAllWinnersOnSmallFish'
+        defaults='see all of the luckiest winners on <a>smallfish.win</a>'
+        components={{
+          a: <a href='https://smallfish.win' target='_blank' className='text-pt-teal' />
+        }}
+      />{' '}
+      🌊😎🏆
+      <Bullet />
+    </>
+  )
+}
