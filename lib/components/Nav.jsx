@@ -27,7 +27,7 @@ export const Nav = (props) => {
 
   return (
     <>
-      <nav className='justify-end items-center hidden sm:flex w-2/3 space-x-4'>
+      <nav className='justify-end items-center hidden sm:flex w-2/3 space-x-8'>
         <LanguagePickerDropdown />
 
         <Link href='/developers' as='/developers' shallow>
@@ -70,7 +70,7 @@ const LanguagePickerDropdown = () => {
   return (
     <DropdownList
       id='language-picker-dropdown'
-      className={classnames('text-white text-sm sm:text-sm')}
+      className={classnames('text-pt-purple-light text-sm sm:text-sm')}
       label={i18n.language}
       formatValue={formatValue}
       onValueSet={(locale) => {
