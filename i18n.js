@@ -13,8 +13,7 @@ export const supportedLanguages = [
   { locale: 'es', language: 'Español' },
   { locale: 'sk', language: 'Slovak' },
   { locale: 'zh', language: '中文' },
-  { locale: 'fil', language: 'Filipino' },
-  { locale: 'de', language: 'Deutsch' }
+  { locale: 'fil', language: 'Filipino' }
 ]
 
 // NOTE: For future reference:
