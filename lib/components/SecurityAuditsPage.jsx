@@ -5,7 +5,7 @@ import { BoxLinkWithImage } from 'lib/components/BoxLinkWithImage'
 
 import EtherscanSymbol from 'assets/images/etherscan-symbol.svg'
 import OpenZeppelinSymbol from 'assets/images/openzeppelin-logo.svg'
-import QuantstampSymbol from 'assets/images/quantstamp.svg'
+import C4Symbol from 'assets/images/c4-logo.svg'
 import GithubBugsSymbol from 'assets/images/github-bugs.svg'
 import GithubDarkSymbol from 'assets/images/github-dark.svg'
 
@@ -25,6 +25,15 @@ export const SecurityAuditsPage = () => {
             'Our smart contracts have been reviewed extensively by OpenZeppelin:'
           )}
         </p>
+
+        <BoxLinkWithImage
+          isExternal
+          href='https://code4rena.com/reports/2021-10-pooltogether/'
+          title='Code4rea V4 Audit'
+          imgSrc={C4Symbol}
+        >
+          Code4rena V4 Audit
+        </BoxLinkWithImage>
 
         <BoxLinkWithImage
           isExternal
