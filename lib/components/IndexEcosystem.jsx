@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next'
 
 import { GridItem } from 'lib/components/GridItem'
 
-import DharmaLogo from 'assets/images/dharma@2x.png'
 import OrangeLogo from 'assets/images/orange@2x.png'
 
 import { ZapperSvg, ZerionSvg } from 'lib/components/SvgComponents'
@@ -33,7 +32,7 @@ export const IndexEcosystem = () => {
 
   return (
     <>
-      <div className='py-12 sm:py-24'>
+      <div className='py-16'>
         <div className='pool-container mx-auto'>
           <h5 className='uppercase text-highlight-1 pb-4'>{t('ecosystem', 'Ecosystem')}:</h5>
 
@@ -65,15 +64,6 @@ export const IndexEcosystem = () => {
 
               <GridItem
                 altBg
-                title={'Dharma'}
-                description={t('joinOnDharma', 'Deposit into PoolTogether from your US bank.')}
-                img={DharmaLogo}
-                url='https://www.dharma.io/'
-                buttonText='Open Dharma'
-              />
-
-              <GridItem
-                altBg
                 title={'Zerion'}
                 description={t('joinOnZerion', 'Access DeFi & view your PoolTogether deposits.')}
                 svg={<ZerionSvg />}
@@ -90,8 +80,7 @@ export const IndexEcosystem = () => {
                 buttonText='Open Orange'
               />
 
-              <div className='w-full sm:w-1/3 mx-auto mb-12 sm:mb-12 h-0'>&nbsp;</div>
-              <div className='w-full sm:w-1/3 mx-auto mb-12 sm:mb-12 h-0'>&nbsp;</div>
+              {/* <div className='w-full sm:w-1/3 mx-auto mb-12 sm:mb-12 h-0'>&nbsp;</div> */}
             </motion.div>
           </div>
         </div>
