@@ -1,11 +1,15 @@
+import React from 'react'
+
 import { Index } from 'lib/components/Index'
 import { PageContainer } from 'lib/components/PageContainer'
+import { Layout } from 'lib/components/Layout'
 
-// Rendered in Layout.jsx
-export default function IndexPage(props) {
+export default function IndexPage (props) {
   return (
     <>
-      <PageContainer ignoreStyles pageComponent={<Index navHeight={75} />} />
+      <Layout>
+        <PageContainer ignoreStyles pageComponent={<Index navHeight={75} />} />
+      </Layout>
     </>
   )
 }

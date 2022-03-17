@@ -1,13 +1,15 @@
 import React from 'react'
 
+import { Layout } from 'lib/components/Layout'
 import { PageContainer } from 'lib/components/PageContainer'
 import { TermsOfServicePage } from 'lib/components/TermsOfServicePage'
 
-export default () => {
-
-  return <PageContainer
-    pageTitle='Terms of Service'
-    pageComponent={<TermsOfServicePage />}
-  />
-
+const TermsPage = () => {
+  return (
+    <Layout>
+      <PageContainer pageTitle='Terms of Service' pageComponent={<TermsOfServicePage />} />
+    </Layout>
+  )
 }
+
+export default TermsPage

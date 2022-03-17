@@ -1,13 +1,15 @@
 import React from 'react'
 
+import { Layout } from 'lib/components/Layout'
 import { PageContainer } from 'lib/components/PageContainer'
-import { BrandAssetsPage } from 'lib/components/BrandAssetsPage'
+import { BrandAssets } from 'lib/components/BrandAssets'
 
-export default () => {
-
-  return <PageContainer
-    pageTitle='Brand Assets'
-    pageComponent={<BrandAssetsPage />}
-  />
-
+const BrandAssetsPage = () => {
+  return (
+    <Layout>
+      <PageContainer pageTitle='Brand Assets' pageComponent={<BrandAssets />} />
+    </Layout>
+  )
 }
+
+export default BrandAssetsPage

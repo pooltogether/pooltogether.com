@@ -1,10 +1,15 @@
 import React from 'react'
 
+import { Layout } from 'lib/components/Layout'
 import { PageContainer } from 'lib/components/PageContainer'
 import { ProtocolDisclaimerPage } from 'lib/components/ProtocolDisclaimerPage'
 
-export default () => {
+const DisclaimerPage = () => {
   return (
-    <PageContainer pageTitle='Protocol Disclaimer' pageComponent={<ProtocolDisclaimerPage />} />
+    <Layout>
+      <PageContainer pageTitle='Protocol Disclaimer' pageComponent={<ProtocolDisclaimerPage />} />
+    </Layout>
   )
 }
+
+export default DisclaimerPage

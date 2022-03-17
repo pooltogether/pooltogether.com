@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 
 export const ProtocolDisclaimerPage = class _ProtocolDisclaimerPage extends PureComponent {
-  render() {
+  render () {
     return (
       <>
         <div className='pool-container mx-auto flex flex-col text-base h-full z-10 relative mb-20'>

@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import * as Fathom from 'fathom-client'
 // import { ReactQueryDevtools } from 'react-query/devtools'
 import { QueryClient, QueryClientProvider } from 'react-query'
 
 import { DEFAULT_QUERY_OPTIONS } from 'lib/constants'
 import { AllContextProviders } from 'lib/components/AllContextProviders'
-import { Layout } from 'lib/components/Layout'
 
 import 'assets/styles/index.css'
 
@@ -15,6 +14,8 @@ import 'assets/styles/layout.css'
 import 'assets/styles/pool.css'
 import 'assets/styles/tweets.css'
 import 'assets/styles/marquee.css'
+
+import 'assets/styles/pool-party.css'
 
 import '@reach/dialog/styles.css'
 import '@reach/menu-button/styles.css'
@@ -38,7 +39,7 @@ if (process.env.NEXT_JS_SENTRY_DSN) {
   })
 }
 
-function MyApp({ Component, pageProps, router }) {
+function MyApp ({ Component, pageProps, router }) {
   useEffect(() => {
     const handleExitComplete = () => {
       if (typeof window !== 'undefined') {
@@ -61,7 +62,7 @@ function MyApp({ Component, pageProps, router }) {
         includedDomains: ['pooltogether.com', 'www.pooltogether.com']
       })
 
-      function onRouteChangeComplete(url) {
+      function onRouteChangeComplete (url) {
         if (window['fathom']) {
           window['fathom'].trackPageview()
         }
@@ -79,12 +80,8 @@ function MyApp({ Component, pageProps, router }) {
     <>
       <QueryClientProvider client={queryClient}>
         <AllContextProviders>
-          <Layout props={pageProps}>
-            <Component {...pageProps} />
-          </Layout>
+          <Component {...pageProps} />
         </AllContextProviders>
-
-        {/* <ReactQueryDevtools /> */}
       </QueryClientProvider>
     </>
   )
