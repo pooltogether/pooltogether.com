@@ -25,27 +25,27 @@ export const PoolParty = () => {
       {
         breakpoint: 5480,
         settings: {
-          slidesToShow: 4
+          // slidesToShow: 4
         }
       },
       {
         breakpoint: 1480,
         settings: {
-          slidesToShow: 3
+          // slidesToShow: 3
         }
       },
       {
         breakpoint: 940,
         settings: {
           // centerMode: true,
-          slidesToShow: 2
+          // slidesToShow: 2
         }
       },
       {
         breakpoint: 640,
         settings: {
           // centerMode: true,
-          slidesToShow: 1
+          // slidesToShow: 1
         }
       }
     ]
