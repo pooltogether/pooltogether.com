@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import FeatherIcon from 'feather-icons-react'
 import { SquareButton, SquareButtonTheme, SquareButtonSize } from '@pooltogether/react-components'
+import { add, format } from 'date-fns'
 
 import Slider from 'react-slick'
 import { HeaderLogo } from 'lib/components/HeaderLogo'
@@ -91,9 +92,15 @@ export const PoolParty = () => {
             </li>
             <li className='mb-2'>
               Didn’t finish on time? You will have{' '}
-              <span className='text-default-soft font-semibold'>(at least)</span> one more week!
+              <span className='text-default font-semibold'>(at least)</span> one more week!
             </li>
           </ol>
+
+          <p className='text-xs font-semibold text-default mt-6 text-center'>
+            Season 1:
+            <br />
+            March 21st - May 17th, 2022
+          </p>
 
           <h3 className='uppercase mb-4 mt-32'>This week's mission:</h3>
 
@@ -109,12 +116,45 @@ export const PoolParty = () => {
   )
 }
 
-const MissionCard = ({ week, task1Text, task2Text }) => {
+const DateDisplay = ({ firstLabel, secondLabel, timestamp }) => {
+  let label
+
+  if (secondLabel) {
+    label =
+      Boolean(secondLabel) && Date.now() * 1000 > timestamp ? `${firstLabel}:` : `${secondLabel}:`
+  } else {
+    label = `${firstLabel}:`
+  }
+
+  return (
+    <p className='text-xs font-semibold text-accent-3'>
+      <span className='opacity-60'>{label}</span> {format(timestamp, 'MMM do, yyyy - hh:mm a')}
+    </p>
+  )
+}
+
+const MissionCard = ({ week, startTimestamp, task1Text, task2Text }) => {
   return (
     <div className='rounded-xl bg-purple-vibrant w-full xs:w-10/12 sm:w-1/2 p-8'>
-      <h5 className='uppercase text-pink mb-4'>Week {week}</h5>
+      <h5 className='uppercase text-pink'>Week {week}</h5>
+      <DateDisplay timestamp={startTimestamp} firstLabel='Starts' secondLabel='Started' />
+      <DateDisplay
+        timestamp={add(new Date(startTimestamp), {
+          days: 6
+        })}
+        firstLabel='Ends'
+        secondLabel='Ended'
+      />
+      <DateDisplay
+        timestamp={add(new Date(startTimestamp), {
+          days: 7
+        })}
+        firstLabel='Claimable'
+      />
 
-      <ul className='text-xs text-default font-semibold'>
+      <hr className='my-3 bg-pt-purple w-full' />
+
+      <ul className='text-xs text-pt-purple-light font-semibold'>
         <li className='mb-4'>
           {task1Text}{' '}
           <span className='text-white'>
@@ -155,6 +195,7 @@ const MissionWeek1 = () => {
           </a>
         </>
       }
+      startTimestamp={1647889200000} // March 21st @ 3pm EST
     />
   )
 }
