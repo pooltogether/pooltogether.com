@@ -24,16 +24,31 @@ export const PoolParty = () => {
     centerMode: true,
     responsive: [
       {
+        breakpoint: 5480,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4
+        }
+      },
+      {
         breakpoint: 1480,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToShow: 3,
+          slidesToScroll: 3
         }
       },
       {
         breakpoint: 940,
         settings: {
-          centerMode: true,
+          // centerMode: true,
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          // centerMode: true,
           slidesToShow: 1,
           slidesToScroll: 1
         }
@@ -58,14 +73,14 @@ export const PoolParty = () => {
 
         <div className='sm:-t-4 relative w-full'>
           <Slider {...settings}>
-            <VideoPlayer files={[`${path}/01_Noodles_v002.mp4`]} isPlaying={isPlaying} />
-            <VideoPlayer files={[`${path}/02_Glasses_v002.mp4`]} isPlaying={isPlaying} />
-            <VideoPlayer files={[`${path}/03_BeachBall_v002.mp4`]} isPlaying={isPlaying} />
-            <VideoPlayer files={[`${path}/04_Thongs_v002.mp4`]} isPlaying={isPlaying} />
-            <VideoPlayer files={[`${path}/05_Cocktail_v002.mp4`]} isPlaying={isPlaying} />
-            <VideoPlayer files={[`${path}/06_Unicorn_v002.mp4`]} isPlaying={isPlaying} />
-            <VideoPlayer files={[`${path}/07_Trophy_v002.mp4`]} isPlaying={isPlaying} />
-            <VideoPlayer files={[`${path}/08_Pooly_v002.mp4`]} isPlaying={isPlaying} />
+            <VideoPlayer files={[`${path}/01_Noodles_v002.webm`]} isPlaying={isPlaying} />
+            <VideoPlayer files={[`${path}/02_Glasses_v002.webm`]} isPlaying={isPlaying} />
+            <VideoPlayer files={[`${path}/03_BeachBall_v002.webm`]} isPlaying={isPlaying} />
+            <VideoPlayer files={[`${path}/04_Thongs_v002.webm`]} isPlaying={isPlaying} />
+            <VideoPlayer files={[`${path}/05_Cocktail_v002.webm`]} isPlaying={isPlaying} />
+            <VideoPlayer files={[`${path}/06_Unicorn_v002.webm`]} isPlaying={isPlaying} />
+            <VideoPlayer files={[`${path}/07_Trophy_v002.webm`]} isPlaying={isPlaying} />
+            <VideoPlayer files={[`${path}/08_Pooly_v002.webm`]} isPlaying={isPlaying} />
           </Slider>
         </div>
 

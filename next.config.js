@@ -18,7 +18,6 @@ const nextConfig = {
     strictPostcssConfiguration: true
   },
   inlineImageLimit: 48, // make it tiny so that it doesn't inline,
-  trailingSlash: true,
 }
 
 const allConfig =
