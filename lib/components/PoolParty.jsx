@@ -1,10 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react'
+import FeatherIcon from 'feather-icons-react'
 import { SquareButton, SquareButtonTheme, SquareButtonSize } from '@pooltogether/react-components'
 
-import { HeaderLogo } from 'lib/components/HeaderLogo'
 import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+import { HeaderLogo } from 'lib/components/HeaderLogo'
 import { VideoPlayer } from 'lib/components/VideoPlayer'
 
 export const PoolParty = () => {
@@ -12,7 +11,6 @@ export const PoolParty = () => {
   const path = '/pool-party/season1'
   const settings = {
     className: 'center',
-    infinite: true,
     speed: 600,
     autoplay: true,
     autoplaySpeed: 8500,
@@ -26,31 +24,27 @@ export const PoolParty = () => {
       {
         breakpoint: 5480,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4
+          slidesToShow: 4
         }
       },
       {
         breakpoint: 1480,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3
+          slidesToShow: 3
         }
       },
       {
         breakpoint: 940,
         settings: {
           // centerMode: true,
-          slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToShow: 2
         }
       },
       {
         breakpoint: 640,
         settings: {
           // centerMode: true,
-          slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToShow: 1
         }
       }
     ]
@@ -84,8 +78,83 @@ export const PoolParty = () => {
           </Slider>
         </div>
 
-        <div className='pool-container mx-auto flex flex-col items-center text-base z-10 relative pt-20'></div>
+        <div className='pool-container mx-auto flex flex-col items-center text-base z-10 relative py-20 text-white'>
+          <h3 className='uppercase mb-4'>How it works:</h3>
+          <ol className='list-decimal w-full xs:w-10/12  sm:w-1/2 px-6'>
+            <li className='mb-2'>
+              Complete the weekly missions by the end of Season 1 to earn claimable collectibles
+              each week.
+            </li>
+            <li className='mb-2'>
+              {' '}
+              Qualifiers NFTs will unlock within 24 hours after weekly missions conclude.{' '}
+            </li>
+            <li className='mb-2'>
+              Didn’t finish on time? You will have{' '}
+              <span className='text-default-soft font-semibold'>(at least)</span> one more week!
+            </li>
+          </ol>
+
+          <h3 className='uppercase mb-4 mt-32'>This week's mission:</h3>
+
+          <MissionWeek1 />
+          <h3 className='uppercase mb-4 mt-32'>Previous missions:</h3>
+
+          <div className='bg-darkened rounded-xl bg-purple-vibrant w-full xs:w-10/12 sm:w-1/2 p-8 text-center text-default-soft'>
+            None yet, check back next week!
+          </div>
+        </div>
       </div>
     </>
+  )
+}
+
+const MissionCard = ({ week, task1Text, task2Text }) => {
+  return (
+    <div className='rounded-xl bg-purple-vibrant w-full xs:w-10/12 sm:w-1/2 p-8'>
+      <h5 className='uppercase text-pink mb-4'>Week {week}</h5>
+
+      <ul className='text-xs text-default font-semibold'>
+        <li className='mb-4'>
+          {task1Text}{' '}
+          <span className='text-white'>
+            {' '}
+            <br />
+            1x NFT
+          </span>
+        </li>
+
+        <li className=''>
+          {task2Text}{' '}
+          <span className='text-white'>
+            {' '}
+            <br />
+            1x NFT
+          </span>
+        </li>
+      </ul>
+    </div>
+  )
+}
+
+const MissionWeek1 = () => {
+  return (
+    <MissionCard
+      week='1'
+      task1Text='Check for prizes at least once this week'
+      task2Text={
+        <>
+          Onboard a friend to PT,{' '}
+          <a
+            href=''
+            className='text-highlight-1 underline inline-flex items-center'
+            target='_blank'
+          >
+            {' '}
+            Fill in form <FeatherIcon icon='external-link' className='ml-2 trans w-5 h-5' />
+          </a>
+        </>
+      }
+    />
   )
 }

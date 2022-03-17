@@ -1,3 +1,23 @@
 .bg-slick-slide--pool-party {
   background-color: #200e41;
 }
+
+.slick-arrow.slick-prev {
+  @apply z-20 absolute;
+  left: 20px;
+  top: 50%;
+}
+
+.slick-arrow.slick-next {
+  @apply z-20 absolute;
+  right: 20px;
+  top: 50%;
+}
+
+.bg-purple-vibrant {
+  background-color: #3f1b85;
+}
+
+.text-pink {
+  color: #fa48e8;
+}
