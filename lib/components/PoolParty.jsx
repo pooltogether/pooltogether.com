@@ -49,49 +49,49 @@ export const PoolParty = () => {
         <div className='w-full slick--pool-party bg-slick-slide--pool-party'>
           <Slider {...settings}>
             <NftVideoPlayer
-              files={[`${path}/01_Noodles_v002.webm`]}
+              files={[`${path}/01_Noodles_v002.mp4`, `${path}/01_Noodles_v002.webm`]}
               label={'#1. Noodles - Common'}
               dropRate={15}
               isPlaying={indexPlaying === 0}
             />
             <NftVideoPlayer
-              files={[`${path}/02_Glasses_v002.webm`]}
+              files={[`${path}/02_Glasses_v002.mp4`, `${path}/02_Glasses_v002.webm`]}
               label={'#2. Glasses - Common'}
               dropRate={15}
               isPlaying={indexPlaying === 1}
             />
             <NftVideoPlayer
-              files={[`${path}/03_BeachBall_v002.webm`]}
+              files={[`${path}/03_BeachBall_v002.mp4`, `${path}/03_BeachBall_v002.webm`]}
               label={'#3. Beach Ball - Common'}
               dropRate={15}
               isPlaying={indexPlaying === 2}
             />
             <NftVideoPlayer
-              files={[`${path}/04_Thongs_v002.webm`]}
+              files={[`${path}/04_Thongs_v002.mp4`, `${path}/04_Thongs_v002.webm`]}
               label={'#4. Thongs - Common'}
               dropRate={15}
               isPlaying={indexPlaying === 3}
             />
             <NftVideoPlayer
-              files={[`${path}/05_Cocktail_v002.webm`]}
+              files={[`${path}/05_Cocktail_v002.mp4`, `${path}/05_Cocktail_v002.webm`]}
               label={'#5. Cocktail - Common'}
               dropRate={15}
               isPlaying={indexPlaying === 4}
             />
             <NftVideoPlayer
-              files={[`${path}/06_Unicorn_v002.webm`]}
+              files={[`${path}/06_Unicorn_v002.mp4`, `${path}/06_Unicorn_v002.webm`]}
               label={'#6. Unicorn - Common'}
               dropRate={15}
               isPlaying={indexPlaying === 5}
             />
             <NftVideoPlayer
-              files={[`${path}/07_Trophy_v002.webm`]}
+              files={[`${path}/07_Trophy_v002.mp4`, `${path}/07_Trophy_v002.webm`]}
               label={'#7. Trophy - Rare'}
               dropRate={7.5}
               isPlaying={indexPlaying === 6}
             />
             <NftVideoPlayer
-              files={[`${path}/08_Pooly_v002.webm`]}
+              files={[`${path}/08_Pooly_v002.mp4`, `${path}/08_Pooly_v002.webm`]}
               label={'#8. Pooly - Ultra Rare'}
               dropRate={2.5}
               isPlaying={indexPlaying === 7}
