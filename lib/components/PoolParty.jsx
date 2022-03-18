@@ -148,7 +148,7 @@ export const PoolParty = () => {
         </a>
       </div>
 
-      <nav className='z-20 p-1 flex flex-row justify-center font-inter bg-pt-purple-bright shadow-lg '>
+      <nav className='z-20 p-4 flex flex-row justify-center font-inter bg-pt-purple-bright shadow-lg '>
         <a
           className='transition mx-1 my-1 first:ml-0 last:mr-0 rounded-lg py-1 px-3 flex flex-row text-xs hover:text-white hover:opacity-100'
           href='/'
@@ -254,9 +254,35 @@ const MissionWeek1 = () => {
     <MissionCard
       current
       week='1'
-      task1Text='Check for prizes at least once this week'
+      task1Text='Deposit or hold the minimum ($4 USDC) on Polygon'
       task2Text={
         <>
+          Retweet the{' '}
+          <a
+            target='_blank'
+            href='https://twitter.com/PoolTogether_'
+            className='text-highlight-3 underline hover:text-white'
+          >
+            campaign tweet
+          </a>{' '}
+          AND follow{' '}
+          <a
+            target='_blank'
+            href='https://twitter.com/PoolTogether_'
+            className='text-highlight-3 underline hover:text-white'
+          >
+            PoolTogether
+          </a>{' '}
+          on Twitter
+        </>
+      }
+      startTimestamp={1647889200000} // March 21st @ 3pm EST
+    />
+  )
+}
+
+{
+  /* <>
           Onboard a friend to PT,{' '}
           <a
             href=''
@@ -266,9 +292,5 @@ const MissionWeek1 = () => {
             {' '}
             Fill in form <FeatherIcon icon='external-link' className='ml-2 trans w-5 h-5' />
           </a>
-        </>
-      }
-      startTimestamp={1647889200000} // March 21st @ 3pm EST
-    />
-  )
+        </> */
 }

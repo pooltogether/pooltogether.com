@@ -31,6 +31,11 @@ const allConfig =
             source: '/prizes',
             destination: '/prizes/PT-cDAI',
             permanent: true,
+          },
+          {
+            source: '/pool-party',
+            destination: '/pool-party/season1',
+            permanent: false,
           }
         ]
       },
