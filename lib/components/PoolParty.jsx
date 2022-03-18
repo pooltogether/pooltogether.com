@@ -125,22 +125,22 @@ export const PoolParty = () => {
 
       <nav className='z-20 p-1 flex flex-row justify-center font-inter bg-pt-purple-bright shadow-lg '>
         <a
-          className='transition mx-1 first:ml-0 last:mr-0 rounded-lg py-2 px-3 flex flex-row text-xs hover:text-white hover:opacity-100'
-          href='/deposit?network=polygon'
+          className='transition mx-1 my-1 first:ml-0 last:mr-0 rounded-lg py-1 px-3 flex flex-row text-xs hover:text-white hover:opacity-100'
+          href='/'
         >
-          <span className='text-white opacity-70 hover:opacity-100'>Deposit</span>
+          <span className='text-white opacity-70 hover:opacity-100'>Home</span>
         </a>
         <a
-          className='transition mx-1 first:ml-0 last:mr-0 rounded-lg py-2 px-3 flex flex-row text-xs hover:text-white hover:opacity-100'
-          href='/prizes?network=polygon'
+          className='transition mx-1 my-1 first:ml-0 last:mr-0 rounded-lg py-1 px-3 flex flex-row text-xs hover:text-white hover:opacity-100'
+          href='https://app.pooltogether.com'
         >
-          <span className='text-white opacity-70 hover:opacity-100'>Prizes</span>
+          <span className='text-white opacity-70 hover:opacity-100'>App</span>
         </a>
         <a
-          className='transition mx-1 first:ml-0 last:mr-0 rounded-lg py-2 px-3 flex flex-row text-xs hover:text-white hover:opacity-100'
-          href='/account?network=polygon'
+          className='transition mx-1 my-1 first:ml-0 last:mr-0 rounded-lg py-1 px-3 flex flex-row text-xs hover:text-white hover:opacity-100'
+          href='/terms'
         >
-          <span className='text-white opacity-70 hover:opacity-100'>Account</span>
+          <span className='text-white opacity-70 hover:opacity-100'>Terms</span>
         </a>
       </nav>
     </>
