@@ -26,3 +26,50 @@
 .text-pink {
   color: #fa48e8;
 }
+
+.pool-party--border-flashy {
+  --borderFlashyRadius: 15px;
+  --borderFlashyWidth: 6px;
+  position: relative;
+  border-radius: var(--borderFlashyRadius);
+}
+
+@screen sm {
+  .pool-party--border-flashy {
+    --borderFlashyWidth: 8px;
+  }
+}
+
+.pool-party--border-flashy:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderFlashyWidth));
+  left: calc(-1 * var(--borderFlashyWidth));
+  height: calc(100% + var(--borderFlashyWidth) * 2);
+  width: calc(100% + var(--borderFlashyWidth) * 2);
+  background: var(--flashyGradient);
+  border-radius: var(--borderFlashyRadius);
+  animation: cycleBackgroundPos 25000ms infinite steps(140);
+  background-size: 300% 300%;
+  z-index: -1;
+}
+
+.skewed {
+  transform: translate(0%, 0%) rotate(-10deg) skew(-15deg);
+}
+
+.pool-party--box-widths {
+  @apply w-full;
+}
+
+@screen xs {
+  .pool-party--box-widths {
+    width: 520px;
+  }
+}
+
+@screen sm {
+  .pool-party--box-widths {
+    width: 550px;
+  }
+}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import classnames from 'classnames'
 import FeatherIcon from 'feather-icons-react'
 import Slider from 'react-slick'
 import { add, format } from 'date-fns'
@@ -98,9 +99,9 @@ export const PoolParty = () => {
           </Slider>
         </div>
 
-        <div className='pool-container mx-auto flex flex-col items-center text-base z-10 relative pt-20 pb-32 text-inverse'>
+        <div className=' pool-party--box-widths mx-auto flex flex-col items-center text-base z-10 relative pt-20 pb-32 text-inverse'>
           <h3 className='uppercase mb-4'>How it works:</h3>
-          <ol className='list-decimal w-full xs:w-10/12  sm:w-1/2 px-6'>
+          <ol className='list-decimal px-10 xs:px-0'>
             <li className='mb-2'>
               Complete the weekly missions by the end of Season 1 to earn random collectibles,
               claimable each week.
@@ -123,12 +124,12 @@ export const PoolParty = () => {
             March 21st - May 17th, 2022
           </p>
 
-          <h3 className='uppercase mb-4 mt-20'>This week's mission:</h3>
+          <h3 className='uppercase mb-4 mt-20'>This week's missions:</h3>
 
           <MissionWeek1 />
           <h3 className='uppercase mb-4 mt-20'>Previous missions:</h3>
 
-          <div className='bg-darkened rounded-xl bg-purple-vibrant w-full xs:w-10/12 sm:w-1/2 p-8 text-center text-default-soft  shadow-lg'>
+          <div className='bg-pt-purple-darkest rounded-xl bg-purple-vibrant pool-party--box-widths p-8 text-center text-default-soft shadow-lg'>
             None yet, check back next week!
           </div>
         </div>
@@ -183,41 +184,65 @@ const DateDisplay = ({ firstLabel, secondLabel, timestamp }) => {
 
   return (
     <p className='text-xs font-semibold text-accent-3'>
-      <span className='opacity-60'>{label}</span> {format(timestamp, 'MMM do, yyyy - hh:mm a')}
+      <span className='opacity-60'>{label}</span> {format(timestamp, 'MMM do yyyy, hh:mm a')}
     </p>
   )
 }
 
-const MissionCard = ({ week, startTimestamp, task1Text, task2Text }) => {
+const MissionCard = ({ current, week, startTimestamp, task1Text, task2Text }) => {
   return (
-    <div className='rounded-xl bg-purple-vibrant w-full xs:w-10/12 sm:w-1/2 p-8 shadow-lg'>
-      <h5 className='uppercase text-pink'>Week {week}</h5>
-      <DateDisplay timestamp={startTimestamp} firstLabel='Starts' secondLabel='Started' />
-      <DateDisplay
-        timestamp={add(new Date(startTimestamp), {
-          days: 6
-        })}
-        firstLabel='Ends'
-        secondLabel='Ended'
-      />
-      <DateDisplay
-        timestamp={add(new Date(startTimestamp), {
-          days: 7
-        })}
-        firstLabel='Claimable'
-      />
+    <div
+      className={classnames(
+        'rounded-xl bg-pt-purple-darkest p-8 shadow-lg pool-party--box-widths',
+        {
+          'pool-party--border-flashy': current
+        }
+      )}
+    >
+      <div className='flex flex-col xs:flex-row'>
+        <div className='relative bg-green z-20 text-center text-3xl font-black leading-none h-14 mb-8 skewed w-40'>
+          <div
+            className='flex justify-center flex-col bg-secondary absolute h-full z-10 w-full'
+            style={{ left: 10, top: 10 }}
+          >
+            <h5 className='uppercase text-pink'>Week {week}</h5>
+          </div>
+        </div>
 
-      <hr className='my-4 w-full' style={{ borderColor: '#5940A9' }} />
+        <div className='xs:ml-12'>
+          <DateDisplay timestamp={startTimestamp} firstLabel='Starts' secondLabel='Started' />
+          <DateDisplay
+            timestamp={add(new Date(startTimestamp), {
+              days: 6
+            })}
+            firstLabel='Ends'
+            secondLabel='Ended'
+          />
+          <DateDisplay
+            timestamp={add(new Date(startTimestamp), {
+              days: 7
+            })}
+            firstLabel='Claimable'
+          />
+        </div>
+      </div>
 
-      <ul className='text-xs text-pt-purple-light font-semibold'>
+      {/* style={{ borderColor: '#5940A9' }} */}
+      <hr className='my-4 w-full pool-party--border-flashy' />
+
+      <ul className='text-xs font-semibold'>
         <li className='mb-4'>
-          {task1Text} <br />{' '}
-          <span className='block text-flashy leading-tight font-semibold'>1x NFT</span>
+          <h6 className='text-white uppercase'>Mission #1:</h6>
+          <h6 className='text-pt-purple-light'>
+            {task1Text} <span className='text-flashy leading-tight font-semibold'>- 1x NFT</span>
+          </h6>
         </li>
 
         <li className=''>
-          {task2Text} <br />{' '}
-          <span className='block text-flashy leading-tight font-semibold'>1x NFT</span>
+          <h6 className='text-white uppercase'>Mission #2:</h6>
+          <h6 className='text-pt-purple-light'>
+            {task2Text} <span className='text-flashy leading-tight font-semibold'>- 1x NFT</span>
+          </h6>
         </li>
       </ul>
     </div>
@@ -227,6 +252,7 @@ const MissionCard = ({ week, startTimestamp, task1Text, task2Text }) => {
 const MissionWeek1 = () => {
   return (
     <MissionCard
+      current
       week='1'
       task1Text='Check for prizes at least once this week'
       task2Text={
