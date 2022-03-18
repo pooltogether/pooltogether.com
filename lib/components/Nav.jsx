@@ -8,7 +8,6 @@ import {
   SquareButtonTheme,
   DropdownList
 } from '@pooltogether/react-components'
-
 import { useTranslation } from 'react-i18next'
 import { supportedLanguages } from 'i18n'
 
@@ -18,9 +17,6 @@ export const Nav = (props) => {
   const router = useRouter()
 
   const developersPage = router.pathname.match('developers')
-  const governancePage = router.pathname.match('governance')
-  const communityPage = router.pathname.match('community')
-  const morePage = router.pathname.match('more')
 
   const navLinkClasses =
     'font-titillium capitalize text-center leading-none rounded-full flex justify-start items-center text-sm lg:text-lg py-3 trans tracking-wider outline-none focus:outline-none active:outline-none text-white'

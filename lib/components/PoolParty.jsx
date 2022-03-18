@@ -1,15 +1,23 @@
 import React, { useState } from 'react'
 import classnames from 'classnames'
-import FeatherIcon from 'feather-icons-react'
 import Slider from 'react-slick'
+import Link from 'next/link'
 import { add, format } from 'date-fns'
-import { SquareButton, SquareButtonTheme, SquareButtonSize } from '@pooltogether/react-components'
+import {
+  SquareLink,
+  SquareButton,
+  SquareButtonTheme,
+  SquareButtonSize
+} from '@pooltogether/react-components'
 
 import { DiscordIconSvg } from 'lib/components/SvgComponents'
 import { HeaderLogo } from 'lib/components/HeaderLogo'
 import { NftVideoPlayer } from 'lib/components/NftVideoPlayer'
+import { useTranslation } from 'react-i18next'
 
 export const PoolParty = () => {
+  const { t } = useTranslation()
+
   const [indexPlaying, setIndexPlaying] = useState(0)
   const path = '/pool-party/season1'
   const settings = {
@@ -34,14 +42,32 @@ export const PoolParty = () => {
       <div className='font-averta'>
         <div className='header pool-container w-full z-30 mx-auto'>
           <div className='flex justify-between items-center w-full xs:px-4 sm:px-0 py-8 sm:py-4 mx-auto'>
-            <HeaderLogo centered={false} />
+            <div className=' sm:w-64'>
+              <HeaderLogo centered={false} />
+            </div>
+
             <div className='text-inverse'>
-              <div className='flex flex-col items-end'>
-                <p className='text-center text-flashy text-xl leading-tight xs:mt-2 font-semibold'>
+              <div className='text-center flex flex-col items-center'>
+                <p className='text-flashy text-xl leading-tight xs:mt-2 font-semibold'>
                   POOL PARTY
                 </p>
-                <p className='text-xxs xs:text-xs'>POOLTOGETHER SEASON 1 NFTs</p>
+                <p className='text-xxs xs:text-xs'>
+                  POOLTOGETHER <br className='xs:hidden' /> SEASON 1 NFTs
+                </p>
               </div>
+            </div>
+
+            <div className='flex justify-end sm:w-64'>
+              <SquareLink
+                chevron
+                Link={Link}
+                href='https://app.pooltogether.com'
+                size={SquareButtonSize.sm}
+                theme={SquareButtonTheme.teal}
+                className='w-24'
+              >
+                <span className='pl-2'>{t('app')}</span>
+              </SquareLink>
             </div>
           </div>
         </div>

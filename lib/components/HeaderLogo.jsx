@@ -9,9 +9,9 @@ export const HeaderLogo = (props) => {
     <>
       <div
         className={classnames(
-          'nav--pool-logo-container flex flex-col justify-center sm:justify-start items-center truncate sm:w-1/3 sm:mx-0',
+          'nav--pool-logo-container flex flex-col justify-center sm:justify-start truncate sm:w-1/3 sm:mx-0',
           {
-            'mx-auto': centered
+            'items-center mx-auto': centered
           }
         )}
       >
