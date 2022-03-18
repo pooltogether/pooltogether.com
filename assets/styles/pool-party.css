@@ -59,7 +59,7 @@
 }
 
 .pool-party--box-widths {
-  @apply w-full;
+  @apply w-11/12;
 }
 
 @screen xs {

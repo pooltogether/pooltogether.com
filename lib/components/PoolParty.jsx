@@ -9,33 +9,16 @@ import {
   SquareButtonTheme,
   SquareButtonSize
 } from '@pooltogether/react-components'
+import { useTranslation } from 'react-i18next'
+import { useInterval } from 'beautiful-react-hooks'
 
 import { DiscordIconSvg } from 'lib/components/SvgComponents'
 import { HeaderLogo } from 'lib/components/HeaderLogo'
 import { NftVideoPlayer } from 'lib/components/NftVideoPlayer'
-import { useTranslation } from 'react-i18next'
+import { Time } from 'lib/components/Time'
 
 export const PoolParty = () => {
   const { t } = useTranslation()
-
-  const [indexPlaying, setIndexPlaying] = useState(0)
-  const path = '/pool-party/season1'
-  const settings = {
-    className: 'center',
-    speed: 1200,
-    autoplay: true,
-    light: true,
-    autoplaySpeed: 10200,
-    cssEase: 'ease',
-    swipeToSlide: true,
-    arrows: true,
-    adaptiveHeight: true,
-    beforeChange: (index, next) => {
-      setTimeout(() => {
-        setIndexPlaying(next)
-      }, 450)
-    }
-  }
 
   return (
     <>
@@ -73,60 +56,9 @@ export const PoolParty = () => {
           </div>
         </div>
 
-        <div className='w-full slick--pool-party bg-slick-slide--pool-party'>
-          <Slider {...settings}>
-            <NftVideoPlayer
-              files={[`${path}/01_Noodles_v002.mp4`, `${path}/01_Noodles_v002.webm`]}
-              label={'#1. Noodles - Common'}
-              dropRate={15}
-              isPlaying={indexPlaying === 0}
-            />
-            <NftVideoPlayer
-              files={[`${path}/02_Glasses_v002.mp4`, `${path}/02_Glasses_v002.webm`]}
-              label={'#2. Glasses - Common'}
-              dropRate={15}
-              isPlaying={indexPlaying === 1}
-            />
-            <NftVideoPlayer
-              files={[`${path}/03_BeachBall_v002.mp4`, `${path}/03_BeachBall_v002.webm`]}
-              label={'#3. Beach Ball - Common'}
-              dropRate={15}
-              isPlaying={indexPlaying === 2}
-            />
-            <NftVideoPlayer
-              files={[`${path}/04_Thongs_v002.mp4`, `${path}/04_Thongs_v002.webm`]}
-              label={'#4. Thongs - Common'}
-              dropRate={15}
-              isPlaying={indexPlaying === 3}
-            />
-            <NftVideoPlayer
-              files={[`${path}/05_Cocktail_v002.mp4`, `${path}/05_Cocktail_v002.webm`]}
-              label={'#5. Cocktail - Common'}
-              dropRate={15}
-              isPlaying={indexPlaying === 4}
-            />
-            <NftVideoPlayer
-              files={[`${path}/06_Unicorn_v002.mp4`, `${path}/06_Unicorn_v002.webm`]}
-              label={'#6. Unicorn - Common'}
-              dropRate={15}
-              isPlaying={indexPlaying === 5}
-            />
-            <NftVideoPlayer
-              files={[`${path}/07_Trophy_v002.mp4`, `${path}/07_Trophy_v002.webm`]}
-              label={'#7. Trophy - Rare'}
-              dropRate={7.5}
-              isPlaying={indexPlaying === 6}
-            />
-            <NftVideoPlayer
-              files={[`${path}/08_Pooly_v002.mp4`, `${path}/08_Pooly_v002.webm`]}
-              label={'#8. Pooly - Ultra Rare'}
-              dropRate={2.5}
-              isPlaying={indexPlaying === 7}
-            />
-          </Slider>
-        </div>
+        <VideoCarousel />
 
-        <div className=' pool-party--box-widths mx-auto flex flex-col items-center text-base z-10 relative pt-20 pb-32 text-inverse'>
+        <div className='pool-party--box-widths mx-auto flex flex-col items-center text-base z-10 relative pt-20 pb-32 text-inverse'>
           <h3 className='uppercase mb-4'>How it works:</h3>
           <ol className='list-decimal px-10 xs:px-0'>
             <li className='mb-2'>
@@ -146,7 +78,7 @@ export const PoolParty = () => {
           <h3 className='uppercase mb-4 mt-20'>This week's missions:</h3>
 
           <MissionWeek1 current />
-          <h3 className='uppercase mb-4 mt-20'>Previous missions:</h3>
+          <h3 className='uppercase mb-2 mt-20'>Previous missions:</h3>
 
           {/* <MissionWeek1 /> */}
           <div className='bg-pt-purple-darkest rounded-xl bg-purple-vibrant pool-party--box-widths p-8 text-center text-default-soft shadow-lg'>
@@ -192,14 +124,35 @@ export const PoolParty = () => {
   )
 }
 
-const DateDisplay = ({ firstLabel, secondLabel, timestamp }) => {
+const DateDisplay = ({ current, firstLabel, secondLabel, date }) => {
+  const [seconds, setSeconds] = useState(0)
+
   let label
 
+  // Make this component 'tick' every second
+  useInterval(() => {
+    setSeconds(1 + seconds)
+  }, 1000)
+
+  const timestamp = date.getTime()
+
+  const endsInFuture = Date.now() * 1000 > timestamp
+  const secondsLeft = Math.round((timestamp - Date.now()) / 1000)
+
   if (secondLabel) {
-    label =
-      Boolean(secondLabel) && Date.now() * 1000 > timestamp ? `${firstLabel}:` : `${secondLabel}:`
+    label = Boolean(secondLabel) && endsInFuture ? `${firstLabel}:` : `${secondLabel}:`
   } else {
     label = `${firstLabel}:`
+  }
+
+  if (current && endsInFuture) {
+    return (
+      <Time
+        seconds={secondsLeft}
+        className='mt-1 mx-auto h-14'
+        timeClassName='text-sm xs:text-lg'
+      />
+    )
   }
 
   return (
@@ -232,11 +185,16 @@ const MissionCard = ({ current, week, startTimestamp, task1Text, task2Text }) =>
 
         <div className='xs:ml-12'>
           {current && (
-            <DateDisplay timestamp={startTimestamp} firstLabel='Starts' secondLabel='Started' />
+            <DateDisplay
+              date={new Date(startTimestamp)}
+              firstLabel='Starts'
+              secondLabel='Started'
+            />
           )}
 
           <DateDisplay
-            timestamp={add(new Date(startTimestamp), {
+            current={current}
+            date={add(new Date(startTimestamp), {
               days: 6
             })}
             firstLabel='Ends'
@@ -245,7 +203,8 @@ const MissionCard = ({ current, week, startTimestamp, task1Text, task2Text }) =>
 
           {current && (
             <DateDisplay
-              timestamp={add(new Date(startTimestamp), {
+              current={current}
+              date={add(new Date(startTimestamp), {
                 days: 7
               })}
               firstLabel='Claimable'
@@ -319,4 +278,80 @@ const MissionWeek1 = (props) => {
             Fill in form <FeatherIcon icon='external-link' className='ml-2 trans w-5 h-5' />
           </a>
         </> */
+}
+
+const VideoCarousel = (props) => {
+  const [indexPlaying, setIndexPlaying] = useState(0)
+  const path = '/pool-party/season1'
+  const settings = {
+    className: 'center',
+    speed: 1200,
+    autoplay: true,
+    light: true,
+    autoplaySpeed: 10200,
+    cssEase: 'ease',
+    swipeToSlide: true,
+    arrows: true,
+    adaptiveHeight: true,
+    beforeChange: (index, next) => {
+      setTimeout(() => {
+        setIndexPlaying(next)
+      }, 450)
+    }
+  }
+
+  return (
+    <div className='w-full slick--pool-party bg-slick-slide--pool-party'>
+      <Slider {...settings}>
+        <NftVideoPlayer
+          files={[`${path}/01_Noodles_v002.mp4`, `${path}/01_Noodles_v002.webm`]}
+          label={'#1. Noodles - Common'}
+          dropRate={15}
+          isPlaying={indexPlaying === 0}
+        />
+        <NftVideoPlayer
+          files={[`${path}/02_Glasses_v002.mp4`, `${path}/02_Glasses_v002.webm`]}
+          label={'#2. Glasses - Common'}
+          dropRate={15}
+          isPlaying={indexPlaying === 1}
+        />
+        <NftVideoPlayer
+          files={[`${path}/03_BeachBall_v002.mp4`, `${path}/03_BeachBall_v002.webm`]}
+          label={'#3. Beach Ball - Common'}
+          dropRate={15}
+          isPlaying={indexPlaying === 2}
+        />
+        <NftVideoPlayer
+          files={[`${path}/04_Thongs_v002.mp4`, `${path}/04_Thongs_v002.webm`]}
+          label={'#4. Thongs - Common'}
+          dropRate={15}
+          isPlaying={indexPlaying === 3}
+        />
+        <NftVideoPlayer
+          files={[`${path}/05_Cocktail_v002.mp4`, `${path}/05_Cocktail_v002.webm`]}
+          label={'#5. Cocktail - Common'}
+          dropRate={15}
+          isPlaying={indexPlaying === 4}
+        />
+        <NftVideoPlayer
+          files={[`${path}/06_Unicorn_v002.mp4`, `${path}/06_Unicorn_v002.webm`]}
+          label={'#6. Unicorn - Common'}
+          dropRate={15}
+          isPlaying={indexPlaying === 5}
+        />
+        <NftVideoPlayer
+          files={[`${path}/07_Trophy_v002.mp4`, `${path}/07_Trophy_v002.webm`]}
+          label={'#7. Trophy - Rare'}
+          dropRate={7.5}
+          isPlaying={indexPlaying === 6}
+        />
+        <NftVideoPlayer
+          files={[`${path}/08_Pooly_v002.mp4`, `${path}/08_Pooly_v002.webm`]}
+          label={'#8. Pooly - Ultra Rare'}
+          dropRate={2.5}
+          isPlaying={indexPlaying === 7}
+        />
+      </Slider>
+    </div>
+  )
 }
