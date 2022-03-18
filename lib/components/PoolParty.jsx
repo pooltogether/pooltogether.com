@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import FeatherIcon from 'feather-icons-react'
-import { SquareButton, SquareButtonTheme, SquareButtonSize } from '@pooltogether/react-components'
-import { add, format } from 'date-fns'
-
 import Slider from 'react-slick'
+import { add, format } from 'date-fns'
+import { SquareButton, SquareButtonTheme, SquareButtonSize } from '@pooltogether/react-components'
+
+import { DiscordIconSvg } from 'lib/components/SvgComponents'
 import { HeaderLogo } from 'lib/components/HeaderLogo'
 import { NftVideoPlayer } from 'lib/components/NftVideoPlayer'
 
@@ -35,8 +36,10 @@ export const PoolParty = () => {
             <HeaderLogo centered={false} />
             <div className='text-inverse'>
               <div className='flex flex-col items-end'>
-                <p className='text-center text-flashy text-xl leading-tight xs:mt-2'>POOL PARTY</p>
-                <p className='text-xxs xs:text-xs font-semibold'>POOLTOGETHER SEASON 1 NFTs</p>
+                <p className='text-center text-flashy text-xl leading-tight xs:mt-2 font-semibold'>
+                  POOL PARTY
+                </p>
+                <p className='text-xxs xs:text-xs'>POOLTOGETHER SEASON 1 NFTs</p>
               </div>
             </div>
           </div>
@@ -131,6 +134,19 @@ export const PoolParty = () => {
         </div>
       </div>
 
+      <div className='z-20 p-6 flex flex-col items-center font-inter bg-pt-purple-darkest shadow-lg '>
+        <h5 className='text-center text-default-soft uppercase font-normal'>Need help?</h5>
+        <a
+          className='transition mx-1 mt-1 first:ml-0 last:mr-0 rounded-lg py-1 px-3 flex flex-row items-center text-lg hover:text-white hover:opacity-100 text-highlight-3 hover:text-white font-semibold'
+          href='/discord'
+        >
+          <div className='inline-block my-1 text-white hover:text-green w-4 mr-2'>
+            <DiscordIconSvg className='my-auto' />
+          </div>
+          Join the Discord
+        </a>
+      </div>
+
       <nav className='z-20 p-1 flex flex-row justify-center font-inter bg-pt-purple-bright shadow-lg '>
         <a
           className='transition mx-1 my-1 first:ml-0 last:mr-0 rounded-lg py-1 px-3 flex flex-row text-xs hover:text-white hover:opacity-100'
@@ -195,21 +211,13 @@ const MissionCard = ({ week, startTimestamp, task1Text, task2Text }) => {
 
       <ul className='text-xs text-pt-purple-light font-semibold'>
         <li className='mb-4'>
-          {task1Text}{' '}
-          <span className='text-white'>
-            {' '}
-            <br />
-            1x NFT
-          </span>
+          {task1Text} <br />{' '}
+          <span className='block text-flashy leading-tight font-semibold'>1x NFT</span>
         </li>
 
         <li className=''>
-          {task2Text}{' '}
-          <span className='text-white'>
-            {' '}
-            <br />
-            1x NFT
-          </span>
+          {task2Text} <br />{' '}
+          <span className='block text-flashy leading-tight font-semibold'>1x NFT</span>
         </li>
       </ul>
     </div>
