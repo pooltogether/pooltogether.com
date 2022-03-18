@@ -1,14 +1,19 @@
-.bg-slick-slide--pool-party {
-  background-color: #200e41;
+.slick--pool-party.bg-slick-slide--pool-party {
+  background-image: linear-gradient(0deg, #20083c, #220a3f, #20083c);
 }
 
-.slick-arrow.slick-prev {
+.slick--pool-party .slick-track {
+  padding: 0;
+  margin: 0;
+}
+
+.slick--pool-party .slick-arrow.slick-prev {
   @apply z-20 absolute;
   left: 20px;
   top: 50%;
 }
 
-.slick-arrow.slick-next {
+.slick--pool-party .slick-arrow.slick-next {
   @apply z-20 absolute;
   right: 20px;
   top: 50%;

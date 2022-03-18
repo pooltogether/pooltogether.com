@@ -24,7 +24,7 @@
 
 .center a,
 .center a:focus,
-.center a:active, {
+.center a:active {
   outline: none;
 }
 
