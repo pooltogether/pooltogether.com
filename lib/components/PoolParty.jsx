@@ -5,7 +5,7 @@ import { add, format } from 'date-fns'
 
 import Slider from 'react-slick'
 import { HeaderLogo } from 'lib/components/HeaderLogo'
-import { VideoPlayer } from 'lib/components/VideoPlayer'
+import { NftVideoPlayer } from 'lib/components/NftVideoPlayer'
 
 export const PoolParty = () => {
   const [indexPlaying, setIndexPlaying] = useState(0)
@@ -23,7 +23,7 @@ export const PoolParty = () => {
     beforeChange: (index, next) => {
       setTimeout(() => {
         setIndexPlaying(next)
-      }, 320)
+      }, 450)
     }
   }
 
@@ -44,44 +44,52 @@ export const PoolParty = () => {
 
         <div className='w-full slick--pool-party bg-slick-slide--pool-party'>
           <Slider {...settings}>
-            <VideoPlayer
+            <NftVideoPlayer
               files={[`${path}/01_Noodles_v002.webm`]}
-              // isPlaying={isPlaying}
+              label={'#1. Noodles - Common'}
+              dropRate={15}
               isPlaying={indexPlaying === 0}
             />
-            <VideoPlayer
+            <NftVideoPlayer
               files={[`${path}/02_Glasses_v002.webm`]}
-              // isPlaying={isPlaying}
+              label={'#2. Glasses - Common'}
+              dropRate={15}
               isPlaying={indexPlaying === 1}
             />
-            <VideoPlayer
+            <NftVideoPlayer
               files={[`${path}/03_BeachBall_v002.webm`]}
-              // isPlaying={isPlaying}
+              label={'#3. Beach Ball - Common'}
+              dropRate={15}
               isPlaying={indexPlaying === 2}
             />
-            <VideoPlayer
+            <NftVideoPlayer
               files={[`${path}/04_Thongs_v002.webm`]}
-              // isPlaying={isPlaying}
+              label={'#4. Thongs - Common'}
+              dropRate={15}
               isPlaying={indexPlaying === 3}
             />
-            <VideoPlayer
+            <NftVideoPlayer
               files={[`${path}/05_Cocktail_v002.webm`]}
-              // isPlaying={isPlaying}
+              label={'#5. Cocktail - Common'}
+              dropRate={15}
               isPlaying={indexPlaying === 4}
             />
-            <VideoPlayer
+            <NftVideoPlayer
               files={[`${path}/06_Unicorn_v002.webm`]}
-              // isPlaying={isPlaying}
+              label={'#6. Unicorn - Common'}
+              dropRate={15}
               isPlaying={indexPlaying === 5}
             />
-            <VideoPlayer
+            <NftVideoPlayer
               files={[`${path}/07_Trophy_v002.webm`]}
-              // isPlaying={isPlaying}
+              label={'#7. Trophy - Rare'}
+              dropRate={7.5}
               isPlaying={indexPlaying === 6}
             />
-            <VideoPlayer
+            <NftVideoPlayer
               files={[`${path}/08_Pooly_v002.webm`]}
-              // isPlaying={isPlaying}
+              label={'#8. Pooly - Ultra Rare'}
+              dropRate={2.5}
               isPlaying={indexPlaying === 7}
             />
           </Slider>
