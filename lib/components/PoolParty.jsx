@@ -54,6 +54,7 @@ export const PoolParty = () => {
                 <p className='text-xxs xs:text-xs'>
                   POOLTOGETHER <br className='xs:hidden' /> SEASON 1 NFTs
                 </p>
+                <p className='text-xxs font-semibold text-default'>March 21st - May 17th, 2022</p>
               </div>
             </div>
 
@@ -138,23 +139,16 @@ export const PoolParty = () => {
               each weekly mission concludes.{' '}
             </li>
             <li className='mb-2'>
-              Didn’t finish on time? You will have{' '}
-              <span className='text-default font-semibold opacity-60'>(at least)</span> one more
-              week!
+              Each week's missions will need to be completed that week to be claimable.
             </li>
           </ol>
 
-          <p className='text-xs font-semibold text-default mt-6 text-center'>
-            Season 1:
-            <br />
-            March 21st - May 17th, 2022
-          </p>
-
           <h3 className='uppercase mb-4 mt-20'>This week's missions:</h3>
 
-          <MissionWeek1 />
+          <MissionWeek1 current />
           <h3 className='uppercase mb-4 mt-20'>Previous missions:</h3>
 
+          {/* <MissionWeek1 /> */}
           <div className='bg-pt-purple-darkest rounded-xl bg-purple-vibrant pool-party--box-widths p-8 text-center text-default-soft shadow-lg'>
             None yet, check back next week!
           </div>
@@ -221,11 +215,12 @@ const MissionCard = ({ current, week, startTimestamp, task1Text, task2Text }) =>
       className={classnames(
         'rounded-xl bg-pt-purple-darkest p-8 shadow-lg pool-party--box-widths',
         {
+          'opacity-60 hover:opacity-100 transition': !current,
           'pool-party--border-flashy': current
         }
       )}
     >
-      <div className='flex flex-col xs:flex-row'>
+      <div className={classnames('mt-4 flex flex-col xs:flex-row', { 'items-center': !current })}>
         <div className='relative bg-green z-20 text-center text-3xl font-black leading-none h-14 mb-8 skewed w-40'>
           <div
             className='flex justify-center flex-col bg-secondary absolute h-full z-10 w-full'
@@ -236,7 +231,10 @@ const MissionCard = ({ current, week, startTimestamp, task1Text, task2Text }) =>
         </div>
 
         <div className='xs:ml-12'>
-          <DateDisplay timestamp={startTimestamp} firstLabel='Starts' secondLabel='Started' />
+          {current && (
+            <DateDisplay timestamp={startTimestamp} firstLabel='Starts' secondLabel='Started' />
+          )}
+
           <DateDisplay
             timestamp={add(new Date(startTimestamp), {
               days: 6
@@ -244,17 +242,19 @@ const MissionCard = ({ current, week, startTimestamp, task1Text, task2Text }) =>
             firstLabel='Ends'
             secondLabel='Ended'
           />
-          <DateDisplay
-            timestamp={add(new Date(startTimestamp), {
-              days: 7
-            })}
-            firstLabel='Claimable'
-          />
+
+          {current && (
+            <DateDisplay
+              timestamp={add(new Date(startTimestamp), {
+                days: 7
+              })}
+              firstLabel='Claimable'
+            />
+          )}
         </div>
       </div>
 
-      {/* style={{ borderColor: '#5940A9' }} */}
-      <hr className='my-4 w-full pool-party--border-flashy' />
+      <br className='my-4' />
 
       <ul className='text-xs font-semibold'>
         <li className='mb-4'>
@@ -275,10 +275,10 @@ const MissionCard = ({ current, week, startTimestamp, task1Text, task2Text }) =>
   )
 }
 
-const MissionWeek1 = () => {
+const MissionWeek1 = (props) => {
   return (
     <MissionCard
-      current
+      {...props}
       week='1'
       task1Text='Deposit or hold the minimum ($4 USDC) on Polygon'
       task2Text={
