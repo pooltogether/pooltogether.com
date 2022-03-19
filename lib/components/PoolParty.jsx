@@ -124,45 +124,69 @@ export const PoolParty = () => {
   )
 }
 
-const DateDisplay = ({ current, firstLabel, secondLabel, date }) => {
-  const [seconds, setSeconds] = useState(0)
+const MissionState = {
+  NotStarted: 'NotStarted',
+  Started: 'Started',
+  Ended: 'Ended',
+  Claimable: 'Claimable'
+}
 
-  let label
+const DateDisplay = (props) => {
+  const { startTimestamp, current, firstLabel, secondLabel } = props
+  const [seconds, setSeconds] = useState(0)
 
   // Make this component 'tick' every second
   useInterval(() => {
     setSeconds(1 + seconds)
   }, 1000)
 
-  const timestamp = date.getTime()
-
-  const endsInFuture = Date.now() * 1000 > timestamp
-  const secondsLeft = Math.round((timestamp - Date.now()) / 1000)
-
-  if (secondLabel) {
-    label = Boolean(secondLabel) && endsInFuture ? `${firstLabel}:` : `${secondLabel}:`
-  } else {
-    label = `${firstLabel}:`
+  if (!current) {
+    return null
   }
 
-  if (current && endsInFuture) {
-    return (
+  const startsDate = new Date(startTimestamp)
+  const endsDate = add(new Date(startTimestamp), {
+    days: 6
+  })
+  const claimableDate = add(new Date(startTimestamp), {
+    days: 7
+  })
+
+  const nowComparable = Date.now() * 1000
+
+  let state, label, secondsLeft
+  if (nowComparable > startsDate.getTime()) {
+    label = 'Starts'
+    state = MissionState.NotStarted
+    secondsLeft = Math.round((startsDate.getTime() - Date.now()) / 1000)
+  } else if (nowComparable < endsDate.getTime()) {
+    label = 'Ends'
+    state = MissionState.Started
+    secondsLeft = Math.round((endsDate.getTime() - Date.now()) / 1000)
+  } else if (nowComparable < claimableDate.getTime()) {
+    label = 'Claimable'
+    state = MissionState.Ended
+    secondsLeft = Math.round((claimableDate.getTime() - Date.now()) / 1000)
+  } else {
+    state = MissionState.Claimable
+  }
+
+  return (
+    <p className='text-xs font-semibold text-accent-3 mt-4 xs:mt-0'>
+      {label && <span className='opacity-80 uppercase'>{label} in:</span>}
+
       <Time
         seconds={secondsLeft}
         className='mt-1 mx-auto h-14'
         timeClassName='text-sm xs:text-lg'
       />
-    )
-  }
-
-  return (
-    <p className='text-xs font-semibold text-accent-3'>
-      <span className='opacity-60'>{label}</span> {format(timestamp, 'MMM do yyyy, hh:mm a')}
     </p>
   )
 }
 
-const MissionCard = ({ current, week, startTimestamp, task1Text, task2Text }) => {
+const MissionCard = (props) => {
+  const { current, week, task1Text, task2Text } = props
+
   return (
     <div
       className={classnames(
@@ -184,32 +208,7 @@ const MissionCard = ({ current, week, startTimestamp, task1Text, task2Text }) =>
         </div>
 
         <div className='xs:ml-12'>
-          {current && (
-            <DateDisplay
-              date={new Date(startTimestamp)}
-              firstLabel='Starts'
-              secondLabel='Started'
-            />
-          )}
-
-          <DateDisplay
-            current={current}
-            date={add(new Date(startTimestamp), {
-              days: 6
-            })}
-            firstLabel='Ends'
-            secondLabel='Ended'
-          />
-
-          {current && (
-            <DateDisplay
-              current={current}
-              date={add(new Date(startTimestamp), {
-                days: 7
-              })}
-              firstLabel='Claimable'
-            />
-          )}
+          <DateDisplay {...props} />
         </div>
       </div>
 
@@ -239,6 +238,7 @@ const MissionWeek1 = (props) => {
     <MissionCard
       {...props}
       week='1'
+      startTimestamp={1647889200000} // March 21st @ 3pm EST
       task1Text='Deposit or hold the minimum ($4 USDC) on Polygon'
       task2Text={
         <>
@@ -261,7 +261,6 @@ const MissionWeek1 = (props) => {
           on Twitter
         </>
       }
-      startTimestamp={1647889200000} // March 21st @ 3pm EST
     />
   )
 }
