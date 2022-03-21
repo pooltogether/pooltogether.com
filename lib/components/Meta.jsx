@@ -4,12 +4,12 @@ export const Meta = ({ title, description }) => {
   const defaultTitle = 'PoolTogether'
   title = title ? `${defaultTitle} - ${title}` : defaultTitle
 
-  let url = `https://pooltogether.com`
-  if (typeof window !== 'undefined') {
-    url = window.location.href
-  }
+  const rootUrl = `https://pooltogether.com`
+  const url = typeof window !== 'undefined' ? window.location.href : rootUrl
+
   const defaultDescription = `PoolTogether`
   description = description ? description : defaultDescription
+
   const keywords = 'ethereum'
   const twitterHandle = '@PoolTogether_'
 
@@ -31,7 +31,7 @@ export const Meta = ({ title, description }) => {
         <meta property='og:url' content={url} />
         <meta
           property='og:image'
-          content={`${url}/pooltogether-facebook-share-image-1200-630@2x.png`}
+          content={`${rootUrl}/pooltogether-facebook-share-image-1200-630@2x.png`}
         />
         <meta property='og:rich_attachment' content='true' />
         <meta property='og:image:width' content='1200' />
@@ -43,7 +43,7 @@ export const Meta = ({ title, description }) => {
         <meta property='twitter:description' content={description} />
         <meta
           property='twitter:image:src'
-          content={`${url}/pooltogether-twitter-share-image-1200-675@2x.png`}
+          content={`${rootUrl}/pooltogether-twitter-share-image-1200-675@2x.png`}
         />
         <meta property='twitter:url' content={url} />
         <meta property='twitter:creator' content={twitterHandle} />

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Head from 'next/head'
 import classnames from 'classnames'
 import Slider from 'react-slick'
 import Link from 'next/link'
@@ -22,6 +23,17 @@ export const PoolParty = () => {
 
   return (
     <>
+      <Head>
+        <meta
+          property='og:image'
+          content={`https://pooltogether.com/pool-party-season-1-facebook-share-image-1200-630@2x.png`}
+        />
+        <meta
+          property='twitter:image:src'
+          content={`https://pooltogether.com/pool-party-season-1-twitter-share-image-1200-675@2x.png`}
+        />
+      </Head>
+
       <div className='font-averta'>
         <div className='header pool-container w-full z-30 mx-auto'>
           <div className='flex justify-between items-center w-full xs:px-4 sm:px-0 py-8 sm:py-4 mx-auto'>
