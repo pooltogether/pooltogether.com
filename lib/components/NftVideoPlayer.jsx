@@ -6,7 +6,15 @@ export const NftVideoPlayer = ({ label, dropRate, files, isPlaying }) => {
       <VideoPlayer files={files} isPlaying={isPlaying} />
       <div className='text-white text-center bg-pt-purple-bright py-2 sm:py-4'>
         <span className='font-semibold'>{label}</span>
-        <span className='block text-xxs opacity-60'>{dropRate}% drop rate</span>
+        <span className='block text-xxs opacity-60 font-semibold' style={{ paddingBottom: 2 }}>
+          {dropRate}% drop rate
+        </span>
+        <span className='block text-default text-xxxs uppercase opacity-90'>
+          Art by{' '}
+          <a target='_blank' href='https://twitter.com/dsmithanimation' className='underline'>
+            David Smith
+          </a>
+        </span>
       </div>
     </div>
   )

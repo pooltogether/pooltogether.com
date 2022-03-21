@@ -78,6 +78,12 @@ export const PoolParty = () => {
               Each week's missions will need to be completed that week to be claimable.
             </li>
           </ol>
+          <p className='text-xxxs uppercase text-default mb-6 mt-6'>
+            Powered by{' '}
+            <a href='https://galaxy.eco/' target='_blank' className='underline'>
+              Project Galaxy
+            </a>
+          </p>
 
           <h4 className='uppercase mb-6 mt-20'>This week's missions:</h4>
 
@@ -223,12 +229,14 @@ const MissionCard = (props) => {
           </h6>
         </li>
 
-        <li className=''>
-          <h6 className='text-white uppercase'>Mission #2:</h6>
-          <h6 className='text-pt-purple-light'>
-            {task2Text} <span className='text-flashy leading-tight font-semibold'>- 1x NFT</span>
-          </h6>
-        </li>
+        {task2Text && (
+          <li className=''>
+            <h6 className='text-white uppercase'>Mission #2:</h6>
+            <h6 className='text-pt-purple-light'>
+              {task2Text} <span className='text-flashy leading-tight font-semibold'>- 1x NFT</span>
+            </h6>
+          </li>
+        )}
       </ul>
     </div>
   )
@@ -241,30 +249,31 @@ const MissionWeek1 = (props) => {
       week='1'
       startTimestamp={1647889200000} // March 21st @ 3pm EST
       task1Text='Have a deposit on Polygon'
-      task2Text={
-        <>
+      task2Text={null}
+    />
+  )
+}
+{
+  /* <>
           Retweet the campaign tweet AND follow PoolTogether on Twitter
-          {/* <a
+           <a
             target='_blank'
             href='https://twitter.com/PoolTogether_'
             className='text-highlight-3 underline hover:text-white'
           >
             campaign tweet
-          </a>{' '} */}
-          {/* AND follow{' '}
+          </a>{' '} 
+           AND follow{' '}
           <a
             target='_blank'
             href='https://twitter.com/PoolTogether_'
             className='text-highlight-3 underline hover:text-white'
           >
             PoolTogether
-          </a>{' '} */}
-          {/* on Twitter
-          VERIFY HERE */}
-        </>
-      }
-    />
-  )
+          </a>{' '} 
+          on Twitter
+          VERIFY HERE 
+        </> */
 }
 
 {
