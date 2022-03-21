@@ -171,10 +171,10 @@ const DateDisplay = (props) => {
     days: 7
   })
 
-  const nowComparable = Date.now() * 1000
+  const nowComparable = Date.now()
 
   let state, label, secondsLeft
-  if (nowComparable > startsDate.getTime()) {
+  if (nowComparable < startsDate.getTime()) {
     label = 'Starts'
     state = MissionState.NotStarted
     secondsLeft = Math.round((startsDate.getTime() - Date.now()) / 1000)
@@ -204,12 +204,12 @@ const DateDisplay = (props) => {
 }
 
 const MissionCard = (props) => {
-  const { current, week, task1Text, task2Text } = props
+  const { current, week, task1Button, task1Text, task2Text } = props
 
   return (
     <div
       className={classnames(
-        'rounded-xl bg-pt-purple-darkest p-4 xs:p-8 shadow-lg pool-party--box-widths',
+        'rounded-xl bg-pt-purple-darkest p-4 py-6 xs:p-8 shadow-lg pool-party--box-widths',
         {
           'opacity-60 hover:opacity-100 transition': !current,
           'pool-party--border-flashy': current
@@ -239,6 +239,7 @@ const MissionCard = (props) => {
           <h6 className='text-pt-purple-light'>
             {task1Text} <span className='text-flashy leading-tight font-semibold'>- 1x NFT</span>
           </h6>
+          {task1Button && task1Button}
         </li>
 
         {task2Text && (
@@ -250,6 +251,10 @@ const MissionCard = (props) => {
           </li>
         )}
       </ul>
+
+      <span className='block text-default text-xxs opacity-80 pt-2'>
+        Complete the task now. NFTs will be claimable 24 hours after mission ends.
+      </span>
     </div>
   )
 }
@@ -260,7 +265,17 @@ const MissionWeek1 = (props) => {
       {...props}
       week='1'
       startTimestamp={1647889200000} // March 21st @ 3pm EST
-      task1Text='Have a deposit on Polygon'
+      task1Text={<>Have a USDC deposit on Polygon</>}
+      task1Button={
+        <SquareLink
+          href='https://app.pooltogether.com'
+          size={SquareButtonSize.sm}
+          theme={SquareButtonTheme.teal}
+          className='w-36 mt-2'
+        >
+          Deposit now
+        </SquareLink>
+      }
       task2Text={null}
     />
   )
