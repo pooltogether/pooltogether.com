@@ -21,6 +21,9 @@ import { Time } from 'lib/components/Time'
 export const PoolParty = () => {
   const { t } = useTranslation()
 
+  const title = `PoolParty - PoolTogether Season 1 NFTs`
+  const description = `Earn NFTs by completing weekly PoolTogether missions`
+
   return (
     <>
       <Head>
@@ -32,6 +35,15 @@ export const PoolParty = () => {
           property='twitter:image:src'
           content={`https://pooltogether.com/pool-party-season-1-twitter-share-image-1200-675@2x.png`}
         />
+
+        <meta name='description' content={description} />
+
+        <meta property='og:title' content={title} />
+        <meta property='og:description' content={description} />
+        <meta property='og:site_name' content={title} />
+
+        <meta property='twitter:title' content={title} />
+        <meta property='twitter:description' content={description} />
       </Head>
 
       <div className='font-averta'>
