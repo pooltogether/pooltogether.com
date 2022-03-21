@@ -11,7 +11,7 @@ export const NftVideoPlayer = ({ label, dropRate, files, isPlaying }) => {
         </span>
         <span className='block text-default text-xxxs uppercase opacity-90'>
           Art by{' '}
-          <a target='_blank' href='https://twitter.com/dsmithanimation' className='underline'>
+          <a target='_blank' href='https://twitter.com/d_v_dsm' className='underline'>
             David Smith
           </a>
         </span>
