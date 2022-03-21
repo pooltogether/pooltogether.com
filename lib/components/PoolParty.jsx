@@ -25,11 +25,11 @@ export const PoolParty = () => {
       <div className='font-averta'>
         <div className='header pool-container w-full z-30 mx-auto'>
           <div className='flex justify-between items-center w-full xs:px-4 sm:px-0 py-8 sm:py-4 mx-auto'>
-            <div className=' sm:w-64'>
+            <div className='hidden xs:block sm:w-64'>
               <HeaderLogo centered={false} />
             </div>
 
-            <div className='text-inverse'>
+            <div className='text-inverse w-full'>
               <div className='text-center flex flex-col items-center'>
                 <p className='text-flashy text-xl leading-tight xs:mt-2 font-semibold'>
                   POOL PARTY
@@ -41,10 +41,9 @@ export const PoolParty = () => {
               </div>
             </div>
 
-            <div className='flex justify-end sm:w-64'>
+            <div className='hidden xs:block flex justify-end sm:w-64'>
               <SquareLink
                 chevron
-                Link={Link}
                 href='https://app.pooltogether.com'
                 size={SquareButtonSize.sm}
                 theme={SquareButtonTheme.teal}
@@ -59,26 +58,19 @@ export const PoolParty = () => {
         <VideoCarousel />
 
         <div className='pool-party--box-widths mx-auto flex flex-col items-center text-base z-10 relative pt-20 pb-32 text-inverse'>
-          <h3 className='uppercase mb-4'>How it works:</h3>
+          <h4 className='uppercase mb-4'>How it works:</h4>
           <ol className='list-decimal px-10 xs:px-0'>
-            <li className='mb-2'>
-              Complete the weekly missions by the end of Season 1 to earn random collectibles,
-              claimable each week.
-            </li>
-            <li className='mb-2'>
-              {' '}
-              Those who qualify will be able to claim NFTs that will unlock within 24 hours after
-              each weekly mission concludes.{' '}
-            </li>
+            <li className='mb-2'>Complete the weekly mission before the countdown expires.</li>
+            <li className='mb-2'>Come back to mint your NFTs when the next mission starts!</li>
             <li className='mb-2'>
               Each week's missions will need to be completed that week to be claimable.
             </li>
           </ol>
 
-          <h3 className='uppercase mb-4 mt-20'>This week's missions:</h3>
+          <h4 className='uppercase mb-6 mt-20'>This week's missions:</h4>
 
           <MissionWeek1 current />
-          <h3 className='uppercase mb-2 mt-20'>Previous missions:</h3>
+          <h4 className='uppercase mb-3 mt-20'>Previous missions:</h4>
 
           {/* <MissionWeek1 /> */}
           <div className='bg-pt-purple-darkest rounded-xl bg-purple-vibrant pool-party--box-widths p-8 text-center text-default-soft shadow-lg'>
@@ -89,36 +81,33 @@ export const PoolParty = () => {
 
       <div className='z-20 p-6 flex flex-col items-center font-inter bg-pt-purple-darkest shadow-lg '>
         <h5 className='text-center text-default-soft uppercase font-normal'>Need help?</h5>
-        <a
-          className='transition mx-1 mt-1 first:ml-0 last:mr-0 rounded-lg py-1 px-3 flex flex-row items-center text-lg hover:text-white hover:opacity-100 text-highlight-3 hover:text-white font-semibold'
-          href='/discord'
-        >
-          <div className='inline-block my-1 text-white hover:text-green w-4 mr-2'>
-            <DiscordIconSvg className='my-auto' />
-          </div>
-          Join the Discord
-        </a>
+        <Link href='/discord'>
+          <a className='transition mx-1 mt-1 first:ml-0 last:mr-0 rounded-lg py-1 px-3 flex flex-row items-center text-lg hover:text-white hover:opacity-100 text-highlight-3 hover:text-white font-semibold'>
+            <div className='inline-block my-1 text-white hover:text-green w-4 mr-2'>
+              <DiscordIconSvg className='my-auto' />
+            </div>
+            Join the Discord
+          </a>
+        </Link>
       </div>
 
       <nav className='z-20 p-4 flex flex-row justify-center font-inter bg-pt-purple-bright shadow-lg '>
+        <Link href='/'>
+          <a className='transition mx-1 my-1 first:ml-0 last:mr-0 rounded-lg py-1 px-3 flex flex-row text-xs hover:text-white hover:opacity-100'>
+            <span className='text-white opacity-70 hover:opacity-100'>Home</span>
+          </a>
+        </Link>
         <a
-          className='transition mx-1 my-1 first:ml-0 last:mr-0 rounded-lg py-1 px-3 flex flex-row text-xs hover:text-white hover:opacity-100'
-          href='/'
-        >
-          <span className='text-white opacity-70 hover:opacity-100'>Home</span>
-        </a>
-        <a
-          className='transition mx-1 my-1 first:ml-0 last:mr-0 rounded-lg py-1 px-3 flex flex-row text-xs hover:text-white hover:opacity-100'
           href='https://app.pooltogether.com'
+          className='transition mx-1 my-1 first:ml-0 last:mr-0 rounded-lg py-1 px-3 flex flex-row text-xs hover:text-white hover:opacity-100'
         >
           <span className='text-white opacity-70 hover:opacity-100'>App</span>
         </a>
-        <a
-          className='transition mx-1 my-1 first:ml-0 last:mr-0 rounded-lg py-1 px-3 flex flex-row text-xs hover:text-white hover:opacity-100'
-          href='/terms'
-        >
-          <span className='text-white opacity-70 hover:opacity-100'>Terms</span>
-        </a>
+        <Link href='/terms'>
+          <a className='transition mx-1 my-1 first:ml-0 last:mr-0 rounded-lg py-1 px-3 flex flex-row text-xs hover:text-white hover:opacity-100'>
+            <span className='text-white opacity-70 hover:opacity-100'>Terms</span>
+          </a>
+        </Link>
       </nav>
     </>
   )
@@ -190,7 +179,7 @@ const MissionCard = (props) => {
   return (
     <div
       className={classnames(
-        'rounded-xl bg-pt-purple-darkest p-8 shadow-lg pool-party--box-widths',
+        'rounded-xl bg-pt-purple-darkest p-4 xs:p-8 shadow-lg pool-party--box-widths',
         {
           'opacity-60 hover:opacity-100 transition': !current,
           'pool-party--border-flashy': current
@@ -239,26 +228,27 @@ const MissionWeek1 = (props) => {
       {...props}
       week='1'
       startTimestamp={1647889200000} // March 21st @ 3pm EST
-      task1Text='Deposit or hold the minimum ($4 USDC) on Polygon'
+      task1Text='Have a deposit on Polygon'
       task2Text={
         <>
-          Retweet the{' '}
-          <a
+          Retweet the campaign tweet AND follow PoolTogether on Twitter
+          {/* <a
             target='_blank'
             href='https://twitter.com/PoolTogether_'
             className='text-highlight-3 underline hover:text-white'
           >
             campaign tweet
-          </a>{' '}
-          AND follow{' '}
+          </a>{' '} */}
+          {/* AND follow{' '}
           <a
             target='_blank'
             href='https://twitter.com/PoolTogether_'
             className='text-highlight-3 underline hover:text-white'
           >
             PoolTogether
-          </a>{' '}
-          on Twitter
+          </a>{' '} */}
+          {/* on Twitter
+          VERIFY HERE */}
         </>
       }
     />
