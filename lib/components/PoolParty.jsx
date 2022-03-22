@@ -252,9 +252,12 @@ const MissionCard = (props) => {
         )}
       </ul>
 
-      <span className='block text-default text-xxs opacity-80 pt-2'>
-        Complete the task now. NFTs will be claimable 24 hours after mission ends.
-      </span>
+      <ul className='block text-default text-xs pt-2 list-disc ml-3'>
+        <li>
+          NFTs will be claimable <span className='underline'>24 hours after</span> mission ends.
+        </li>
+        <li>If you already have a deposit on Polygon you are good to go.</li>
+      </ul>
     </div>
   )
 }
