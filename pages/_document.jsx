@@ -6,17 +6,17 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { Meta } from 'lib/components/Meta'
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+  static async getInitialProps (ctx) {
     const initialProps = await Document.getInitialProps(ctx)
     return { ...initialProps }
   }
 
-  render() {
+  render () {
     return (
       <Html>
         <Head />
 
-        <body className='bg-body theme-dark font-inter'>
+        <body className='bg-body theme-dark'>
           <Main />
           <NextScript />
           {/* <script src='/paper.js'></script> */}

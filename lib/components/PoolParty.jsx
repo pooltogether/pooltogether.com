@@ -109,7 +109,7 @@ export const PoolParty = () => {
         </div>
       </div>
 
-      <div className='z-20 p-6 flex flex-col items-center font-inter bg-pt-purple-darkest shadow-lg '>
+      <div className='z-20 p-6 flex flex-col items-center bg-pt-purple-darkest shadow-lg '>
         <h5 className='text-center text-default-soft uppercase font-normal'>Need help?</h5>
         <Link href='/discord'>
           <a className='transition mx-1 mt-1 first:ml-0 last:mr-0 rounded-lg py-1 px-3 flex flex-row items-center text-lg hover:text-white hover:opacity-100 text-highlight-3 hover:text-white font-semibold'>
@@ -121,7 +121,7 @@ export const PoolParty = () => {
         </Link>
       </div>
 
-      <nav className='z-20 p-4 flex flex-row justify-center font-inter bg-pt-purple-bright shadow-lg '>
+      <nav className='z-20 p-4 flex flex-row justify-center bg-pt-purple-bright shadow-lg '>
         <Link href='/'>
           <a className='transition mx-1 my-1 first:ml-0 last:mr-0 rounded-lg py-1 px-3 flex flex-row text-xs hover:text-white hover:opacity-100'>
             <span className='text-white opacity-70 hover:opacity-100'>Home</span>

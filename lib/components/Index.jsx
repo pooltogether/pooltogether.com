@@ -97,14 +97,14 @@ const HeroRight = () => {
           <div className='uppercase font-semibold text-default text-xxs xs:text-lg lg:text-xl mx-auto -mt-4 sm:mt-3'>
             {t('currently', 'Currently')}
           </div>
-          <h1 className='text-4xl xs:text-6xl sm:text-7xl lg:text-9xl -mt-1 xs:-mt-1'>
+          <h1 className='text-4xl xs:text-6xl sm:text-7xl lg:text-9xl -mt-2'>
             <WeeklyPrizeAmount />
           </h1>
           <div className='uppercase font-semibold text-default text-xxs xs:text-lg lg:text-xl -mt-2'>
             {t('inWeeklyPrizes', 'In weekly prizes!')}
           </div>
         </div>
-        <div className='font-semibold text-default-soft pt-8 xs:pt-0 mb-12 text-xxs w-1/2 mx-auto'>
+        <div className='font-semibold text-default-soft pt-4 xs:pt-0 mb-12 text-xxs w-full xs:w-1/2 mx-auto'>
           * {t('acrossBothVersions', 'across all v3 and v4 pools')}
         </div>
       </div>
@@ -131,7 +131,7 @@ const HeroLeft = () => {
   return (
     <>
       <span
-        className='font-medium font-inter text-2xl xs:text-3xl lg:text-6xl text-new-gradient'
+        className='font-semibold text-2xl xs:text-3xl lg:text-6xl text-new-gradient'
         style={{ lineHeight: 1.25 }}
       >
         {t('winBySaving', 'Win by saving.')}
@@ -193,7 +193,7 @@ const LuckiestWinnersBanner = (props) => {
     <>
       <div className='text-center relative flex flex-col sm:flex-row mx-auto w-full'>
         <div className='bg-luckiest-winners-gradient mx-auto w-full sm:w-full py-8 sm:py-8 text-center sm:text-left overflow-hidden'>
-          <div className='font-inter text-sm text-center text-green font-black uppercase'>
+          <div className='text-sm text-center text-green font-black uppercase'>
             {t('luckiestWinners', 'Luckiest Winners')}
           </div>
           <nav className='menu'>

@@ -31,7 +31,7 @@ export const GridItem = (props) => {
         {svg && <div className='w-24 h-24'>{svg}</div>}
 
         <div className='text-white flex flex-col trans pt-2 sm:pt-4'>
-          <div className='font-inter font-semibold text-xl sm:text-2xl'>{title}</div>
+          <div className='font-semibold text-xl sm:text-2xl'>{title}</div>
 
           <div className='sm:mt-2 text-accent-1 text-lg'>{description}</div>
 
