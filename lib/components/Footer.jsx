@@ -58,6 +58,7 @@ export const Footer = () => {
               <div className='flex flex-col'>
                 <span className='font-semibold block'>{t('ecosystem', 'Ecosystem')}</span>
                 <ul>
+                  <FooterLink href='https://tools.pooltogether.com'>{t('tools', 'Tools')}</FooterLink>
                   <FooterLink href='/developers'>{t('developers', 'Developers')}</FooterLink>
                   <FooterLink href='/audits'>{t('security', 'Security')}</FooterLink>
                   <FooterLink href='https://docs.pooltogether.com/faq/general'>FAQ</FooterLink>

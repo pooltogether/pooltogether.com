@@ -28,6 +28,11 @@ const links = [
     href: 'https://app.pooltogether.com',
     as: 'https://app.pooltogether.com'
   },
+  {
+    label: 'Tools',
+    href: 'https://tools.pooltogether.com',
+    as: 'https://tools.pooltogether.com'
+  },
 ]
 
 export const NavMobileList = (props) => (
