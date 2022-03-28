@@ -37,9 +37,16 @@ export const Nav = (props) => {
           </a>
         </Link>
 
+        <Link href='https://tools.pooltogether.com' as='https://tools.pooltogether.com' shallow>
+          <a
+            className={classnames(navLinkClasses,  'text-white hover:text-highlight-2')}
+          >
+            {t('tools', 'Tools')}
+          </a>
+        </Link>
+
         <SquareLink
           chevron
-          Link={Link}
           href='https://app.pooltogether.com'
           size={SquareButtonSize.sm}
           theme={SquareButtonTheme.teal}
