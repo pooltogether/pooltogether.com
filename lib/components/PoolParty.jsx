@@ -3,13 +3,8 @@ import Head from 'next/head'
 import classnames from 'classnames'
 import Slider from 'react-slick'
 import Link from 'next/link'
-import { add, format } from 'date-fns'
-import {
-  SquareLink,
-  SquareButton,
-  SquareButtonTheme,
-  SquareButtonSize
-} from '@pooltogether/react-components'
+import { add } from 'date-fns'
+import { SquareLink, SquareButtonTheme, SquareButtonSize } from '@pooltogether/react-components'
 import { useTranslation } from 'react-i18next'
 import { useInterval } from 'beautiful-react-hooks'
 
@@ -99,13 +94,10 @@ export const PoolParty = () => {
 
           <h4 className='uppercase mb-6 mt-20'>This week's missions:</h4>
 
-          <MissionWeek1 current />
+          <MissionWeek2 current />
           <h4 className='uppercase mb-3 mt-20'>Previous missions:</h4>
 
-          {/* <MissionWeek1 /> */}
-          <div className='bg-pt-purple-darkest rounded-xl bg-purple-vibrant pool-party--box-widths p-8 text-center text-default-soft shadow-lg'>
-            None yet, check back next week!
-          </div>
+          <MissionWeek1 />
         </div>
       </div>
 
@@ -204,14 +196,23 @@ const DateDisplay = (props) => {
 }
 
 const MissionCard = (props) => {
-  const { current, week, task1Button, task1Text, task2Text } = props
+  const {
+    current,
+    week,
+    task1Text,
+    task1Button,
+    task2Text,
+    task2Button,
+    bulletPoint1,
+    bulletPoint2,
+    claimLink
+  } = props
 
   return (
     <div
       className={classnames(
         'rounded-xl bg-pt-purple-darkest p-4 py-6 xs:p-8 shadow-lg pool-party--box-widths',
         {
-          'opacity-60 hover:opacity-100 transition': !current,
           'pool-party--border-flashy': current
         }
       )}
@@ -248,15 +249,28 @@ const MissionCard = (props) => {
             <h6 className='text-pt-purple-light'>
               {task2Text} <span className='text-flashy leading-tight font-semibold'>- 1x NFT</span>
             </h6>
+            {task2Button && task2Button}
           </li>
         )}
       </ul>
 
-      <ul className='block text-default text-xs pt-2 list-disc ml-3'>
+      {claimLink && (
+        <SquareLink
+          href={claimLink}
+          size={SquareButtonSize.sm}
+          theme={SquareButtonTheme.rainbow}
+          className='w-44 mt-2'
+        >
+          <span className='py-1'>Claim now</span>
+        </SquareLink>
+      )}
+
+      <ul className='block text-white dark:text-default text-xs pt-8 list-decimal ml-3'>
         <li>
           NFTs will be claimable <span className='underline'>24 hours after</span> mission ends.
         </li>
-        <li>If you already have a deposit on Polygon you are good to go.</li>
+        {bulletPoint1 && <li>{bulletPoint1}</li>}
+        {bulletPoint2 && <li>{bulletPoint2}</li>}
       </ul>
     </div>
   )
@@ -269,55 +283,89 @@ const MissionWeek1 = (props) => {
       week='1'
       startTimestamp={1647889200000} // March 21st @ 3pm EST
       task1Text={<>Have a USDC deposit on Polygon</>}
-      task1Button={
-        <SquareLink
-          href='https://app.pooltogether.com'
-          size={SquareButtonSize.sm}
-          theme={SquareButtonTheme.teal}
-          className='w-36 mt-2'
-        >
-          Deposit now
-        </SquareLink>
-      }
       task2Text={null}
+      bulletPoint1='If you already have a deposit on Polygon you are good to go.'
+      claimLink='https://galaxy.eco/PoolTogether/campaign/GCTKRUUx9o'
     />
   )
 }
-{
-  /* <>
-          Retweet the campaign tweet AND follow PoolTogether on Twitter
-           <a
-            target='_blank'
-            href='https://twitter.com/PoolTogether_'
-            className='text-highlight-3 underline hover:text-white'
-          >
-            campaign tweet
-          </a>{' '} 
-           AND follow{' '}
-          <a
-            target='_blank'
-            href='https://twitter.com/PoolTogether_'
-            className='text-highlight-3 underline hover:text-white'
-          >
-            PoolTogether
-          </a>{' '} 
-          on Twitter
-          VERIFY HERE 
-        </> */
-}
 
-{
-  /* <>
-          Onboard a friend to PT,{' '}
-          <a
-            href=''
-            className='text-highlight-4 underline inline-flex items-center'
-            target='_blank'
-          >
-            {' '}
-            Fill in form <FeatherIcon icon='external-link' className='ml-2 trans w-5 h-5' />
-          </a>
-        </> */
+const MissionWeek2 = (props) => {
+  return (
+    <MissionCard
+      {...props}
+      week='2'
+      startTimestamp={1648494000000} // March 28th @ 3pm EST
+      task1Text={
+        <>
+          Hold the POOL
+          <BulletPointAsterisk number='1' /> token
+        </>
+      }
+      task2Text={
+        <>
+          Subscribe to the PT Newsletter
+          <BulletPointAsterisk number='2' />
+        </>
+      }
+      task2Button={
+        <SquareLink
+          href='https://gleam.io/p9ua7/pooltogether-newsletter'
+          size={SquareButtonSize.sm}
+          theme={SquareButtonTheme.teal}
+          className='w-44 mt-2'
+        >
+          Subscribe now
+        </SquareLink>
+      }
+      bulletPoint1={
+        <>
+          <strong>The following POOL is valid:</strong>{' '}
+          <ul>
+            <ListItemLink
+              href='https://etherscan.io/token/0x0cec1a9154ff802e7934fc916ed7ca50bde6844e'
+              label='POOL token on Ethereum'
+            />
+            <ListItemLink
+              href='https://etherscan.io/token/0x27d22a7648e955e510a40bdb058333e9190d12d4'
+              label='pPOOL prize pool ticket on Ethereum'
+            />
+            <ListItemLink
+              href='https://polygonscan.com/token/0x25788a1a171ec66da6502f9975a15b609ff54cf6'
+              label='POOL (POS) token on Polygon'
+            />
+
+            <ListItemLink
+              href='https://polygonscan.com/token/0xd80eaa761ccfdc8698999d73c96cec39fbb1fc48'
+              label='pPOOL on Polygon'
+            />
+
+            <ListItemLink
+              href='https://polygonscan.com/token/0x34908ec7f451beaa88c46c60a394cf324f86f67e'
+              label='SushiSwap Polygon LP'
+            />
+
+            <ListItemLink
+              href='https://etherscan.io/address/0x85cb0bab616fe88a89a35080516a8928f38b518b'
+              label='UniswapV2 Ethereum LP'
+            />
+
+            <ListItemLink
+              href='https://polygonscan.com/token/0x1585d301b58661bc0cb5a8eba24ecae7b4600470'
+              label='Quickswap Polygon LP'
+            />
+          </ul>
+          <div className='opacity-50 font-semibold'>Snapshot: Sunday April 3, 19:00 UTC</div>
+        </>
+      }
+      bulletPoint2={
+        <>
+          Subscribe to the community newsletter in one of the five languages, then fill in and
+          submit the Gleam form
+        </>
+      }
+    />
+  )
 }
 
 const VideoCarousel = (props) => {
@@ -395,3 +443,16 @@ const VideoCarousel = (props) => {
     </div>
   )
 }
+
+const BulletPointAsterisk = (props) => {
+  const { number } = props
+  return <sup className='relative text-xxxs text-highlight-2'>{number}</sup>
+}
+
+const ListItemLink = (props) => (
+  <li>
+    <a href={props.href} className='underline' target='_blank'>
+      {props.label}
+    </a>
+  </li>
+)
