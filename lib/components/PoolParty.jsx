@@ -379,7 +379,12 @@ const MissionWeek3 = (props) => {
       {...props}
       week='3'
       startTimestamp={1649098800000} // April 4th @ 3pm EST
-      task1Text={<>Check if you won prizes at least once this week</>}
+      task1Text={
+        <>
+          Check if you won prizes
+          <BulletPointAsterisk number='2' /> at least once this week
+        </>
+      }
       task1Button={
         <SquareLink
           href='https://app.pooltogether.com/prizes'
@@ -389,6 +394,15 @@ const MissionWeek3 = (props) => {
         >
           Check prizes
         </SquareLink>
+      }
+      bulletPoint1={
+        <>
+          <strong>
+            Checking for prizes on Ethereum, Polygon or Avalanche will enter your address prior to
+            the snapshot
+          </strong>{' '}
+          <div className='opacity-50 font-semibold'>Snapshot: Sunday April 10, 19:00 UTC</div>
+        </>
       }
     />
   )
