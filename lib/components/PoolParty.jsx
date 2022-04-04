@@ -238,10 +238,33 @@ const MissionCard = (props) => {
 
       <ul className='text-xs font-semibold'>
         <li className='mb-4'>
-          <h6 className='text-white uppercase'>Mission #1:</h6>
-          <h6 className='text-pt-purple-light'>
-            {task1Text} <span className='text-flashy leading-tight font-semibold'>- 1x NFT</span>
+          <h6 className='text-white uppercase'>
+            <span
+              className={classnames({
+                'opacity-60': !current
+              })}
+            >
+              Mission #1:{' '}
+            </span>
+            {!current && (
+              <div className='inline-block relative z-20 text-center font-black leading-none h-6 w-24'>
+                <div
+                  className='flex justify-center flex-col bg-red absolute h-full z-10 w-full rounded-lg'
+                  style={{ left: 4, top: 6 }}
+                >
+                  <span className='text-sm uppercase text-white'>Expired</span>
+                </div>
+              </div>
+            )}
           </h6>
+          <h6
+            className={classnames('text-pt-purple-light', {
+              'opacity-60': !current
+            })}
+          >
+            {task1Text} <span className='text-flashy leading-tight font-semibold'>- 1x NFT</span>{' '}
+          </h6>
+
           {task1Button && task1Button}
 
           {claimLink1 && (
@@ -258,8 +281,30 @@ const MissionCard = (props) => {
 
         {task2Text && (
           <li className=''>
-            <h6 className='text-white uppercase'>Mission #2:</h6>
-            <h6 className='text-pt-purple-light'>
+            <h6 className='text-white uppercase'>
+              <span
+                className={classnames({
+                  'opacity-60': !current
+                })}
+              >
+                Mission #2:{' '}
+              </span>
+              {!current && (
+                <div className='inline-block relative z-20 text-center font-black leading-none h-6 w-24'>
+                  <div
+                    className='flex justify-center flex-col bg-red absolute h-full z-10 w-full rounded-lg'
+                    style={{ left: 4, top: 6 }}
+                  >
+                    <span className='text-sm uppercase text-white'>Expired</span>
+                  </div>
+                </div>
+              )}
+            </h6>
+            <h6
+              className={classnames('text-pt-purple-light', {
+                'opacity-60': !current
+              })}
+            >
               {task2Text} <span className='text-flashy leading-tight font-semibold'>- 1x NFT</span>
             </h6>
             {task2Button && task2Button}
