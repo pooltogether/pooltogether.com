@@ -323,16 +323,6 @@ const MissionWeek2 = (props) => {
           <BulletPointAsterisk number='2' />
         </>
       }
-      task2Button={
-        <SquareLink
-          href='https://gleam.io/p9ua7/pooltogether-newsletter'
-          size={SquareButtonSize.sm}
-          theme={SquareButtonTheme.teal}
-          className='w-44 mt-2'
-        >
-          Subscribe now
-        </SquareLink>
-      }
       bulletPoint1={
         <>
           <strong>The following POOL is valid:</strong>{' '}
