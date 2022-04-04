@@ -94,9 +94,10 @@ export const PoolParty = () => {
 
           <h4 className='uppercase mb-6 mt-20'>This week's missions:</h4>
 
-          <MissionWeek2 current />
+          <MissionWeek3 current />
           <h4 className='uppercase mb-3 mt-20'>Previous missions:</h4>
 
+          <MissionWeek2 />
           <MissionWeek1 />
         </div>
       </div>
@@ -205,7 +206,8 @@ const MissionCard = (props) => {
     task2Button,
     bulletPoint1,
     bulletPoint2,
-    claimLink
+    claimLink1,
+    claimLink2
   } = props
 
   return (
@@ -241,6 +243,17 @@ const MissionCard = (props) => {
             {task1Text} <span className='text-flashy leading-tight font-semibold'>- 1x NFT</span>
           </h6>
           {task1Button && task1Button}
+
+          {claimLink1 && (
+            <SquareLink
+              href={claimLink1}
+              size={SquareButtonSize.sm}
+              theme={SquareButtonTheme.rainbow}
+              className='w-44 mt-2'
+            >
+              <span className='py-1'>Claim now</span>
+            </SquareLink>
+          )}
         </li>
 
         {task2Text && (
@@ -250,20 +263,20 @@ const MissionCard = (props) => {
               {task2Text} <span className='text-flashy leading-tight font-semibold'>- 1x NFT</span>
             </h6>
             {task2Button && task2Button}
+
+            {claimLink2 && (
+              <SquareLink
+                href={claimLink2}
+                size={SquareButtonSize.sm}
+                theme={SquareButtonTheme.rainbow}
+                className='w-44 mt-2'
+              >
+                <span className='py-1'>Claim now</span>
+              </SquareLink>
+            )}
           </li>
         )}
       </ul>
-
-      {claimLink && (
-        <SquareLink
-          href={claimLink}
-          size={SquareButtonSize.sm}
-          theme={SquareButtonTheme.rainbow}
-          className='w-44 mt-2'
-        >
-          <span className='py-1'>Claim now</span>
-        </SquareLink>
-      )}
 
       <ul className='block text-white dark:text-default text-xs pt-8 list-decimal ml-3'>
         <li>
@@ -285,7 +298,7 @@ const MissionWeek1 = (props) => {
       task1Text={<>Have a USDC deposit on Polygon</>}
       task2Text={null}
       bulletPoint1='If you already have a deposit on Polygon you are good to go.'
-      claimLink='https://galaxy.eco/PoolTogether/campaign/GCTKRUUx9o'
+      claimLink1='https://galaxy.eco/PoolTogether/campaign/GCTKRUUx9o'
     />
   )
 }
@@ -295,6 +308,8 @@ const MissionWeek2 = (props) => {
     <MissionCard
       {...props}
       week='2'
+      claimLink1='https://galaxy.eco/PoolTogether/campaign/GC49rUU1Fi'
+      claimLink2='https://galaxy.eco/PoolTogether/campaign/GCTwrUU1kQ'
       startTimestamp={1648494000000} // March 28th @ 3pm EST
       task1Text={
         <>
@@ -363,6 +378,27 @@ const MissionWeek2 = (props) => {
           Subscribe to the community newsletter in one of the five languages, then fill in and
           submit the Gleam form
         </>
+      }
+    />
+  )
+}
+
+const MissionWeek3 = (props) => {
+  return (
+    <MissionCard
+      {...props}
+      week='3'
+      startTimestamp={1649098800000} // April 4th @ 3pm EST
+      task1Text={<>Check if you won prizes at least once this week</>}
+      task1Button={
+        <SquareLink
+          href='https://app.pooltogether.com/prizes'
+          size={SquareButtonSize.sm}
+          theme={SquareButtonTheme.teal}
+          className='w-44 mt-2'
+        >
+          Check prizes
+        </SquareLink>
       }
     />
   )
