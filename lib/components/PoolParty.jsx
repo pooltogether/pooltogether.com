@@ -213,7 +213,7 @@ const MissionCard = (props) => {
   return (
     <div
       className={classnames(
-        'rounded-xl bg-pt-purple-darkest p-4 py-6 xs:p-8 shadow-lg pool-party--box-widths',
+        'rounded-xl bg-pt-purple-darkest p-4 py-6 xs:p-8 shadow-lg pool-party--box-widths mb-4',
         {
           'pool-party--border-flashy': current
         }
@@ -397,10 +397,8 @@ const MissionWeek3 = (props) => {
       }
       bulletPoint1={
         <>
-          <strong>
-            Checking for prizes on Ethereum, Polygon or Avalanche will enter your address prior to
-            the snapshot
-          </strong>{' '}
+          Checking for prizes on Ethereum, Polygon or Avalanche will enter your address prior to the
+          snapshot{' '}
           <div className='opacity-50 font-semibold'>Snapshot: Sunday April 10, 19:00 UTC</div>
         </>
       }
