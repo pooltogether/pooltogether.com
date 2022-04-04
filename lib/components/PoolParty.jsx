@@ -314,13 +314,13 @@ const MissionWeek2 = (props) => {
       task1Text={
         <>
           Hold the POOL
-          <BulletPointAsterisk number='1' /> token
+          <BulletPointAsterisk number='2' /> token
         </>
       }
       task2Text={
         <>
           Subscribe to the PT Newsletter
-          <BulletPointAsterisk number='2' />
+          <BulletPointAsterisk number='3' />
         </>
       }
       bulletPoint1={
