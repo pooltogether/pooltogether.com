@@ -4,7 +4,12 @@ import classnames from 'classnames'
 import Slider from 'react-slick'
 import Link from 'next/link'
 import { add } from 'date-fns'
-import { SquareLink, SquareButtonTheme, SquareButtonSize } from '@pooltogether/react-components'
+import {
+  SquareLink,
+  SquareButton,
+  SquareButtonTheme,
+  SquareButtonSize
+} from '@pooltogether/react-components'
 import { useTranslation } from 'react-i18next'
 import { useInterval } from 'beautiful-react-hooks'
 
@@ -94,9 +99,10 @@ export const PoolParty = () => {
 
           <h4 className='uppercase mb-6 mt-20'>This week's missions:</h4>
 
-          <MissionWeek3 current />
+          <MissionWeek4 current />
           <h4 className='uppercase mb-3 mt-20'>Previous missions:</h4>
 
+          <MissionWeek3 />
           <MissionWeek2 />
           <MissionWeek1 />
         </div>
@@ -139,8 +145,7 @@ export const PoolParty = () => {
 const MissionState = {
   NotStarted: 'NotStarted',
   Started: 'Started',
-  Ended: 'Ended',
-  Claimable: 'Claimable'
+  Ended: 'Ended'
 }
 
 const DateDisplay = (props) => {
@@ -152,9 +157,9 @@ const DateDisplay = (props) => {
     setSeconds(1 + seconds)
   }, 1000)
 
-  if (!current) {
-    return null
-  }
+  // if (!current) {
+  //   return null
+  // }
 
   const startsDate = new Date(startTimestamp)
   const endsDate = add(new Date(startTimestamp), {
@@ -180,7 +185,7 @@ const DateDisplay = (props) => {
     state = MissionState.Ended
     secondsLeft = Math.round((claimableDate.getTime() - Date.now()) / 1000)
   } else {
-    state = MissionState.Claimable
+    return null
   }
 
   return (
@@ -431,14 +436,15 @@ const MissionWeek3 = (props) => {
         </>
       }
       task1Button={
-        <SquareLink
+        <SquareButton
           href='https://app.pooltogether.com/prizes'
           size={SquareButtonSize.sm}
-          theme={SquareButtonTheme.teal}
-          className='w-44 mt-2'
+          theme={SquareButtonTheme.rainbow}
+          className='w-60 mt-2 h-12'
+          disabled
         >
-          Check prizes
-        </SquareLink>
+          Claimable Monday
+        </SquareButton>
       }
       bulletPoint1={
         <>
@@ -447,6 +453,18 @@ const MissionWeek3 = (props) => {
           <div className='opacity-50 font-semibold'>Snapshot: Sunday April 10, 19:00 UTC</div>
         </>
       }
+    />
+  )
+}
+
+const MissionWeek4 = (props) => {
+  return (
+    <MissionCard
+      {...props}
+      week='4'
+      startTimestamp={1649703600000} // April 11th @ 3pm EST
+      task1Text={<>Mission details on Monday ...</>}
+      task1Button={null}
     />
   )
 }
