@@ -170,7 +170,7 @@ const HeroLeft = () => {
             chevron
             size={SquareButtonSize.md}
             theme={SquareButtonTheme.teal}
-            className='mx-auto sm:mx-0 max-w-md mt-2 block sm:w-3/4'
+            className='mx-auto sm:mx-0 max-w-md mt-2 block lg:w-3/4'
           >
             {t('startSavingAndWinning', 'Start saving & winning')}
           </SquareLink>

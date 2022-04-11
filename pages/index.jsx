@@ -9,7 +9,6 @@ import i18nConfig from '../next-i18next.config'
 export async function getStaticProps(context) {
   const { locale } = context
   const translations = await serverSideTranslations(locale, ['common'], i18nConfig)
-  console.log('getStaticProps', { context })
   return {
     props: {
       ...translations

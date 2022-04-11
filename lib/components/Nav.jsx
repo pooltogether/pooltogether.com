@@ -70,7 +70,7 @@ const LanguagePickerDropdown = () => {
   return (
     <DropdownList
       id='language-picker-dropdown'
-      className={classnames('text-pt-purple-light text-sm sm:text-sm')}
+      className={classnames('text-pt-purple-light text-sm sm:text-sm capitalize')}
       label={langs[i18n.language].nativeName}
       formatValue={formatValue}
       onValueSet={(locale) => {
