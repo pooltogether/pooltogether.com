@@ -26,7 +26,7 @@ export const IndexHowItWorks = () => {
 
   return (
     <>
-      <div className='pool-container mx-auto pt-24 pb-8'>
+      <div className='content-max-width mx-auto pt-24 pb-8'>
         <h5 className='uppercase text-highlight-1 pb-4'>{t('howItWorks', 'How it works:')}</h5>
 
         <div className='flex flex-col sm:flex-row w-full justify-between'>

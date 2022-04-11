@@ -38,8 +38,8 @@ export const IndexHeroFeaturedIn = () => {
   }
 
   return (
-    <div id='featured-in' className='text-center w-full' style={{ paddingBottom: '2vh' }}>
-      <div className='pool-container mx-auto'>
+    <div id='featured-in' className='text-center w-full'>
+      <div className='content-max-width mx-auto'>
         <div className='text-default text-sm font-black mt-12 sm:mt-0 mb-4 uppercase'>
           {t('featuredIn', 'Featured in')}
         </div>

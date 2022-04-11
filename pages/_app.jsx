@@ -6,19 +6,15 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 import { DEFAULT_QUERY_OPTIONS } from 'lib/constants'
 import { AllContextProviders } from 'lib/components/AllContextProviders'
 
-import 'assets/styles/index.css'
+import '../styles/globals.css'
+import '@pooltogether/react-components/dist/globals.css'
 
 // pooltogether.com specific:
-import 'assets/styles/layout.css'
-import 'assets/styles/pool.css'
-import 'assets/styles/tweets.css'
-import 'assets/styles/marquee.css'
-
-import 'assets/styles/pool-party.css'
-
-import '@reach/dialog/styles.css'
-import '@reach/menu-button/styles.css'
-import '@reach/tooltip/styles.css'
+import 'styles/layout.css'
+import 'styles/pool.css'
+import 'styles/tweets.css'
+import 'styles/marquee.css'
+import 'styles/pool-party.css'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'

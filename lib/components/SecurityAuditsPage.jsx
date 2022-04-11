@@ -3,18 +3,18 @@ import { useTranslation } from 'next-i18next'
 
 import { BoxLinkWithImage } from 'lib/components/BoxLinkWithImage'
 
-import EtherscanSymbol from 'assets/images/etherscan-symbol.svg'
-import OpenZeppelinSymbol from 'assets/images/openzeppelin-logo.svg'
-import C4Symbol from 'assets/images/c4-logo.svg'
-import GithubBugsSymbol from 'assets/images/github-bugs.svg'
-import GithubDarkSymbol from 'assets/images/github-dark.svg'
+import EtherscanSymbol from 'public/images/etherscan-symbol.svg'
+import OpenZeppelinSymbol from 'public/images/openzeppelin-logo.svg'
+import C4Symbol from 'public/images/c4-logo.svg'
+import GithubBugsSymbol from 'public/images/github-bugs.svg'
+import GithubDarkSymbol from 'public/images/github-dark.svg'
 
 export const SecurityAuditsPage = () => {
   const { t } = useTranslation()
 
   return (
     <>
-      <div className='pool-container mx-auto flex flex-col text-base h-full z-10 relative mb-20'>
+      <div className='content-max-width mx-auto flex flex-col text-base h-full z-10 relative mb-20'>
         <h4 className='mb-6'>{t('audistsAndSecurity', 'Audits & Security')}</h4>
 
         <h5 className='my-0'>OpenZeppelin</h5>

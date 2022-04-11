@@ -469,37 +469,8 @@ li.nav-mobile-listitem {
   width: 100%;
 }
 
-.bg-prize-amount {
-  background-image: url('/bg-prize-amount@2x.png');
-  background-size: contain;
-  background-position: top center;
-  background-repeat: no-repeat;
-
-  /* 16:9 */
-  /* padding-bottom: 56.25%; */
-  /* height: 0; */
-
-  /* padding-bottom: 45%; */
-  /* height: 200px; */
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-@screen xs {
-  .bg-prize-amount {
-    height: 260px;
-  }
-}
-@screen sm {
-  .bg-prize-amount {
-    height: 250px;
-  }
-}
-@screen lg {
-  .bg-prize-amount {
-    height: 290px;
-  }
+.bg-prize-gradient {
+  background: radial-gradient(rgba(76, 36, 159, 0.7) 0, rgba(76, 36, 159, 0) 90%);
 }
 
 .bounce {
@@ -531,31 +502,5 @@ li.nav-mobile-listitem {
   }
   100% {
     transform: scale(1, 1) translateY(0);
-  }
-}
-
-.sm-max-width-hero {
-  max-width: 296px;
-}
-
-@screen xs {
-  .sm-max-width-hero {
-    max-width: 446px;
-  }
-}
-
-.hero-right--width {
-  width: 120%;
-}
-
-@screen sm {
-  .hero-right--width {
-    @apply w-7/12;
-  }
-}
-
-@screen lg {
-  .hero-right--width {
-    @apply w-1/2;
   }
 }

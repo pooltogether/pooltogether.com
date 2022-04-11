@@ -21,7 +21,7 @@ export default function IndexPage(props) {
   return (
     <>
       <Layout>
-        <PageContainer ignoreStyles pageComponent={<Index navHeight={75} />} />
+        <PageContainer ignoreStyles pageComponent={<Index />} />
       </Layout>
     </>
   )

@@ -6,7 +6,7 @@ export const IndexGetInvolved = () => {
   return (
     <>
       <div className='bg-get-involved'>
-        <div className='pool-container mx-auto pt-12 pb-20 sm:pt-10 sm:pb-16'>
+        <div className='content-max-width mx-auto pt-12 pb-20 sm:pt-10 sm:pb-16'>
           <h1 className='text-center'>Get involved</h1>
 
           <div className='flex flex-col items-center rounded-lg p-4 py-12 sm:p-10 mt-8 bg-overlay'>

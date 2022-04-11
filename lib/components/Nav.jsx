@@ -15,10 +15,6 @@ import Cookies from 'js-cookie'
 export const Nav = (props) => {
   const { t } = useTranslation()
 
-  const router = useRouter()
-
-  const developersPage = router.pathname.match('developers')
-
   const navLinkClasses =
     'font-titillium capitalize text-center leading-none rounded-full flex justify-start items-center text-sm lg:text-lg py-3 trans tracking-wider outline-none focus:outline-none active:outline-none text-white'
 
@@ -68,14 +64,14 @@ const LanguagePickerDropdown = () => {
   const langs = getLangs(i18nConfig.locales)
 
   const formatValue = (locale) => (
-    <span className='capitalize'>{`${locale} - ${langs[locale].name}`}</span>
+    <span className='capitalize'>{`${langs[locale].nativeName}`}</span>
   )
 
   return (
     <DropdownList
       id='language-picker-dropdown'
       className={classnames('text-pt-purple-light text-sm sm:text-sm')}
-      label={i18n.language}
+      label={langs[i18n.language].nativeName}
       formatValue={formatValue}
       onValueSet={(locale) => {
         Cookies.set('NEXT_LOCALE', locale)

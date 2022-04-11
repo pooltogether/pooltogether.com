@@ -4,22 +4,22 @@
 // ./pages/_document.js
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { Meta } from 'lib/components/Meta'
+import React from 'react'
 
 class MyDocument extends Document {
-  static async getInitialProps (ctx) {
+  static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx)
     return { ...initialProps }
   }
 
-  render () {
+  render() {
     return (
-      <Html>
+      <Html className='dark'>
         <Head />
 
-        <body className='bg-body theme-dark'>
+        <body className='bg-body text-inverse theme-dark'>
           <Main />
           <NextScript />
-          {/* <script src='/paper.js'></script> */}
         </body>
       </Html>
     )

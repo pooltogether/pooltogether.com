@@ -30,7 +30,7 @@ export const IndexGovernance = () => {
   return (
     <>
       <div className='pb-12 sm:pb-24'>
-        <div className='pool-container mx-auto'>
+        <div className='content-max-width mx-auto'>
           <h5 className='uppercase text-highlight-1 pb-4'>{t('governance')}:</h5>
 
           <div className='flex flex-col'>

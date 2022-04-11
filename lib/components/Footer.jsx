@@ -4,8 +4,6 @@ import Link from 'next/link'
 import { useTranslation } from 'next-i18next'
 import { i18n } from '../../next-i18next.config'
 
-// import MailIcon from 'assets/images/mail-footer.svg'
-
 import {
   TwitterIconSvg,
   DiscordIconSvg,
@@ -48,7 +46,7 @@ export const Footer = () => {
 
   return (
     <>
-      <footer className='footer pool-container w-full text-white text-sm mx-auto'>
+      <footer className='footer content-max-width w-full text-white text-sm mx-auto'>
         <div className='flex flex-col pt-10 lg:pt-20'>
           <div className='pt-6 sm:pt-0 pb-8 flex flex-col sm:flex-row justify-between'>
             <div className='pb-8 sm:pb-0 sm:pr-8'>

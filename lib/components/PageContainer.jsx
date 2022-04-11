@@ -20,7 +20,6 @@ export const PageContainer = (props) => {
     }
   }
 
-  const motionDivClassnames = 'pt-10 sm:pt-20 xl:pt-24 trans'
   const wrapperClassnames = ignoreStyles ? '' : 'min-height-container mx-auto leading-relaxed'
 
   return (
@@ -32,7 +31,6 @@ export const PageContainer = (props) => {
         initial='initial'
         animate='enter'
         exit='exit'
-        className={motionDivClassnames}
       >
         <div className={wrapperClassnames}>{props.pageComponent}</div>
       </motion.div>

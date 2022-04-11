@@ -2,10 +2,10 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import DesktopLogo from '../../assets/images/pooltogether-logo.svg'
-import DesktopLogoDark from '../../assets/images/pooltogether-logo-black.svg'
-import MobileLogo from '../../assets/images/pooltogether-mark--white.svg'
-import MobileLogoDark from '../../assets/images/pooltogether-black-mark.svg'
+import DesktopLogo from '../../public/images/pooltogether-logo.svg'
+import DesktopLogoDark from '../../public/images/pooltogether-logo-black.svg'
+import MobileLogo from '../../public/images/pooltogether-mark--white.svg'
+import MobileLogoDark from '../../public/images/pooltogether-black-mark.svg'
 import classNames from 'classnames'
 
 export const HeaderLogo = (props) => {
