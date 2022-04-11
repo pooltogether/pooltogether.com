@@ -47,7 +47,7 @@ export const Index = (props) => {
         className='w-full flex flex-col justify-between text-center sm:text-left pt-2 sm:pt-20 xl:pt-24'
         style={{ height }}
       >
-        <div className='content-max-width flex flex-col sm:flex-row justify-between mx-auto w-full'>
+        <div className='content-max-width flex flex-col sm:flex-row justify-between mx-auto w-full space-x-4'>
           <div className='w-full sm:w-1/2 mt-6 sm:mt-12'>
             <HeroLeft />
           </div>
