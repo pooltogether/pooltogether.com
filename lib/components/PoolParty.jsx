@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import FeatherIcon from 'feather-icons-react'
 import Head from 'next/head'
 import classnames from 'classnames'
 import Slider from 'react-slick'
@@ -206,6 +207,7 @@ const MissionCard = (props) => {
     current,
     week,
     task1Text,
+    task1Description,
     task1Button,
     task2Text,
     task2Button,
@@ -267,8 +269,11 @@ const MissionCard = (props) => {
               'opacity-60': !current
             })}
           >
-            {task1Text} <span className='text-flashy leading-tight font-semibold'>- 1x NFT</span>{' '}
+            <span className='text-blue'>{task1Text}</span>{' '}
+            <span className='text-flashy leading-tight font-semibold'>- 1x NFT</span>{' '}
           </h6>
+
+          {task1Description && task1Description}
 
           {task1Button && task1Button}
 
@@ -310,7 +315,8 @@ const MissionCard = (props) => {
                 'opacity-60': !current
               })}
             >
-              {task2Text} <span className='text-flashy leading-tight font-semibold'>- 1x NFT</span>
+              <span className='text-blue'>{task2Text}</span>{' '}
+              <span className='text-flashy leading-tight font-semibold'>- 1x NFT</span>
             </h6>
             {task2Button && task2Button}
 
@@ -463,8 +469,35 @@ const MissionWeek4 = (props) => {
       {...props}
       week='4'
       startTimestamp={1649703600000} // April 11th @ 3pm EST
-      task1Text={<>Mission details on Monday ...</>}
+      task1Text={<>Delegate 10$ worth of PTUASDC to a friend using the "Delegatoor" app</>}
+      task1Description={
+        <>
+          <div className='text-pt-purple-light mt-2'>
+            {' '}
+            Use the new{' '}
+            <a href='https://tools.pooltogether.com/delegate' className='text-pt-teal underline'>
+              Deposit Delegator
+            </a>{' '}
+            and share your chances to win prizes with a friend! Delegate at least $10 worth of
+            PoolTogether tickets (PTaUSDC) to be eligible. <br />
+            <a
+              href='https://docs.pooltogether.com/how-to/deposit-delegator'
+              target='_blank'
+              className='text-pt-teal underline flex items-center'
+            >
+              <span>How to delegate & what is the Deposit Delegator</span>
+              <FeatherIcon icon={'external-link'} className='inline-block w-4 h-4 ml-1' />
+            </a>
+          </div>
+        </>
+      }
       task1Button={null}
+      bulletPoint1={
+        <>
+          'Using the Deposit Delegator on Polygon will enter your address prior to the snapshot'
+          <div className='opacity-50 font-semibold'>Snapshot: Sunday April 17, 19:00 UTC</div>
+        </>
+      }
     />
   )
 }
