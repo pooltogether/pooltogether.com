@@ -441,17 +441,17 @@ const MissionWeek3 = (props) => {
           <BulletPointAsterisk number='2' /> at least once this week
         </>
       }
-      task1Button={
-        <SquareButton
-          href='https://app.pooltogether.com/prizes'
-          size={SquareButtonSize.sm}
-          theme={SquareButtonTheme.rainbow}
-          className='w-60 mt-2 h-12'
-          disabled
-        >
-          Claimable Monday
-        </SquareButton>
-      }
+      // task1Button={
+      //   <SquareButton
+      //     href='https://app.pooltogether.com/prizes'
+      //     size={SquareButtonSize.sm}
+      //     theme={SquareButtonTheme.rainbow}
+      //     className='w-60 mt-2 h-12'
+      //     disabled
+      //   >
+      //     Claimable Monday
+      //   </SquareButton>
+      // }
       bulletPoint1={
         <>
           Checking for prizes on Ethereum, Polygon or Avalanche will enter your address prior to the
@@ -459,6 +459,7 @@ const MissionWeek3 = (props) => {
           <div className='opacity-50 font-semibold'>Snapshot: Sunday April 10, 19:00 UTC</div>
         </>
       }
+      claimLink1='https://galaxy.eco/PoolTogether/campaign/GCPibUU4Za'
     />
   )
 }
