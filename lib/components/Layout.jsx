@@ -43,8 +43,9 @@ export const Layout = (props) => {
           <Nav />
         </div>
       </div>
+      {children}
 
-      {isIndex &&
+      {/* {isIndex &&
         React.cloneElement(children, {
           ...props
         })}
@@ -68,7 +69,7 @@ export const Layout = (props) => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
       <div className='footer--container'>
         <Footer />
       </div>

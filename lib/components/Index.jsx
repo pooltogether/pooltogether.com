@@ -3,7 +3,7 @@ import classnames from 'classnames'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { SquareLink, SquareButtonTheme, SquareButtonSize } from '@pooltogether/react-components'
-import { useTranslation, Trans } from 'react-i18next'
+import { useTranslation, Trans } from 'next-i18next'
 
 import { WeeklyPrizeAmount } from 'lib/components/WeeklyPrizeAmount'
 import { IndexHeroFeaturedIn } from 'lib/components/IndexHeroFeaturedIn'
@@ -101,7 +101,7 @@ const HeroRight = () => {
             <WeeklyPrizeAmount />
           </h1>
           <div className='uppercase font-semibold text-default text-xxs xs:text-lg lg:text-xl -mt-2'>
-            {t('inWeeklyPrizes', 'In weekly prizes!')}
+            {t('inWeeklyPrizes')}
           </div>
         </div>
         <div className='font-semibold text-default-soft pt-4 xs:pt-0 mb-12 text-xxs w-full xs:w-1/2 mx-auto'>

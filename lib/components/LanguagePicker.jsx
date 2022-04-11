@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import { i18n } from 'react-i18next'
+import { i18n } from 'next-i18next'
 import { DropdownInputGroup } from 'lib/components/DropdownInputGroup'
 
 {

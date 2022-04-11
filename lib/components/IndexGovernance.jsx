@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import FeatherIcon from 'feather-icons-react'
 import { useInView } from 'react-intersection-observer'
 import { motion, useAnimation } from 'framer-motion'
-import { useTranslation, Trans } from 'react-i18next'
+import { useTranslation, Trans } from 'next-i18next'
 
 import { GridItem } from 'lib/components/GridItem'
 

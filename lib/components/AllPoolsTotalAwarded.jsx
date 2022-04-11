@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { ethers } from 'ethers'
 
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'next-i18next'
 import { PoolDataContext } from 'lib/components/contextProviders/PoolDataContextProvider'
 import { displayAmountInEther } from 'lib/utils/displayAmountInEther'
 import { normalizeTo18Decimals } from 'lib/utils/normalizeTo18Decimals'

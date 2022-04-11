@@ -13,10 +13,6 @@
   color: rgba(108, 49, 245, 0.4);
 }
 
-:focus {
-  outline: rgba(147, 106, 241, 1) dashed 1px;
-}
-
 * {
   --flashyGradient: linear-gradient(40deg, #ff62cc 10%, #f7fe0c 40%, #2af787 60%, #00f0d0 80%);
   --luckiestWinnersGradient: linear-gradient(40deg, #4c249f 0%, #1c3857 50%, #650380 100%);
@@ -214,39 +210,6 @@ input[type='submit'][disabled] {
 
 .footer .img-link:hover {
   @apply border-0 no-underline;
-}
-
-.nav--pool-logo-container {
-  position: relative;
-}
-
-@screen sm {
-  .nav--pool-logo-container {
-    left: 0;
-  }
-}
-
-@screen sm {
-  .pool-logo {
-    width: 154px !important;
-  }
-}
-
-@screen sm {
-  .pool-logo:after {
-    width: 154px !important;
-  }
-}
-
-.pool-logo {
-  height: 52px;
-  position: relative;
-  z-index: 1;
-  width: 133px;
-}
-
-.pool-logo:hover {
-  background-color: transparent;
 }
 
 .banner-text {

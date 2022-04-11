@@ -9,7 +9,6 @@ import { AllContextProviders } from 'lib/components/AllContextProviders'
 import 'assets/styles/index.css'
 
 // pooltogether.com specific:
-import '../i18n'
 import 'assets/styles/layout.css'
 import 'assets/styles/pool.css'
 import 'assets/styles/tweets.css'
@@ -23,6 +22,10 @@ import '@reach/tooltip/styles.css'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import { appWithTranslation, i18n } from 'next-i18next'
+import i18nConfig from '../next-i18next.config'
+
+import Locize from 'i18next-locize-backend'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -39,7 +42,7 @@ if (process.env.NEXT_JS_SENTRY_DSN) {
   })
 }
 
-function MyApp ({ Component, pageProps, router }) {
+function MyApp({ Component, pageProps, router }) {
   useEffect(() => {
     const handleExitComplete = () => {
       if (typeof window !== 'undefined') {
@@ -54,6 +57,10 @@ function MyApp ({ Component, pageProps, router }) {
   }, [])
 
   useEffect(() => {
+    i18n.use(Locize).init(i18nConfig)
+  }, [])
+
+  useEffect(() => {
     const fathomSiteId = process.env.NEXT_JS_FATHOM_SITE_ID
 
     if (fathomSiteId) {
@@ -62,7 +69,7 @@ function MyApp ({ Component, pageProps, router }) {
         includedDomains: ['pooltogether.com', 'www.pooltogether.com']
       })
 
-      function onRouteChangeComplete (url) {
+      function onRouteChangeComplete(url) {
         if (window['fathom']) {
           window['fathom'].trackPageview()
         }
@@ -87,4 +94,4 @@ function MyApp ({ Component, pageProps, router }) {
   )
 }
 
-export default MyApp
+export default appWithTranslation(MyApp, i18nConfig)

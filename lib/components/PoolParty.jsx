@@ -5,7 +5,7 @@ import Slider from 'react-slick'
 import Link from 'next/link'
 import { add } from 'date-fns'
 import { SquareLink, SquareButtonTheme, SquareButtonSize } from '@pooltogether/react-components'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'next-i18next'
 import { useInterval } from 'beautiful-react-hooks'
 
 import { DiscordIconSvg } from 'lib/components/SvgComponents'

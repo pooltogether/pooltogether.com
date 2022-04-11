@@ -20,9 +20,7 @@ export const PageContainer = (props) => {
     }
   }
 
-  const motionDivClassnames = ignoreStyles
-    ? ''
-    : `pt-10 sm:pt-20 xl:pt-24 trans ${router.pathname === '/developers' ? 'bg-developers' : ''}`
+  const motionDivClassnames = 'pt-10 sm:pt-20 xl:pt-24 trans'
   const wrapperClassnames = ignoreStyles ? '' : 'min-height-container mx-auto leading-relaxed'
 
   return (
