@@ -42,7 +42,7 @@ export const PoolParty = () => {
         <meta property='twitter:description' content={description} />
       </Head>
 
-      <div className='font-averta'>
+      <div className=''>
         <div className='header content-max-width w-full z-30 mx-auto'>
           <div className='flex justify-between items-center w-full xs:px-4 sm:px-0 py-8 sm:py-4 mx-auto'>
             <div className='hidden xs:block sm:w-64'>

@@ -17,7 +17,7 @@ class MyDocument extends Document {
       <Html className='dark'>
         <Head />
 
-        <body className='bg-body text-inverse theme-dark'>
+        <body className='bg-body text-inverse theme-dark font-averta'>
           <Main />
           <NextScript />
         </body>

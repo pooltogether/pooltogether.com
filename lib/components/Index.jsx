@@ -47,12 +47,12 @@ export const Index = (props) => {
         className='w-full flex flex-col justify-between text-center sm:text-left pt-2 sm:pt-20 xl:pt-24 mb-8 space-y-2'
         style={{ height }}
       >
-        <div className='content-max-width flex flex-col sm:flex-row justify-between mx-auto w-full space-x-4'>
+        <div className='content-max-width flex flex-col sm:flex-row justify-between mx-auto w-full sm:space-x-4'>
           <div className='w-full sm:w-1/2 mt-6 sm:mt-12'>
             <HeroLeft />
           </div>
 
-          <div className='w-full sm:w-1/2 mt-10 sm:mt-0 xs:pl-8'>
+          <div className='w-full sm:w-1/2 mt-10 sm:mt-0 sm:pl-8 sm:pt-10'>
             <HeroRight />
           </div>
         </div>
@@ -147,7 +147,7 @@ const HeroLeft = () => {
       >
         {t('winBySaving', 'Win by saving.')}
       </span>
-      <p className='text-accent-1 mt-2 sm:mt-4 mx-auto sm:mx-0 max-w-md'>
+      <p className='text-accent-1 mt-2 sm:mt-4 mx-auto sm:mx-0 max-w-sm'>
         <Trans
           t={t}
           i18nKey='poolTogetherIsAPrizeSavingsProtocol'
@@ -170,7 +170,7 @@ const HeroLeft = () => {
             chevron
             size={SquareButtonSize.md}
             theme={SquareButtonTheme.teal}
-            className='mx-auto sm:mx-0 max-w-md mt-2 block lg:w-3/4'
+            className='mx-auto sm:mx-0 max-w-sm mt-2 block lg:w-3/4'
           >
             {t('startSavingAndWinning', 'Start saving & winning')}
           </SquareLink>
