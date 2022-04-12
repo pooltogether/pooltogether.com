@@ -7,11 +7,11 @@
   "scripts": {
     "reinstall": "rm -rf .next out ./node_modules && yarn cache clean && yarn",
     "dev": "npm-run-all --parallel start:app",
-    "build": "next build && yarn postexport",
-    "prebuild": "cp ./node_modules/@pooltogether/contract-list-schema/src/contract-list.schema.json public/",
+    "prebuild": "node pre-build.js",
+    "build": "next build",
+    "postbuild": "node post-build.js",
     "dist": "yarn build",
     "start:app": "PORT=3000 node --max-old-space-size=8192 server.js",
-    "postexport": "node post-export.js",
     "distrelease": "yarn dist",
     "start": "NODE_ENV=production PORT=80 node server.js",
     "debug:server": "NODE_OPTIONS='--inspect' next dev"
@@ -69,6 +69,7 @@
     "react-query-devtools": "^2.6.3",
     "react-slick": "^0.28.1",
     "react-spring-bottom-sheet": "^3.4.0",
+    "sharp": "^0.30.3",
     "slick-carousel": "^1.8.1",
     "tailwindcss": "^2.2.15",
     "webpack": "5.47.0"

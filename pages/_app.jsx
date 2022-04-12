@@ -79,6 +79,8 @@ function MyApp({ Component, pageProps, router }) {
     }
   }, [])
 
+  if (!i18n.isInitialized) return null
+
   return (
     <>
       <QueryClientProvider client={queryClient}>

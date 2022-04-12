@@ -14,7 +14,7 @@ module.exports = {
   ns: ['common'], // the namespaces needs to be listed here, to make sure they got preloaded
   defaultNS: 'common',
   serializeConfig: false, // because of the custom use i18next plugin. Forces us to pass config to appWithTranslation and serverSideTranslations
-  fallbackLng: 'en',
-  debug: true
+  fallbackLng: 'en'
+  // debug: true
   // saveMissing: true, // to not saveMissing to true for production
 }
