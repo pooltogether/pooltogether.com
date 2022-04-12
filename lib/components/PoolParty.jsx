@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import FeatherIcon from 'feather-icons-react'
 import Head from 'next/head'
 import classnames from 'classnames'
 import Slider from 'react-slick'
@@ -94,9 +95,10 @@ export const PoolParty = () => {
 
           <h4 className='uppercase mb-6 mt-20'>This week's missions:</h4>
 
-          <MissionWeek3 current />
+          <MissionWeek4 current />
           <h4 className='uppercase mb-3 mt-20'>Previous missions:</h4>
 
+          <MissionWeek3 />
           <MissionWeek2 />
           <MissionWeek1 />
         </div>
@@ -139,8 +141,7 @@ export const PoolParty = () => {
 const MissionState = {
   NotStarted: 'NotStarted',
   Started: 'Started',
-  Ended: 'Ended',
-  Claimable: 'Claimable'
+  Ended: 'Ended'
 }
 
 const DateDisplay = (props) => {
@@ -152,9 +153,9 @@ const DateDisplay = (props) => {
     setSeconds(1 + seconds)
   }, 1000)
 
-  if (!current) {
-    return null
-  }
+  // if (!current) {
+  //   return null
+  // }
 
   const startsDate = new Date(startTimestamp)
   const endsDate = add(new Date(startTimestamp), {
@@ -180,7 +181,7 @@ const DateDisplay = (props) => {
     state = MissionState.Ended
     secondsLeft = Math.round((claimableDate.getTime() - Date.now()) / 1000)
   } else {
-    state = MissionState.Claimable
+    return null
   }
 
   return (
@@ -201,6 +202,7 @@ const MissionCard = (props) => {
     current,
     week,
     task1Text,
+    task1Description,
     task1Button,
     task2Text,
     task2Button,
@@ -262,8 +264,11 @@ const MissionCard = (props) => {
               'opacity-60': !current
             })}
           >
-            {task1Text} <span className='text-flashy leading-tight font-semibold'>- 1x NFT</span>{' '}
+            <span className='text-blue'>{task1Text}</span>{' '}
+            <span className='text-flashy leading-tight font-semibold'>- 1x NFT</span>{' '}
           </h6>
+
+          {task1Description && task1Description}
 
           {task1Button && task1Button}
 
@@ -305,7 +310,8 @@ const MissionCard = (props) => {
                 'opacity-60': !current
               })}
             >
-              {task2Text} <span className='text-flashy leading-tight font-semibold'>- 1x NFT</span>
+              <span className='text-blue'>{task2Text}</span>{' '}
+              <span className='text-flashy leading-tight font-semibold'>- 1x NFT</span>
             </h6>
             {task2Button && task2Button}
 
@@ -430,21 +436,62 @@ const MissionWeek3 = (props) => {
           <BulletPointAsterisk number='2' /> at least once this week
         </>
       }
-      task1Button={
-        <SquareLink
-          href='https://app.pooltogether.com/prizes'
-          size={SquareButtonSize.sm}
-          theme={SquareButtonTheme.teal}
-          className='w-44 mt-2'
-        >
-          Check prizes
-        </SquareLink>
-      }
+      // task1Button={
+      //   <SquareButton
+      //     href='https://app.pooltogether.com/prizes'
+      //     size={SquareButtonSize.sm}
+      //     theme={SquareButtonTheme.rainbow}
+      //     className='w-60 mt-2 h-12'
+      //     disabled
+      //   >
+      //     Claimable Monday
+      //   </SquareButton>
+      // }
       bulletPoint1={
         <>
           Checking for prizes on Ethereum, Polygon or Avalanche will enter your address prior to the
           snapshot{' '}
           <div className='opacity-50 font-semibold'>Snapshot: Sunday April 10, 19:00 UTC</div>
+        </>
+      }
+      claimLink1='https://galaxy.eco/PoolTogether/campaign/GCPibUU4Za'
+    />
+  )
+}
+
+const MissionWeek4 = (props) => {
+  return (
+    <MissionCard
+      {...props}
+      week='4'
+      startTimestamp={1649703600000} // April 11th @ 3pm EST
+      task1Text={<>Delegate 10$ worth of PTUASDC to a friend using the "Delegatoor" app</>}
+      task1Description={
+        <>
+          <div className='text-pt-purple-light mt-2'>
+            {' '}
+            Use the new{' '}
+            <a href='https://tools.pooltogether.com/delegate' className='text-pt-teal underline'>
+              Deposit Delegator
+            </a>{' '}
+            and share your chances to win prizes with a friend! Delegate at least $10 worth of
+            PoolTogether tickets (PTaUSDC) to be eligible. <br />
+            <a
+              href='https://docs.pooltogether.com/how-to/deposit-delegator'
+              target='_blank'
+              className='text-pt-teal underline flex items-center'
+            >
+              <span>How to delegate & what is the Deposit Delegator</span>
+              <FeatherIcon icon={'external-link'} className='inline-block w-4 h-4 ml-1' />
+            </a>
+          </div>
+        </>
+      }
+      task1Button={null}
+      bulletPoint1={
+        <>
+          'Using the Deposit Delegator on Polygon will enter your address prior to the snapshot'
+          <div className='opacity-50 font-semibold'>Snapshot: Sunday April 17, 19:00 UTC</div>
         </>
       }
     />
