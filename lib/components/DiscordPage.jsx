@@ -77,7 +77,7 @@ export const DiscordPage = () => {
 
   return (
     <div>
-      <div className='pool-container mx-auto flex flex-col items-center text-base z-10 relative pt-20'>
+      <div className='content-max-width mx-auto flex flex-col items-center text-base z-10 relative pt-20'>
         <div className='my-2 text-white hover:text-green w-20'>
           <DiscordIconSvg className='my-auto' />
         </div>

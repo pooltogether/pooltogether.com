@@ -28,7 +28,7 @@ export const IndexAnalytics = () => {
   return (
     <>
       <div className='py-12 sm:py-24'>
-        <div className='pool-container mx-auto pt-24 pb-8 relative'>
+        <div className='content-max-width mx-auto pt-24 pb-8 relative'>
           <div className=' absolute t-0 r-0 l-0 b-0 w-full  items-center flex justify-center text-7xl text-white z-20'>
             FINISH IMPLEMENTING!
             <div
@@ -55,24 +55,24 @@ export const IndexAnalytics = () => {
           </motion.div>
         </div>
 
-        <div className='flex items-center w-full sm-max-width-hero mx-auto text-center'>
-          <SquareLink
-            chevron
-            Link={Link}
-            size={SquareButtonSize.md}
-            theme={SquareButtonTheme.teal}
-            href='https://info.pooltogether.com'
-            className='mx-auto block'
-          >
-            See more protocol analytics
-          </SquareLink>
+        <div className='flex items-center w-full mx-auto text-center'>
+          <Link href='https://info.pooltogether.com'>
+            <SquareLink
+              chevron
+              size={SquareButtonSize.md}
+              theme={SquareButtonTheme.teal}
+              className='mx-auto block'
+            >
+              See more protocol analytics
+            </SquareLink>
+          </Link>
         </div>
       </div>
     </>
   )
 }
 
-function AnalyticsGridItem (props) {
+function AnalyticsGridItem(props) {
   return (
     <div className='text-center leading-none mb-10 sm:mb-0'>
       <h1 className='text-7xl'>{props.value}</h1>

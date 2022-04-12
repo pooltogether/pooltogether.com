@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react'
 import classnames from 'classnames'
 import Link from 'next/link'
-import { useTranslation } from 'react-i18next'
-import { supportedLanguages } from '../../i18n'
-
-// import MailIcon from 'assets/images/mail-footer.svg'
+import { useTranslation } from 'next-i18next'
+import { i18n } from '../../next-i18next.config'
 
 import {
   TwitterIconSvg,
@@ -12,6 +10,9 @@ import {
   GithubIconSvg,
   MediumIconSvg
 } from 'lib/components/SvgComponents'
+import Cookies from 'js-cookie'
+import { useRouter } from 'next/router'
+import { HeaderLogo } from 'lib/components/HeaderLogo'
 
 export const Footer = () => {
   const { t } = useTranslation()
@@ -45,22 +46,26 @@ export const Footer = () => {
 
   return (
     <>
-      <footer className='footer pool-container w-full text-white text-sm mx-auto'>
+      <footer className='footer content-max-width w-full text-white text-sm mx-auto'>
         <div className='flex flex-col pt-10 lg:pt-20'>
           <div className='pt-6 sm:pt-0 pb-8 flex flex-col sm:flex-row justify-between'>
             <div className='pb-8 sm:pb-0 sm:pr-8'>
-              <Link href='/' as='/' shallow>
-                <a title={'Back to home'} className='pool-logo border-0 trans block w-full' />
-              </Link>
+              <HeaderLogo />
             </div>
 
             <nav className='flex flex-col sm:flex-row space-x-0 space-y-4 sm:space-x-10 sm:space-y-0'>
               <div className='flex flex-col'>
                 <span className='font-semibold block'>{t('ecosystem', 'Ecosystem')}</span>
                 <ul>
-                  <FooterLink href='https://tools.pooltogether.com'>{t('tools', 'Tools')}</FooterLink>
-                  <FooterLink href='/developers'>{t('developers', 'Developers')}</FooterLink>
-                  <FooterLink href='/audits'>{t('security', 'Security')}</FooterLink>
+                  <FooterLink href='https://tools.pooltogether.com'>
+                    {t('tools', 'Tools')}
+                  </FooterLink>
+                  <FooterLink href='https://dev.pooltogether.com'>
+                    {t('developers', 'Developers')}
+                  </FooterLink>
+                  <FooterLink href='https://docs.pooltogether.com/faq/risks/audits'>
+                    {t('security', 'Security')}
+                  </FooterLink>
                   <FooterLink href='https://docs.pooltogether.com/faq/general'>FAQ</FooterLink>
                   <FooterLink href='/brand-assets'>{t('assets', 'Assets')}</FooterLink>
                   <FooterLink href='https://gov.pooltogether.com/'>{t('governance')}</FooterLink>
@@ -113,12 +118,9 @@ export const Footer = () => {
 
               <div className='flex flex-col'>
                 <span className='font-semibold block pb-2'>{t('language', 'Language')}</span>
-
                 <ul className='flex flex-col space-y-2'>
-                  {supportedLanguages.map((sl) => (
-                    <LanguageTrigger key={sl.locale} locale={sl.locale}>
-                      {sl.language}
-                    </LanguageTrigger>
+                  {i18n.locales.map((locale) => (
+                    <LanguageTrigger key={locale} locale={locale} />
                   ))}
                 </ul>
               </div>
@@ -157,13 +159,18 @@ export const Footer = () => {
 
 const LanguageTrigger = (props) => {
   const { children, locale } = props
-  const { i18n } = useTranslation()
+  const intl = new Intl.DisplayNames([locale], { type: 'language' })
+  const router = useRouter()
   return (
     <button
-      onClick={() => i18n.changeLanguage(locale)}
-      className='text-pt-teal hover:text-white transition-colors text-left'
+      onClick={() => {
+        Cookies.set('NEXT_LOCALE', locale)
+        const { pathname, asPath, query } = router
+        router.push({ pathname, query }, asPath, { locale })
+      }}
+      className='text-pt-teal hover:text-white transition-colors text-left capitalize'
     >
-      {children}
+      {intl.of(locale)}
     </button>
   )
 }

@@ -23,10 +23,10 @@ export const WeeklyPrizeAmount = (props) => {
     return <ThemedClipSpinner />
   }
 
-  // add hard-coded V4 amount (as of oct 16, 2021) over 1 week:
-  // $14,980 * 7
-  // 104860
-  const totalV3AndV4PrizesWeekly = Number(totalPrizes) + 104860
+  // add hard-coded V4 amount (as of apr 11, 2021) over 1 week:
+  // $11,160 * 7
+  // 78120
+  const totalV3AndV4PrizesWeekly = Number(totalPrizes) + 78120
 
-  return formatNumbers(totalV3AndV4PrizesWeekly)
+  return <b>{formatNumbers(totalV3AndV4PrizesWeekly)}</b>
 }

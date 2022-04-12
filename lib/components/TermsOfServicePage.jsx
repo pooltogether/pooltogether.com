@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react'
 
 export const TermsOfServicePage = class _TermsOfServicePage extends PureComponent {
-  render () {
+  render() {
     return (
       <>
-        <div className='pool-container mx-auto flex flex-col text-base h-full z-10 relative mb-20'>
+        <div className='content-max-width mx-auto flex flex-col text-base h-full z-10 relative mb-20'>
           <h2 className='mb-6'>Terms of Service</h2>
 
           <p>

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import FeatherIcon from 'feather-icons-react'
 import { useInView } from 'react-intersection-observer'
 import { motion, useAnimation } from 'framer-motion'
-import { useTranslation, Trans } from 'react-i18next'
+import { useTranslation, Trans } from 'next-i18next'
 
 import { GridItem } from 'lib/components/GridItem'
 
@@ -30,7 +30,7 @@ export const IndexGovernance = () => {
   return (
     <>
       <div className='pb-12 sm:pb-24'>
-        <div className='pool-container mx-auto'>
+        <div className='content-max-width mx-auto'>
           <h5 className='uppercase text-highlight-1 pb-4'>{t('governance')}:</h5>
 
           <div className='flex flex-col'>

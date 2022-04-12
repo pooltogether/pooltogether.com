@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { motion, useAnimation } from 'framer-motion'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'next-i18next'
 
 import { GridItem } from 'lib/components/GridItem'
 
-import OrangeLogo from 'assets/images/orange@2x.png'
-
-import { ZapperSvg, ZerionSvg } from 'lib/components/SvgComponents'
+import OrangeLogo from '../../public/images/orange-logo.png'
+import ZapperLogo from '../../public/images/zapper-logo.svg'
+import ZerionLogo from '../../public/images/zerion-logo.svg'
 
 export const IndexEcosystem = () => {
   const controls = useAnimation()
@@ -33,7 +33,7 @@ export const IndexEcosystem = () => {
   return (
     <>
       <div className='py-16'>
-        <div className='pool-container mx-auto'>
+        <div className='content-max-width mx-auto'>
           <h5 className='uppercase text-highlight-1 pb-4'>{t('ecosystem', 'Ecosystem')}:</h5>
 
           <div className='flex flex-col'>
@@ -57,7 +57,7 @@ export const IndexEcosystem = () => {
                 altBg
                 title={'Zapper'}
                 description={t('joinOnZapper', 'Join PoolTogether using this portal to DeFi.')}
-                svg={<ZapperSvg />}
+                src={ZapperLogo}
                 url='https://www.zapper.fi'
                 buttonText='Open Zapper'
               />
@@ -66,7 +66,7 @@ export const IndexEcosystem = () => {
                 altBg
                 title={'Zerion'}
                 description={t('joinOnZerion', 'Access DeFi & view your PoolTogether deposits.')}
-                svg={<ZerionSvg />}
+                src={ZerionLogo}
                 url='https://zerion.io/'
                 buttonText='Open Zerion'
               />
@@ -75,7 +75,7 @@ export const IndexEcosystem = () => {
                 altBg
                 title={'Orange'}
                 description={t('joinOnOrange', 'Smart L2 wallet focusing on the Polygon network.')}
-                img={OrangeLogo}
+                src={OrangeLogo}
                 url='https://orangewallet.app/'
                 buttonText='Open Orange'
               />

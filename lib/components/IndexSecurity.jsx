@@ -2,7 +2,7 @@ import React from 'react'
 
 import { ButtonLink } from 'lib/components/ButtonLink'
 
-import SecurityLocksSvg from 'assets/images/security-art-locks@2x.png'
+import SecurityLocksSvg from 'public/images/security-art-locks@2x.png'
 
 export const IndexSecurity = () => {
   const securityImg = <img src={SecurityLocksSvg} className='max-w-full' />
@@ -10,7 +10,7 @@ export const IndexSecurity = () => {
   return (
     <>
       <div>
-        <div className='pool-container mx-auto pt-12 pb-6 sm:pt-20 sm:pb-16'>
+        <div className='content-max-width mx-auto pt-12 pb-6 sm:pt-20 sm:pb-16'>
           <div className='flex items-center justify-between'>
             <div className='flex flex-col sm:w-2/3'>
               <h1 className='leading-10 sm:leading-tight'>

@@ -32,7 +32,7 @@ export const IndexTweetSlideshow = () => {
         breakpoint: 1480,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToScroll: 1
         }
       },
       {

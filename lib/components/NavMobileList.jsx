@@ -14,16 +14,6 @@ const variants = {
 
 const links = [
   {
-    label: 'Home',
-    href: '/',
-    as: '/'
-  },
-  {
-    label: 'Developers',
-    href: '/developers',
-    as: '/developers'
-  },
-  {
     label: 'App',
     href: 'https://app.pooltogether.com',
     as: 'https://app.pooltogether.com'
@@ -33,16 +23,25 @@ const links = [
     href: 'https://tools.pooltogether.com',
     as: 'https://tools.pooltogether.com'
   },
+  {
+    label: 'DAO',
+    href: 'https://dao.pooltogether.com',
+    as: 'https://dao.pooltogether.com'
+  },
+  {
+    label: 'Developers',
+    href: 'https://dev.pooltogether.com',
+    as: 'https://dev.pooltogether.com'
+  },
+  {
+    label: 'Governance',
+    href: 'https://gov.pooltogether.com',
+    as: 'https://gov.pooltogether.com'
+  }
 ]
 
 export const NavMobileList = (props) => (
-  <motion.ul
-    variants={variants}
-    className={classnames(
-      'nav-mobile-list',
-      props.className,
-    )}
-  >
+  <motion.ul variants={variants} className={classnames('nav-mobile-list', props.className)}>
     {links.map((link, index) => (
       <NavMobileListItem
         toggleOpen={props.toggleOpen}
@@ -53,4 +52,3 @@ export const NavMobileList = (props) => (
     ))}
   </motion.ul>
 )
-

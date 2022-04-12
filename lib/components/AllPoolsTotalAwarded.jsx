@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { ethers } from 'ethers'
 
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'next-i18next'
 import { PoolDataContext } from 'lib/components/contextProviders/PoolDataContextProvider'
 import { displayAmountInEther } from 'lib/utils/displayAmountInEther'
 import { normalizeTo18Decimals } from 'lib/utils/normalizeTo18Decimals'
@@ -16,11 +16,6 @@ export const AllPoolsTotalAwarded = (props) => {
   pools?.forEach((_pool) => {
     if (_pool.cumulativePrizeNet) {
       const decimals = _pool?.underlyingCollateralDecimals
-      // const poolCumNorm = normalizeTo18Decimals(
-      //   _pool.cumulativePrizeNet,
-      //   decimals
-      // )
-      // console.log(poolCumNorm.toString())
       const cumulativePrizeNetForPool = normalizeTo18Decimals(_pool.cumulativePrizeNet, decimals)
 
       cumulativePrizeNetAllPools = cumulativePrizeNetAllPools.add(cumulativePrizeNetForPool)

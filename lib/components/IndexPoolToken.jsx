@@ -6,7 +6,7 @@ export const IndexPoolToken = (props) => {
   return (
     <>
       <div id='token' className='bg-darkened text-center pt-12 pb-6 sm:pt-20 sm:pb-16'>
-        <div className='pool-container mx-auto'>
+        <div className='content-max-width mx-auto'>
           <h1 className='text-center'>
             <span
               role='img'

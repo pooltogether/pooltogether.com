@@ -4,6 +4,19 @@ import { Layout } from 'lib/components/Layout'
 import { PageContainer } from 'lib/components/PageContainer'
 import { DiscordPage } from 'lib/components/DiscordPage'
 
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import i18nConfig from '../next-i18next.config'
+
+export async function getStaticProps(context) {
+  const { locale } = context
+  const translations = await serverSideTranslations(locale, ['common'], i18nConfig)
+  return {
+    props: {
+      ...translations
+    }
+  }
+}
+
 const Discord = () => {
   return (
     <Layout>

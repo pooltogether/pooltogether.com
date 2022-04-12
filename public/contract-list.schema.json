@@ -1,0 +1,229 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://pooltogether.com/contract-list.schema.json",
+  "title": "Generic Contract List",
+  "description": "Generic schema for a list of contracts & ABIs",
+  "definitions": {
+    "Version": {
+      "type": "object",
+      "description": "Semantic versioning",
+      "examples": [
+        {
+          "major": 1,
+          "minor": 0,
+          "patch": 0
+        }
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "major": {
+          "type": "integer",
+          "description": "The major version. Must be incremented when contracts are removed from the list or contract addresses are changed.",
+          "minimum": 0,
+          "examples": [1, 2]
+        },
+        "minor": {
+          "type": "integer",
+          "description": "The minor version. Must be incremented when new contracts are added to the contract list.",
+          "minimum": 0,
+          "examples": [0, 1]
+        },
+        "patch": {
+          "type": "integer",
+          "description": "The patch version. Must be incremented for bug fixes in the contract list.",
+          "minimum": 0,
+          "examples": [0, 1]
+        }
+      },
+      "required": ["major", "minor", "patch"]
+    },
+    "TagIdentifier": {
+      "type": "string",
+      "description": "The unique identifier of a tag",
+      "minLength": 1,
+      "maxLength": 10,
+      "pattern": "^[\\w]+$",
+      "examples": ["factory", "unlinked"]
+    },
+    "TagDefinition": {
+      "type": "object",
+      "description": "Definition of a tag that can be associated with a contract via its identifier",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the tag",
+          "pattern": "^[ \\w]+$",
+          "minLength": 1,
+          "maxLength": 30
+        },
+        "description": {
+          "type": "string",
+          "description": "A user-friendly description of the tag",
+          "pattern": "^[ \\w\\.,:]+$",
+          "minLength": 1,
+          "maxLength": 200
+        }
+      },
+      "required": ["name", "description"],
+      "examples": [
+        {
+          "name": "Factory",
+          "description": "A contract that creates other contracts"
+        }
+      ]
+    },
+    "ExtensionIdentifier": {
+      "type": "string",
+      "description": "The name of a contract extension property",
+      "minLength": 1,
+      "maxLength": 30,
+      "pattern": "^[\\w]+$",
+      "examples": ["factory_output", "is_linked"]
+    },
+    "ExtensionValue": {},
+    "ABIIdentifier": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "$ref": "#/definitions/Version"
+        },
+        "type": {
+          "$ref": "#/definitions/ContractType"
+        }
+      },
+      "required": ["version", "type"],
+      "examples": [
+        {
+          "version": "1.0.0",
+          "type": "PRIZE_POOL"
+        }
+      ]
+    },
+    "ABI": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "ContractType": {
+      "type": "string",
+      "description": "The type of contract.",
+      "examples": ["PrizePool", "ERC20", "Ticket"]
+    },
+    "ContractIdentifier": {
+      "type": "object",
+      "description": "The unique identifier for a contract",
+      "properties": {
+        "chainId": {
+          "type": "integer",
+          "description": "The chain ID of the Ethereum network where this contract is deployed",
+          "minimum": 1,
+          "examples": [1, 42]
+        },
+        "address": {
+          "type": "string",
+          "description": "The checksummed address of the contract on the specified chain ID",
+          "pattern": "^0x[a-fA-F0-9]{40}$"
+        }
+      },
+      "examples": [
+        {
+          "chainId": 1,
+          "address": "0xde9ec95d7708B8319CCca4b8BC92c0a3B70bf416"
+        }
+      ],
+      "required": ["chainId", "address"]
+    },
+    "Contract": {
+      "allOf": [
+        { "$ref": "#/definitions/ABIIdentifier" },
+        { "$ref": "#/definitions/ContractIdentifier" },
+        {
+          "type": "object",
+          "description": "Data required to interact with and describe a contract.",
+          "properties": {
+            "tags": {
+              "type": "array",
+              "description": "An array of tag identifiers associated with the contract; tags are defined at the contract list level",
+              "items": {
+                "$ref": "#/definitions/TagIdentifier"
+              }
+            },
+            "extensions": {
+              "type": "object",
+              "description": "An object containing any arbitrary metadata",
+              "propertyNames": {
+                "$ref": "#/definitions/ExtensionIdentifier"
+              },
+              "additionalProperties": {
+                "$ref": "#/definitions/ExtensionValue"
+              },
+              "maxProperties": 10,
+              "examples": [
+                {
+                  "is_factory": true,
+                  "factory_output": {
+                    "$ref": "#/definitions/ABIIdentifier"
+                  }
+                },
+                {
+                  "prizePool": {
+                    "$ref": "#/definitions/ContractIdentifier"
+                  }
+                }
+              ]
+            },
+            "abi": {
+              "$ref": "#/definitions/ABI"
+            }
+          },
+          "required": ["abi"]
+        }
+      ]
+    }
+  },
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the contract list",
+      "minLength": 1,
+      "maxLength": 30,
+      "pattern": "^[\\w ]+$",
+      "examples": ["PoolTogether Governance Contracts", "Tsunami USDC Linked Prize Pool"]
+    },
+    "version": {
+      "$ref": "#/definitions/Version"
+    },
+    "tags": {
+      "type": "object",
+      "description": "A mapping of tag identifiers to their name and description",
+      "propertyNames": {
+        "$ref": "#/definitions/TagIdentifier"
+      },
+      "additionalProperties": {
+        "$ref": "#/definitions/TagDefinition"
+      },
+      "maxProperties": 20,
+      "examples": [
+        {
+          "stablecoin": {
+            "name": "Stablecoin",
+            "description": "A token with value pegged to another asset"
+          }
+        }
+      ]
+    },
+    "contracts": {
+      "type": "array",
+      "description": "The contracts that make up this contract list",
+      "items": {
+        "$ref": "#/definitions/Contract"
+      },
+      "minItems": 1
+    }
+  },
+  "required": ["name", "version", "tags", "contracts"]
+}

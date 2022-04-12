@@ -8,11 +8,10 @@ import { add } from 'date-fns'
 import {
   CopyIcon,
   SquareLink,
-  SquareButton,
   SquareButtonTheme,
   SquareButtonSize
 } from '@pooltogether/react-components'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'next-i18next'
 import { useInterval } from 'beautiful-react-hooks'
 
 import { DiscordIconSvg } from 'lib/components/SvgComponents'
@@ -48,8 +47,8 @@ export const PoolParty = () => {
         <meta property='twitter:description' content={description} />
       </Head>
 
-      <div className='font-averta'>
-        <div className='header pool-container w-full z-30 mx-auto'>
+      <div className=''>
+        <div className='header content-max-width w-full z-30 mx-auto'>
           <div className='flex justify-between items-center w-full xs:px-4 sm:px-0 py-8 sm:py-4 mx-auto'>
             <div className='hidden xs:block sm:w-64'>
               <HeaderLogo centered={false} />

@@ -28,24 +28,24 @@ body {
   min-height: 600px;
 }
 
-.pool-container {
+.content-max-width {
   max-width: 86vw;
 }
 
 @screen sm {
-  .pool-container {
+  .content-max-width {
     max-width: 90vw;
   }
 }
 
 @screen sm {
-  .pool-container {
+  .content-max-width {
     max-width: 880px;
   }
 }
 
 @screen lg {
-  .pool-container {
+  .content-max-width {
     max-width: 1200px;
   }
 }

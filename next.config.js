@@ -1,65 +1,30 @@
-const chalk = require("chalk")
-const withImages = require('next-images')
-const webpack = require('webpack')
-const _ = require('lodash')
-
-const isProduction = process.env.NODE_ENV === 'production'
-
+/** @type {import('next').NextConfig} */
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
 
+const { i18n } = require('./next-i18next.config');
+const chalk = require("chalk")
+const path = require('path');
+
 const nextConfig = {
-  images: {
-    disableStaticImages: true
+  reactStrictMode: true,
+  async redirects() {
+    return [
+      {
+        source: '/prizes',
+        destination: '/prizes/PT-cDAI',
+        permanent: true,
+      },
+      {
+        source: '/pool-party',
+        destination: '/pool-party/season1',
+        permanent: false,
+      }
+    ]
   },
-  future: {
-    webpack5: true,
-    strictPostcssConfiguration: true
-  },
-  inlineImageLimit: 48, // make it tiny so that it doesn't inline,
+  i18n
 }
 
-const allConfig =
-  withBundleAnalyzer(
-  withImages(
-    {
-      ...nextConfig,
-      async redirects() {
-        return [
-          {
-            source: '/prizes',
-            destination: '/prizes/PT-cDAI',
-            permanent: true,
-          },
-          {
-            source: '/pool-party',
-            destination: '/pool-party/season1',
-            permanent: false,
-          }
-        ]
-      },
-      publicRuntimeConfig: {
-        locizeProjectId: process.env.NEXT_JS_LOCIZE_PROJECT_ID,
-        locizeApiKey: process.env.NEXT_JS_LOCIZE_DEV_API_KEY,
-        locizeVersion: process.env.NEXT_JS_LOCIZE_VERSION
-      },
-      webpack(config, options) {
-        config.mode = isProduction ? 'production' : 'development'
-        config.devtool = isProduction ? 'hidden-source-map' : 'eval-source-map'
+module.exports = withBundleAnalyzer(nextConfig)
 
-        var appVars = _.keys(process.env).filter(key => key.startsWith('NEXT_JS_'))
-
-        config.plugins.push(new webpack.EnvironmentPlugin(_.pick(process.env, appVars)))
-
-        return config
-      }
-    }
-  ))
-
-console.log('')
-console.log(chalk.green('Using next.js config options:'))
-console.log(allConfig)
-console.log('')
-
-module.exports = allConfig

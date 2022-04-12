@@ -6,9 +6,11 @@ import { motion, useAnimation } from 'framer-motion'
 import { BoxLinkWithIcon } from 'lib/components/BoxLinkWithIcon'
 import { GridItemBrandAssets } from 'lib/components/GridItemBrandAssets'
 
-import PoolTogetherPurpleWordmarkImg from 'assets/images/pooltogether-wordmark--purple-gradient.svg'
-import PoolTogetherWhiteMarkImg from 'assets/images/pooltogether-mark--white.svg'
-import PoolTogetherTrophyImg from 'assets/images/pooltogether-trophy--detailed.svg'
+import PoolTogetherPurpleWordmarkImg from '../../public/images/pooltogether-wordmark--purple-gradient.svg'
+import PoolTogetherWhiteMarkImg from '../../public/images/pooltogether-mark--white.svg'
+import PoolTogetherTrophyImg from '../../public/images/pooltogether-trophy--detailed.svg'
+
+console.log({ PoolTogetherPurpleWordmarkImg, PoolTogetherWhiteMarkImg, PoolTogetherTrophyImg })
 
 export const BrandAssets = (props) => {
   const controls = useAnimation()
@@ -22,7 +24,7 @@ export const BrandAssets = (props) => {
 
   return (
     <>
-      <div className='pool-container mx-auto flex flex-col text-base h-full z-10 relative mb-20'>
+      <div className='content-max-width mx-auto flex flex-col text-base h-full z-10 relative mb-20'>
         <h4 className='my-0 uppercase text-default'>Brand Assets</h4>
 
         <h2 className='mb-6'>PoolTogether Logos &amp; Usage</h2>
@@ -73,9 +75,9 @@ export const BrandAssets = (props) => {
               hidden: {}
             }}
           >
-            <GridItemBrandAssets title={`Purple Wordmark`} img={PoolTogetherPurpleWordmarkImg} />
-            <GridItemBrandAssets title={`White Mark`} img={PoolTogetherWhiteMarkImg} />
-            <GridItemBrandAssets title={`Trophy`} img={PoolTogetherTrophyImg} />
+            <GridItemBrandAssets title={`Purple Wordmark`} src={PoolTogetherPurpleWordmarkImg} />
+            <GridItemBrandAssets title={`White Mark`} src={PoolTogetherWhiteMarkImg} />
+            <GridItemBrandAssets title={`Trophy`} src={PoolTogetherTrophyImg} />
           </motion.div>
         </div>
 

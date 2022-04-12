@@ -7,7 +7,6 @@
 .envrc.example
 
 /abis
-/assets/images
 /functions-out
 /i18n
 /node_modules
