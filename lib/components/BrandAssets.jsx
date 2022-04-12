@@ -6,9 +6,11 @@ import { motion, useAnimation } from 'framer-motion'
 import { BoxLinkWithIcon } from 'lib/components/BoxLinkWithIcon'
 import { GridItemBrandAssets } from 'lib/components/GridItemBrandAssets'
 
-import PoolTogetherPurpleWordmarkImg from 'public/images/pooltogether-wordmark--purple-gradient.svg'
-import PoolTogetherWhiteMarkImg from 'public/images/pooltogether-mark--white.svg'
-import PoolTogetherTrophyImg from 'public/images/pooltogether-trophy--detailed.svg'
+import PoolTogetherPurpleWordmarkImg from '../../public/images/pooltogether-wordmark--purple-gradient.svg'
+import PoolTogetherWhiteMarkImg from '../../public/images/pooltogether-mark--white.svg'
+import PoolTogetherTrophyImg from '../../public/images/pooltogether-trophy--detailed.svg'
+
+console.log({ PoolTogetherPurpleWordmarkImg, PoolTogetherWhiteMarkImg, PoolTogetherTrophyImg })
 
 export const BrandAssets = (props) => {
   const controls = useAnimation()

@@ -3,9 +3,10 @@ import { motion } from 'framer-motion'
 import { useRouter } from 'next/router'
 
 import { Meta } from 'lib/components/Meta'
+import classNames from 'classnames'
 
 export const PageContainer = (props) => {
-  const { ignoreStyles } = props
+  const { className, ignoreStyles } = props
   const router = useRouter()
 
   const transition = { duration: 0.2, ease: [0.43, 0.13, 0.23, 0.96] }
@@ -20,7 +21,9 @@ export const PageContainer = (props) => {
     }
   }
 
-  const wrapperClassnames = ignoreStyles ? '' : 'min-height-container mx-auto leading-relaxed'
+  const wrapperClassnames = ignoreStyles
+    ? ''
+    : 'min-height-container mx-auto leading-relaxed pt-2 sm:pt-20 xl:pt-24'
 
   return (
     <>
@@ -32,7 +35,7 @@ export const PageContainer = (props) => {
         animate='enter'
         exit='exit'
       >
-        <div className={wrapperClassnames}>{props.pageComponent}</div>
+        <div className={classNames(className, wrapperClassnames)}>{props.pageComponent}</div>
       </motion.div>
     </>
   )

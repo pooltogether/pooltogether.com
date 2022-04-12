@@ -147,7 +147,7 @@ const HeroLeft = () => {
       >
         {t('winBySaving', 'Win by saving.')}
       </span>
-      <p className='text-accent-1 mt-2 sm:mt-4 mx-auto sm:mx-0 max-w-sm'>
+      <p className='text-accent-1 mt-2 sm:mt-4 mx-auto sm:mx-0 max-w-md'>
         <Trans
           t={t}
           i18nKey='poolTogetherIsAPrizeSavingsProtocol'

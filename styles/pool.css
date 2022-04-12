@@ -470,7 +470,7 @@ li.nav-mobile-listitem {
 }
 
 .bg-prize-gradient {
-  background: radial-gradient(rgba(76, 36, 159, 0.7) 0, rgba(76, 36, 159, 0) 90%);
+  background: radial-gradient(#2b1c6e 70%, #2b1c6e00 100%);
 }
 
 .bounce {

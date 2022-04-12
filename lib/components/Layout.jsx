@@ -29,6 +29,7 @@ export const Layout = (props) => {
           <Nav />
         </div>
       </div>
+
       {children}
 
       <div className='footer--container'>

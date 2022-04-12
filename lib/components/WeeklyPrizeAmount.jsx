@@ -28,5 +28,5 @@ export const WeeklyPrizeAmount = (props) => {
   // 78120
   const totalV3AndV4PrizesWeekly = Number(totalPrizes) + 78120
 
-  return formatNumbers(totalV3AndV4PrizesWeekly)
+  return <b>{formatNumbers(totalV3AndV4PrizesWeekly)}</b>
 }
