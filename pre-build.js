@@ -1,6 +1,7 @@
 const fs = require('fs')
 
-console.log('copying Contract list JSON schema to public/')
+const chalk = require('chalk')
+console.log(chalk.blue('Pre Build'))
 
 fs.copyFile(
   './node_modules/@pooltogether/contract-list-schema/src/contract-list.schema.json',
