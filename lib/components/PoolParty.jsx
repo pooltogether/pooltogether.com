@@ -5,7 +5,12 @@ import classnames from 'classnames'
 import Slider from 'react-slick'
 import Link from 'next/link'
 import { add } from 'date-fns'
-import { SquareLink, SquareButtonTheme, SquareButtonSize } from '@pooltogether/react-components'
+import {
+  CopyIcon,
+  SquareLink,
+  SquareButtonTheme,
+  SquareButtonSize
+} from '@pooltogether/react-components'
 import { useTranslation } from 'next-i18next'
 import { useInterval } from 'beautiful-react-hooks'
 
@@ -485,6 +490,14 @@ const MissionWeek4 = (props) => {
               <FeatherIcon icon={'external-link'} className='inline-block w-4 h-4 ml-1' />
             </a>
           </div>
+          <div className='text-pt-purple-light mt-3'>
+            Don't know who to delegate to? We suggest delegating to Unchain Ukraine:
+            0xb37b3b78022E6964fe80030C9161525880274010
+            <CopyIcon
+              className='ml-2 my-auto w-4 h-4'
+              text={'0xb37b3b78022E6964fe80030C9161525880274010'}
+            />
+          </div>
         </>
       }
       task1Button={null}
@@ -492,6 +505,12 @@ const MissionWeek4 = (props) => {
         <>
           'Using the Deposit Delegator on Polygon will enter your address prior to the snapshot'
           <div className='opacity-50 font-semibold'>Snapshot: Sunday April 17, 19:00 UTC</div>
+        </>
+      }
+      bulletPoint2={
+        <>
+          If you delegated using app.pooltogether.com you will need to also delegate via the new
+          Deposit Delegator on <a href='https://tools.pooltogether.com'>tools.pooltogether.com</a>
         </>
       }
     />
