@@ -24,11 +24,6 @@ const links = [
     as: 'https://tools.pooltogether.com'
   },
   {
-    label: 'DAO',
-    href: 'https://dao.pooltogether.com',
-    as: 'https://dao.pooltogether.com'
-  },
-  {
     label: 'Developers',
     href: 'https://dev.pooltogether.com',
     as: 'https://dev.pooltogether.com'
@@ -37,6 +32,11 @@ const links = [
     label: 'Governance',
     href: 'https://gov.pooltogether.com',
     as: 'https://gov.pooltogether.com'
+  },
+  {
+    label: 'Help',
+    href: 'https://docs.pooltogether.com',
+    as: 'https://docs.pooltogether.com'
   }
 ]
 

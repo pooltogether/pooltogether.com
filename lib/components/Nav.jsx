@@ -23,8 +23,8 @@ export const Nav = (props) => {
       <nav className='justify-end items-center hidden sm:flex w-2/3 space-x-8'>
         <LanguagePickerDropdown />
 
-        <Link href='https://dao.pooltogether.com' as='https://dao.pooltogether.com' shallow>
-          <a className={classnames(navLinkClasses, 'text-white hover:text-highlight-2')}>DAO</a>
+        <Link href='https://docs.pooltogether.com' as='https://docs.pooltogether.com' shallow>
+          <a className={classnames(navLinkClasses, 'text-white hover:text-highlight-2')}>Help</a>
         </Link>
 
         <Link href='https://gov.pooltogether.com' as='https://gov.pooltogether.com' shallow>
