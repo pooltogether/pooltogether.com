@@ -36,18 +36,17 @@ export const GridItem = (props) => {
 
           <div className='sm:mt-2 text-accent-1 text-lg'>{description}</div>
 
-          <Link href={url}>
-            <SquareLink
-              chevron
-              size={SquareButtonSize.md}
-              theme={SquareButtonTheme.tealOutline}
-              className='w-2/3 mt-4 text-center'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              {buttonText || 'Open'}
-            </SquareLink>
-          </Link>
+          <SquareLink
+            chevron
+            size={SquareButtonSize.md}
+            theme={SquareButtonTheme.tealOutline}
+            className='w-2/3 mt-4 text-center'
+            href={url}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            {buttonText || 'Open'}
+          </SquareLink>
         </div>
       </motion.div>
     </>

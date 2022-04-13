@@ -18,7 +18,7 @@ export const Footer = () => {
   const { t } = useTranslation()
 
   const linkListItemClassNames = 'my-2'
-  const linkClassNames = 'trans trans-fast text-accent-1 no-underline'
+  const linkClassNames = 'trans trans-fast text-accent-1 no-underline capitalize'
 
   const FooterLink = (props) => (
     <>
@@ -69,8 +69,8 @@ export const Footer = () => {
                   <FooterLink href='https://docs.pooltogether.com/faq/general'>FAQ</FooterLink>
                   <FooterLink href='/brand-assets'>{t('assets', 'Assets')}</FooterLink>
                   <FooterLink href='https://gov.pooltogether.com/'>{t('governance')}</FooterLink>
-                  <FooterLink href='https://www.notion.so/PoolTogether-Knowledge-Base-fa721ccefa3242eaabd125a8415acd27'>
-                    {t('knowledgeBase', 'Knowledge Base')}
+                  <FooterLink href='https://docs.pooltogether.com/'>
+                    {t('userDocs', 'User docs')}
                   </FooterLink>
                 </ul>
               </div>
