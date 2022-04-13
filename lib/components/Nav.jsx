@@ -24,7 +24,9 @@ export const Nav = (props) => {
         <LanguagePickerDropdown />
 
         <Link href='https://docs.pooltogether.com' as='https://docs.pooltogether.com' shallow>
-          <a className={classnames(navLinkClasses, 'text-white hover:text-highlight-2')}>Help</a>
+          <a className={classnames(navLinkClasses, 'text-white hover:text-highlight-2')}>
+            {t('help', 'Help')}
+          </a>
         </Link>
 
         <Link href='https://gov.pooltogether.com' as='https://gov.pooltogether.com' shallow>

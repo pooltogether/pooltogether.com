@@ -20,21 +20,25 @@ const links = [
   },
   {
     label: 'Tools',
+    i18nKey: 'tools',
     href: 'https://tools.pooltogether.com',
     as: 'https://tools.pooltogether.com'
   },
   {
     label: 'Developers',
+    i18nKey: 'developers',
     href: 'https://dev.pooltogether.com',
     as: 'https://dev.pooltogether.com'
   },
   {
     label: 'Governance',
+    i18nKey: 'governance',
     href: 'https://gov.pooltogether.com',
     as: 'https://gov.pooltogether.com'
   },
   {
     label: 'Help',
+    i18nKey: 'help',
     href: 'https://docs.pooltogether.com',
     as: 'https://docs.pooltogether.com'
   }

@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { useTranslation } from 'next-i18next'
 
 const variants = {
   open: {
@@ -23,6 +24,7 @@ const colors = ['#ff77e1', '#69FEB8', '#17e1fd', '#ffeb77', '#7FB3FF']
 
 export const NavMobileListItem = ({ link, index, toggleOpen }) => {
   const style = { color: `${colors[index]}` }
+  const { t } = useTranslation()
 
   return (
     <>
@@ -35,7 +37,7 @@ export const NavMobileListItem = ({ link, index, toggleOpen }) => {
       >
         <Link href={link.href} as={link.as}>
           <a onClick={toggleOpen} style={style}>
-            {link.label}
+            {link.i18nKey ? t(link.i18nKey) : link.label}
           </a>
         </Link>
       </motion.li>
