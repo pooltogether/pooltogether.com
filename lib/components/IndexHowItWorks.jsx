@@ -64,7 +64,7 @@ export const IndexHowItWorks = () => {
               description={t('evenIfYouDontWin', `Even if you don't win, keep all of your money!`)}
             />
 
-            <div className='relative bg-green z-20 text-center text-3xl font-black leading-none w-full h-14 mt-8 sm:mt-0 -ml-1 sm:ml-0'>
+            <div className='relative bg-green z-20 text-center text-2xl font-black leading-none w-full h-14 mt-8 sm:mt-0 -ml-1 sm:ml-0'>
               <div
                 className='flex justify-center flex-col bg-secondary absolute w-full h-full z-10'
                 style={{ left: 10, top: 10 }}

@@ -8,6 +8,7 @@ import { add } from 'date-fns'
 import {
   CopyIcon,
   SquareLink,
+  SquareButton,
   SquareButtonTheme,
   SquareButtonSize
 } from '@pooltogether/react-components'
@@ -100,9 +101,10 @@ export const PoolParty = () => {
 
           <h4 className='uppercase mb-6 mt-20'>This week's missions:</h4>
 
-          <MissionWeek4 current />
+          <MissionWeek5 current />
           <h4 className='uppercase mb-3 mt-20'>Previous missions:</h4>
 
+          <MissionWeek4 />
           <MissionWeek3 />
           <MissionWeek2 />
           <MissionWeek1 />
@@ -214,7 +216,8 @@ const MissionCard = (props) => {
     bulletPoint1,
     bulletPoint2,
     claimLink1,
-    claimLink2
+    claimLink2,
+    claimLink2Expired
   } = props
 
   return (
@@ -321,14 +324,15 @@ const MissionCard = (props) => {
             {task2Button && task2Button}
 
             {claimLink2 && (
-              <SquareLink
+              <SquareButton
                 href={claimLink2}
                 size={SquareButtonSize.sm}
                 theme={SquareButtonTheme.rainbow}
                 className='w-44 mt-2'
+                disabled={claimLink2Expired}
               >
                 <span className='py-1'>Claim now</span>
-              </SquareLink>
+              </SquareButton>
             )}
           </li>
         )}
@@ -364,6 +368,7 @@ const MissionWeek2 = (props) => {
     <MissionCard
       {...props}
       week='2'
+      claimLink2Expired
       claimLink1='https://galaxy.eco/PoolTogether/campaign/GC49rUU1Fi'
       claimLink2='https://galaxy.eco/PoolTogether/campaign/GCTwrUU1kQ'
       startTimestamp={1648494000000} // March 28th @ 3pm EST
@@ -510,6 +515,24 @@ const MissionWeek4 = (props) => {
         <>
           If you delegated using app.pooltogether.com you will need to also delegate via the new
           Deposit Delegator on <a href='https://tools.pooltogether.com'>tools.pooltogether.com</a>
+        </>
+      }
+      claimLink1='https://galaxy.eco/PoolTogether/campaign/GCsGBUUnvs'
+    />
+  )
+}
+
+const MissionWeek5 = (props) => {
+  return (
+    <MissionCard
+      {...props}
+      week='5'
+      startTimestamp={1650308400000} // April 18th @ 3pm EST
+      task1Text={<>Held a V4 deposit for the last 14 days on Polygon, Avalanche or Ethereum</>}
+      bulletPoint1={
+        <>
+          Must be PoolTogether V4, which is currently found at{' '}
+          <a href='https://app.pooltogether.com'>app.pooltogether.com</a>
         </>
       }
     />
