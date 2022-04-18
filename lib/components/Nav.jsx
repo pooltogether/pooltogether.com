@@ -23,29 +23,33 @@ export const Nav = (props) => {
       <nav className='justify-end items-center hidden sm:flex w-2/3 space-x-8'>
         <LanguagePickerDropdown />
 
-        <Link href='https://docs.pooltogether.com' as='https://docs.pooltogether.com' shallow>
-          <a className={classnames(navLinkClasses, 'text-white hover:text-highlight-2')}>
-            {t('help', 'Help')}
-          </a>
-        </Link>
+        <a
+          href='https://docs.pooltogether.com'
+          className={classnames(navLinkClasses, 'text-white hover:text-highlight-2')}
+        >
+          {t('help', 'Help')}
+        </a>
 
-        <Link href='https://gov.pooltogether.com' as='https://gov.pooltogether.com' shallow>
-          <a className={classnames(navLinkClasses, 'text-white hover:text-highlight-2')}>
-            {t('governance')}
-          </a>
-        </Link>
+        <a
+          href='https://gov.pooltogether.com'
+          className={classnames(navLinkClasses, 'text-white hover:text-highlight-2')}
+        >
+          {t('governance')}
+        </a>
 
-        <Link href='https://dev.pooltogether.com' as='https://dev.pooltogether.com' shallow>
-          <a className={classnames(navLinkClasses, 'text-white hover:text-highlight-2')}>
-            {t('developers', 'Developers')}
-          </a>
-        </Link>
+        <a
+          href='https://dev.pooltogether.com'
+          className={classnames(navLinkClasses, 'text-white hover:text-highlight-2')}
+        >
+          {t('developers', 'Developers')}
+        </a>
 
-        <Link href='https://tools.pooltogether.com' as='https://tools.pooltogether.com' shallow>
-          <a className={classnames(navLinkClasses, 'text-white hover:text-highlight-2')}>
-            {t('tools', 'Tools')}
-          </a>
-        </Link>
+        <a
+          href='https://tools.pooltogether.com'
+          className={classnames(navLinkClasses, 'text-white hover:text-highlight-2')}
+        >
+          {t('tools', 'Tools')}
+        </a>
 
         <SquareLink
           chevron

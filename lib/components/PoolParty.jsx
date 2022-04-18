@@ -491,8 +491,7 @@ const MissionWeek4 = (props) => {
             </a>
           </div>
           <div className='text-pt-purple-light mt-3'>
-            Don't know who to delegate to? We suggest delegating to Unchain Ukraine:
-            0xb37b3b78022E6964fe80030C9161525880274010
+            Don't know who to delegate to? We suggest delegating to Unchain Ukraine: 0xb37b...4010
             <CopyIcon
               className='ml-2 my-auto w-4 h-4'
               text={'0xb37b3b78022E6964fe80030C9161525880274010'}

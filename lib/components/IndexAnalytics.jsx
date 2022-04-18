@@ -56,16 +56,15 @@ export const IndexAnalytics = () => {
         </div>
 
         <div className='flex items-center w-full mx-auto text-center'>
-          <Link href='https://info.pooltogether.com'>
-            <SquareLink
-              chevron
-              size={SquareButtonSize.md}
-              theme={SquareButtonTheme.teal}
-              className='mx-auto block'
-            >
-              See more protocol analytics
-            </SquareLink>
-          </Link>
+          <SquareLink
+            href='https://info.pooltogether.com'
+            chevron
+            size={SquareButtonSize.md}
+            theme={SquareButtonTheme.teal}
+            className='mx-auto block'
+          >
+            See more protocol analytics
+          </SquareLink>
         </div>
       </div>
     </>

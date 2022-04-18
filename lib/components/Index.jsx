@@ -165,16 +165,15 @@ const HeroLeft = () => {
         />
       </p>
       <div className='mt-4 sm:mt-8 mb-4 sm:mb-0 mx-auto sm:mx-0 text-center'>
-        <Link href='https://app.pooltogether.com'>
-          <SquareLink
-            chevron
-            size={SquareButtonSize.md}
-            theme={SquareButtonTheme.teal}
-            className='mx-auto sm:mx-0 max-w-sm mt-2 block lg:w-3/4'
-          >
-            {t('startSavingAndWinning', 'Start saving & winning')}
-          </SquareLink>
-        </Link>
+        <SquareLink
+          href='https://app.pooltogether.com'
+          chevron
+          size={SquareButtonSize.md}
+          theme={SquareButtonTheme.teal}
+          className='mx-auto sm:mx-0 max-w-sm mt-2 block lg:w-3/4'
+        >
+          {t('startSavingAndWinning', 'Start saving & winning')}
+        </SquareLink>
       </div>
     </>
   )
