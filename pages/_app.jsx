@@ -31,10 +31,10 @@ const queryClient = new QueryClient({
   }
 })
 
-if (process.env.NEXT_JS_SENTRY_DSN) {
+if (process.env.NEXT_PUBLIC_SENTRY_DSN) {
   Sentry.init({
-    dsn: process.env.NEXT_JS_SENTRY_DSN,
-    release: process.env.NEXT_JS_RELEASE_VERSION
+    dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
+    release: process.env.NEXT_PUBLIC_RELEASE_VERSION
   })
 }
 
@@ -57,10 +57,10 @@ function MyApp({ Component, pageProps, router }) {
   }, [])
 
   useEffect(() => {
-    const fathomSiteId = process.env.NEXT_JS_FATHOM_SITE_ID
+    const fathomSiteId = process.env.NEXT_PUBLIC_FATHOM_SITE_ID
 
     if (fathomSiteId) {
-      Fathom.load(process.env.NEXT_JS_FATHOM_SITE_ID, {
+      Fathom.load(process.env.NEXT_PUBLIC_FATHOM_SITE_ID, {
         url: 'https://goose.pooltogether.com/script.js',
         includedDomains: ['pooltogether.com', 'www.pooltogether.com']
       })
