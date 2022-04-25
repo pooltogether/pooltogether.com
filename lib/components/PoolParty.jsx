@@ -533,7 +533,7 @@ const MissionWeek5 = (props) => {
           <a href='https://app.pooltogether.com'>app.pooltogether.com</a>
         </>
       }
-      claimLink1='https://galaxy.eco/PoolTogether/campaign/GC9rsUU43o'
+      claimLink1='https://galaxy.eco/PoolTogether/campaign/GCsvBUUn5R'
     />
   )
 }
