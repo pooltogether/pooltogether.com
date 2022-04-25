@@ -4,10 +4,10 @@ import { useRouter } from 'next/router'
 
 import { Meta } from 'lib/components/Meta'
 import classNames from 'classnames'
+import { PageHead } from 'lib/components/PageHead'
 
 export const PageContainer = (props) => {
   const { className, ignoreStyles } = props
-  const router = useRouter()
 
   const transition = { duration: 0.2, ease: [0.43, 0.13, 0.23, 0.96] }
 
@@ -28,6 +28,7 @@ export const PageContainer = (props) => {
   return (
     <>
       <Meta title={props.pageTitle} description={props.pageDescription} />
+      <PageHead />
       <motion.div
         variants={variants}
         transition={transition}

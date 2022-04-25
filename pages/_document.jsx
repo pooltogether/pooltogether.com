@@ -3,7 +3,6 @@
 
 // ./pages/_document.js
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { Meta } from 'lib/components/Meta'
 import React from 'react'
 
 class MyDocument extends Document {

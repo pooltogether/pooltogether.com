@@ -1,5 +1,4 @@
 import React from 'react'
-import { ThemeContextProvider } from '@pooltogether/react-components'
 
 import { AuthControllerContextProvider } from 'lib/components/contextProviders/AuthControllerContextProvider'
 
@@ -8,9 +7,7 @@ export function AllContextProviders(props) {
 
   return (
     <>
-      <AuthControllerContextProvider>
-        <ThemeContextProvider>{children}</ThemeContextProvider>
-      </AuthControllerContextProvider>
+      <AuthControllerContextProvider>{children}</AuthControllerContextProvider>
     </>
   )
 }
