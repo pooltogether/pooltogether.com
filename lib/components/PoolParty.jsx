@@ -101,9 +101,10 @@ export const PoolParty = () => {
 
           <h4 className='uppercase mb-6 mt-20'>This week's missions:</h4>
 
-          <MissionWeek5 current />
+          <MissionWeek6 current />
           <h4 className='uppercase mb-3 mt-20'>Previous missions:</h4>
 
+          <MissionWeek5 />
           <MissionWeek4 />
           <MissionWeek3 />
           <MissionWeek2 />
@@ -216,8 +217,7 @@ const MissionCard = (props) => {
     bulletPoint1,
     bulletPoint2,
     claimLink1,
-    claimLink2,
-    claimLink2Expired
+    claimLink2
   } = props
 
   return (
@@ -329,7 +329,6 @@ const MissionCard = (props) => {
                 size={SquareButtonSize.sm}
                 theme={SquareButtonTheme.rainbow}
                 className='w-44 mt-2'
-                disabled={claimLink2Expired}
               >
                 <span className='py-1'>Claim now</span>
               </SquareButton>
@@ -368,7 +367,6 @@ const MissionWeek2 = (props) => {
     <MissionCard
       {...props}
       week='2'
-      claimLink2Expired
       claimLink1='https://galaxy.eco/PoolTogether/campaign/GC49rUU1Fi'
       claimLink2='https://galaxy.eco/PoolTogether/campaign/GCTwrUU1kQ'
       startTimestamp={1648494000000} // March 28th @ 3pm EST
@@ -535,6 +533,29 @@ const MissionWeek5 = (props) => {
           <a href='https://app.pooltogether.com'>app.pooltogether.com</a>
         </>
       }
+      claimLink1='https://galaxy.eco/PoolTogether/campaign/GC9rsUU43o'
+    />
+  )
+}
+
+const MissionWeek6 = (props) => {
+  return (
+    <MissionCard
+      {...props}
+      week='6'
+      startTimestamp={1650913200000} // April 18th @ 3pm EST
+      task1Text={
+        <>
+          Claimed a prize during the Campaign (between 19:00 UTC March 21st and 19:00 UTC May 1st)
+        </>
+      }
+      bulletPoint1={
+        <>
+          Only valid for accounts who have claimed a prize between 19:00 UTC March 21st and 19:00
+          UTC May 1st on Polygon, Avalanche or Ethereum
+        </>
+      }
+      claimLink1='https://galaxy.eco/PoolTogether/campaign/GC9rsUU43o'
     />
   )
 }
