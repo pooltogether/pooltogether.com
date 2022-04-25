@@ -545,14 +545,12 @@ const MissionWeek6 = (props) => {
       week='6'
       startTimestamp={1650913200000} // April 18th @ 3pm EST
       task1Text={
-        <>
-          Claimed a prize during the Campaign (between 19:00 UTC March 21st and 19:00 UTC May 1st)
-        </>
+        <>Claim a prize during the campaign (between 19:00 UTC March 21st and 19:00 UTC May 1st)</>
       }
       bulletPoint1={
         <>
-          Only valid for accounts who have claimed a prize between 19:00 UTC March 21st and 19:00
-          UTC May 1st on Polygon, Avalanche or Ethereum
+          Only valid for accounts who will claim or have claimed a prize between 19:00 UTC March
+          21st and 19:00 UTC May 1st on Polygon, Avalanche or Ethereum
         </>
       }
       claimLink1='https://galaxy.eco/PoolTogether/campaign/GC9rsUU43o'
