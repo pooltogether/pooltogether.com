@@ -553,7 +553,6 @@ const MissionWeek6 = (props) => {
           21st and 19:00 UTC May 1st on Polygon, Avalanche or Ethereum
         </>
       }
-      claimLink1='https://galaxy.eco/PoolTogether/campaign/GC9rsUU43o'
     />
   )
 }
