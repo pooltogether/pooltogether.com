@@ -76,7 +76,7 @@ export const DiscordPage = () => {
   }, [inviteToken])
 
   return (
-    <div>
+    <div className='pb-20'>
       <div className='content-max-width mx-auto flex flex-col items-center text-base z-10 relative pt-20'>
         <div className='my-2 text-white hover:text-green w-20'>
           <DiscordIconSvg className='my-auto' />
@@ -117,7 +117,7 @@ export const DiscordPage = () => {
           <a target='_blank' className='text-xs' href='https://hcaptcha.com/privacy'>
             Privacy Policy
           </a>{' '}
-          and
+          and{' '}
           <a target='_blank' className='text-xs' href='https://hcaptcha.com/terms'>
             Terms of Service
           </a>{' '}
