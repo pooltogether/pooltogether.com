@@ -567,9 +567,19 @@ const MissionWeek7 = (props) => {
       task1Text={
         <>
           <span className='font-semibold'>Sign up for Prize Notifications</span> on either{' '}
-          <a href='https://docs.pooltogether.com/how-to/setting-up-prize-notifications'>Discord</a>{' '}
+          <a
+            className='text-pt-teal underline'
+            href='https://docs.pooltogether.com/how-to/setting-up-prize-notifications'
+          >
+            Discord
+          </a>{' '}
           or{' '}
-          <a href='https://docs.pooltogether.com/how-to/setting-up-prize-notifications'>Telegram</a>{' '}
+          <a
+            className='text-pt-teal underline'
+            href='https://docs.pooltogether.com/how-to/setting-up-prize-notifications'
+          >
+            Telegram
+          </a>{' '}
         </>
       }
       task1Description={
@@ -577,7 +587,10 @@ const MissionWeek7 = (props) => {
           <div className='text-pt-purple-light mt-2'>
             Tired of opening chests every day? Receive a notification when you win a prize! Follow
             the instructions here to set up prize notifications:{' '}
-            <a href='https://docs.pooltogether.com/how-to/setting-up-prize-notifications'>
+            <a
+              className='text-pt-teal underline'
+              href='https://docs.pooltogether.com/how-to/setting-up-prize-notifications'
+            >
               Setting up Prize Notifications
             </a>
           </div>
