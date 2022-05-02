@@ -100,10 +100,10 @@ export const PoolParty = () => {
           </p>
 
           <h4 className='uppercase mb-6 mt-20'>This week's missions:</h4>
+          <MissionWeek7 current />
 
-          <MissionWeek6 current />
           <h4 className='uppercase mb-3 mt-20'>Previous missions:</h4>
-
+          <MissionWeek6 />
           <MissionWeek5 />
           <MissionWeek4 />
           <MissionWeek3 />
@@ -505,7 +505,7 @@ const MissionWeek4 = (props) => {
       task1Button={null}
       bulletPoint1={
         <>
-          'Using the Deposit Delegator on Polygon will enter your address prior to the snapshot'
+          Using the Deposit Delegator on Polygon will enter your address prior to the snapshot
           <div className='opacity-50 font-semibold'>Snapshot: Sunday April 17, 19:00 UTC</div>
         </>
       }
@@ -543,7 +543,7 @@ const MissionWeek6 = (props) => {
     <MissionCard
       {...props}
       week='6'
-      startTimestamp={1650913200000} // April 18th @ 3pm EST
+      startTimestamp={1650913200000} // April 25th @ 3pm EST
       task1Text={
         <>Claim a prize during the campaign (between 19:00 UTC March 21st and 19:00 UTC May 1st)</>
       }
@@ -553,6 +553,44 @@ const MissionWeek6 = (props) => {
           21st and 19:00 UTC May 1st on Polygon, Avalanche or Ethereum
         </>
       }
+      claimLink1='https://galaxy.eco/PoolTogether/campaign/GC9rsUU43o'
+    />
+  )
+}
+
+const MissionWeek7 = (props) => {
+  return (
+    <MissionCard
+      {...props}
+      week='7'
+      startTimestamp={1651518000000} // May 2nd @ 3pm EST
+      task1Text={
+        <>
+          <span className='font-semibold'>Sign up for Prize Notifications</span> on either{' '}
+          <a href='https://docs.pooltogether.com/how-to/setting-up-prize-notifications'>Discord</a>{' '}
+          or{' '}
+          <a href='https://docs.pooltogether.com/how-to/setting-up-prize-notifications'>Telegram</a>{' '}
+        </>
+      }
+      task1Description={
+        <>
+          <div className='text-pt-purple-light mt-2'>
+            Tired of opening chests every day? Receive a notification when you win a prize! Follow
+            the instructions here to set up prize notifications:{' '}
+            <a href='https://docs.pooltogether.com/how-to/setting-up-prize-notifications'>
+              Setting up Prize Notifications
+            </a>
+          </div>
+        </>
+      }
+      bulletPoint1={
+        <>
+          Signing up for prize notifications prior to the snapshot will enter your address
+          <div className='opacity-50 font-semibold'>Snapshot: Sunday May 8th, 19:00 UTC</div>
+        </>
+      }
+      bulletPoint2={<>Having a PoolTogether deposit is required</>}
+      // claimLink1='https://galaxy.eco/PoolTogether/campaign/GCFnFUUzwh'
     />
   )
 }
