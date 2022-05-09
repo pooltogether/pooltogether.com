@@ -214,6 +214,7 @@ const MissionCard = (props) => {
     task1Description,
     task1Button,
     task2Text,
+    task2Description,
     task2Button,
     bulletPoint1,
     bulletPoint2,
@@ -322,6 +323,9 @@ const MissionCard = (props) => {
               <span className='text-blue'>{task2Text}</span>{' '}
               <span className='text-flashy leading-tight font-semibold'>- 1x NFT</span>
             </h6>
+
+            {task2Description && task2Description}
+
             {task2Button && task2Button}
 
             {claimLink2 && (
@@ -639,8 +643,11 @@ const MissionWeek8 = (props) => {
       }
       task2Description={
         <div className='text-pt-purple-light mt-2'>
-          This mission rewards all previous governance voters. Learn more about
-          <a href='https://docs.pooltogether.com/pooltogether/governance'>
+          This mission rewards all previous governance voters. Learn more about{' '}
+          <a
+            href='https://docs.pooltogether.com/pooltogether/governance'
+            className='text-pt-teal underline'
+          >
             PoolTogether Governance
           </a>
           .
