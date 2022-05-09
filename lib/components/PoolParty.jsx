@@ -604,7 +604,7 @@ const MissionWeek7 = (props) => {
         </>
       }
       bulletPoint2={<>Having a PoolTogether deposit is required</>}
-      // claimLink1='https://galaxy.eco/PoolTogether/campaign/GCFnFUUzwh'
+      claimLink1='https://galaxy.eco/PoolTogether/campaign/GCFnFUUzwh'
     />
   )
 }
