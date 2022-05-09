@@ -100,9 +100,10 @@ export const PoolParty = () => {
           </p>
 
           <h4 className='uppercase mb-6 mt-20'>This week's missions:</h4>
-          <MissionWeek7 current />
+          <MissionWeek8 current />
 
           <h4 className='uppercase mb-3 mt-20'>Previous missions:</h4>
+          <MissionWeek7 />
           <MissionWeek6 />
           <MissionWeek5 />
           <MissionWeek4 />
@@ -603,6 +604,106 @@ const MissionWeek7 = (props) => {
         </>
       }
       bulletPoint2={<>Having a PoolTogether deposit is required</>}
+      // claimLink1='https://galaxy.eco/PoolTogether/campaign/GCFnFUUzwh'
+    />
+  )
+}
+
+const MissionWeek8 = (props) => {
+  return (
+    <MissionCard
+      {...props}
+      week='8'
+      startTimestamp={1652122800000} // May 9th @ 3pm EST
+      task1Text={
+        <>
+          POOL Hodlers <BulletPointAsterisk number='2' />
+        </>
+      }
+      task1Description={
+        <div className='text-pt-purple-light mt-2'>
+          This mission rewards anyone who has held POOL for the last 42 days. Learn more about the{' '}
+          <a
+            className='text-pt-teal underline'
+            href='https://docs.pooltogether.com/pooltogether/pool-token'
+          >
+            POOL token
+          </a>
+          .
+        </div>
+      }
+      task2Text={
+        <>
+          Governance Poolers <BulletPointAsterisk number='3' />
+        </>
+      }
+      task2Description={
+        <div className='text-pt-purple-light mt-2'>
+          This mission rewards all previous governance voters. Learn more about
+          <a href='https://docs.pooltogether.com/pooltogether/governance'>
+            PoolTogether Governance
+          </a>
+          .
+        </div>
+      }
+      bulletPoint1={
+        <>
+          <span>The following POOL is valid:</span>{' '}
+          <ul>
+            <ListItemLink
+              href='https://etherscan.io/token/0x0cec1a9154ff802e7934fc916ed7ca50bde6844e'
+              label='POOL token on Ethereum'
+            />
+            <ListItemLink
+              href='https://etherscan.io/token/0x27d22a7648e955e510a40bdb058333e9190d12d4'
+              label='pPOOL prize pool ticket on Ethereum'
+            />
+            <ListItemLink
+              href='https://polygonscan.com/token/0x25788a1a171ec66da6502f9975a15b609ff54cf6'
+              label='POOL (POS) token on Polygon'
+            />
+
+            <ListItemLink
+              href='https://polygonscan.com/token/0xd80eaa761ccfdc8698999d73c96cec39fbb1fc48'
+              label='pPOOL on Polygon'
+            />
+
+            <ListItemLink
+              href='https://polygonscan.com/token/0x34908ec7f451beaa88c46c60a394cf324f86f67e'
+              label='SushiSwap Polygon LP'
+            />
+
+            <ListItemLink
+              href='https://etherscan.io/address/0x85cb0bab616fe88a89a35080516a8928f38b518b'
+              label='UniswapV2 Ethereum LP'
+            />
+
+            <ListItemLink
+              href='https://polygonscan.com/token/0x1585d301b58661bc0cb5a8eba24ecae7b4600470'
+              label='Quickswap Polygon LP'
+            />
+          </ul>
+        </>
+      }
+      bulletPoint2={
+        <>
+          <span>Including:</span>{' '}
+          <ul>
+            <ListItemLink
+              href='https://vote.pooltogether.com/proposals?view=active'
+              label='PoolTogether On-Chain governance'
+            />
+            <ListItemLink
+              href='https://snapshot.org/#/pooltogether.eth'
+              label='PoolTogether.eth Snapshot'
+            />
+            <ListItemLink
+              href='https://snapshot.org/#/poolpool.pooltogether.eth'
+              label='POOL Pool Snapshot'
+            />
+          </ul>
+        </>
+      }
       // claimLink1='https://galaxy.eco/PoolTogether/campaign/GCFnFUUzwh'
     />
   )
