@@ -14,24 +14,24 @@ Code for the latest PoolTogether landing site.
 
 Install dependencies:
 
-```bash
+```console
 $ yarn
 ```
 
 Make sure you have `direnv` installed and copy `.envrc.example` to `.envrc`:
 
-```bash
+```console
 $ cp .envrc.example .envrc
 ```
 
 Fill in your own values for `.envrc`, then run:
 
-```bash
+```console
 $ direnv allow
 ```
 
 To run the local server, run:
 
-```
+```conosle
 $ yarn dev
 ```
