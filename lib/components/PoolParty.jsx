@@ -490,7 +490,7 @@ const MissionWeek4 = (props) => {
             and share your chances to win prizes with a friend! Delegate at least $10 worth of
             PoolTogether tickets (PTaUSDC) to be eligible. <br />
             <a
-              href='https://docs.pooltogether.com/how-to/deposit-delegator'
+              href='https://docs.pooltogether.com/pooltogether/guides/deposit-delegator'
               target='_blank'
               className='text-pt-teal underline flex items-center'
             >
@@ -574,14 +574,14 @@ const MissionWeek7 = (props) => {
           <span className='font-semibold'>Sign up for Prize Notifications</span> on either{' '}
           <a
             className='text-pt-teal underline'
-            href='https://docs.pooltogether.com/how-to/setting-up-prize-notifications'
+            href='https://docs.pooltogether.com/pooltogether/guides/setting-up-prize-notifications'
           >
             Discord
           </a>{' '}
           or{' '}
           <a
             className='text-pt-teal underline'
-            href='https://docs.pooltogether.com/how-to/setting-up-prize-notifications'
+            href='https://docs.pooltogether.com/pooltogether/guides/setting-up-prize-notifications'
           >
             Telegram
           </a>{' '}
@@ -594,7 +594,7 @@ const MissionWeek7 = (props) => {
             the instructions here to set up prize notifications:{' '}
             <a
               className='text-pt-teal underline'
-              href='https://docs.pooltogether.com/how-to/setting-up-prize-notifications'
+              href='https://docs.pooltogether.com/pooltogether/guides/setting-up-prize-notifications'
             >
               Setting up Prize Notifications
             </a>
