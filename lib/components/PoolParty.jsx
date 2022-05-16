@@ -63,7 +63,7 @@ export const PoolParty = () => {
                 <p className='text-xxs xs:text-xs'>
                   POOLTOGETHER <br className='xs:hidden' /> SEASON 1 NFTs
                 </p>
-                <p className='text-xxs font-semibold text-default'>March 21st - May 17th, 2022</p>
+                <p className='text-xxs font-semibold text-default'>March 21st - May 16th, 2022</p>
               </div>
             </div>
 
@@ -84,8 +84,12 @@ export const PoolParty = () => {
         <VideoCarousel />
 
         <div className='pool-party--box-widths mx-auto flex flex-col items-center text-base z-10 relative pt-20 pb-32 text-inverse'>
+          <h1>😊</h1>
+          <h4 className='uppercase'>Season 1 is done!</h4>
+          <h6 className='uppercase mb-24'>Thanks for collecting!</h6>
+
           <h4 className='uppercase mb-4'>How it works:</h4>
-          <ol className='list-decimal px-10 xs:px-0'>
+          <ol className='list-decimal px-10 xs:px-0 text-center xs:max-w-sm'>
             <li className='mb-2'>Complete the weekly mission before the countdown expires.</li>
             <li className='mb-2'>Come back to mint your NFTs when the next mission starts!</li>
             <li className='mb-2'>
@@ -99,10 +103,10 @@ export const PoolParty = () => {
             </a>
           </p>
 
-          <h4 className='uppercase mb-6 mt-20'>This week's missions:</h4>
-          <MissionWeek8 current />
+          {/* <h4 className='uppercase mb-6 mt-20'>This week's missions:</h4> */}
 
           <h4 className='uppercase mb-3 mt-20'>Previous missions:</h4>
+          <MissionWeek8 />
           <MissionWeek7 />
           <MissionWeek6 />
           <MissionWeek5 />
@@ -329,14 +333,14 @@ const MissionCard = (props) => {
             {task2Button && task2Button}
 
             {claimLink2 && (
-              <SquareButton
+              <SquareLink
                 href={claimLink2}
                 size={SquareButtonSize.sm}
                 theme={SquareButtonTheme.rainbow}
                 className='w-44 mt-2'
               >
                 <span className='py-1'>Claim now</span>
-              </SquareButton>
+              </SquareLink>
             )}
           </li>
         )}
@@ -711,7 +715,8 @@ const MissionWeek8 = (props) => {
           </ul>
         </>
       }
-      // claimLink1='https://galaxy.eco/PoolTogether/campaign/GCFnFUUzwh'
+      claimLink1='https://galaxy.eco/PoolTogether/campaign/GC7sAUUrnr'
+      claimLink2='https://galaxy.eco/PoolTogether/campaign/GCfELUUkRj'
     />
   )
 }

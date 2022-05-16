@@ -60,7 +60,7 @@ export const IndexHeroFeaturedIn = () => {
             img={<BinanceAcademySvg />}
             url='https://academy.binance.com/en/articles/how-pool-together-turns-saving-money-into-a-game'
             className='-mr-2 sm:mr-12'
-            heightClassName='h-14'
+            heightClassName='h-10'
           />
 
           <GridItemSupportedBy
@@ -69,6 +69,7 @@ export const IndexHeroFeaturedIn = () => {
             img={<FortuneSvg />}
             url='https://fortune.com/longform/decentralized-finance-crypto-wall-street'
             className='mt-1'
+            heightClassName='h-9'
           />
 
           <GridItemSupportedBy
@@ -77,6 +78,7 @@ export const IndexHeroFeaturedIn = () => {
             img={<CoindeskSvg />}
             url='https://old.coindesk.com/tag/pooltogether'
             className='mt-1 ml-3 sm:ml-12'
+            heightClassName='h-9'
           />
         </motion.div>
       </div>
