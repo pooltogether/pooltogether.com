@@ -504,3 +504,46 @@ li.nav-mobile-listitem {
     transform: scale(1, 1) translateY(0);
   }
 }
+
+.fixed-banner {
+  backdrop-filter: blur(6px);
+}
+
+.fixed-banner + * {
+  @apply mt-2;
+}
+
+.mint-banner--left {
+  width: auto;
+}
+
+@screen xs {
+  .mint-banner--left {
+    width: 500px;
+  }
+}
+
+@-webkit-keyframes back {
+  0% {
+    transform: translateY(-40px);
+  }
+  40% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(-2px);
+  }
+}
+
+.ease-fly-in {
+  animation-name: back;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0, 0, 0.05, 1);
+  animation-fill-mode: forwards;
+
+  transform-origin: 0px;
+}
+
+.pooly-fly {
+  transform: translateY(-40px);
+}
