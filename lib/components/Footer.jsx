@@ -63,10 +63,10 @@ export const Footer = () => {
                   <FooterLink href='https://dev.pooltogether.com'>
                     {t('developers', 'Developers')}
                   </FooterLink>
-                  <FooterLink href='https://docs.pooltogether.com/faq/risks/audits'>
+                  <FooterLink href='https://docs.pooltogether.com/security/audits'>
                     {t('security', 'Security')}
                   </FooterLink>
-                  <FooterLink href='https://docs.pooltogether.com/faq/general'>FAQ</FooterLink>
+                  <FooterLink href='https://docs.pooltogether.com/welcome/faq'>FAQ</FooterLink>
                   <FooterLink href='/brand-assets'>{t('assets', 'Assets')}</FooterLink>
                   <FooterLink href='https://gov.pooltogether.com/'>{t('governance')}</FooterLink>
                   <FooterLink href='https://docs.pooltogether.com/'>
