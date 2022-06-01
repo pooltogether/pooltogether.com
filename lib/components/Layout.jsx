@@ -29,14 +29,13 @@ export const Layout = (props) => {
   useEffect(() => {
     setTimeout(() => setAnimateIn(true), DELAY * 1000)
   }, [])
-  console.log({ animateIn })
 
   return (
     <>
       <NavMobile />
 
-      <div className='fixed-banner mint-banner sticky px-8 t-0 l-0 r-0 w-full bg-pt-purple-darkest text-center py-3 z-50 backdrop-blur-2xl bg-opacity-70'>
-        <div className='fixed-banner mint-banner--left text-xxs xs:text-xs flex flex-col xs:flex-row mx-auto items-center'>
+      <div className='fixed-banner mint-banner sticky px-8 t-0 l-0 r-0 w-full bg-pt-purple-darkest text-center py-3 z-50 backdrop-blur-2xl bg-opacity-80'>
+        <div className='mint-banner--left text-xxs xs:text-xs flex flex-col xs:flex-row mx-auto items-center'>
           <div className='w-full mb-1 xs:mb-0 mx-3'>
             <span className='font-bold'> Keep Pooly flying!</span>{' '}
             <img
