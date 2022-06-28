@@ -34,7 +34,7 @@ export const Layout = (props) => {
     <>
       <NavMobile />
 
-      <div className='fixed-banner mint-banner sticky px-8 t-0 l-0 r-0 w-full bg-pt-purple-darkest text-center py-3 z-50 backdrop-blur-2xl bg-opacity-80'>
+      {/* <div className='fixed-banner mint-banner sticky px-8 t-0 l-0 r-0 w-full bg-pt-purple-darkest text-center py-3 z-50 backdrop-blur-2xl bg-opacity-80'>
         <div className='mint-banner--left text-xxs xs:text-xs flex flex-col xs:flex-row mx-auto items-center'>
           <div className='w-full mb-1 xs:mb-0 mx-3'>
             <span className='font-bold'> Keep Pooly flying!</span>{' '}
@@ -58,7 +58,7 @@ export const Layout = (props) => {
             <FeatherIcon icon='chevron-right' className={'relative w-4 h-4'} style={{ top: 1 }} />
           </SquareLink>
         </div>
-      </div>
+      </div> */}
 
       <div className={classnames('w-full z-30 mx-auto')}>
         <div className='content-max-width flex justify-center sm:justify-between items-center w-full px-4 sm:px-0 pt-8 sm:pt-2 mx-auto'>
