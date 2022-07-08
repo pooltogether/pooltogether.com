@@ -513,13 +513,13 @@ li.nav-mobile-listitem {
   @apply mt-2;
 }
 
-.mint-banner--left {
+.index-banner--inner {
   width: auto;
 }
 
 @screen xs {
-  .mint-banner--left {
-    width: 500px;
+  .index-banner--inner {
+    width: 460px;
   }
 }
 
