@@ -122,7 +122,7 @@ const OptimismBanner = (props) => {
 
 const Banner = (props) => {
   return (
-    <div className='fixed-banner index-banner sticky px-8 t-0 l-0 r-0 w-full bg-actually-black text-center py-3 z-50 backdrop-blur-2xl bg-opacity-80'>
+    <div className='fixed-banner index-banner px-8 t-0 l-0 r-0 w-full bg-actually-black text-center py-3 z-50 backdrop-blur-2xl bg-opacity-80'>
       <div className='index-banner--inner text-xxs xs:text-xs flex flex-col xs:flex-row mx-auto items-center'>
         {props.children}
       </div>
