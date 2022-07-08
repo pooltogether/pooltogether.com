@@ -525,7 +525,7 @@ li.nav-mobile-listitem {
 
 @-webkit-keyframes back {
   0% {
-    transform: translateY(-40px);
+    transform: translateY(-50px);
   }
   40% {
     transform: translateY(3px);
@@ -545,5 +545,5 @@ li.nav-mobile-listitem {
 }
 
 .pooly-fly {
-  transform: translateY(-40px);
+  transform: translateY(-50px);
 }
