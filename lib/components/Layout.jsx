@@ -103,7 +103,7 @@ const OptimismBanner = (props) => {
 
       <SquareLink
         className='w-24 mx-auto h-8'
-        href='https://app.pooltogether.com/'
+        href='https://app.pooltogether.com/deposit?network=optimism'
         size={SquareButtonSize.sm}
         theme={SquareButtonTheme.tealOutline}
         style={{ paddingLeft: 14 }}
