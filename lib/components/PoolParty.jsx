@@ -19,12 +19,14 @@ import { DiscordIconSvg } from 'lib/components/SvgComponents'
 import { HeaderLogo } from 'lib/components/HeaderLogo'
 import { NftVideoPlayer } from 'lib/components/NftVideoPlayer'
 import { Time } from 'lib/components/Time'
+import { usePassthroughUrl } from 'lib/hooks/usePassthroughUrl'
 
 export const PoolParty = () => {
   const { t } = useTranslation()
 
   const title = `PoolParty - PoolTogether Season 1 NFTs`
   const description = `Earn NFTs by completing weekly PoolTogether missions`
+  const appUrl = usePassthroughUrl('https://app.pooltogether.com')
 
   return (
     <>
@@ -70,7 +72,7 @@ export const PoolParty = () => {
             <div className='hidden xs:block flex justify-end sm:w-64'>
               <SquareLink
                 chevron
-                href='https://app.pooltogether.com'
+                href={appUrl}
                 size={SquareButtonSize.sm}
                 theme={SquareButtonTheme.teal}
                 className='w-24'
@@ -136,7 +138,7 @@ export const PoolParty = () => {
           </a>
         </Link>
         <a
-          href='https://app.pooltogether.com'
+          href={appUrl}
           className='transition mx-1 my-1 first:ml-0 last:mr-0 rounded-lg py-1 px-3 flex flex-row text-xs hover:text-white hover:opacity-100'
         >
           <span className='text-white opacity-70 hover:opacity-100'>App</span>
@@ -530,6 +532,7 @@ const MissionWeek4 = (props) => {
 }
 
 const MissionWeek5 = (props) => {
+  const appUrl = usePassthroughUrl('https://app.pooltogether.com')
   return (
     <MissionCard
       {...props}
@@ -539,7 +542,7 @@ const MissionWeek5 = (props) => {
       bulletPoint1={
         <>
           Must be PoolTogether V4, which is currently found at{' '}
-          <a href='https://app.pooltogether.com'>app.pooltogether.com</a>
+          <a href={appUrl}>app.pooltogether.com</a>
         </>
       }
       claimLink1='https://galaxy.eco/PoolTogether/campaign/GCsvBUUn5R'

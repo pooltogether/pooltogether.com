@@ -11,6 +11,7 @@ import {
 import { useTranslation } from 'next-i18next'
 import { i18n as i18nConfig } from '../../next-i18next.config'
 import Cookies from 'js-cookie'
+import { usePassthroughUrl } from 'lib/hooks/usePassthroughUrl'
 
 export const Nav = (props) => {
   const { t } = useTranslation()
@@ -18,20 +19,7 @@ export const Nav = (props) => {
   const navLinkClasses =
     'font-titillium capitalize text-center leading-none rounded-full flex justify-start items-center text-sm lg:text-lg py-3 trans tracking-wider outline-none focus:outline-none active:outline-none text-white'
 
-  const router = useRouter()
-
-  const getAppUrl = () => {
-    const appUrl = new URL('https://app.pooltogether.com')
-    const params = new URLSearchParams(window.location.search)
-    const keys = ['utm_campaign', 'utm_source', 'utm_medium', 'utm_content', 'utm_term']
-
-    keys.forEach((key) => {
-      if (params.has(key)) {
-        appUrl.searchParams.set(key, params.get(key))
-      }
-    })
-    return appUrl.toString()
-  }
+  const appUrl = usePassthroughUrl('https://app.pooltogether.com')
 
   return (
     <>
@@ -66,12 +54,7 @@ export const Nav = (props) => {
           {t('tools', 'Tools')}
         </a>
 
-        <SquareLink
-          chevron
-          href={getAppUrl()}
-          size={SquareButtonSize.sm}
-          theme={SquareButtonTheme.teal}
-        >
+        <SquareLink chevron href={appUrl} size={SquareButtonSize.sm} theme={SquareButtonTheme.teal}>
           <span className='pl-2'>{t('app')}</span>
         </SquareLink>
       </nav>

@@ -2,6 +2,7 @@ import * as React from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useTranslation } from 'next-i18next'
+import { usePassthroughUrl } from 'lib/hooks/usePassthroughUrl'
 
 const variants = {
   open: {
@@ -26,6 +27,8 @@ export const NavMobileListItem = ({ link, index, toggleOpen }) => {
   const style = { color: `${colors[index]}` }
   const { t } = useTranslation()
 
+  const url = usePassthroughUrl(link.href)
+
   return (
     <>
       <motion.li
@@ -35,7 +38,7 @@ export const NavMobileListItem = ({ link, index, toggleOpen }) => {
         className='font-bold text-center mb-6 text-xl'
         style={style}
       >
-        <Link href={link.href} as={link.as}>
+        <Link href={url} as={url}>
           <a onClick={toggleOpen} style={style}>
             {link.i18nKey ? t(link.i18nKey) : link.label}
           </a>

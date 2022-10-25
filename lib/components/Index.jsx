@@ -26,6 +26,7 @@ import {
 } from 'lib/components/SvgComponents'
 import { ScreenSize, useScreenSize } from '@pooltogether/hooks'
 import classNames from 'classnames'
+import { usePassthroughUrl } from 'lib/hooks/usePassthroughUrl'
 
 export const Index = (props) => {
   const router = useRouter()
@@ -139,6 +140,7 @@ const HeroRight = () => {
 
 const HeroLeft = () => {
   const { t } = useTranslation()
+  const appUrl = usePassthroughUrl('https://app.pooltogether.com')
   return (
     <>
       <span
@@ -166,7 +168,7 @@ const HeroLeft = () => {
       </p>
       <div className='mt-4 sm:mt-8 mb-4 sm:mb-0 mx-auto sm:mx-0 text-center'>
         <SquareLink
-          href='https://app.pooltogether.com'
+          href={appUrl}
           chevron
           size={SquareButtonSize.md}
           theme={SquareButtonTheme.teal}

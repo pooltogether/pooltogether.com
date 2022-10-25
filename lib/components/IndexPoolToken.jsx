@@ -1,8 +1,11 @@
 import React from 'react'
 
 import { ButtonLink } from 'lib/components/ButtonLink'
+import { usePassthroughUrl } from 'lib/hooks/usePassthroughUrl'
 
 export const IndexPoolToken = (props) => {
+  const appUrl = usePassthroughUrl('https://app.pooltogether.com')
+
   return (
     <>
       <div id='token' className='bg-darkened text-center pt-12 pb-6 sm:pt-20 sm:pb-16'>
@@ -36,12 +39,7 @@ export const IndexPoolToken = (props) => {
 
           <div className='mt-10'>
             <div className='sm:w-7/12 lg:w-1/2 sm:mx-auto my-6'>
-              <ButtonLink
-                textSize='xl'
-                width='w-full'
-                as={`https://app.pooltogether.com`}
-                href={`https://app.pooltogether.com`}
-              >
+              <ButtonLink textSize='xl' width='w-full' as={appUrl} href={appUrl}>
                 Deposit to receive POOL tokens
               </ButtonLink>
             </div>
