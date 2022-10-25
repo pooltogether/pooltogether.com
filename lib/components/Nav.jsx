@@ -18,6 +18,21 @@ export const Nav = (props) => {
   const navLinkClasses =
     'font-titillium capitalize text-center leading-none rounded-full flex justify-start items-center text-sm lg:text-lg py-3 trans tracking-wider outline-none focus:outline-none active:outline-none text-white'
 
+  const router = useRouter()
+
+  const getAppUrl = () => {
+    const appUrl = new URL('https://app.pooltogether.com')
+    const params = new URLSearchParams(window.location.search)
+    const keys = ['utm_campaign', 'utm_source', 'utm_medium', 'utm_content', 'utm_term']
+
+    keys.forEach((key) => {
+      if (params.has(key)) {
+        appUrl.searchParams.set(key, params.get(key))
+      }
+    })
+    return appUrl.toString()
+  }
+
   return (
     <>
       <nav className='justify-end items-center hidden sm:flex w-2/3 space-x-8'>
@@ -53,7 +68,7 @@ export const Nav = (props) => {
 
         <SquareLink
           chevron
-          href='https://app.pooltogether.com'
+          href={getAppUrl()}
           size={SquareButtonSize.sm}
           theme={SquareButtonTheme.teal}
         >
