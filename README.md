@@ -32,6 +32,6 @@ $ direnv allow
 
 To run the local server, run:
 
-```conosle
+```console
 $ yarn dev
 ```

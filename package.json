@@ -1,9 +1,9 @@
 {
-  "name": "pooltogether-marketing-site-v3",
+  "name": "pooltogether-landing-page",
   "version": "3.0.0",
   "private": false,
   "author": "PoolTogether Inc.",
-  "repository": "git@github.com:pooltogether/pool-marketing-site-v3.git",
+  "repository": "git@github.com:pooltogether/pooltogether.com.git",
   "scripts": {
     "reinstall": "rm -rf .next out ./node_modules && yarn cache clean && yarn",
     "dev": "npm-run-all --parallel start:app",
