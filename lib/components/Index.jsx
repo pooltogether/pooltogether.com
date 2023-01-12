@@ -116,7 +116,7 @@ const HeroRight = () => {
             </span>
           </div>
           <span className='font-semibold text-default-soft text-xxxs xs:text-xxs mx-auto mt-2 uppercase'>
-            {`${t('acrossBothVersions', 'Across all v3 and v4 pools')}`}
+            {`${t('acrossV4', 'Across all v4 pools')}`}
           </span>
         </div>
       </Banner>

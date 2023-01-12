@@ -1,21 +1,15 @@
 import React from 'react'
 import { ThemedClipSpinner } from '@pooltogether/react-components'
+import { useWeeklyPrizeAmount } from 'lib/atoms/serverAtoms'
 import { numberWithCommas } from '@pooltogether/utilities'
-import { useQuery } from 'react-query'
 
-export const WeeklyPrizeAmount = (props) => {
-  const { data: amount, isFetched } = useWeeklyPrizeAmount()
+export const WeeklyPrizeAmount = () => {
+  const weeklyPrizeAmount = useWeeklyPrizeAmount()
 
   // Check if data has loaded
-  if (!isFetched) {
+  if (!weeklyPrizeAmount) {
     return <ThemedClipSpinner />
   }
 
-  return <b>${amount}</b>
-}
-
-const useWeeklyPrizeAmount = () => {
-  return useQuery('weeklyPrizeAmount', () => {
-    return numberWithCommas('29400', { precision: 0 })
-  })
+  return <b>${numberWithCommas(weeklyPrizeAmount, { precision: 0 })}</b>
 }
