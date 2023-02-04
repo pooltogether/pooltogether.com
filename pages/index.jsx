@@ -8,29 +8,29 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import i18nConfig from '../next-i18next.config'
 import { getWeeklyPrizeAmount } from 'lib/utils/getWeeklyPrizeAmount'
 import { weeklyPrizeAmountAtom } from 'lib/atoms/serverAtoms'
+import { getLastWeeksWinners } from '../lib/utils/getLastWeeksWinners'
 
 export async function getStaticProps(context) {
   const { locale } = context
 
   const translations = await serverSideTranslations(locale, ['common'], i18nConfig)
-  const weeklyPrizeAmount = await getWeeklyPrizeAmount()
+  const amountWon = await getLastWeeksWinners()
 
   return {
     props: {
       ...translations,
-      weeklyPrizeAmount
+      amountWon
     },
     revalidate: 86400
   }
 }
 
 /**
- * @param {{ weeklyPrizeAmount: string }} props
+ * @param {{ weeklyPrizeAmount: string, amountWon: string }} props
  */
 export default function IndexPage(props) {
-  const { weeklyPrizeAmount } = props
-
-  useHydrateAtoms([[weeklyPrizeAmountAtom, weeklyPrizeAmount]])
+  const { amountWon } = props
+  useHydrateAtoms([[weeklyPrizeAmountAtom, amountWon]])
 
   return (
     <>

@@ -106,13 +106,13 @@ const HeroRight = () => {
         <div className='bg-prize-gradient flex flex-col justify-between text-center py-6 xs:py-10 px-8'>
           <div className='sm:pb-4 space-y-2 flex flex-col leading-none'>
             <span className='uppercase font-semibold text-default text-xxs xs:text-lg lg:text-xl mx-auto'>
-              {t('currently', 'Currently')}
+              {t('lastWeek')}
             </span>
             <span className='text-4xl xs:text-6xl sm:text-7xl lg:text-9xl'>
               <WeeklyPrizeAmount />
             </span>
             <span className='uppercase font-semibold text-default text-xxs xs:text-lg lg:text-xl'>
-              {t('inWeeklyPrizes')}
+              {t('wonBySaving')}
             </span>
           </div>
           <span className='font-semibold text-default-soft text-xxxs xs:text-xxs mx-auto mt-2 uppercase'>
@@ -265,7 +265,7 @@ const SameText = () => {
         i18nKey='seeAllWinnersOnSmallFish'
         defaults='see all of the luckiest winners on <a>smallfish.win</a>'
         components={{
-          a: <a href='https://smallfish.win' target='_blank' className='text-pt-teal' />
+          a: <a href='https://poolexplorer.win/luckiest' target='_blank' className='text-pt-teal' />
         }}
       />{' '}
       🌊😎🏆
