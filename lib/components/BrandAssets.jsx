@@ -43,6 +43,15 @@ export const BrandAssets = (props) => {
           pooltogether-brand-assets-v1.2.0.zip
         </BoxLinkWithIcon>
 
+        <BoxLinkWithIcon
+          isExternal
+          href='https://www.figma.com/community/file/1212805243917604494'
+          title='View our Figma file'
+          icon={'link'}
+        >
+          PoolTogether Brand Kit (Figma)
+        </BoxLinkWithIcon>
+
         <br />
 
         <h4 className='my-5 uppercase text-default'>By Style</h4>
