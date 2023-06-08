@@ -38,7 +38,7 @@ export const IndexGovernance = () => {
               <Trans
                 t={t}
                 i18nKey='pooltogetherIsGovernedByPool'
-                defaults='PoolTogether is a decentralized, autonomously goverened system. Changes and upgrades are proposed and voted on by the <a>POOL</a> token holders.'
+                defaults='PoolTogether is a decentralized, autonomously governed system. Changes and upgrades are proposed and voted on by the <a>POOL</a> token holders.'
                 components={{
                   a: (
                     <a
