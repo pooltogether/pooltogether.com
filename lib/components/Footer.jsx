@@ -81,8 +81,6 @@ export const Footer = () => {
                 <ul>
                   <FooterLink href='https://v4.pooltogether.com'>Version 4</FooterLink>
                   <FooterLink href='https://v3.pooltogether.com'>Version 3</FooterLink>
-                  <FooterLink href='https://v2.pooltogether.com'>Version 2</FooterLink>
-                  <FooterLink href='https://v1.pooltogether.com'>Version 1</FooterLink>
                 </ul>
               </div>
 
