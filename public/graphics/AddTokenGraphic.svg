@@ -1,0 +1,8 @@
+<svg width="130" height="90" viewBox="0 0 130 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M129 45C129 69.3005 109.301 89 85 89C60.6995 89 41 69.3005 41 45C41 20.6995 60.6995 1 85 1C109.301 1 129 20.6995 129 45Z" fill="#21064E" stroke="white" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 8"/>
+<circle cx="45" cy="45" r="44" fill="#21064E" stroke="white" stroke-width="2"/>
+<circle cx="87" cy="35" r="12" transform="rotate(90 87 35)" fill="#21064E" stroke="#21064E" stroke-width="8"/>
+<path d="M95 37L102.293 44.2929C102.683 44.6834 102.683 45.3166 102.293 45.7071L95 53" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M61 45L101 45" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<circle cx="45" cy="45" r="8" transform="rotate(90 45 45)" fill="#35F0D0"/>
+</svg>
