@@ -45,7 +45,7 @@ export const SavingCard = (props: SavingCardProps) => {
         <span className='font-averta font-bold text-2xl text-pt-purple-100 md:text-lg lg:text-2xl xl:text-[2rem]'>
           {card.title}
         </span>
-        <span className='text-base text-gray-100 whitespace-nowrap md:text-xs lg:text-sm xl:text-base'>
+        <span className='min-h-[48px] text-base text-gray-100 md:min-h-[32px] md:text-xs lg:min-h-[40px] lg:text-sm xl:min-h-[48px] xl:text-base'>
           {card.description}
         </span>
       </div>

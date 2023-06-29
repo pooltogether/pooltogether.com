@@ -11,7 +11,7 @@
 ![next](https://img.shields.io/static/v1?label&logo=nextdotjs&logoColor=white&message=Next.js&color=black)
 ![ts](https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white)
 ![tailwind](https://img.shields.io/static/v1?label&logo=tailwindcss&logoColor=white&message=tailwind&color=38B2AC)
-![version](https://img.shields.io/github/package-json/v/pooltogether/pooltogether-client-monorepo?filename=apps%2Flanding-page%2Fpackage.json&color=brightgreen)
+![version](https://img.shields.io/github/package-json/v/pooltogether/pooltogether.com?color=brightgreen)
 [![Crowdin](https://badges.crowdin.net/pooltogether-landing-page/localized.svg)](https://crowdin.com/project/pooltogether-landing-page)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5122144f-d6f2-4ee0-98d3-84fc4e564d4a/deploy-status)](https://app.netlify.com/sites/pooltogether-com/deploys)
