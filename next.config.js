@@ -1,30 +1,37 @@
-/** @type {import('next').NextConfig} */
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-})
-
-const { i18n } = require('./next-i18next.config');
-const chalk = require("chalk")
-const path = require('path');
-
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
-  async redirects() {
-    return [
-      {
-        source: '/prizes',
-        destination: '/prizes/PT-cDAI',
-        permanent: true,
-      },
-      {
-        source: '/pool-party',
-        destination: '/pool-party/season1',
-        permanent: false,
-      }
-    ]
+  transpilePackages: [
+    "file:../../shared/generic-react-hooks",
+    "file:../../shared/react-components",
+    "file:../../shared/types",
+    "file:../../shared/ui",
+    "file:../../shared/utilities",
+  ],
+  redirects: async () => [
+    {
+      source: "/discord",
+      destination: "/",
+      permanent: false,
+    },
+    {
+      source: "/brand-assets",
+      destination: "/",
+      permanent: false,
+    },
+    {
+      source: "/pool-party/season1",
+      destination: "/",
+      permanent: true,
+    },
+  ],
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = { fs: false, net: false, tls: false };
+    }
+    return config;
   },
-  i18n
-}
-
-module.exports = withBundleAnalyzer(nextConfig)
-
+  i18n: {
+    locales: ["en", "es", "de", "fr", "hi", "it", "ko", "pt", "tr", "zh"],
+    defaultLocale: "en",
+  },
+};
