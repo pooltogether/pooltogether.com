@@ -134,7 +134,9 @@
     "faq": "FAQ",
     "brandAssets": "Brand Assets",
     "governance": "Governance",
-    "userDocs": "User Docs"
+    "userDocs": "User Docs",
+    "termsOfService": "Terms Of Service",
+    "protocolDisclaimer": "Protocol Disclaimer"
   },
   "Error": {
     "404": "We couldn't find the page you're looking for.",

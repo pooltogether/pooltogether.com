@@ -134,7 +134,9 @@
     "faq": "FAQ",
     "brandAssets": "Kit de Marca",
     "governance": "Governança",
-    "userDocs": "Documentação"
+    "userDocs": "Documentação",
+    "termsOfService": "Termos de Serviço",
+    "protocolDisclaimer": "Aviso de Responsabilidade"
   },
   "Error": {
     "404": "Não foi possível encontrar a página que procura.",
