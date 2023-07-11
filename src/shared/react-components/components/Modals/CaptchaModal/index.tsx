@@ -7,15 +7,30 @@ export interface CaptchaModalProps {
   hCaptchaSiteKey: string
   header: ReactNode
   onVerify: (token: string) => void | Promise<void>
+  isOnPageContent?: boolean
 }
 
 export const CaptchaModal = (props: CaptchaModalProps) => {
-  const { hCaptchaSiteKey, header, onVerify } = props
+  const { hCaptchaSiteKey, header, onVerify, isOnPageContent } = props
 
   const { isModalOpen, setIsModalOpen } = useIsModalOpen(MODAL_KEYS.captcha)
 
   const handleClose = () => {
     setIsModalOpen(false)
+  }
+
+  if (isOnPageContent && !!hCaptchaSiteKey) {
+    return (
+      <div className='flex flex-col gap-6 items-center justify-center'>
+        <span className='font-medium'>{header}</span>
+        <BodyContent
+          hCaptchaSiteKey={hCaptchaSiteKey}
+          handleClose={handleClose}
+          onVerify={onVerify}
+        />
+        <FooterContent />
+      </div>
+    )
   }
 
   if (isModalOpen && !!hCaptchaSiteKey) {
