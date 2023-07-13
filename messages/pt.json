@@ -20,7 +20,7 @@
   },
   "Home": {
     "realAdoption": "<first>O <purple-400>Protocolo #1</purple-400> para</first><second>Verdadeira Adoção</second>",
-    "permissionlessProtocol": "O protocolo decentralizado {users} estão usando para ganhar",
+    "permissionlessProtocol": "O protocolo decentralizado que {users} pessoas estão usando para poupar e ganhar",
     "totalPrizesAwarded": "Prêmios Totais Distribuídos",
     "savedWithPt": "Poupados com PoolTogether",
     "uniqueWallets": "Carteiras Únicas",
@@ -40,9 +40,9 @@
     "organicUsage": "PoolTogether traz uso orgânico para carteiras & blockchains",
     "docs": "Documentação V{version}",
     "addYourToken": "Adicione Seu Token",
-    "whyCrypto": "Por que um Protocolo com Crypto?",
+    "whyCrypto": "Por que um Protocolo Crypto?",
     "becauseCrypto": "Porque é 100% Transparente & Gratuito",
-    "automationTransparency": "Protocolos automatizam serviços de acordo com regras imutáveis. Isso torna poupanças com prêmios mais transparentes, justas e acessíveis.",
+    "automationTransparency": "Protocolos automatizam serviços de acordo com regras imutáveis. Isso torna as poupanças com prêmios mais transparentes, justas e acessíveis.",
     "learnHowItWorks": "Aprenda como funciona"
   },
   "Help": {
@@ -136,7 +136,7 @@
     "governance": "Governança",
     "userDocs": "Documentação",
     "termsOfService": "Termos de Serviço",
-    "protocolDisclaimer": "Aviso de Responsabilidade"
+    "protocolDisclaimer": "Aviso de Protocolo"
   },
   "Error": {
     "404": "Não foi possível encontrar a página que procura.",

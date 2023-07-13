@@ -9,11 +9,6 @@ module.exports = {
   ],
   redirects: async () => [
     {
-      source: "/discord",
-      destination: "/",
-      permanent: false,
-    },
-    {
       source: "/brand-assets",
       destination: "/",
       permanent: false,
