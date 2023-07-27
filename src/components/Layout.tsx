@@ -129,7 +129,7 @@ export const Layout = (props: LayoutProps) => {
       title: t_footer('languages'),
       content: [
         { content: 'English', onClick: () => handleLocaleSwitch('en') },
-        // { content: 'Español', onClick: () => handleLocaleSwitch('es') },
+        { content: 'Español', onClick: () => handleLocaleSwitch('es') },
         { content: 'Deutsch', onClick: () => handleLocaleSwitch('de') },
         { content: 'Français', onClick: () => handleLocaleSwitch('fr') },
         { content: 'हिन्दी', onClick: () => handleLocaleSwitch('hi') },
@@ -137,7 +137,9 @@ export const Layout = (props: LayoutProps) => {
         { content: '한국어', onClick: () => handleLocaleSwitch('ko') },
         { content: 'Português', onClick: () => handleLocaleSwitch('pt') },
         { content: 'Türkçe', onClick: () => handleLocaleSwitch('tr') },
-        { content: '中文', onClick: () => handleLocaleSwitch('zh') }
+        { content: '中文', onClick: () => handleLocaleSwitch('zh') },
+        { content: 'Русский', onClick: () => handleLocaleSwitch('ru') }
+        // { content: 'Filipino', onClick: () => handleLocaleSwitch('fil') }
       ]
     }
   ]
