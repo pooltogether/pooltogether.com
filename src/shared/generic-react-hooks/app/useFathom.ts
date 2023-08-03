@@ -16,7 +16,7 @@ export const useFathom = (
   useEffect(() => {
     if (fathomSiteId && !!addRouteChangeListener && !!removeRouteChangeListener) {
       load(fathomSiteId, {
-        url: 'https://goose.pooltogether.com/script.js',
+        url: 'https://cdn.usefathom.com/script.js',
         includedDomains: siteDomains
       })
       const onRouteChangeComplete = () => {
