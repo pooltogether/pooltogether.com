@@ -15,7 +15,7 @@
     "help": "Hilfe",
     "ecosystem": "Ecosystem",
     "community": "Community",
-    "builders": "Builders",
+    "builders": "Entwickler",
     "usePt": "Nutze PoolTogether"
   },
   "Home": {
@@ -76,7 +76,7 @@
     "tallyCardDescription": "Abstimmungen zu Governance Proposals und die Möglichkeit Proposals zu erstellen.",
     "treasuryCardTitle": "Treasury Zusammenfassung",
     "treasuryCardDescription": "Eine Übersicht über die Kryptowährungen welche sich in der community-geführten Treasury von PoolTogether befinden.",
-    "dune_v4CardTitle": "V4 Dune Dashboard",
+    "dune_v4CardTitle": "V4 Dune-Dashboard",
     "dune_v4CardDescription": "Ein Dune Analytics-Dashboard zur Visualisierung von onchain Daten zu PoolTogether V4.",
     "prizeCalcCardTitle": "Deposit Delegation-Rechner",
     "prizeCalcCardDescription": "Ein Rechner zur Kalkulation von Delegationen."
