@@ -109,6 +109,11 @@ export const Layout = (props: LayoutProps) => {
           icon: <SocialIcon platform='twitter' className='w-6 h-auto shrink-0' />
         },
         {
+          content: 'Lens',
+          href: LINKS.lens,
+          icon: <SocialIcon platform='lens' className='w-6 h-auto shrink-0' />
+        },
+        {
           content: 'Discord',
           onClick: () => setIsCaptchaModalOpen(true),
           icon: <SocialIcon platform='discord' className='w-6 h-auto shrink-0' />
