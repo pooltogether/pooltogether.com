@@ -104,6 +104,11 @@ export const Layout = (props: LayoutProps) => {
       title: t_footer('community'),
       content: [
         {
+          content: 'Lens',
+          href: LINKS.lens,
+          icon: <SocialIcon platform='lens' className='w-6 h-auto shrink-0' />
+        },
+        {
           content: 'Twitter',
           href: LINKS.twitter,
           icon: <SocialIcon platform='twitter' className='w-6 h-auto shrink-0' />
