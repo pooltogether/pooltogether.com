@@ -127,6 +127,11 @@ export const Layout = (props: LayoutProps) => {
           content: 'Medium',
           href: LINKS.medium,
           icon: <SocialIcon platform='medium' className='w-6 h-auto shrink-0' />
+        },
+        {
+          content: 'Mirror',
+          href: LINKS.mirror,
+          icon: <SocialIcon platform='mirror' className='w-6 h-auto shrink-0' />
         }
       ]
     },
