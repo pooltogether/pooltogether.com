@@ -138,8 +138,8 @@ export const Layout = (props: LayoutProps) => {
         { content: 'Português', onClick: () => handleLocaleSwitch('pt') },
         { content: 'Türkçe', onClick: () => handleLocaleSwitch('tr') },
         { content: '中文', onClick: () => handleLocaleSwitch('zh') },
-        { content: 'Русский', onClick: () => handleLocaleSwitch('ru') }
-        // { content: 'Filipino', onClick: () => handleLocaleSwitch('fil') }
+        { content: 'Русский', onClick: () => handleLocaleSwitch('ru') },
+        { content: 'Filipino', onClick: () => handleLocaleSwitch('fil') }
       ]
     }
   ]
