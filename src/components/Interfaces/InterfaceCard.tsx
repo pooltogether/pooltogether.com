@@ -49,7 +49,7 @@ export const InterfaceCard = (props: InterfaceCardProps) => {
       href={card.href}
       target='_blank'
       className={classNames(
-        'w-full flex gap-3 p-8 text-pt-purple-100 bg-[#8247E5]/30 rounded-2xl',
+        'w-full flex gap-3 p-8 bg-[#8247E5]/30 rounded-2xl group',
         'outline outline-2 -outline-offset-2 outline-transparent hover:outline-pt-purple-100/20 hover:shadow-lg',
         'md:gap-4',
         'bg-[radial-gradient(farthest-corner_at_0%_5%,_#440BA0B3_0%,_#5820CFB3_100%),_radial-gradient(farthest-corner_at_0%_0%,_#634E90_50%,_#36147D_100%)]',
@@ -58,9 +58,9 @@ export const InterfaceCard = (props: InterfaceCardProps) => {
     >
       <div className='flex gap-2 items-center'>
         <Image src={card.iconSrc} width={48} height={48} alt={card.title} className='h-12 w-auto' />
-        <span className='text-base md:text-xl'>{card.title}</span>
+        <span className='text-base text-pt-purple-100 md:text-xl'>{card.title}</span>
       </div>
-      <ArrowTopRightOnSquareIcon className='w-8 h-auto ml-auto text-pt-purple-300' />
+      <ArrowTopRightOnSquareIcon className='w-8 h-auto ml-auto text-pt-purple-300 group-hover:text-pt-purple-400' />
     </a>
   )
 }
