@@ -1,0 +1,15 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="24" cy="24" rx="24" ry="24" fill="#8050E3"/>
+<mask id="mask0_886_38517" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+<ellipse cx="24" cy="24" rx="24" ry="24" fill="#8050E3"/>
+</mask>
+<g mask="url(#mask0_886_38517)">
+<path d="M22.8359 19.4531C22.4437 28.4487 22.6119 49.0602 26.4224 59.5422" stroke="#DECEFF" stroke-width="3.20001" stroke-linecap="round"/>
+<path d="M23.4565 21.6586C23.0549 16.4812 21.4139 4.69408 10.5696 12.7853C14.3154 12.588 20.6383 16.8507 23.4565 21.6586Z" fill="#DECEFF" stroke="#C8ADFF" stroke-width="1.13548"/>
+<path d="M23.3066 23.356C20.4509 18.1011 13.1687 10.9738 6.88569 24.5036C10.3 22.56 18.3642 19.6095 23.3066 23.356Z" fill="#DECEFF" stroke="#C8ADFF" stroke-width="1.13548"/>
+<path d="M24.6758 24.1592C19.9485 21.5563 10.3697 20.3266 12.326 33.5534C13.9266 30.4515 19.1281 23.6942 24.6758 24.1592Z" fill="#DECEFF" stroke="#C8ADFF" stroke-width="1.13548"/>
+<path d="M23.3822 22.5087C23.5687 18.502 25.9305 5.30869 35.5737 10.7794C32.3237 10.886 25.673 18.6193 23.3822 22.5087Z" fill="#DECEFF" stroke="#C8ADFF" stroke-width="1.13548"/>
+<path d="M23.3018 23.3569C26.0374 17.7929 33.1461 10.0958 39.6965 23.8194C36.2516 21.9589 28.1497 19.2617 23.3018 23.3569Z" fill="#DECEFF" stroke="#C8ADFF" stroke-width="1.13548"/>
+<path d="M23.2277 24.2059C27.8884 21.5043 37.1374 19.9018 35.1115 32.8731C33.5652 29.9017 28.6765 23.562 23.2277 24.2059Z" fill="#DECEFF" stroke="#C8ADFF" stroke-width="1.13548"/>
+</g>
+</svg>

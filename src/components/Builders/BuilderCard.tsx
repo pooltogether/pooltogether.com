@@ -8,6 +8,7 @@ export type BuilderCardType =
   | 'reactHooks'
   | 'prizeTierController'
   | 'brandKit'
+  | 'cabanaFactory'
 
 interface BuilderCardProps {
   type: BuilderCardType
@@ -32,7 +33,7 @@ export const BuilderCard = (props: BuilderCardProps) => {
       href: LINKS.clientJs,
       iconSrc: '/icons/devToolIcon.svg',
       title: t('clientJsCardTitle'),
-      author: 'PoolTogether Inc.',
+      author: 'G9 Software Inc.',
       tags: ['dev', 'v5'],
       description: t('clientJsCardDescription')
     },
@@ -40,7 +41,7 @@ export const BuilderCard = (props: BuilderCardProps) => {
       href: LINKS.reactHooks,
       iconSrc: '/icons/devToolIcon.svg',
       title: t('reactHooksCardTitle'),
-      author: 'PoolTogether Inc.',
+      author: 'G9 Software Inc.',
       tags: ['dev', 'v5'],
       description: t('reactHooksCardDescription')
     },
@@ -59,6 +60,14 @@ export const BuilderCard = (props: BuilderCardProps) => {
       author: 'PoolTogether Inc.',
       tags: ['design'],
       description: t('brandKitCardDescription')
+    },
+    cabanaFactory: {
+      href: 'https://factory.cabana.fi/',
+      iconSrc: '/icons/cabanaIcon.svg',
+      title: t('cabanaFactoryCardTitle'),
+      author: 'G9 Software Inc.',
+      tags: ['dev', 'v5'],
+      description: t('cabanaFactoryCardDescription')
     }
   }
 
