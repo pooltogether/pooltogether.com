@@ -13,11 +13,13 @@ import { ReactNode, useEffect, useState } from 'react'
 
 interface LayoutProps {
   children: ReactNode
+  hideNavbar?: boolean
+  hideFooter?: boolean
   className?: string
 }
 
 export const Layout = (props: LayoutProps) => {
-  const { children, className } = props
+  const { children, hideNavbar, hideFooter, className } = props
 
   const router = useRouter()
 
@@ -151,29 +153,33 @@ export const Layout = (props: LayoutProps) => {
         <title>{`PoolTogether${!!pageTitle ? ` | ${pageTitle}` : ''}`}</title>
       </Head>
 
-      <Navbar
-        links={navbarLinks}
-        activePage={router.pathname}
-        // @ts-ignore
-        linksAs={Link}
-        append={
-          <Button href={LINKS.app_v4}>
-            <span className='text-sm md:px-5 md:text-base'>{t_nav('usePt')}</span>
-          </Button>
-        }
-        onClickBrand={() => router.push('/')}
-        sticky={!isMobile}
-        className={classNames(
-          '!px-4 !py-3 bg-transparent !border-opacity-0 sm:!px-8 md:shadow-2xl',
-          {
-            'transition-all': !shouldReduceMotion,
-            '!shadow-transparent md:!py-8': scrollY === 0,
-            'md:!py-4 md:bg-pt-bg-purple-darker md:!border-opacity-100': scrollY > 0
+      {!hideNavbar && (
+        <Navbar
+          links={navbarLinks}
+          activePage={router.pathname}
+          // @ts-ignore
+          linksAs={Link}
+          append={
+            <Link href='/interfaces' passHref={true}>
+              <Button>
+                <span className='text-sm md:px-5 md:text-base'>{t_nav('usePt')}</span>
+              </Button>
+            </Link>
           }
-        )}
-        linkClassName='text-xs sm:text-sm md:text-base text-pt-purple-100 hover:text-pt-purple-300'
-        mobileBottomClassName='!gap-4 sm:!gap-6'
-      />
+          onClickBrand={() => router.push('/')}
+          sticky={!isMobile}
+          className={classNames(
+            '!px-4 !py-3 bg-transparent !border-opacity-0 sm:!px-8 md:shadow-2xl',
+            {
+              'transition-all': !shouldReduceMotion,
+              '!shadow-transparent md:!py-8': scrollY === 0,
+              'md:!py-4 md:bg-pt-bg-purple-darker md:!border-opacity-100': scrollY > 0
+            }
+          )}
+          linkClassName='text-xs sm:text-sm md:text-base text-pt-purple-100 hover:text-pt-purple-300'
+          mobileBottomClassName='!gap-4 sm:!gap-6'
+        />
+      )}
 
       <CaptchaModal
         hCaptchaSiteKey='11cdabde-af7e-42cb-ba97-76e35b7f7c39'
@@ -190,15 +196,17 @@ export const Layout = (props: LayoutProps) => {
         <>{children}</>
       </main>
 
-      <Footer
-        items={footerItems}
-        className={classNames({
-          'bg-pt-bg-purple-darker': isDarkerFooterBg,
-          'bg-pt-purple-800': !isDarkerFooterBg
-        })}
-        containerClassName='max-w-[1440px]'
-        titleClassName='text-pt-purple-400'
-      />
+      {!hideFooter && (
+        <Footer
+          items={footerItems}
+          className={classNames({
+            'bg-pt-bg-purple-darker': isDarkerFooterBg,
+            'bg-pt-purple-800': !isDarkerFooterBg
+          })}
+          containerClassName='max-w-[1440px]'
+          titleClassName='text-pt-purple-400'
+        />
+      )}
     </div>
   )
 }

@@ -3,12 +3,18 @@ import { useTranslations } from 'next-intl'
 import { FancyCard, FancyCardProps } from '@components/FancyCard'
 
 export type EcosystemCardType =
+  | 'cabanaApp'
+  | 'pooltimeApp'
   | 'ptApp_v4'
   | 'poolExplorer'
-  | 'depositDelegator'
+  | 'depositDelegator_v4'
   | 'tally'
   | 'treasury'
   | 'dune_v4'
+  | 'dune_v5'
+  | 'cabanaLists'
+  | 'cabanalytics'
+  | 'cabanaSwaps'
   | 'prizeCalc'
 
 interface EcosystemCardProps {
@@ -22,12 +28,28 @@ export const EcosystemCard = (props: EcosystemCardProps) => {
   const t = useTranslations('Ecosystem')
 
   const ecosystemCardInfo: Record<EcosystemCardType, Omit<FancyCardProps, 'className'>> = {
+    cabanaApp: {
+      href: 'https://app.cabana.fi/',
+      iconSrc: '/icons/cabanaIcon.svg',
+      title: t('cabanaAppCardTitle'),
+      author: 'G9 Software Inc.',
+      tags: ['ui', 'v5'],
+      description: t('cabanaAppCardDescription')
+    },
+    pooltimeApp: {
+      href: 'https://pooltime.app/',
+      iconSrc: '/icons/pooltimeIcon.svg',
+      title: t('pooltimeAppCardTitle'),
+      author: '', // TODO
+      tags: ['ui', 'v5'],
+      description: t('pooltimeAppCardDescription')
+    },
     ptApp_v4: {
       href: LINKS.app_v4,
       iconSrc: '/pooltogether-token-logo.svg',
       title: t('ptApp_v4CardTitle'),
       author: 'PoolTogether Inc.',
-      tags: ['ui'],
+      tags: ['ui', 'v4'],
       description: t('ptApp_v4CardDescription')
     },
     poolExplorer: {
@@ -35,15 +57,15 @@ export const EcosystemCard = (props: EcosystemCardProps) => {
       iconSrc: '/icons/poolExplorer.svg',
       title: t('poolExplorerCardTitle'),
       author: 'Underthesea',
-      tags: ['ui', 'extensions'],
+      tags: ['ui', 'v4'],
       description: t('poolExplorerCardDescription')
     },
-    depositDelegator: {
+    depositDelegator_v4: {
       href: LINKS.depositDelegator,
       iconSrc: '/icons/extension.svg',
       title: t('depositDelegatorCardTitle'),
       author: 'PoolTogether Inc.',
-      tags: ['extensions'],
+      tags: ['extensions', 'v4'],
       description: t('depositDelegatorCardDescription')
     },
     tally: {
@@ -51,7 +73,7 @@ export const EcosystemCard = (props: EcosystemCardProps) => {
       iconSrc: '/icons/tally.svg',
       title: t('tallyCardTitle'),
       author: 'Tally',
-      tags: ['extensions', 'governance'],
+      tags: ['governance'],
       description: t('tallyCardDescription')
     },
     treasury: {
@@ -67,8 +89,40 @@ export const EcosystemCard = (props: EcosystemCardProps) => {
       iconSrc: '/icons/dune.svg',
       title: t('dune_v4CardTitle'),
       author: 'Sarfang',
-      tags: ['analytics'],
+      tags: ['analytics', 'v4'],
       description: t('dune_v4CardDescription')
+    },
+    dune_v5: {
+      href: 'https://dune.com/pooltogether/pooltogether-v5',
+      iconSrc: '/icons/dune.svg',
+      title: t('dune_v5CardTitle'),
+      author: 'Bronder',
+      tags: ['analytics', 'v5'],
+      description: t('dune_v5CardDescription')
+    },
+    cabanaLists: {
+      href: 'https://lists.cabana.fi/',
+      iconSrc: '/icons/cabanaIcon.svg',
+      title: t('cabanaListsCardTitle'),
+      author: 'G9 Software Inc.',
+      tags: ['extensions', 'v5'],
+      description: t('cabanaListsCardDescription')
+    },
+    cabanalytics: {
+      href: 'https://analytics.cabana.fi/',
+      iconSrc: '/icons/cabanaIcon.svg',
+      title: t('cabanalyticsCardTitle'),
+      author: 'G9 Software Inc.',
+      tags: ['extensions', 'v5'],
+      description: t('cabanalyticsCardDescription')
+    },
+    cabanaSwaps: {
+      href: 'https://swap.cabana.fi/',
+      iconSrc: '/icons/cabanaIcon.svg',
+      title: t('cabanaSwapsCardTitle'),
+      author: 'G9 Software Inc.',
+      tags: ['ui', 'extensions', 'v5'],
+      description: t('cabanaSwapsCardDescription')
     },
     prizeCalc: {
       href: LINKS.prizeCalc,
