@@ -59,29 +59,17 @@ export const Layout = (props: LayoutProps) => {
       title: t_footer('audits'),
       content: [
         {
-          content: (
-            <SecurityAuditItem
-              svgSrc='/graphics/c4Logo.svg'
-              altText='CodeArena V4 Audit'
-              href={'https://code4rena.com/reports/2021-10-pooltogether'}
-              date='November 5th, 2021'
-            />
-          )
+          content: <SecurityAuditItem svgSrc='/graphics/c4Logo.svg' altText='CodeArena Audits' />
         },
         {
-          content: (
-            <SecurityAuditItem
-              svgSrc='/graphics/ozLogo.svg'
-              altText='OpenZeppelin V3 Audit'
-              href={'https://blog.openzeppelin.com/pooltogether-v3-audit'}
-              date='October 21, 2020'
-            />
-          )
+          content: <SecurityAuditItem svgSrc='/graphics/macroLogo.svg' altText='0xMacro Audits' />
+        },
+        {
+          content: <SecurityAuditItem svgSrc='/graphics/ozLogo.svg' altText='OpenZeppelin Audits' />
         }
       ],
       className: 'min-w-min xl:pr-20',
-      titleClassName: 'whitespace-nowrap lg:text-right',
-      itemClassName: 'lg:ml-auto'
+      titleClassName: 'whitespace-nowrap lg:text-right'
     },
     {
       title: t_footer('ecosystem'),
@@ -218,17 +206,14 @@ export const Layout = (props: LayoutProps) => {
 interface SecurityAuditItemProps {
   svgSrc: `${string}.svg`
   altText: string
-  href: string
-  date: string
 }
 
 const SecurityAuditItem = (props: SecurityAuditItemProps) => {
-  const { svgSrc, altText, href, date } = props
+  const { svgSrc, altText } = props
 
   return (
-    <a href={href} target='_blank' className='relative flex flex-col'>
+    <a href={LINKS.audits} target='_blank' className='relative flex flex-col'>
       <Image src={svgSrc} alt={altText} fill={true} className='!relative' />
-      <span className='-mt-[2%] ml-[20%] text-gray-200'>{date}</span>
     </a>
   )
 }
