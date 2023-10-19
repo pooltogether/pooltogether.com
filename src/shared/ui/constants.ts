@@ -28,7 +28,7 @@ export const LINKS = Object.freeze({
   faq: `${DOMAINS.docs}/welcome/faq`,
   guides: `${DOMAINS.docs}/pooltogether/guides`,
   audits: `${DOMAINS.docs}/security/audits`,
-  devDocs_v5: `${DOMAINS.devDocs}/protocol/next/introduction`,
+  devDocs_v4: `${DOMAINS.devDocs}/protocol/V4/introduction`,
   depositDelegator: `${DOMAINS.tools}/delegate`,
   prizeTierController: `${DOMAINS.tools}/prize-tier-controller`,
   communityCalendar: `${DOMAINS.notion}/Community-Calendar-4ce3024241dd464db96215e6729a78e0`,

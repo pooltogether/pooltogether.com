@@ -49,8 +49,8 @@ const DocsCards = (props: DocsCardsProps) => {
         className
       )}
     >
-      <DocCard href={LINKS.devDocs_v5} version={5} />
-      <DocCard href={LINKS.devDocs} version={4} />
+      <DocCard href={LINKS.devDocs} version={5} />
+      <DocCard href={LINKS.devDocs_v4} version={4} />
     </div>
   )
 }
