@@ -104,6 +104,11 @@ export const Layout = (props: LayoutProps) => {
       title: t_footer('community'),
       content: [
         {
+          content: 'Lens',
+          href: LINKS.lens,
+          icon: <SocialIcon platform='lens' className='w-6 h-auto shrink-0' />
+        },
+        {
           content: 'Twitter',
           href: LINKS.twitter,
           icon: <SocialIcon platform='twitter' className='w-6 h-auto shrink-0' />
@@ -122,6 +127,11 @@ export const Layout = (props: LayoutProps) => {
           content: 'Medium',
           href: LINKS.medium,
           icon: <SocialIcon platform='medium' className='w-6 h-auto shrink-0' />
+        },
+        {
+          content: 'Mirror',
+          href: LINKS.mirror,
+          icon: <SocialIcon platform='mirror' className='w-6 h-auto shrink-0' />
         }
       ]
     },
