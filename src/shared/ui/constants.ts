@@ -2,18 +2,18 @@
  * Domains
  */
 export const DOMAINS = Object.freeze({
-  app: "https://app.pooltogether.com",
-  landingPage: "https://pooltogether.com",
-  app_v4: "https://app.pooltogether.com",
-  landingPage_v4: "https://pooltogether.com",
-  docs: "https://docs.pooltogether.com",
-  docs_v4: "https://docs.pooltogether.com",
-  devDocs: "https://dev.pooltogether.com",
-  governance: "https://gov.pooltogether.com",
-  poolExplorer: "https://poolexplorer.win",
-  tools: "https://tools.pooltogether.com",
-  notion: "https://pooltogetherdao.notion.site",
-});
+  app: 'https://app.pooltogether.com',
+  landingPage: 'https://pooltogether.com',
+  app_v4: 'https://app.pooltogether.com',
+  landingPage_v4: 'https://pooltogether.com',
+  docs: 'https://docs.pooltogether.com',
+  docs_v4: 'https://docs.pooltogether.com',
+  devDocs: 'https://dev.pooltogether.com',
+  governance: 'https://gov.pooltogether.com',
+  poolExplorer: 'https://poolexplorer.win',
+  tools: 'https://tools.pooltogether.com',
+  notion: 'https://pooltogetherdao.notion.site'
+})
 
 /**
  * Links
@@ -42,7 +42,7 @@ export const LINKS = Object.freeze({
   grants: `https://poolgrants.org`,
   lens: `https://lenster.xyz/u/pooltogether`,
   mirror: `https://pooltogether.mirror.xyz/`,
-  clientJs: `https://www.npmjs.com/package/@pooltogether/hyperstructure-client-js`,
+  clientJs: `https://www.npmjs.com/package/@generationsoftware/hyperstructure-client-js`,
   clientJs_v4: `https://www.npmjs.com/package/@pooltogether/v4-client-js`,
-  reactHooks: `https://www.npmjs.com/package/@pooltogether/hyperstructure-react-hooks`,
-});
+  reactHooks: `https://www.npmjs.com/package/@generationsoftware/hyperstructure-react-hooks`
+})

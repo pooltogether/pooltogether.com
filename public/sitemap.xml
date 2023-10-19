@@ -6,6 +6,7 @@
   <url> <loc>https://pooltogether.com/ecosystem</loc> <changefreq>daily</changefreq> <priority>0.8</priority> </url>
   <url> <loc>https://pooltogether.com/community</loc> <changefreq>daily</changefreq> <priority>0.8</priority> </url>
   <url> <loc>https://pooltogether.com/builders</loc> <changefreq>daily</changefreq> <priority>0.8</priority> </url>
+  <url> <loc>https://pooltogether.com/interfaces</loc> <changefreq>daily</changefreq> <priority>0.8</priority> </url>
   <url> <loc>https://pooltogether.com/terms</loc> <changefreq>weekly</changefreq> <priority>0.6</priority> </url>
   <url> <loc>https://pooltogether.com/protocol-disclaimer</loc> <changefreq>weekly</changefreq> <priority>0.6</priority> </url>
   <url> <loc>https://app.pooltogether.com</loc> <changefreq>daily</changefreq> <priority>0.5</priority> </url>

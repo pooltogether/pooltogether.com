@@ -13,11 +13,13 @@ import { ReactNode, useEffect, useState } from 'react'
 
 interface LayoutProps {
   children: ReactNode
+  hideNavbar?: boolean
+  hideFooter?: boolean
   className?: string
 }
 
 export const Layout = (props: LayoutProps) => {
-  const { children, className } = props
+  const { children, hideNavbar, hideFooter, className } = props
 
   const router = useRouter()
 
@@ -59,29 +61,17 @@ export const Layout = (props: LayoutProps) => {
       title: t_footer('audits'),
       content: [
         {
-          content: (
-            <SecurityAuditItem
-              svgSrc='/graphics/c4Logo.svg'
-              altText='CodeArena V4 Audit'
-              href={'https://code4rena.com/reports/2021-10-pooltogether'}
-              date='November 5th, 2021'
-            />
-          )
+          content: <SecurityAuditItem svgSrc='/graphics/c4Logo.svg' altText='CodeArena Audits' />
         },
         {
-          content: (
-            <SecurityAuditItem
-              svgSrc='/graphics/ozLogo.svg'
-              altText='OpenZeppelin V3 Audit'
-              href={'https://blog.openzeppelin.com/pooltogether-v3-audit'}
-              date='October 21, 2020'
-            />
-          )
+          content: <SecurityAuditItem svgSrc='/graphics/macroLogo.svg' altText='0xMacro Audits' />
+        },
+        {
+          content: <SecurityAuditItem svgSrc='/graphics/ozLogo.svg' altText='OpenZeppelin Audits' />
         }
       ],
       className: 'min-w-min xl:pr-20',
-      titleClassName: 'whitespace-nowrap lg:text-right',
-      itemClassName: 'lg:ml-auto'
+      titleClassName: 'whitespace-nowrap lg:text-right'
     },
     {
       title: t_footer('ecosystem'),
@@ -148,8 +138,8 @@ export const Layout = (props: LayoutProps) => {
         { content: 'Português', onClick: () => handleLocaleSwitch('pt') },
         { content: 'Türkçe', onClick: () => handleLocaleSwitch('tr') },
         { content: '中文', onClick: () => handleLocaleSwitch('zh') },
-        { content: 'Русский', onClick: () => handleLocaleSwitch('ru') }
-        // { content: 'Filipino', onClick: () => handleLocaleSwitch('fil') }
+        { content: 'Русский', onClick: () => handleLocaleSwitch('ru') },
+        { content: 'Filipino', onClick: () => handleLocaleSwitch('fil') }
       ]
     }
   ]
@@ -173,29 +163,33 @@ export const Layout = (props: LayoutProps) => {
         <title>{`PoolTogether${!!pageTitle ? ` | ${pageTitle}` : ''}`}</title>
       </Head>
 
-      <Navbar
-        links={navbarLinks}
-        activePage={router.pathname}
-        // @ts-ignore
-        linksAs={Link}
-        append={
-          <Button href={LINKS.app_v4}>
-            <span className='text-sm md:px-5 md:text-base'>{t_nav('usePt')}</span>
-          </Button>
-        }
-        onClickBrand={() => router.push('/')}
-        sticky={!isMobile}
-        className={classNames(
-          '!px-4 !py-3 bg-transparent !border-opacity-0 sm:!px-8 md:shadow-2xl',
-          {
-            'transition-all': !shouldReduceMotion,
-            '!shadow-transparent md:!py-8': scrollY === 0,
-            'md:!py-4 md:bg-pt-bg-purple-darker md:!border-opacity-100': scrollY > 0
+      {!hideNavbar && (
+        <Navbar
+          links={navbarLinks}
+          activePage={router.pathname}
+          // @ts-ignore
+          linksAs={Link}
+          append={
+            <Link href='/interfaces' passHref={true}>
+              <Button>
+                <span className='text-sm md:px-5 md:text-base'>{t_nav('usePt')}</span>
+              </Button>
+            </Link>
           }
-        )}
-        linkClassName='text-xs sm:text-sm md:text-base text-pt-purple-100 hover:text-pt-purple-300'
-        mobileBottomClassName='!gap-4 sm:!gap-6'
-      />
+          onClickBrand={() => router.push('/')}
+          sticky={!isMobile}
+          className={classNames(
+            '!px-4 !py-3 bg-transparent !border-opacity-0 sm:!px-8 md:shadow-2xl',
+            {
+              'transition-all': !shouldReduceMotion,
+              '!shadow-transparent md:!py-8': scrollY === 0,
+              'md:!py-4 md:bg-pt-bg-purple-darker md:!border-opacity-100': scrollY > 0
+            }
+          )}
+          linkClassName='text-xs sm:text-sm md:text-base text-pt-purple-100 hover:text-pt-purple-300'
+          mobileBottomClassName='!gap-4 sm:!gap-6'
+        />
+      )}
 
       <CaptchaModal
         hCaptchaSiteKey='11cdabde-af7e-42cb-ba97-76e35b7f7c39'
@@ -212,15 +206,17 @@ export const Layout = (props: LayoutProps) => {
         <>{children}</>
       </main>
 
-      <Footer
-        items={footerItems}
-        className={classNames({
-          'bg-pt-bg-purple-darker': isDarkerFooterBg,
-          'bg-pt-purple-800': !isDarkerFooterBg
-        })}
-        containerClassName='max-w-[1440px]'
-        titleClassName='text-pt-purple-400'
-      />
+      {!hideFooter && (
+        <Footer
+          items={footerItems}
+          className={classNames({
+            'bg-pt-bg-purple-darker': isDarkerFooterBg,
+            'bg-pt-purple-800': !isDarkerFooterBg
+          })}
+          containerClassName='max-w-[1440px]'
+          titleClassName='text-pt-purple-400'
+        />
+      )}
     </div>
   )
 }
@@ -228,17 +224,14 @@ export const Layout = (props: LayoutProps) => {
 interface SecurityAuditItemProps {
   svgSrc: `${string}.svg`
   altText: string
-  href: string
-  date: string
 }
 
 const SecurityAuditItem = (props: SecurityAuditItemProps) => {
-  const { svgSrc, altText, href, date } = props
+  const { svgSrc, altText } = props
 
   return (
-    <a href={href} target='_blank' className='relative flex flex-col'>
+    <a href={LINKS.audits} target='_blank' className='relative flex flex-col'>
       <Image src={svgSrc} alt={altText} fill={true} className='!relative' />
-      <span className='-mt-[2%] ml-[20%] text-gray-200'>{date}</span>
     </a>
   )
 }

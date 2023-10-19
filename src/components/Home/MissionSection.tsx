@@ -102,9 +102,9 @@ const DeveloperCards = (props: DeveloperCardsProps) => {
         className
       )}
     >
-      <DeveloperCard type='v4Docs' className='grow' />
-      <DeveloperCard type='docs' className='grow' />
       <DeveloperCard type='addToken' className='grow' />
+      <DeveloperCard type='docs' className='grow' />
+      <DeveloperCard type='v4Docs' className='grow' />
     </div>
   )
 }
