@@ -25,7 +25,7 @@ export const MainSection = (props: MainSection) => {
       <SimpleTextBanner
         title={t.rich('buildOnPt', RICH_TEXT_FORMATTING)}
         description={t('joinUs')}
-        className='absolute w-full mt-[28%] md:h-[10%] md:justify-end md:mt-0 lg:h-[12%] xl:h-[13.7%]'
+        className='absolute w-full mt-[28%] md:h-[10%] md:justify-end md:mt-0 lg:h-[13.7%]'
         titleClassName='max-w-[1440px]'
         descriptionClassName='max-w-[1440px] px-[5%] sm:px-0'
       />
@@ -49,8 +49,8 @@ const DocsCards = (props: DocsCardsProps) => {
         className
       )}
     >
-      <DocCard href={LINKS.devDocs_v5} version={5} />
-      <DocCard href={LINKS.devDocs} version={4} />
+      <DocCard href={LINKS.devDocs} version={5} />
+      <DocCard href={LINKS.devDocs_v4} version={4} />
     </div>
   )
 }

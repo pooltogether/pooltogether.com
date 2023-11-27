@@ -22,7 +22,7 @@ export const DeveloperCard = (props: DeveloperCardProps) => {
     v4Docs: {
       src: '/graphics/IntegrateGraphic.svg',
       buttonProps: {
-        href: LINKS.devDocs,
+        href: LINKS.devDocs_v4,
         target: '_blank',
         children: t('docs', { version: 4 })
       }
@@ -30,7 +30,7 @@ export const DeveloperCard = (props: DeveloperCardProps) => {
     docs: {
       src: '/graphics/YieldGraphic.svg',
       buttonProps: {
-        href: LINKS.devDocs_v5,
+        href: LINKS.devDocs,
         target: '_blank',
         children: t('docs', { version: 5 })
       }
