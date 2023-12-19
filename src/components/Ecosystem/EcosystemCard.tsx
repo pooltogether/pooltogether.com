@@ -7,6 +7,8 @@ export type EcosystemCardType =
   | 'pooltimeApp'
   | 'ptApp_v4'
   | 'poolExplorer'
+  | 'rewards'
+  | 'flash'
   | 'depositDelegator_v4'
   | 'tally'
   | 'treasury'
@@ -59,6 +61,22 @@ export const EcosystemCard = (props: EcosystemCardProps) => {
       author: 'Underthesea',
       tags: ['ui', 'v4'],
       description: t('poolExplorerCardDescription')
+    },
+    rewards: {
+      href: 'https://rewards.cabana.fi/',
+      iconSrc: '/icons/cabanaIcon.svg',
+      title: t('rewards'),
+      author: 'G9 Software Inc.',
+      tags: ['ui', 'v5'],
+      description: t('rewardsCardDescription')
+    },
+    flash: {
+      href: 'https://flash.cabana.fi/',
+      iconSrc: '/icons/cabanaIcon.svg',
+      title: t('flash'),
+      author: 'G9 Software Inc.',
+      tags: ['ui', 'v5'],
+      description: t('flashCardDescription')
     },
     depositDelegator_v4: {
       href: LINKS.depositDelegator,
