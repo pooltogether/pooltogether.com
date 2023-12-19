@@ -24,6 +24,8 @@ export const LINKS = Object.freeze({
   protocolDisclaimer: `${DOMAINS.app}/protocol-disclaimer`,
   ecosystem: `${DOMAINS.landingPage}/ecosystem`,
   brandKit: `https://www.figma.com/community/file/1309277420331106706`,
+  pooltogetherUiKit: `https://www.figma.com/community/file/1312204004590586926`,
+  pooltogetherTokenBrandingGuidelines: `https://www.figma.com/community/file/1296919804512902494`,
   gettingStarted: `${DOMAINS.docs}/welcome/getting-started`,
   faq: `${DOMAINS.docs}/welcome/faq`,
   guides: `${DOMAINS.docs}/pooltogether/guides`,

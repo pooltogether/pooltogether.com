@@ -8,6 +8,8 @@ export type BuilderCardType =
   | 'reactHooks'
   | 'prizeTierController'
   | 'brandKit'
+  | 'pooltogetherUiKit'
+  | 'pooltogetherTokenBrandingGuidelines'
   | 'cabanaFactory'
 
 interface BuilderCardProps {
@@ -60,6 +62,22 @@ export const BuilderCard = (props: BuilderCardProps) => {
       author: 'PoolTogether Inc.',
       tags: ['design'],
       description: t('brandKitCardDescription')
+    },
+    pooltogetherUiKit: {
+      href: LINKS.pooltogetherUiKit,
+      iconSrc: '/icons/devToolIcon.svg',
+      title: t('pooltogetherUiKitCardTitle'),
+      author: 'G9 Software Inc.',
+      tags: ['design'],
+      description: t('pooltogetherUiKitCardDescription')
+    },
+    pooltogetherTokenBrandingGuidelines: {
+      href: LINKS.pooltogetherTokenBrandingGuidelines,
+      iconSrc: '/icons/devToolIcon.svg',
+      title: t('pooltogetherTokenBrandingGuidelinesCardTitle'),
+      author: 'G9 Software Inc.',
+      tags: ['design'],
+      description: t('pooltogetherTokenBrandingGuidelinesCardDescription')
     },
     cabanaFactory: {
       href: 'https://factory.cabana.fi/',
