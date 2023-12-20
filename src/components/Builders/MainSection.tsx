@@ -115,7 +115,7 @@ const CardRows = (props: CardRowsProps) => {
       <BuilderCards
         iconSrc='/icons/landscapeIcon.svg'
         title={t('designerToolsSectionTitle')}
-        cards={['brandKit']}
+        cards={['brandKit', 'pooltogetherUiKit', 'pooltogetherTokenBrandingGuidelines']}
       />
     </div>
   )

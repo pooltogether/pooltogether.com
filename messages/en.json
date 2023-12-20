@@ -129,6 +129,10 @@
     "prizeTierControllerCardDescription": "View and edit upcoming prize tiers.",
     "brandKitCardTitle": "Brand Kit",
     "brandKitCardDescription": "A collection of assets, logos and styles for building the PoolTogether brand.",
+    "pooltogetherUiKitCardTitle": "PoolTogether UI Kit",
+    "pooltogetherUiKitCardDescription": "The Figma based design system that comprises the Cabana.fi user interface. This tool can be used to design a new version of the PoolTogether V5 ui or design and prototype new extensions.",
+    "pooltogetherTokenBrandingGuidelinesCardTitle": "PoolTogether Token Branding Guidelines",
+    "pooltogetherTokenBrandingGuidelinesCardDescription": "A template for creating token logos for your PoolTogether V5 prize tokens, plus guidelines on how to structure token names and symbols",
     "cabanaFactoryCardTitle": "Cabana Factory",
     "cabanaFactoryCardDescription": "Launch your own prize vaults using any ERC-4626 compatible yield source."
   },
