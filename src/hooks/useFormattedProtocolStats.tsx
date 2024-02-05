@@ -29,9 +29,11 @@ export const useFormattedProtocolStats = () => {
 
   if (!!protocolStats) {
     return {
-      totalPrizes: `$${formatProtocolStatsValue(protocolStats.totalPrizes)}`,
-      tvl: `$${formatProtocolStatsValue(protocolStats.tvl)}`,
-      uniqueWallets: formatProtocolStatsValue(protocolStats.uniqueWallets, { hideLabel: true })
+      totalPrizes: `$${formatProtocolStatsValue(protocolStats.total.awarded.usd)}`,
+      tvl: `$${formatProtocolStatsValue(protocolStats.total.current.tvl.usd)}`,
+      uniqueWallets: formatProtocolStatsValue(protocolStats.total.current.users, {
+        hideLabel: true
+      })
     }
   }
 
