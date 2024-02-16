@@ -1,9 +1,10 @@
 import deepmerge from 'deepmerge'
-import { ProtocolStats } from './types'
+import { PROTOCOL_STATS_API_URL } from './constants'
+import { AggregatedProtocolStats } from './types'
 
 export const getProtocolStats = async () => {
-  const results = await fetch('https://protocol-stats.ncookie.workers.dev')
-  const data: ProtocolStats = await results.json()
+  const results = await fetch(PROTOCOL_STATS_API_URL)
+  const data: AggregatedProtocolStats = await results.json()
   return data
 }
 

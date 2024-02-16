@@ -1,7 +1,7 @@
 import { atom, useAtomValue } from 'jotai'
-import { ProtocolStats } from './types'
+import { AggregatedProtocolStats } from './types'
 
-export const protocolStatsAtom = atom<ProtocolStats | undefined>(undefined)
+export const protocolStatsAtom = atom<AggregatedProtocolStats | undefined>(undefined)
 
 export const useProtocolStats = () => {
   const protocolStats = useAtomValue(protocolStatsAtom)
