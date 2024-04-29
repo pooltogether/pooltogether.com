@@ -11,6 +11,8 @@ export type BuilderCardType =
   | 'pooltogetherUiKit'
   | 'pooltogetherTokenBrandingGuidelines'
   | 'cabanaFactory'
+  | 'nextjsTemplate'
+  | 'sveltekitTemplate'
 
 interface BuilderCardProps {
   type: BuilderCardType
@@ -86,6 +88,22 @@ export const BuilderCard = (props: BuilderCardProps) => {
       author: 'G9 Software Inc.',
       tags: ['dev', 'v5'],
       description: t('cabanaFactoryCardDescription')
+    },
+    nextjsTemplate: {
+      href: 'https://github.com/GenerationSoftware/pooltogether-nextjs-template',
+      iconSrc: '/icons/nextjsIcon.svg',
+      title: t('nextjsTemplateCardTitle'),
+      author: 'G9 Software Inc.',
+      tags: ['dev', 'v5'],
+      description: t('nextjsTemplateCardDescription')
+    },
+    sveltekitTemplate: {
+      href: 'https://github.com/GenerationSoftware/pooltogether-sveltekit-template',
+      iconSrc: '/icons/svelteIcon.svg',
+      title: t('sveltekitTemplateCardTitle'),
+      author: 'G9 Software Inc.',
+      tags: ['dev', 'v5'],
+      description: t('sveltekitTemplateCardDescription')
     }
   }
 

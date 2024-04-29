@@ -45,12 +45,11 @@ const DocsCards = (props: DocsCardsProps) => {
   return (
     <div
       className={classNames(
-        'flex flex-col gap-3 items-center px-4 md:flex-row md:gap-8 md:px-0',
+        'flex flex-col gap-3 items-center justify-center px-4 md:flex-row md:gap-8 md:px-0',
         className
       )}
     >
       <DocCard href={LINKS.devDocs} version={5} />
-      <DocCard href={LINKS.devDocs_v4} version={4} />
     </div>
   )
 }
@@ -73,7 +72,7 @@ const DocCard = (props: DocCardProps) => {
       className={classNames(
         'w-full max-w-sm flex gap-2 items-center p-4 bg-pt-bg-purple-darker rounded-2xl',
         'outline outline-2 -outline-offset-2 outline-transparent hover:outline-pt-purple-100/20 hover:shadow-lg',
-        'md:w-auto md:max-w-none md:h-full md:grow md:gap-4 md:justify-center md:px-8 md:py-6',
+        'md:gap-4 md:justify-center md:px-8 md:py-6',
         'xl:px-16 xl:py-12',
         className
       )}
@@ -110,7 +109,7 @@ const CardRows = (props: CardRowsProps) => {
       <BuilderCards
         iconSrc='/icons/smallCodeIcon.svg'
         title={t('devToolsSectionTitle')}
-        cards={['cabanaFactory', 'clientJs', 'reactHooks', 'clientJs_v4', 'prizeTierController']}
+        cards={['cabanaFactory', 'clientJs', 'reactHooks', 'nextjsTemplate', 'sveltekitTemplate']}
       />
       <BuilderCards
         iconSrc='/icons/landscapeIcon.svg'

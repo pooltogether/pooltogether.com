@@ -138,7 +138,11 @@
     "pooltogetherTokenBrandingGuidelinesCardTitle": "PoolTogether Token Branding Guidelines",
     "pooltogetherTokenBrandingGuidelinesCardDescription": "A template for creating token logos for your PoolTogether V5 prize tokens, plus guidelines on how to structure token names and symbols",
     "cabanaFactoryCardTitle": "Cabana Factory",
-    "cabanaFactoryCardDescription": "Launch your own prize vaults using any ERC-4626 compatible yield source."
+    "cabanaFactoryCardDescription": "Launch your own prize vaults using any ERC-4626 compatible yield source.",
+    "nextjsTemplateCardTitle": "NextJS Template",
+    "nextjsTemplateCardDescription": "A minimal static template for building a PoolTogether dapp using NextJS.",
+    "sveltekitTemplateCardTitle": "SvelteKit Template",
+    "sveltekitTemplateCardDescription": "A minimal static template for building a PoolTogether dapp using SvelteKit."
   },
   "Interfaces": {
     "interfacesTitle": "Interfaces for using PoolTogether",
