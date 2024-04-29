@@ -18,6 +18,8 @@ export type EcosystemCardType =
   | 'cabanalytics'
   | 'cabanaSwaps'
   | 'prizeCalc'
+  | 'migrationApp'
+  | 'ptlist'
 
 interface EcosystemCardProps {
   type: EcosystemCardType
@@ -59,7 +61,7 @@ export const EcosystemCard = (props: EcosystemCardProps) => {
       iconSrc: '/icons/poolExplorer.svg',
       title: t('poolExplorerCardTitle'),
       author: 'Underthesea',
-      tags: ['ui', 'v4'],
+      tags: ['analytics', 'v4'],
       description: t('poolExplorerCardDescription')
     },
     rewards: {
@@ -67,7 +69,7 @@ export const EcosystemCard = (props: EcosystemCardProps) => {
       iconSrc: '/icons/cabanaIcon.svg',
       title: t('rewards'),
       author: 'G9 Software Inc.',
-      tags: ['ui', 'v5'],
+      tags: ['extensions', 'v5'],
       description: t('rewardsCardDescription')
     },
     flash: {
@@ -75,7 +77,7 @@ export const EcosystemCard = (props: EcosystemCardProps) => {
       iconSrc: '/icons/cabanaIcon.svg',
       title: t('flash'),
       author: 'G9 Software Inc.',
-      tags: ['ui', 'v5'],
+      tags: ['extensions', 'v5'],
       description: t('flashCardDescription')
     },
     depositDelegator_v4: {
@@ -131,7 +133,7 @@ export const EcosystemCard = (props: EcosystemCardProps) => {
       iconSrc: '/icons/cabanaIcon.svg',
       title: t('cabanalyticsCardTitle'),
       author: 'G9 Software Inc.',
-      tags: ['extensions', 'v5'],
+      tags: ['analytics', 'v5'],
       description: t('cabanalyticsCardDescription')
     },
     cabanaSwaps: {
@@ -149,6 +151,22 @@ export const EcosystemCard = (props: EcosystemCardProps) => {
       author: 'Ncookie',
       tags: ['analytics'],
       description: t('prizeCalcCardDescription')
+    },
+    migrationApp: {
+      href: 'https://migrate.cabana.fi/',
+      iconSrc: '/icons/cabanaIcon.svg',
+      title: t('migrationAppCardTitle'),
+      author: 'G9 Software Inc.',
+      tags: ['ui', 'v3', 'v4'],
+      description: t('migrationAppCardDescription')
+    },
+    ptlist: {
+      href: 'https://ptlist.xyz/',
+      iconSrc: '/icons/ptlistIcon.svg',
+      title: t('ptlistCardTitle'),
+      author: 'Ncookie & Trmid',
+      tags: ['extensions', 'v5'],
+      description: t('ptlistCardDescription')
     }
   }
 

@@ -96,7 +96,11 @@
     "cabanaSwapsCardTitle": "Cabana Swaps",
     "cabanaSwapsCardDescription": "Browse and swap into your favorite PoolTogether vaults.",
     "prizeCalcCardTitle": "Deposit Delegator Calculator",
-    "prizeCalcCardDescription": "A calculator for viewing potential outcomes from delegations."
+    "prizeCalcCardDescription": "A calculator for viewing potential outcomes from delegations.",
+    "migrationAppCardTitle": "Cabana Migrations",
+    "migrationAppCardDescription": "An interface to easily migrate funds from older versions of PoolTogether.",
+    "ptlistCardTitle": "PTList",
+    "ptlistCardDescription": "Quickly generate a vault list from an account's deposits."
   },
   "Community": {
     "dipInThePool": "Take a <purple-400>dip</purple-400> in the pool",
@@ -149,6 +153,7 @@
     "governance": "Governance",
     "dev": "Dev Tools",
     "design": "Design Tools",
+    "v3": "V3",
     "v4": "V4",
     "v5": "V5"
   },
