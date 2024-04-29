@@ -76,23 +76,24 @@ export const Layout = (props: LayoutProps) => {
     {
       title: t_footer('ecosystem'),
       content: [
-        { content: t_footer('tools'), href: LINKS.tools },
         { content: t_footer('devDocs'), href: LINKS.devDocs },
         { content: t_footer('security'), href: LINKS.audits },
         { content: t_footer('faq'), href: LINKS.faq },
         { content: t_footer('brandAssets'), href: LINKS.brandKit },
         { content: t_footer('governance'), href: LINKS.governance },
         { content: t_footer('userDocs'), href: LINKS.docs },
-        {
-          content: t_footer('protocolDisclaimer'),
-          href: LINKS.protocolDisclaimer
-        },
-        { content: t_footer('termsOfService'), href: LINKS.termsOfService }
+        { content: t_footer('protocolDisclaimer'), href: '/protocol-disclaimer' },
+        { content: t_footer('termsOfService'), href: '/terms' }
       ]
     },
     {
       title: t_footer('community'),
       content: [
+        {
+          content: 'Warpcast',
+          href: LINKS.warpcast,
+          icon: <SocialIcon platform='warpcast' className='w-6 h-auto shrink-0' />
+        },
         {
           content: 'Lens',
           href: LINKS.lens,
