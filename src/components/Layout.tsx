@@ -90,11 +90,6 @@ export const Layout = (props: LayoutProps) => {
       title: t_footer('community'),
       content: [
         {
-          content: 'Warpcast',
-          href: LINKS.warpcast,
-          icon: <SocialIcon platform='warpcast' className='w-6 h-auto shrink-0' />
-        },
-        {
           content: 'Lens',
           href: LINKS.lens,
           icon: <SocialIcon platform='lens' className='w-6 h-auto shrink-0' />
