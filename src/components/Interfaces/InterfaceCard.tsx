@@ -4,7 +4,12 @@ import classNames from 'classnames'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
-export type InterfaceCardType = 'cabanaApp' | 'pooltimeApp' | 'ptApp_v4' | 'poolExplorer'
+export type InterfaceCardType =
+  | 'cabanaApp'
+  | 'pooltimeApp'
+  | 'ptApp_v4'
+  | 'poolExplorer'
+  | 'migrationApp'
 
 interface InterfaceCardProps {
   type: InterfaceCardType
@@ -39,6 +44,11 @@ export const InterfaceCard = (props: InterfaceCardProps) => {
       href: LINKS.poolExplorer,
       iconSrc: '/icons/poolExplorer.svg',
       title: t('poolExplorerCardTitle')
+    },
+    migrationApp: {
+      href: 'https://migrate.cabana.fi/',
+      iconSrc: '/icons/cabanaIcon.svg',
+      title: t('migrationAppCardTitle')
     }
   }
 
