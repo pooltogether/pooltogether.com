@@ -77,6 +77,7 @@ const Socials = (props: SocialsProps) => {
         {t('otherPlatforms')}
       </span>
       <div className='w-full flex flex-wrap gap-6 justify-center px-16 md:justify-between md:pb-4 md:px-0'>
+        <SocialItem type='warpcast' />
         <SocialItem type='lens' />
         <SocialItem type='mirror' />
         <SocialItem type='twitter' />
