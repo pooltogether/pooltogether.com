@@ -44,6 +44,7 @@ export const LINKS = Object.freeze({
   grants: `https://poolgrants.org`,
   lens: `https://lenster.xyz/u/pooltogether`,
   warpcast: `https://warpcast.com/pooltogether`,
+  farcaster: `https://warpcast.com/~/channel/pool-together`,
   mirror: `https://pooltogether.mirror.xyz/`,
   clientJs: `https://www.npmjs.com/package/@generationsoftware/hyperstructure-client-js`,
   clientJs_v4: `https://www.npmjs.com/package/@pooltogether/v4-client-js`,

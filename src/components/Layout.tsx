@@ -95,6 +95,11 @@ export const Layout = (props: LayoutProps) => {
           icon: <SocialIcon platform='lens' className='w-6 h-auto shrink-0' />
         },
         {
+          content: 'Farcaster',
+          href: LINKS.farcaster,
+          icon: <SocialIcon platform='farcaster' className='w-6 h-auto shrink-0' />
+        },
+        {
           content: 'Twitter',
           href: LINKS.twitter,
           icon: <SocialIcon platform='twitter' className='w-6 h-auto shrink-0' />
