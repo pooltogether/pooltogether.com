@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
-type DeveloperCardType = 'v4Docs' | 'docs' | 'addToken'
+type DeveloperCardType = 'devDocs' | 'addVault'
 
 interface DeveloperCardProps {
   type: DeveloperCardType
@@ -17,30 +17,22 @@ export const DeveloperCard = (props: DeveloperCardProps) => {
 
   const developerCardInfo: Record<
     DeveloperCardType,
-    { src: `/${string}.svg`; buttonProps: ButtonProps; tag?: string }
+    { src: `/${string}.svg`; buttonProps: ButtonProps }
   > = {
-    v4Docs: {
-      src: '/graphics/IntegrateGraphic.svg',
-      buttonProps: {
-        href: LINKS.devDocs_v4,
-        target: '_blank',
-        children: t('docs', { version: 4 })
-      }
-    },
-    docs: {
+    devDocs: {
       src: '/graphics/YieldGraphic.svg',
       buttonProps: {
         href: LINKS.devDocs,
         target: '_blank',
-        children: t('docs', { version: 5 })
+        children: t('devDocs')
       }
     },
-    addToken: {
-      src: '/graphics/AddTokenGraphic.svg',
+    addVault: {
+      src: '/graphics/AddVaultGraphic.svg',
       buttonProps: {
         href: 'https://factory.cabana.fi/',
         target: '_blank',
-        children: t('addYourToken')
+        children: t('addYourVault')
       }
     }
   }
@@ -56,11 +48,6 @@ export const DeveloperCard = (props: DeveloperCardProps) => {
         className
       )}
     >
-      {'tag' in card && (
-        <span className='absolute top-0 -translate-y-1/2 px-3 py-0.5 text-xs text-pt-purple-400 bg-[#361D60] rounded-full'>
-          {card.tag}
-        </span>
-      )}
       <Image
         src='/icons/codeIcon.svg'
         width={333}
