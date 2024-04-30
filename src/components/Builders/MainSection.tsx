@@ -49,19 +49,18 @@ const DocsCards = (props: DocsCardsProps) => {
         className
       )}
     >
-      <DocCard href={LINKS.devDocs} version={5} />
+      <DocCard href={LINKS.devDocs} />
     </div>
   )
 }
 
 interface DocCardProps {
   href: string
-  version: number
   className?: string
 }
 
 const DocCard = (props: DocCardProps) => {
-  const { href, version, className } = props
+  const { href, className } = props
 
   const t = useTranslations('Builders')
 
@@ -70,9 +69,9 @@ const DocCard = (props: DocCardProps) => {
       href={href}
       target='_blank'
       className={classNames(
-        'w-full max-w-sm flex gap-2 items-center p-4 bg-pt-bg-purple-darker rounded-2xl',
+        'flex gap-2 items-center px-8 py-6 bg-pt-bg-purple-darker rounded-2xl',
         'outline outline-2 -outline-offset-2 outline-transparent hover:outline-pt-purple-100/20 hover:shadow-lg',
-        'md:gap-4 md:justify-center md:px-8 md:py-6',
+        'md:w-full md:max-w-lg md:gap-4 md:justify-center',
         'xl:px-16 xl:py-12',
         className
       )}
@@ -86,7 +85,6 @@ const DocCard = (props: DocCardProps) => {
       />
       <div className='flex text-base text-pt-purple-50 md:flex-col lg:text-lg xl:text-xl'>
         {t.rich('devDocs', {
-          version,
           first: (chunks) => <span className='mr-[.5ch] md:mr-0'>{chunks}</span>,
           second: (chunks) => <span>{chunks}</span>
         })}
