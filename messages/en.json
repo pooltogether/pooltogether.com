@@ -39,8 +39,8 @@
     "forDevelopers": "For Developers",
     "buildOnPt": "Build on PoolTogether",
     "organicUsage": "PoolTogether unlocks organic usage for wallets, yield sources & blockchains",
-    "docs": "V{version} Documentation",
-    "addYourToken": "Add Your Token",
+    "devDocs": "Dev Documentation",
+    "addYourVault": "Add Your Vault",
     "whyCrypto": "Why a Crypto Protocol?",
     "becauseCrypto": "Because it's 100% Transparent & Free",
     "automationTransparency": "Protocols automate services according to unchangeable rules. This makes prize savings more transparent, fair and accessible.",
@@ -96,7 +96,11 @@
     "cabanaSwapsCardTitle": "Cabana Swaps",
     "cabanaSwapsCardDescription": "Browse and swap into your favorite PoolTogether vaults.",
     "prizeCalcCardTitle": "Deposit Delegator Calculator",
-    "prizeCalcCardDescription": "A calculator for viewing potential outcomes from delegations."
+    "prizeCalcCardDescription": "A calculator for viewing potential outcomes from delegations.",
+    "migrationAppCardTitle": "Cabana Migrations",
+    "migrationAppCardDescription": "An interface to easily migrate funds from older versions of PoolTogether.",
+    "ptlistCardTitle": "PTList",
+    "ptlistCardDescription": "Quickly generate a vault list from an account's deposits."
   },
   "Community": {
     "dipInThePool": "Take a <purple-400>dip</purple-400> in the pool",
@@ -116,14 +120,14 @@
   "Builders": {
     "buildOnPt": "<purple-400>Build</purple-400> on PoolTogether",
     "joinUs": "Join the diverse community of developers and designers building on the protocol",
-    "devDocs": "<first>V{version} Developer</first><second>Documentation</second>",
+    "devDocs": "<first>Developer</first><second>Documentation</second>",
     "devToolsSectionTitle": "Developer Tools",
     "designerToolsSectionTitle": "Designer Tools",
     "clientJs_v4CardTitle": "V4 Client Library",
     "clientJs_v4CardDescription": "Simple JS library to interact with PoolTogether V4 contracts.",
-    "clientJsCardTitle": "V5 Client Library",
+    "clientJsCardTitle": "Client Library",
     "clientJsCardDescription": "Simple JS library to interact with PoolTogether V5 contracts.",
-    "reactHooksCardTitle": "V5 React Hooks",
+    "reactHooksCardTitle": "React Hooks",
     "reactHooksCardDescription": "Shared Hyperstructure-specific React hooks.",
     "prizeTierControllerCardTitle": "Prize Tier Controller",
     "prizeTierControllerCardDescription": "View and edit upcoming prize tiers.",
@@ -134,13 +138,18 @@
     "pooltogetherTokenBrandingGuidelinesCardTitle": "PoolTogether Token Branding Guidelines",
     "pooltogetherTokenBrandingGuidelinesCardDescription": "A template for creating token logos for your PoolTogether V5 prize tokens, plus guidelines on how to structure token names and symbols",
     "cabanaFactoryCardTitle": "Cabana Factory",
-    "cabanaFactoryCardDescription": "Launch your own prize vaults using any ERC-4626 compatible yield source."
+    "cabanaFactoryCardDescription": "Launch your own prize vaults using any ERC-4626 compatible yield source.",
+    "nextjsTemplateCardTitle": "NextJS Template",
+    "nextjsTemplateCardDescription": "A minimal static template for building a PoolTogether dapp using NextJS.",
+    "sveltekitTemplateCardTitle": "SvelteKit Template",
+    "sveltekitTemplateCardDescription": "A minimal static template for building a PoolTogether dapp using SvelteKit."
   },
   "Interfaces": {
     "interfacesTitle": "Interfaces for using PoolTogether",
     "manyWays": "There are a variety of ways to interact with the PoolTogether protocol.",
     "decentralization": "Supporting multiple interfaces makes the protocol more decentralized and censorship-resistant.",
-    "v4Info": "PoolTogether V5 is independent from PoolTogether V4. Any funds you deposited in V4 remain secure and can be accessed by using the V4 app."
+    "v4Info": "PoolTogether V5 is independent from PoolTogether V4. Any funds you deposited in V4 remain secure and can be accessed by using the V4 app.",
+    "migrationPrompt": "Have funds in older versions of PoolTogether?"
   },
   "Tags": {
     "ui": "User Interfaces",
@@ -149,6 +158,7 @@
     "governance": "Governance",
     "dev": "Dev Tools",
     "design": "Design Tools",
+    "v3": "V3",
     "v4": "V4",
     "v5": "V5"
   },

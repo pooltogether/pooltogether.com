@@ -7,7 +7,8 @@ const socialItemInfo = {
   mirror: { href: LINKS.mirror, name: 'Mirror', iconSrc: '/icons/mirrorIcon.svg' },
   twitter: { href: LINKS.twitter, name: 'Twitter', iconSrc: '/icons/twitterIcon.svg' },
   medium: { href: LINKS.medium, name: 'Medium', iconSrc: '/icons/mediumIcon.svg' },
-  notion: { href: LINKS.notion, name: 'Notion', iconSrc: '/icons/notionIcon.svg' }
+  notion: { href: LINKS.notion, name: 'Notion', iconSrc: '/icons/notionIcon.svg' },
+  farcaster: { href: LINKS.warpcast, name: 'Farcaster', iconSrc: '/icons/farcasterIcon.svg' }
 } satisfies { [id: string]: { href: string; name: string; iconSrc: `${string}.svg` } }
 
 interface SocialItemProps {

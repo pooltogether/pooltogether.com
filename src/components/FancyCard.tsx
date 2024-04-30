@@ -10,6 +10,7 @@ export type FancyCardTag =
   | 'governance'
   | 'dev'
   | 'design'
+  | 'v3'
   | 'v4'
   | 'v5'
 

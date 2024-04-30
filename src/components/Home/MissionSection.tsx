@@ -19,10 +19,10 @@ export const MissionSection = (props: MissionSection) => {
         bg='indexSection3.svg'
         smallBg='mobileIndexSection3.svg'
         animatedBg='indexSection3.svg'
-        className='aspect-[375/1494] md:aspect-[1600/1430]'
+        className='aspect-[375/1233] md:aspect-[1600/1410]'
       >
         <DeveloperBanner className='absolute w-full max-w-[86.8%] h-[25%] mt-[44%] md:max-w-[21%] md:h-[29.2%] md:mt-[55.8%] md:ml-[4%]' />
-        <DeveloperCards className='w-full max-w-[60%] h-[50.9%] mt-[174.8%] ml-[20%] md:max-w-[47.5%] md:h-[19%] md:mt-[62.6%] md:ml-[45.5%]' />
+        <DeveloperCards className='w-full max-w-[60%] h-[43.5%] mt-[174.8%] ml-[20%] md:max-w-[47.5%] md:h-[19%] md:mt-[62.6%] md:ml-[46.5%]' />
       </Section>
     </div>
   )
@@ -98,13 +98,12 @@ const DeveloperCards = (props: DeveloperCardsProps) => {
   return (
     <div
       className={classNames(
-        'flex flex-col gap-12 justify-between md:grid md:grid-cols-3 md:gap-4',
+        'flex flex-col gap-12 justify-between md:grid md:grid-cols-2 md:gap-4',
         className
       )}
     >
-      <DeveloperCard type='addToken' className='grow' />
-      <DeveloperCard type='docs' className='grow' />
-      <DeveloperCard type='v4Docs' className='grow' />
+      <DeveloperCard type='devDocs' className='max-w-xs md:ml-auto' />
+      <DeveloperCard type='addVault' className='max-w-xs' />
     </div>
   )
 }
