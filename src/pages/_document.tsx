@@ -28,6 +28,8 @@ class MyDocument extends Document {
           <link rel='icon' href='/favicon.png' type='image/x-icon' />
           <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
 
+          <meta name='cf-2fa-verify' content='Gjd021938jr984hfi92E' />
+
           <meta name='theme-color' content='#21064e' />
           <meta name='description' content={description} />
           <meta name='keywords' content={keywords} />
