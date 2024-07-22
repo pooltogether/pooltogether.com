@@ -100,7 +100,9 @@
     "migrationAppCardTitle": "Cabana Migrations",
     "migrationAppCardDescription": "An interface to easily migrate funds from older versions of PoolTogether.",
     "ptlistCardTitle": "PTList",
-    "ptlistCardDescription": "Quickly generate a vault list from an account's deposits."
+    "ptlistCardDescription": "Quickly generate a vault list from an account's deposits.",
+    "superformCardTitle": "Superform",
+    "superformCardDescription": "Easily save with multiple prize vaults via pooled deposits."
   },
   "Community": {
     "dipInThePool": "Take a <purple-400>dip</purple-400> in the pool",
