@@ -10,6 +10,7 @@ export type InterfaceCardType =
   | 'ptApp_v4'
   | 'poolExplorer'
   | 'migrationApp'
+  | 'wineth'
 
 interface InterfaceCardProps {
   type: InterfaceCardType
@@ -49,6 +50,11 @@ export const InterfaceCard = (props: InterfaceCardProps) => {
       href: 'https://migrate.cabana.fi/',
       iconSrc: '/icons/cabanaIcon.svg',
       title: t('migrationAppCardTitle')
+    },
+    wineth: {
+      href: 'https://wineth.org',
+      iconSrc: '/icons/wineth.svg',
+      title: t('winethCardTitle')
     }
   }
 

@@ -20,6 +20,7 @@ export type EcosystemCardType =
   | 'prizeCalc'
   | 'migrationApp'
   | 'ptlist'
+  | 'wineth'
 
 interface EcosystemCardProps {
   type: EcosystemCardType
@@ -167,6 +168,14 @@ export const EcosystemCard = (props: EcosystemCardProps) => {
       author: 'Ncookie & Trmid',
       tags: ['extensions', 'v5'],
       description: t('ptlistCardDescription')
+    },
+    wineth: {
+      href: 'https://wineth.org',
+      iconSrc: '/icons/wineth.svg',
+      title: t('winethCardTitle'),
+      author: 'WinETH Team',
+      tags: ['ui', 'v5'],
+      description: t('winethCardDescription')
     }
   }
 
