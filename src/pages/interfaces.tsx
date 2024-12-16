@@ -29,7 +29,7 @@ export default function InterfacesPage() {
       className='px-4 py-16 bg-gradient-to-b from-pt-bg-purple-darker to-pt-purple-800'
     >
       <InterfacesHeader />
-      <InterfaceCards cards={['cabanaApp', 'pooltimeApp']} className='mt-8' />
+      <InterfaceCards cards={['cabanaApp', 'pooltimeApp', 'wineth']} className='mt-8' />
       <InterfaceCards title={t('migrationPrompt')} cards={['migrationApp']} className='mt-8' />
     </Layout>
   )
