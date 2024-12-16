@@ -21,6 +21,7 @@ export type EcosystemCardType =
   | 'migrationApp'
   | 'ptlist'
   | 'superform'
+  | 'wineth'
 
 interface EcosystemCardProps {
   type: EcosystemCardType
@@ -176,6 +177,14 @@ export const EcosystemCard = (props: EcosystemCardProps) => {
       author: 'Superform',
       tags: ['ui', 'v5'],
       description: t('superformCardDescription')
+    },
+    wineth: {
+      href: 'https://wineth.org',
+      iconSrc: '/icons/wineth.svg',
+      title: t('winethCardTitle'),
+      author: 'WinETH Team',
+      tags: ['ui', 'v5'],
+      description: t('winethCardDescription')
     }
   }
 

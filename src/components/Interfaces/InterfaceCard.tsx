@@ -11,6 +11,7 @@ export type InterfaceCardType =
   | 'poolExplorer'
   | 'migrationApp'
   | 'superform'
+  | 'wineth'
 
 interface InterfaceCardProps {
   type: InterfaceCardType
@@ -55,6 +56,11 @@ export const InterfaceCard = (props: InterfaceCardProps) => {
       href: 'https://app.superform.xyz/protocol/pooltogether/',
       iconSrc: '/icons/superformIcon.png',
       title: t('superformCardTitle')
+    },
+    wineth: {
+      href: 'https://wineth.org',
+      iconSrc: '/icons/wineth.svg',
+      title: t('winethCardTitle')
     }
   }
 
