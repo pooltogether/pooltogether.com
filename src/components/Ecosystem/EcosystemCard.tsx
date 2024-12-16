@@ -20,6 +20,7 @@ export type EcosystemCardType =
   | 'prizeCalc'
   | 'migrationApp'
   | 'ptlist'
+  | 'superform'
   | 'wineth'
 
 interface EcosystemCardProps {
@@ -168,6 +169,14 @@ export const EcosystemCard = (props: EcosystemCardProps) => {
       author: 'Ncookie & Trmid',
       tags: ['extensions', 'v5'],
       description: t('ptlistCardDescription')
+    },
+    superform: {
+      href: 'https://app.superform.xyz/protocol/pooltogether',
+      iconSrc: '/icons/superformIcon.png',
+      title: t('superformCardTitle'),
+      author: 'Superform',
+      tags: ['ui', 'v5'],
+      description: t('superformCardDescription')
     },
     wineth: {
       href: 'https://wineth.org',

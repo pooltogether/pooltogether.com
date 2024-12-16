@@ -10,6 +10,7 @@ export type InterfaceCardType =
   | 'ptApp_v4'
   | 'poolExplorer'
   | 'migrationApp'
+  | 'superform'
   | 'wineth'
 
 interface InterfaceCardProps {
@@ -50,6 +51,11 @@ export const InterfaceCard = (props: InterfaceCardProps) => {
       href: 'https://migrate.cabana.fi/',
       iconSrc: '/icons/cabanaIcon.svg',
       title: t('migrationAppCardTitle')
+    },
+    superform: {
+      href: 'https://app.superform.xyz/protocol/pooltogether/',
+      iconSrc: '/icons/superformIcon.png',
+      title: t('superformCardTitle')
     },
     wineth: {
       href: 'https://wineth.org',

@@ -101,6 +101,8 @@
     "migrationAppCardDescription": "An interface to easily migrate funds from older versions of PoolTogether.",
     "ptlistCardTitle": "PTList",
     "ptlistCardDescription": "Quickly generate a vault list from an account's deposits.",
+    "superformCardTitle": "Superform",
+    "superformCardDescription": "Easily save with multiple prize vaults via pooled deposits.",
     "winethCardTitle": "winETH",
     "winethCardDescription": "Contribute to a good cause while saving and winning with PoolTogether."
   },
