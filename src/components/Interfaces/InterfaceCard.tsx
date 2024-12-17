@@ -12,6 +12,7 @@ export type InterfaceCardType =
   | 'migrationApp'
   | 'superform'
   | 'wineth'
+  | 'yearn'
 
 interface InterfaceCardProps {
   type: InterfaceCardType
@@ -61,6 +62,11 @@ export const InterfaceCard = (props: InterfaceCardProps) => {
       href: 'https://wineth.org',
       iconSrc: '/icons/wineth.svg',
       title: t('winethCardTitle')
+    },
+    yearn: {
+      href: 'https://pooltogether.yearn.space/',
+      iconSrc: '/icons/yearn.svg',
+      title: t('yearnCardTitle')
     }
   }
 
@@ -79,7 +85,15 @@ export const InterfaceCard = (props: InterfaceCardProps) => {
       )}
     >
       <div className='flex gap-2 items-center'>
-        <Image src={card.iconSrc} width={48} height={48} alt={card.title} className='h-12 w-auto' />
+        <div className='flex h-12 w-12 items-center justify-center'>
+          <Image
+            src={card.iconSrc}
+            width={48}
+            height={48}
+            alt={card.title}
+            className='h-full w-auto max-w-full'
+          />
+        </div>
         <span className='text-base text-pt-purple-100 md:text-xl'>{card.title}</span>
       </div>
       <ArrowTopRightOnSquareIcon className='w-8 h-auto ml-auto text-pt-purple-300 group-hover:text-pt-purple-400' />
