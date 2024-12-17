@@ -46,7 +46,7 @@ const CardRows = (props: CardRowsProps) => {
       <EcosystemCards
         iconSrc='/icons/addIcon.svg'
         title={t('interfacesSectionTitle')}
-        cards={['cabanaApp', 'pooltimeApp', 'superform', 'yearn', 'migrationApp']}
+        cards={['cabanaApp', 'pooltimeApp', 'superform', 'wineth', 'yearn', 'migrationApp']}
       />
       <EcosystemCards
         iconSrc='/icons/puzzleIcon.svg'
