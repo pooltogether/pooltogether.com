@@ -103,8 +103,10 @@
     "ptlistCardDescription": "Quickly generate a vault list from an account's deposits.",
     "superformCardTitle": "Superform",
     "superformCardDescription": "Easily save with multiple prize vaults via pooled deposits.",
-    "winethCardTitle": "winETH",
-    "winethCardDescription": "Contribute to a good cause while saving and winning with PoolTogether."
+    "winethCardTitle": "WinETH",
+    "winethCardDescription": "Contribute to a good cause while saving and winning with PoolTogether.",
+    "yearnCardTitle": "Yearn",
+    "yearnCardDescription": "Win prizes by saving with your favorite yearn strategies."
   },
   "Community": {
     "dipInThePool": "Take a <purple-400>dip</purple-400> in the pool",

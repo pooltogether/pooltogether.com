@@ -12,6 +12,7 @@ export type InterfaceCardType =
   | 'migrationApp'
   | 'superform'
   | 'wineth'
+  | 'yearn'
 
 interface InterfaceCardProps {
   type: InterfaceCardType
@@ -61,6 +62,11 @@ export const InterfaceCard = (props: InterfaceCardProps) => {
       href: 'https://wineth.org',
       iconSrc: '/icons/wineth.svg',
       title: t('winethCardTitle')
+    },
+    yearn: {
+      href: 'https://pooltogether.yearn.space/',
+      iconSrc: '/icons/yearn.svg',
+      title: t('yearnCardTitle')
     }
   }
 

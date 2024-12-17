@@ -22,6 +22,7 @@ export type EcosystemCardType =
   | 'ptlist'
   | 'superform'
   | 'wineth'
+  | 'yearn'
 
 interface EcosystemCardProps {
   type: EcosystemCardType
@@ -185,6 +186,14 @@ export const EcosystemCard = (props: EcosystemCardProps) => {
       author: 'WinETH Team',
       tags: ['ui', 'v5'],
       description: t('winethCardDescription')
+    },
+    yearn: {
+      href: 'https://pooltogether.yearn.space/',
+      iconSrc: '/icons/yearn.svg',
+      title: t('yearnCardTitle'),
+      author: 'Yearn Team',
+      tags: ['ui', 'v5'],
+      description: t('yearnCardDescription')
     }
   }
 
