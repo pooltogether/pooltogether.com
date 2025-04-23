@@ -22,7 +22,7 @@ export const Tabs = (props: TabsProps) => {
         return (
           <FlowbiteTabs.Item
             key={`tab-${item.name.toLowerCase().replaceAll(' ', '-')}-${i}`}
-            active={i === defaultActiveTab ?? false}
+            active={i === defaultActiveTab}
             title={item.title}
             disabled={item.disabled}
           >

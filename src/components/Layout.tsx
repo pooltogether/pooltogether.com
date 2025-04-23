@@ -68,6 +68,11 @@ export const Layout = (props: LayoutProps) => {
         },
         {
           content: <SecurityAuditItem svgSrc='/graphics/ozLogo.svg' altText='OpenZeppelin Audits' />
+        },
+        {
+          content: (
+            <SecurityAuditItem svgSrc='/graphics/sherlockLogo.svg' altText='Sherlock Audits' />
+          )
         }
       ],
       className: 'min-w-min xl:pr-20',
