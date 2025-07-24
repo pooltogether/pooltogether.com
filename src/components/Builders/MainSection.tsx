@@ -85,6 +85,7 @@ const DocCard = (props: DocCardProps) => {
       />
       <div className='flex text-base text-pt-purple-50 md:flex-col lg:text-lg xl:text-xl'>
         {t.rich('devDocs', {
+          version: '5',
           first: (chunks) => <span className='mr-[.5ch] md:mr-0'>{chunks}</span>,
           second: (chunks) => <span>{chunks}</span>
         })}

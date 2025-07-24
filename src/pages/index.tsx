@@ -12,7 +12,7 @@ import { StatsSection } from '@components/Home/StatsSection'
 import { Layout } from '@components/Layout'
 
 interface HomePageProps {
-  protocolStats: AggregatedProtocolStats
+  protocolStats: AggregatedProtocolStats | null
   messages: IntlMessages
 }
 
@@ -34,7 +34,7 @@ export default function HomePage(props: HomePageProps) {
   return (
     <Layout>
       <HeroSection className='md:mt-20' />
-      <StatsSection />
+      {protocolStats && <StatsSection />}
       <SavingSection />
       <MissionSection />
       <CryptoSection className='mt-[35%] md:mt-0' />
