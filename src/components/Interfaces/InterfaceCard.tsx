@@ -1,20 +1,17 @@
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
-import { LINKS } from '@shared/ui'
 import classNames from 'classnames'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 export type InterfaceCardType =
-  | 'cabanaApp'
-  | 'pooltimeApp'
-  | 'ptApp_v4'
-  | 'poolExplorer'
-  | 'migrationApp'
-  | 'superform'
+  | 'cabanaLite'
+  | 'cabanaWorld'
+  | 'cabanaMigrations'
+  | 'pooltime'
+  | 'shinjo'
+  | 'poolside'
   | 'wineth'
   | 'yearn'
-  | 'world'
-  | 'shinjo'
 
 interface InterfaceCardProps {
   type: InterfaceCardType
@@ -30,35 +27,35 @@ export const InterfaceCard = (props: InterfaceCardProps) => {
     InterfaceCardType,
     { href: string; iconSrc: string; title: string }
   > = {
-    cabanaApp: {
+    cabanaLite: {
       href: 'https://app.cabana.fi/',
       iconSrc: '/icons/cabanaIcon.svg',
-      title: t('cabanaAppCardTitle')
+      title: t('cabanaLiteCardTitle')
     },
-    pooltimeApp: {
-      href: 'https://pooltime.xyz/',
-      iconSrc: '/icons/pooltimeIcon.svg',
-      title: t('pooltimeAppCardTitle')
+    cabanaWorld: {
+      href: 'https://world.org/ecosystem/app_85f4c411dc00aadabc96cce7b3a77219',
+      iconSrc: '/icons/cabanaIcon.svg',
+      title: t('cabanaWorldCardTitle')
     },
-    ptApp_v4: {
-      href: LINKS.app_v4,
-      iconSrc: '/pooltogether-token-logo.svg',
-      title: t('ptApp_v4CardTitle')
-    },
-    poolExplorer: {
-      href: LINKS.poolExplorer,
-      iconSrc: '/icons/poolExplorer.svg',
-      title: t('poolExplorerCardTitle')
-    },
-    migrationApp: {
+    cabanaMigrations: {
       href: 'https://migrate.cabana.fi/',
       iconSrc: '/icons/cabanaIcon.svg',
-      title: t('migrationAppCardTitle')
+      title: t('cabanaMigrationsCardTitle')
     },
-    superform: {
-      href: 'https://app.superform.xyz/protocol/pooltogether/',
-      iconSrc: '/icons/superformIcon.png',
-      title: t('superformCardTitle')
+    pooltime: {
+      href: 'https://pooly.eth.limo/',
+      iconSrc: '/icons/pooltimeIcon.svg',
+      title: t('pooltimeCardTitle')
+    },
+    shinjo: {
+      href: 'https://shinjo.app/',
+      iconSrc: '/icons/shinjoIcon.svg',
+      title: t('shinjoCardTitle')
+    },
+    poolside: {
+      href: 'https://poolsidewin.eth.limo/',
+      iconSrc: '/icons/poolsideIcon.svg',
+      title: t('poolsideCardTitle')
     },
     wineth: {
       href: 'https://wineth.org',
@@ -69,16 +66,6 @@ export const InterfaceCard = (props: InterfaceCardProps) => {
       href: 'https://pooltogether.yearn.space/',
       iconSrc: '/icons/yearn.svg',
       title: t('yearnCardTitle')
-    },
-    world: {
-      href: 'https://world.org/ecosystem/app_85f4c411dc00aadabc96cce7b3a77219',
-      iconSrc: '/icons/cabanaIcon.svg',
-      title: t('worldCardTitle')
-    },
-    shinjo: {
-      href: 'https://shinjo.app/',
-      iconSrc: '/icons/shinjoIcon.svg',
-      title: t('shinjoCardTitle')
     }
   }
 

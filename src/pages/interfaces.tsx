@@ -30,10 +30,10 @@ export default function InterfacesPage() {
     >
       <InterfacesHeader />
       <InterfaceCards
-        cards={['cabanaApp', 'pooltimeApp', 'shinjo', 'superform', 'wineth', 'yearn', 'world']}
+        cards={['pooltime', 'shinjo', 'poolside', 'cabanaLite', 'cabanaWorld', 'wineth', 'yearn']}
         className='mt-8'
       />
-      <InterfaceCards title={t('migrationPrompt')} cards={['migrationApp']} className='mt-8' />
+      <InterfaceCards title={t('migrationPrompt')} cards={['cabanaMigrations']} className='mt-8' />
     </Layout>
   )
 }

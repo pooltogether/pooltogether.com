@@ -3,12 +3,10 @@ import classNames from 'classnames'
 import Image from 'next/image'
 
 const socialItemInfo = {
-  lens: { href: LINKS.lens, name: 'Lens Protocol', iconSrc: '/icons/lensIcon.svg' },
   mirror: { href: LINKS.mirror, name: 'Mirror', iconSrc: '/icons/mirrorIcon.svg' },
   twitter: { href: LINKS.twitter, name: 'Twitter', iconSrc: '/icons/twitterIcon.svg' },
   medium: { href: LINKS.medium, name: 'Medium', iconSrc: '/icons/mediumIcon.svg' },
-  notion: { href: LINKS.notion, name: 'Notion', iconSrc: '/icons/notionIcon.svg' },
-  farcaster: { href: LINKS.warpcast, name: 'Farcaster', iconSrc: '/icons/farcasterIcon.svg' }
+  farcaster: { href: LINKS.farcaster, name: 'Farcaster', iconSrc: '/icons/farcasterIcon.svg' }
 } satisfies { [id: string]: { href: string; name: string; iconSrc: `${string}.svg` } }
 
 interface SocialItemProps {

@@ -1,10 +1,9 @@
 import { MODAL_KEYS, useIsModalOpen } from '@shared/generic-react-hooks'
-import { LINKS } from '@shared/ui'
 import classNames from 'classnames'
 import { useTranslations } from 'next-intl'
 import { SimpleCard, SimpleCardProps } from '@components/SimpleCard'
 
-type CommunityCardType = 'chat' | 'forums' | 'voting' | 'grants' | 'calendar'
+type CommunityCardType = 'chat'
 
 interface CommunityCardProps {
   type: CommunityCardType
@@ -24,30 +23,6 @@ export const CommunityCard = (props: CommunityCardProps) => {
       iconSrc: '/icons/chatIcon.svg',
       title: t('chatCardTitle'),
       description: t('chatCardDescription')
-    },
-    forums: {
-      href: LINKS.governance,
-      iconSrc: '/icons/governanceIcon.svg',
-      title: t('forumsCardTitle'),
-      description: t('forumsCardDescription')
-    },
-    voting: {
-      href: LINKS.tally,
-      iconSrc: '/icons/votingIcon.svg',
-      title: t('votingCardTitle'),
-      description: t('votingCardDescription')
-    },
-    grants: {
-      href: LINKS.grants,
-      iconSrc: '/icons/grantsIcon.svg',
-      title: t('grantsCardTitle'),
-      description: t('grantsCardDescription')
-    },
-    calendar: {
-      href: LINKS.communityCalendar,
-      iconSrc: '/icons/calendarIcon.svg',
-      title: t('calendarCardTitle'),
-      description: t('calendarCardDescription')
     }
   }
 

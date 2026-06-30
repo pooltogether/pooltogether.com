@@ -30,7 +30,7 @@ export const DeveloperCard = (props: DeveloperCardProps) => {
     addVault: {
       src: '/graphics/AddVaultGraphic.svg',
       buttonProps: {
-        href: 'https://factory.cabana.fi/',
+        href: 'https://dev.pooltogether.com/protocol/guides/customize/custom-prize-vault',
         target: '_blank',
         children: t('addYourVault')
       }

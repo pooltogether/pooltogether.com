@@ -1,8 +1,8 @@
+import { formatNumberForDisplay } from '@shared/utilities'
 import classNames from 'classnames'
 import { useTranslations } from 'next-intl'
 import { RICH_TEXT_FORMATTING } from 'src/constants'
 import { Section } from '@components/Section'
-import { useFormattedProtocolStats } from '@hooks/useFormattedProtocolStats'
 
 interface HeroSection {
   className?: string
@@ -34,8 +34,6 @@ const TextBanner = (props: TextBannerProps) => {
 
   const t = useTranslations('Home')
 
-  const { uniqueWallets } = useFormattedProtocolStats()
-
   return (
     <div
       className={classNames(
@@ -53,7 +51,7 @@ const TextBanner = (props: TextBannerProps) => {
         })}
       </h1>
       <span className='text-base font-medium md:text-sm lg:text-base xl:text-2xl'>
-        {t('permissionlessProtocol', { users: uniqueWallets })}
+        {t('permissionlessProtocol', { users: `${formatNumberForDisplay(100_000)}+` })}
       </span>
     </div>
   )

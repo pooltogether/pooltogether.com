@@ -49,10 +49,6 @@ const CommunityCards = (props: CommunityCardsProps) => {
       )}
     >
       <CommunityCard type='chat' className='mx-auto' />
-      <CommunityCard type='forums' className='mx-auto' />
-      <CommunityCard type='voting' className='mx-auto' />
-      <CommunityCard type='grants' className='mx-auto' />
-      <CommunityCard type='calendar' className='mx-auto' />
     </div>
   )
 }
@@ -78,11 +74,9 @@ const Socials = (props: SocialsProps) => {
       </span>
       <div className='w-full flex flex-wrap gap-6 justify-center px-16 md:justify-between md:pb-4 md:px-0'>
         <SocialItem type='farcaster' />
-        <SocialItem type='lens' />
         <SocialItem type='mirror' />
         <SocialItem type='twitter' />
         <SocialItem type='medium' />
-        <SocialItem type='notion' />
       </div>
     </div>
   )

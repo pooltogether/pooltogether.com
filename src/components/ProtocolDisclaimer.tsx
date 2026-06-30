@@ -18,8 +18,8 @@ export const ProtocolDisclaimer = (props: ProtocolDisclaimerProps) => {
 
       <p>
         PoolTogether is a decentralized peer-to-peer protocol that people can use to facilitate the
-        aggregation and disbursement of interest generated on deposited funds. There are four
-        versions of the PoolTogether protocol (v1, v2, v3, and V4), each of which is made up of
+        aggregation and disbursement of interest generated on deposited funds. There are five
+        versions of the PoolTogether protocol (v1, v2, v3, v4 and v5), each of which is made up of
         free, public, open-source or source-available software including a set of smart contracts
         that are deployed on the Ethereum Blockchain and other blockchains.
       </p>

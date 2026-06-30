@@ -108,7 +108,7 @@ const CardRows = (props: CardRowsProps) => {
       <BuilderCards
         iconSrc='/icons/smallCodeIcon.svg'
         title={t('devToolsSectionTitle')}
-        cards={['cabanaFactory', 'clientJs', 'reactHooks', 'nextjsTemplate', 'sveltekitTemplate']}
+        cards={['clientJs', 'reactHooks', 'nextjsTemplate', 'sveltekitTemplate']}
       />
       <BuilderCards
         iconSrc='/icons/landscapeIcon.svg'

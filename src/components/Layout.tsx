@@ -85,7 +85,6 @@ export const Layout = (props: LayoutProps) => {
         { content: t_footer('security'), href: LINKS.audits },
         { content: t_footer('faq'), href: LINKS.faq },
         { content: t_footer('brandAssets'), href: LINKS.brandKit },
-        { content: t_footer('governance'), href: LINKS.governance },
         { content: t_footer('userDocs'), href: LINKS.docs },
         { content: t_footer('protocolDisclaimer'), href: '/protocol-disclaimer' },
         { content: t_footer('termsOfService'), href: '/terms' }
@@ -94,11 +93,6 @@ export const Layout = (props: LayoutProps) => {
     {
       title: t_footer('community'),
       content: [
-        {
-          content: 'Lens',
-          href: LINKS.lens,
-          icon: <SocialIcon platform='lens' className='w-6 h-auto shrink-0' />
-        },
         {
           content: 'Farcaster',
           href: LINKS.farcaster,
@@ -139,7 +133,6 @@ export const Layout = (props: LayoutProps) => {
         { content: 'Deutsch', onClick: () => handleLocaleSwitch('de') },
         { content: 'Français', onClick: () => handleLocaleSwitch('fr') },
         { content: 'हिन्दी', onClick: () => handleLocaleSwitch('hi') },
-        // { content: 'Italiano', onClick: () => handleLocaleSwitch('it') },
         { content: '한국어', onClick: () => handleLocaleSwitch('ko') },
         { content: 'Português', onClick: () => handleLocaleSwitch('pt') },
         { content: 'Türkçe', onClick: () => handleLocaleSwitch('tr') },
